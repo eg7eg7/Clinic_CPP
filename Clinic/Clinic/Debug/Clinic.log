@@ -1,0 +1,195 @@
+﻿  Nurse.cpp
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): error C2011: 'Person': 'class' type redefinition
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(11): error C2504: 'MedicalStaff': base class undefined
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2065: 'medicalStaff': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2614: 'Doctor': illegal member initialization: 'MedicalStaff' is not a base or member
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2065: 'the_profession': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(19): error C2614: 'Doctor': illegal member initialization: 'MedicalStaff' is not a base or member
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(19): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(552): note: see declaration of 'strdup'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(12): error C2504: 'Person': base class undefined
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C2143: syntax error: missing ';' before '*'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C2238: unexpected token(s) preceding ';'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(16): error C3646: 'medicalStaff': unknown override specifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(30): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(25): error C2512: 'Room': no appropriate default constructor available
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\room.h(6): note: see declaration of 'Room'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\nurse.h(18): error C2512: 'Staff::Staff': no appropriate default constructor available
+  main.cpp
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): error C2011: 'Person': 'class' type redefinition
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\staff.h(7): error C2504: 'Person': base class undefined
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(18): error C2143: syntax error: missing ';' before '*'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(18): error C2238: unexpected token(s) preceding ';'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(35): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(35): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(36): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(36): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(37): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(37): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(25): error C2512: 'Room': no appropriate default constructor available
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\room.h(6): note: see declaration of 'Room'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(17): error C3646: 'patient': unknown override specifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(17): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(21): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(31): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2512: 'Staff::Staff': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(19): error C2512: 'Staff::Staff': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(12): error C2504: 'Person': base class undefined
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\nurse.h(18): error C2512: 'Staff::Staff': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): error C2079: 'person_1' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): error C2079: 'person_1' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): error C2374: 'person_1': redefinition; multiple initialization
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(75): note: see declaration of 'person_1'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(76): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(77): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(77): error C2065: 'Female': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(77): error C2079: 'person_2' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(77): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(77): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(78): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(78): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(78): error C2079: 'person_3' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(78): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(78): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(79): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(79): error C2065: 'Female': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(79): error C2079: 'person_4' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(79): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(79): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(80): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(80): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(80): error C2079: 'person_5' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(80): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(80): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(81): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(81): error C2065: 'Female': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(81): error C2079: 'person_6' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(81): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(81): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(82): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(82): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(82): error C2079: 'person_7' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(82): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(82): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(84): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(84): error C2065: 'Male': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(84): error C2079: 'person_8' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(84): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(84): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(85): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(85): error C2065: 'Female': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(85): error C2079: 'person_9' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(85): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(85): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(86): error C2027: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(86): error C2065: 'Female': undeclared identifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(86): error C2079: 'person_10' uses undefined class 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(86): error C2440: 'initializing': cannot convert from 'initializer list' to 'int'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(86): note: The initializer contains too many elements
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(91): error C2664: 'Doctor::Doctor(const Doctor &)': cannot convert argument 1 from 'const char [11]' to 'const Doctor &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(91): note: Reason: cannot convert from 'const char [11]' to 'const Doctor'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(91): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(92): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'MedicalStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(92): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(92): error C2664: 'Doctor::Doctor(const Doctor &)': cannot convert argument 1 from 'const char [8]' to 'const Doctor &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(92): note: Reason: cannot convert from 'const char [8]' to 'const Doctor'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(92): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(94): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'MedicalStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(94): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(94): error C2664: 'Nurse::Nurse(const Nurse &)': cannot convert argument 1 from 'const char [11]' to 'const Nurse &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(94): note: Reason: cannot convert from 'const char [11]' to 'const Nurse'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(94): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(95): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'MedicalStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(95): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(95): error C2664: 'Nurse::Nurse(const Nurse &)': cannot convert argument 1 from 'const char [14]' to 'const Nurse &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(95): note: Reason: cannot convert from 'const char [14]' to 'const Nurse'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(95): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(98): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Staff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(98): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(98): error C2440: '<function-style-cast>': cannot convert from 'Room' to 'OfficeStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(98): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(98): error C2512: 'Secretary::Secretary': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(99): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Staff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(99): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(99): error C2440: '<function-style-cast>': cannot convert from 'Room' to 'OfficeStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(99): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(99): error C2512: 'Secretary::Secretary': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(101): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'Staff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(101): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(101): error C2440: '<function-style-cast>': cannot convert from 'Room' to 'OfficeStaff'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(101): note: No constructor could take the source type, or constructor overload resolution was ambiguous
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(101): error C2512: 'ClinicManager::ClinicManager': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(114): error C2664: 'Patient::Patient(const Patient &)': cannot convert argument 1 from 'int' to 'const Person &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(114): note: Reason: cannot convert from 'int' to 'const Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(114): note: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(115): error C2664: 'Patient::Patient(const Patient &)': cannot convert argument 1 from 'int' to 'const Person &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(115): note: Reason: cannot convert from 'int' to 'const Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(115): note: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(116): error C2664: 'Patient::Patient(const Patient &)': cannot convert argument 1 from 'int' to 'const Person &'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(116): note: Reason: cannot convert from 'int' to 'const Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(116): note: use of undefined type 'Person'
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(7): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(125): error C2661: 'Turn::Turn': no overloaded function takes 4 arguments
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(126): error C2661: 'Turn::Turn': no overloaded function takes 4 arguments
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(127): error C2661: 'Turn::Turn': no overloaded function takes 4 arguments
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\main.cpp(128): error C2661: 'Turn::Turn': no overloaded function takes 4 arguments
+  Doctor.cpp
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): error C2011: 'Person': 'class' type redefinition
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\person.h(8): note: see declaration of 'Person'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(12): error C2504: 'Person': base class undefined
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C2143: syntax error: missing ';' before '*'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(16): error C2238: unexpected token(s) preceding ';'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(18): error C3646: 'personalDoctor': unknown override specifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(23): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(31): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\patient.h(31): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(16): error C3646: 'medicalStaff': unknown override specifier
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(30): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\turn.h(30): error C2143: syntax error: missing ',' before '&'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\medicalstaff.h(25): error C2512: 'Room': no appropriate default constructor available
+  c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\room.h(6): note: see declaration of 'Room'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(17): error C2512: 'Staff::Staff': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(18): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(552): note: see declaration of 'strdup'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(19): error C2512: 'Staff::Staff': no appropriate default constructor available
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.h(19): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(552): note: see declaration of 'strdup'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.cpp(14): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(552): note: see declaration of 'strdup'
+c:\users\eg7eg\downloads\part 1-20190920t124927z-001\part 1\part 2\clinic\naordavid_and_alikhateeb_clinic\clinic\clinic\doctor.cpp(21): error C2065: 'cout': undeclared identifier
+  Address.cpp
+  Generating Code...
