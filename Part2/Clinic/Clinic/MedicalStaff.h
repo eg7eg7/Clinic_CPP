@@ -1,13 +1,14 @@
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
 #pragma warning(disable: 4996)
+
+#include "Turn.h"
 #include <iostream>
 #include "Staff.h"
 #include "Room.h"
-#include "Turn.h"
 
 using namespace std;
-
+class Turn;
 const int TURN_SIZE = 20;
 
 class MedicalStaff : virtual public Staff
@@ -30,8 +31,8 @@ public:
 	// Methods
 	long getNextFreeTime() const { //TODO
 	};
-	void addTurn(Turn& turn);
-	void deleteTurn(const Turn& turn);
+	void addTurn(Turn* turn);
+	void deleteTurn(const Turn* turn);
 
 	Turn* operator[](int index);
 	// Show

@@ -46,7 +46,7 @@ void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	}
 }
 
-void MedicalStaff::addTurn(Turn& turn)
+void MedicalStaff::addTurn(Turn* turn)
 {
 	if (turnsNumber < TURN_SIZE)
 	{
@@ -54,7 +54,7 @@ void MedicalStaff::addTurn(Turn& turn)
 		{
 			if (turns[i] == nullptr)
 			{
-				turns[i] = &turn;
+				turns[i] = turn;
 				++turnsNumber;
 				break;
 			}
@@ -62,11 +62,11 @@ void MedicalStaff::addTurn(Turn& turn)
 	}
 }
 
-void MedicalStaff::deleteTurn(const Turn& turn)
+void MedicalStaff::deleteTurn(const Turn* turn)
 {
 	for (int i = 0; i < TURN_SIZE; i++)
 	{
-		if (turns[i] == &turn)
+		if (turns[i] == turn)
 		{
 			turns[i] = nullptr;
 			--turnsNumber;

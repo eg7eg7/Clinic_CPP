@@ -18,10 +18,10 @@ private:
 	long duration;
 	MedicalStaff* medicalStaff;
 	Patient* patient;
-	//add flag for turn - was it used or not
+	//TODO add flag for turn - was it used or not
 
 public:
-	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
+	Turn(MedicalStaff* medicalStaff, Patient* patient, long startTime, long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
 	virtual ~Turn() {};
 
@@ -30,8 +30,8 @@ public:
 	// Methods
 	void changeStartTime(long startTime);
 	void changeDuration(long duration);
-	void changeMedicalStaff(MedicalStaff& medicalStaff);
-	void changePatient(Patient& patient);
+	void changeMedicalStaff(MedicalStaff* medicalStaff);
+	void changePatient(Patient* patient);
 
 	// Show
 	void print() const;

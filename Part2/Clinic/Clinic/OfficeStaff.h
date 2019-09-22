@@ -19,7 +19,7 @@ private:
 public:
 	OfficeStaff(const Staff& staff, Room& room); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
-	~OfficeStaff();
+	virtual ~OfficeStaff();
 
 	//void operator=(const OfficeStaff& officestaff);
 

@@ -17,7 +17,7 @@ private:
 
 public:
 	Room(int roomNumber, int floor, int size, bool occupied) : roomNumber(roomNumber), floor(floor), size(size), occupied(occupied) {};	// Constructor
-
+	virtual ~Room() {};
 	// Getters
 	int getRoomNumber() const { return roomNumber; }
 	int getFloor() const { return floor; }

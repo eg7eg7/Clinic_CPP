@@ -3,10 +3,14 @@
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;
+#include "Person.h"
+#include "Turn.h"
 #include "Doctor.h"
 const int MAX_TURNS_SIZE = 20;
 
 class Turn;
+class Doctor;
+
 class Patient : public Person
 {
 private:
@@ -17,15 +21,15 @@ private:
 	int numTurns;
 
 public:
-	Patient(const Person& person, Doctor& personalDoctor, bool clinicMember); // Constructor
+	Patient(const Person& person, Doctor* personalDoctor, bool clinicMember); // Constructor
 	Patient(Patient& other); // copy constructor
-	~Patient();
+	virtual ~Patient();
 
 	void operator=(const Patient& patient);
 
 	// Methods
 	void answerCall();
-	void changeDoctor(Doctor& doctor);
+	void changeDoctor(Doctor* doctor);
 	void changeClinicMember(bool clinicMember);
 	int getNumTurns() { return numTurns; };
 	// Show

@@ -11,7 +11,7 @@ private:
 
 public:
 	Secretary(const OfficeStaff& officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};	// Constructor
-
+	virtual ~Secretary() {};
 	// Methods
 	void callPatient();
 };

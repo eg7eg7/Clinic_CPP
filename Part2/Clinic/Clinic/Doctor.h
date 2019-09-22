@@ -3,6 +3,7 @@
 #pragma warning(disable: 4996)
 
 #include <iostream>
+#include "Staff.h"
 #include "MedicalStaff.h"
 #include <string.h>
 using namespace std;
@@ -17,7 +18,7 @@ public:
 		: Staff(medicalStaff), MedicalStaff(medicalStaff) {
 		this->profession = strdup(profession);
 	};	// Constructor
-	Doctor(const Doctor& other) : Staff(other), MedicalStaff(other), profession(nullptr) { profession = strdup(other.getProfession()); }; // copy constructor
+	Doctor(const Doctor& other) : Staff(other), MedicalStaff(other), profession(nullptr) { this->profession = strdup(other.profession); }; // copy constructor
 	virtual ~Doctor();
 
 	const Doctor& operator=(const Doctor& doctor);
