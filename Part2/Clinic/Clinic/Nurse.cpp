@@ -1,15 +1,24 @@
 #include "Nurse.h"
+#pragma warning(disable: 4996)
 
-Nurse::Nurse(const MedicalStaff& medicalStaff, const char* the_service) : MedicalStaff(medicalStaff) {
+Nurse::Nurse(const MedicalStaff& medicalStaff, const char* the_service) : Staff(medicalStaff), MedicalStaff(medicalStaff) {
 	num_services = 1;
 	services = new char*[MAX_NURSE_SERVICES];
 	services[0] = strdup(the_service);
 	
 };
 
+Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other), services(NULL) 
+{  
+	num_services = other.getNumServices();
+	const char** otherServices = other.getServices();
+	for (int i = 0; i < num_services; i++)
+		services[i] = strdup(otherServices[i]);
+}; 
+
 Nurse::~Nurse()
 {
-	for (int i = 0i < num_services; i++)
+	for (int i = 0; i < num_services; i++)
 		delete[]services[i];
 	delete[]services;
 }

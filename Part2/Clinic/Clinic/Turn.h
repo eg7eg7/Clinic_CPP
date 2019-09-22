@@ -1,10 +1,15 @@
 #ifndef __TURN_H
 #define __TURN_H
+#pragma warning(disable: 4996)
 
-#include "MedicalStaff.h"
+#include <iostream>
+using namespace std;
 #include "Patient.h"
 #include "Staff.h"
+#include "MedicalStaff.h"
 
+class MedicalStaff;
+class Patient;
 
 class Turn
 {
@@ -13,22 +18,22 @@ private:
 
 	long startTime;
 	long duration;
-	MedicalStaff medicalStaff;
-	Patient patient;
-
+	MedicalStaff* medicalStaff;
+	Patient* patient;
+	//add flag for turn - was it used or not
 
 public:
-	Turn(const Staff& medicalStaff ,const Patient& patient ,long startTime ,long duration);	// Constructor
+	Turn(MedicalStaff& medicalStaff ,Patient& patient ,long startTime ,long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
-	~Turn();
+	virtual ~Turn() {};
 
-	void operator=(const Turn& turn);
+	//void operator=(const Turn& turn);
 
 	// Methods
 	void changeStartTime(long startTime);
-	void changeDuration(long duraction);
-	void changeMedicalStaff(const MedicalStaff& medicalStaff);
-	void changePatient(const Patient& patient);
+	void changeDuration(long duration);
+	void changeMedicalStaff(MedicalStaff& medicalStaff);
+	void changePatient(Patient& patient);
 
 
 	// Show

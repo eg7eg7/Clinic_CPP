@@ -36,10 +36,10 @@ using namespace std;
 
 int main()
 {
-
+	/*
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
-
+	
 	
 	// Rooms
 	Room room_1(11, 2, 120, false);
@@ -98,7 +98,7 @@ int main()
 	Secretary secretary_1(OfficeStaff(Staff(person_5, 12416, 5000), room_5));
 	Secretary secretary_2(OfficeStaff(Staff(person_6, 12417, 6000), room_6));
 
-	ClinicManager manager(OfficeStaff(Staff(person_7, 12418, 20000), room_7));
+	ClinicManager manager(OfficeStaff(Staff(person_7, 12418, 20000), room_7), Doctor(MedicalStaff(person_7, 12412, 10000, 800, 1400, room_7), "oncologist"));
 
 	clinic.addStaff(doctor_1);
 	clinic.addStaff(doctor_2);
@@ -135,12 +135,12 @@ int main()
 
 
 	// Print clinic
-	clinic.printStaffs();
+	clinic.printStaff();
 	clinic.printPatients();
 	clinic.printTurns();
 
 	clinic.updateTurn(turn_1, turn_4);
-	clinic.deleteTurn(turn_3);
+	clinic.removeTurn(turn_3);
 	clinic.updateTurn(turn_1, turn_4);
 
 	clinic.printTurns();
@@ -155,13 +155,13 @@ int main()
 	clinic.printRooms();
 
 	clinic.removeStaff(secretary_1);
-	clinic.printStaffs();
+	clinic.printStaff();
 
 	clinic.removeRoom(room_5);
 	clinic.printRooms();
 
 
-
+	*/
 
 }
 //Add virtual to destructors and functions?
@@ -173,3 +173,15 @@ int main()
 //camelCase vs camel_case
 
 //add toString instead of print()
+
+//add virtual to functions
+
+//change to protected.
+
+//add "this" to constructors
+
+//ref to pointer in classes
+
+//name(NULL) add to classes
+
+//check TODO

@@ -1,5 +1,8 @@
 #ifndef __ROOM_H
 #define __ROOM_H
+#pragma warning(disable: 4996)
+#include <iostream>
+using namespace std;
 
 
 class Room
@@ -16,7 +19,7 @@ private:
 
 
 public:
-	Room(int roomNumber,int floor ,int size ,bool occupied);	// Constructor
+	Room(int roomNumber, int floor, int size, bool occupied) : roomNumber(roomNumber), floor(floor), size(size), occupied(occupied) {};	// Constructor
 
 	// Getters
 	int getRoomNumber() const { return roomNumber; }

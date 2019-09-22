@@ -147,9 +147,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Address.cpp" />
+    <ClCompile Include="Clinic.cpp" />
+    <ClCompile Include="ClinicManager.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MedicalStaff.cpp" />
     <ClCompile Include="Nurse.cpp" />
+    <ClCompile Include="OfficeStaff.cpp" />
+    <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Room.cpp" />
+    <ClCompile Include="Secretary.cpp" />
+    <ClCompile Include="Staff.cpp" />
+    <ClCompile Include="Turn.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />

@@ -1,6 +1,8 @@
 #ifndef __OFFICESTAFF_H
 #define __OFFICESTAFF_H
-
+#pragma warning(disable: 4996)
+#include <iostream>
+using namespace std;
 #include "Staff.h"
 #include "Patient.h"
 
@@ -14,20 +16,18 @@ private:
 
 	Patient** patients;
 	int patientNumber;
-	Room room;
-
-
-
+	Room& room;
 
 public:
-	OfficeStaff(const Staff& staff ,const Room& room); // Constructor
+	OfficeStaff(const Staff& staff , Room& room); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
 	~OfficeStaff();
 
-	void operator=(const OfficeStaff& officestaff);
+
+	//void operator=(const OfficeStaff& officestaff);
 
 	// Methods
-	void addPatient(const Patient& patient);
+	void addPatient(Patient& patient);
 	void removePatient(const Patient& patient);
 	
 

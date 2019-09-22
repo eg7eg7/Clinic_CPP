@@ -1,10 +1,10 @@
 #ifndef __NURSE_H
 #define __NURSE_H
-
+#pragma warning(disable: 4996)
 #include <iostream>
 #include <string.h>
 #include "MedicalStaff.h"
-
+#include "Staff.h"
 #define MAX_NURSE_SERVICES 20
 using namespace std;
 
@@ -16,7 +16,7 @@ private:
 	int num_services;
 public:
 	Nurse(const MedicalStaff& medicalStaff, const char* the_service);	// Constructor
-	Nurse(const Nurse& other) : MedicalStaff(other), services(NULL) { services = strdup(other.getServices()); }; // copy constructor
+	Nurse(const Nurse& other); // copy constructor
 	virtual ~Nurse();
 
 	const Nurse& operator=(const Nurse& nurse);

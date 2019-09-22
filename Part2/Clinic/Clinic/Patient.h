@@ -1,12 +1,15 @@
 #ifndef __PATIENT_H
 #define __PATIENT_H
-
-
+#pragma warning(disable: 4996)
+#include <iostream>
+using namespace std;
 #include "Person.h"
-#include "Turn.h"
 #include "Doctor.h"
+#include "Turn.h"
 
 const int MAX_TURNS_SIZE = 20;
+
+class Doctor;
 
 class Patient : public Person
 {
@@ -15,22 +18,22 @@ private:
 	
 	Turn** turns;
 	bool clinicMember;
-	Doctor personalDoctor;
-	
+	Doctor* personalDoctor;
+	int numTurns;
 
 
 public:
-	Patient(const Person& person ,const Doctor& personalDoctor ,bool clinicMember); // Constructor
-	Patient(const Patient& other); // copy constructor
+	Patient(const Person& person ,Doctor& personalDoctor ,bool clinicMember); // Constructor
+	Patient(Patient& other); // copy constructor
 	~Patient();
 
 	void operator=(const Patient& patient);
 
 	// Methods
 	void answerCall();
-	void changeDoctor(const Doctor& doctor);
+	void changeDoctor(Doctor& doctor);
 	void changeClinicMember(bool clinicMember);
-
+	int getNumTurns() { return numTurns; };
 	// Show
 	void print() const;
 

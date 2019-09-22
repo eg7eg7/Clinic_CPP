@@ -1,9 +1,14 @@
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
-
+#pragma warning(disable: 4996)
+#include <iostream>
 #include "Staff.h"
 #include "Room.h"
 #include "Turn.h"
+
+using namespace std;
+
+class Turn;
 
 const int TURN_SIZE = 20;
 
@@ -12,32 +17,28 @@ class MedicalStaff : virtual public Staff
 
 private:
 
-	long acceptHourseFrom;
-	long acceptHourseTo;
-	Room room;
+	long acceptHoursFrom;
+	long acceptHoursTo;
+	Room& room;
 	Turn** turns;
 	int turnsNumber;
 
 
 
 public:
-	MedicalStaff(const Person& person, long extention, long salary, long acceptHourseFrom, long acceptHourseTo, const Room& room) 
-		: Staff(person, extention, salary) { 
-		//TODO 
-	}; // Constructor
-	MedicalStaff(const MedicalStaff& other) : Staff(other) {
-	//TODO
-	}; // copy constructor
-	~MedicalStaff();
+	MedicalStaff(const Person& person, long extension, long salary, long acceptHoursFrom, long acceptHoursTo, Room& room);
+	MedicalStaff(const MedicalStaff& other); // copy constructor
+	virtual ~MedicalStaff();
 
 	void operator=(const MedicalStaff& medicalstaff);
 
 	// Methods
-	long getNextFreeTime() const;
-	void addTurn(const Turn& turn);
+	long getNextFreeTime() const { //TODO 
+	};
+	void addTurn(Turn& turn);
 	void deleteTurn(const Turn& turn);
-	void updateTurn(const Turn& turn, int index);
-
+	
+	Turn* operator[](int index);
 	// Show
 	void print() const;
 

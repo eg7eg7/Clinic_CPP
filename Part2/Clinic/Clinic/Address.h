@@ -1,6 +1,11 @@
 #ifndef __ADDRESS_H
 #define __ADDRESS_H
+#pragma warning(disable: 4996)
 
+#include <iostream>
+#include <string.h>
+
+using namespace std;
 class Address
 {
 
@@ -9,15 +14,15 @@ private:
 	char* country;
 	char* city;
 	char* street;
-	int buildNO;
-	int floorNO;
-	int houseNO;
+	int buildNum;
+	int floorNum;
+	int houseNum;
 
 
 
 
 public:
-	Address(const char* country ,const char* city ,const char* street ,int buildNO ,int floorNO ,int houseNO);
+	Address(const char* country ,const char* city ,const char* street ,int buildNum,int floorNum,int houseNum);
 	Address(const Address& other); // copy constructor
 	~Address();
 
@@ -28,18 +33,18 @@ public:
 	const char* getCountry() const { return country; }
 	const char* getCity() const { return city; }
 	const char* getStreet() const { return street; }
-	int getBuildNO() const { return floorNO; }
-	int getFloor() const { return buildNO; }
-	int getHouseNO() const { return houseNO; }
+	int getBuildNO() const { return floorNum; }
+	int getFloor() const { return buildNum; }
+	int getHouseNO() const { return houseNum; }
 
 
 	// Setters
 	void setCountry(const char* country);
 	void setCity(const char* city);
 	void setStreet(const char* street);
-	void setBuildNO(int floor) { this->buildNO = floor; }
-	void setFloorNO(int floor) { this->floorNO = floor; }
-	void setHouseNO(int houseNO) { this->houseNO = houseNO; }
+	void setBuildNum(int floor) { this->buildNum = floor; }
+	void setFloorNum(int floor) { this->floorNum = floor; }
+	void setHouseNum(int houseNum) { this->houseNum = houseNum; }
 
 	// Show
 	void print() const;
