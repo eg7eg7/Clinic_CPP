@@ -5,16 +5,15 @@ Nurse::Nurse(const MedicalStaff& medicalStaff, const char* the_service) : Staff(
 	num_services = 1;
 	services = new char*[MAX_NURSE_SERVICES];
 	services[0] = strdup(the_service);
-	
 };
 
-Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other), services(NULL) 
-{  
+Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other), services(NULL)
+{
 	num_services = other.getNumServices();
-	const char** otherServices = other.getServices();
+	char** otherServices = other.getServices();
 	for (int i = 0; i < num_services; i++)
 		services[i] = strdup(otherServices[i]);
-}; 
+};
 
 Nurse::~Nurse()
 {
@@ -25,7 +24,7 @@ Nurse::~Nurse()
 
 const Nurse& Nurse::operator=(const Nurse& nurse)
 {
-	const char** nurseServices;
+	char** nurseServices;
 	if (this != &nurse)
 	{
 		nurseServices = nurse.getServices();
@@ -35,7 +34,6 @@ const Nurse& Nurse::operator=(const Nurse& nurse)
 			delete[]services[i];
 			services[i] = strdup(nurseServices[i]);
 		}
-
 	}
 	return *this;
 }
@@ -56,4 +54,3 @@ void Nurse::print() const
 		cout << services[i] << ", ";
 	cout << "\b\b]" << endl;
 }
-

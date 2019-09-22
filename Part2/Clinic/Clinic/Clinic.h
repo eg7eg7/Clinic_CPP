@@ -7,8 +7,6 @@
 #include "ClinicManager.h"
 #include "Room.h"
 #include "Patient.h"
-#include "Staff.h"
-
 
 using namespace std;
 
@@ -21,9 +19,8 @@ class ClinicManager;
 
 class Clinic
 {
-
 private:
-	
+
 	char* name;
 	Address address;
 	Room** rooms;
@@ -37,12 +34,11 @@ private:
 
 	ClinicManager* manager;
 
-
 public:
-	Clinic(const char* name ,const Address& address);
+	Clinic(const char* name, const Address& address);
 	Clinic(const Clinic& other); // copy constructor
 	virtual ~Clinic();
-	
+
 	//void operator=(const Clinic& clinic);
 
 	// Methods
@@ -60,7 +56,6 @@ public:
 	void removeTurn(const Turn& turn);
 	void updateTurn(const Turn& oldturn, const Turn& newturn);
 
-	
 	// Show
 	void printStaff() const;
 	void printPatients() const;
@@ -68,8 +63,6 @@ public:
 	void printTurns() const;
 
 	void setClinicManager(ClinicManager* new_manager);
-
 };
-
 
 #endif // !__CLINIC_H

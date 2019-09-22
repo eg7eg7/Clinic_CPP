@@ -52,14 +52,12 @@ void Address::setCountry(const char * country)
 
 void Address::setCity(const char * city)
 {
-
 	delete[]this->city;
 	this->city = strdup(city);
 }
 
 void Address::setStreet(const char * street)
 {
-
 	delete[]this->street;
 	this->street = strdup(street);
 }

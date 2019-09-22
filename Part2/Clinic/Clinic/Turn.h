@@ -5,7 +5,6 @@
 #include <iostream>
 using namespace std;
 #include "Patient.h"
-#include "Staff.h"
 #include "MedicalStaff.h"
 
 class MedicalStaff;
@@ -13,7 +12,6 @@ class Patient;
 
 class Turn
 {
-
 private:
 
 	long startTime;
@@ -23,7 +21,7 @@ private:
 	//add flag for turn - was it used or not
 
 public:
-	Turn(MedicalStaff& medicalStaff ,Patient& patient ,long startTime ,long duration);	// Constructor
+	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
 	virtual ~Turn() {};
 
@@ -35,13 +33,8 @@ public:
 	void changeMedicalStaff(MedicalStaff& medicalStaff);
 	void changePatient(Patient& patient);
 
-
 	// Show
 	void print() const;
-
-
 };
-
-
 
 #endif // !__TURN_H

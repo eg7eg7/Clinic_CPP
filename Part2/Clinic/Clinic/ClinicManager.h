@@ -5,15 +5,13 @@
 using namespace std;
 #include "OfficeStaff.h"
 #include "Clinic.h"
-#include "Staff.h"
-
+#include "Doctor.h"
 const int STAFF_SIZE = 20;
 
 class Clinic;
 
 class ClinicManager : public OfficeStaff, public Doctor
 {
-
 private:
 	Clinic* clinic;
 
@@ -29,7 +27,6 @@ public:
 	// Method
 	void fireStaff(const Staff& staff);
 	void hireStaff(const Staff& staff);
-
 };
 
 #endif // !__CLINICMANAGER_H

@@ -7,22 +7,13 @@ using namespace std;
 
 class Secretary : public OfficeStaff
 {
-
 private:
-
-
-
 
 public:
 	Secretary(const OfficeStaff& officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};	// Constructor
 
-
 	// Methods
 	void callPatient();
-
-
 };
 
-
 #endif // !__SECRETARY_H
-

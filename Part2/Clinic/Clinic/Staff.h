@@ -1,4 +1,3 @@
-
 #ifndef __STAFF_H
 #define __STAFF_H
 #pragma warning(disable: 4996)
@@ -8,12 +7,9 @@ using namespace std;
 
 class Staff : public Person
 {
-
 private:
 	long extension;
 	long salary;
-
-
 
 public:
 	Staff(const Person& person, long extension, long salary) : Person(person), extension(extension), salary(salary) {};	//Constructor
@@ -23,18 +19,11 @@ public:
 	long getExtension() const { return extension; }
 	long getSalary() const { return salary; }
 
-
 	// Setters
 	void setSalary(long salary) { this->salary = salary; }
 
-
-
 	// Show
-	void print() const;	
-
-
+	void print() const;
 };
-
-
 
 #endif // !__STAFF_H

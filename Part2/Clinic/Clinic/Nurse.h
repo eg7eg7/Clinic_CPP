@@ -4,13 +4,11 @@
 #include <iostream>
 #include <string.h>
 #include "MedicalStaff.h"
-#include "Staff.h"
 #define MAX_NURSE_SERVICES 20
 using namespace std;
 
 class Nurse : public MedicalStaff
 {
-
 private:
 	char** services;
 	int num_services;
@@ -22,7 +20,7 @@ public:
 	const Nurse& operator=(const Nurse& nurse);
 
 	// Getters
-	const char** getServices() const { return services; }
+	char** getServices() const { return services; }
 
 	// Method
 	void addServices(const char* service);
@@ -31,10 +29,6 @@ public:
 
 	// Show
 	void print() const;
-
-
 };
-
-
 
 #endif // !__NURSE_H

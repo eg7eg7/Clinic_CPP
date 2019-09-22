@@ -8,7 +8,6 @@ Patient::Patient(const Person & person, Doctor & personalDoctor, bool clinicMemb
 		turns[i] = nullptr;
 	this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
-
 }
 
 Patient::Patient(Patient & other) : Person(other)

@@ -12,7 +12,6 @@ class Person
 public:
 	enum eGender { Male, Female };
 
-
 private:
 
 	int id;
@@ -23,7 +22,7 @@ private:
 	eGender gender;
 
 public:
-	Person(int id ,const char* name ,const char* phone ,int age ,const Address& address ,const eGender& gender);	// Constructor
+	Person(int id, const char* name, const char* phone, int age, const Address& address, const eGender& gender);	// Constructor
 	Person(const Person& other); // copy constructor
 	~Person();
 
@@ -35,15 +34,12 @@ public:
 	eGender getGender() const { return gender; };
 	const Address& getAddress() const { return address; };
 
-
 	// Setters
 	void setPhone(const char* phone);
 	void setAddress(Address& address);
 
 	// Show
 	void print() const;
-
 };
-
 
 #endif // !__PERSON_H

@@ -4,10 +4,8 @@
 #include <iostream>
 using namespace std;
 
-
 class Room
 {
-
 private:
 
 	int roomNumber;
@@ -16,7 +14,6 @@ private:
 	bool occupied;
 
 	Room(const Room& other); // private copy constructor
-
 
 public:
 	Room(int roomNumber, int floor, int size, bool occupied) : roomNumber(roomNumber), floor(floor), size(size), occupied(occupied) {};	// Constructor
@@ -32,9 +29,6 @@ public:
 
 	// Show
 	void print() const;
-
-
 };
-
 
 #endif // !__ROOM_H

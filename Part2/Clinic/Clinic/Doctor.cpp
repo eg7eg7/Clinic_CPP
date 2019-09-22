@@ -1,6 +1,5 @@
 #include "Doctor.h"
 
-
 Doctor::~Doctor()
 {
 	delete[]profession;

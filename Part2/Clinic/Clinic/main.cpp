@@ -11,11 +11,9 @@
 //*****************************************************************************************
 //*****************************************************************************************
 
-
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;
-
 
 #include "Address.h"
 #include "Clinic.h"
@@ -31,16 +29,11 @@ using namespace std;
 #include "Staff.h"
 #include "Turn.h"
 
-
-
-
 int main()
 {
 	/*
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
-	
-	
 	// Rooms
 	Room room_1(11, 2, 120, false);
 	Room room_2(12, 2, 150, false);
@@ -58,8 +51,6 @@ int main()
 	clinic.addRoom(room_6);
 	clinic.addRoom(room_7);
 
-
-
 	// Addresses
 	Address address_1("Israel", "Tel-Aviv", "einstein", 43, 9, 18);
 	Address address_2("Israel", "haifa", "karmel", 17, 12, 22);
@@ -68,8 +59,6 @@ int main()
 	Address address_5("Israel", "Tel-Aviv", "yarkon", 5, 13, 14);
 	Address address_6("Israel", "Herzliya", "bazel", 45, 1, 45);
 	Address address_7("Israel", "Tel-Aviv", "dizengoff", 28, 19, 48);
-
-
 
 	// Persons
 	Person person_1(1000, "Doctor_1", "054-452-123", 34, address_1, Person::Male);
@@ -84,8 +73,6 @@ int main()
 	Person person_8(3333, "patient_1", "050-231-4579", 92, address_3, Person::Male);
 	Person person_9(4444, "patient_2", "054-782-4362", 18, address_2, Person::Female);
 	Person person_10(5555, "patient_3", "052-451-0921", 54,address_4, Person::Female);
-
-
 
 	// Staff
 	Doctor doctor_1(MedicalStaff(person_1, 12412, 10000, 800, 1400, room_1), "oncologist");
@@ -108,8 +95,6 @@ int main()
 	clinic.addStaff(secretary_2);
 	clinic.addStaff(manager);
 
-
-
 	// Patients
 	Patient patient_1(person_8, doctor_1, true);
 	Patient patient_2(person_9, doctor_2, true);
@@ -118,8 +103,6 @@ int main()
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);
 	clinic.addPatient(patient_3);
-	
-
 
 	// Turns
 	Turn turn_1(doctor_1, patient_1, 1000, 200);
@@ -127,12 +110,9 @@ int main()
 	Turn turn_3(doctor_1, patient_3, 1400, 130);
 	Turn turn_4(doctor_1, patient_1, 1400, 130);
 
-
 	clinic.addTurn(turn_1);
 	clinic.addTurn(turn_2);
 	clinic.addTurn(turn_3);
-
-
 
 	// Print clinic
 	clinic.printStaff();
@@ -149,8 +129,6 @@ int main()
 	clinic.printPatients();
 	clinic.printTurns();
 
-
-
 	clinic.removeRoom(room_5);
 	clinic.printRooms();
 
@@ -160,9 +138,7 @@ int main()
 	clinic.removeRoom(room_5);
 	clinic.printRooms();
 
-
 	*/
-
 }
 //Add virtual to destructors and functions?
 

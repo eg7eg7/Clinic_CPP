@@ -8,7 +8,6 @@
 using namespace std;
 class Address
 {
-
 private:
 
 	char* country;
@@ -18,16 +17,12 @@ private:
 	int floorNum;
 	int houseNum;
 
-
-
-
 public:
-	Address(const char* country ,const char* city ,const char* street ,int buildNum,int floorNum,int houseNum);
+	Address(const char* country, const char* city, const char* street, int buildNum, int floorNum, int houseNum);
 	Address(const Address& other); // copy constructor
 	~Address();
 
 	void operator=(const Address& address);
-
 
 	// Getters
 	const char* getCountry() const { return country; }
@@ -36,7 +31,6 @@ public:
 	int getBuildNO() const { return floorNum; }
 	int getFloor() const { return buildNum; }
 	int getHouseNO() const { return houseNum; }
-
 
 	// Setters
 	void setCountry(const char* country);
@@ -48,9 +42,6 @@ public:
 
 	// Show
 	void print() const;
-
-
 };
-
 
 #endif // __ADDRESS_H

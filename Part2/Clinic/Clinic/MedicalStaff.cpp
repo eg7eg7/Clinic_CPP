@@ -26,7 +26,6 @@ MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other), room(other
 	}
 }
 
-
 MedicalStaff::~MedicalStaff()
 {
 	delete[]turns;

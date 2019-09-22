@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Turn" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAIAACAAAAAAAAAiAEAAIBgAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Turn.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Address">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwgAAAAAAiAAgABKAAACCAAAAAAAgACAgEgAIAAgAo=</HashCode>
+      <FileName>Address.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clinic">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAIAAAIAAAQEgAKIAsAAGAgIEAARAAAAAAQxAAwA=</HashCode>
+      <FileName>Clinic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClinicManager" Collapsed="true">
+    <Position X="6" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABEAAAAAAAAAABAAAAEAAAAAAAAAAAAAUAAAAAAAAAA=</HashCode>
+      <FileName>ClinicManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Doctor" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAACAAAAAAAAAAAAAIAQAAAAgAAAAIAA=</HashCode>
+      <FileName>Doctor.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MedicalStaff" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAACQAYAAFAAAAEAAAgAAxAAAA=</HashCode>
+      <FileName>MedicalStaff.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Nurse" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAACAAAAAAEgAAIAACAAABAAgAIAAAAA=</HashCode>
+      <FileName>Nurse.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeStaff" Collapsed="true">
+    <Position X="7.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAIAAAAAAAAAAAAABAAAQAAAEAABAAAAAAAAAAgA=</HashCode>
+      <FileName>OfficeStaff.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Patient" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgAAAAAAAAAAAAAIAggAAQAAAACAAAAAgAABACAA=</HashCode>
+      <FileName>Patient.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Person" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AoQAAEIAAAAgQAAAAAAAgAAAAAIEAAAgIAIEIgAAAgA=</HashCode>
+      <FileName>Person.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Room">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQQAAAAAIAAAAAiAJAIAACAABAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Room.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Secretary">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Secretary.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Staff" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAgAAIgAAQAAAAAACAAAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>Staff.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

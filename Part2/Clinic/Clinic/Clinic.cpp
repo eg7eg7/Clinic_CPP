@@ -20,9 +20,6 @@ Clinic::Clinic(const char * name, const Address & address) : address(address)
 		patients[i] = nullptr;
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 		turns[i] = nullptr;
-
-
-
 }
 
 Clinic::Clinic(const Clinic & other) : address(other.address)
@@ -57,7 +54,6 @@ Clinic::~Clinic()
 	delete[]patients;
 	delete[]turns;
 }
-
 
 void Clinic::addStaff(Staff & staff)
 {
@@ -204,5 +200,3 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 			manager->setClinic(this);
 	}
 }
-
-
