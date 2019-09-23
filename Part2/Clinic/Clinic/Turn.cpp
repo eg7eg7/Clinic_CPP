@@ -35,7 +35,7 @@ void Turn::changeMedicalStaff(MedicalStaff* medicalStaff)
 
 void Turn::changePatient(Patient* patient)
 {
-	this->patient = *patient;
+	this->patient = patient;
 }
 
 void Turn::print() const

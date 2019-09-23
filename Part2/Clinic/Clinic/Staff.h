@@ -1,5 +1,7 @@
 #ifndef __STAFF_H
 #define __STAFF_H
+#pragma message("Adding Staff")
+
 #pragma warning(disable: 4996)
 #include "Person.h"
 #include <iostream>

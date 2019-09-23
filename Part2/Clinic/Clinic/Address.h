@@ -1,5 +1,6 @@
 #ifndef __ADDRESS_H
 #define __ADDRESS_H
+#pragma message("Adding Address")
 #pragma warning(disable: 4996)
 
 #include <iostream>

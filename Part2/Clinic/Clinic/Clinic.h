@@ -1,5 +1,6 @@
 #ifndef __CLINIC_H
 #define __CLINIC_H
+#pragma message("Adding Clinic")
 #pragma warning(disable: 4996)
 #include <iostream>
 #include <string.h>

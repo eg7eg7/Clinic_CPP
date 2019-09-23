@@ -11,6 +11,8 @@
 //*****************************************************************************************
 //*****************************************************************************************
 
+#pragma message("in main")
+
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;
@@ -18,16 +20,11 @@ using namespace std;
 #include "Address.h"
 #include "Clinic.h"
 #include "ClinicManager.h"
-#include "Doctor.h"
-#include "MedicalStaff.h"
 #include "Nurse.h"
 #include "OfficeStaff.h"
 #include "Patient.h"
-#include "Person.h"
 #include "Room.h"
 #include "Secretary.h"
-#include "Staff.h"
-#include "Turn.h"
 
 int main()
 {
@@ -161,3 +158,5 @@ int main()
 //name(NULL) add to classes
 
 //check TODO
+
+//Clinic should create turns

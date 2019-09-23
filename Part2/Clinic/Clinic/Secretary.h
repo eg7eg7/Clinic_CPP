@@ -1,5 +1,7 @@
 #ifndef __SECRETARY_H
 #define __SECRETARY_H
+#pragma message("Adding Secretary")
+
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;

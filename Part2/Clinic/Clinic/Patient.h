@@ -1,15 +1,16 @@
 #ifndef __PATIENT_H
 #define __PATIENT_H
+#pragma message("Adding Patient")
+
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;
 #include "Person.h"
-#include "Turn.h"
 #include "Doctor.h"
 const int MAX_TURNS_SIZE = 20;
 
-class Turn;
 class Doctor;
+class Turn;
 
 class Patient : public Person
 {

@@ -1,8 +1,8 @@
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
+#pragma message("Adding MedicalStaff")
 #pragma warning(disable: 4996)
 
-#include "Turn.h"
 #include <iostream>
 #include "Staff.h"
 #include "Room.h"

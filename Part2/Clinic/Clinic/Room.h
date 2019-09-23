@@ -1,5 +1,7 @@
 #ifndef __ROOM_H
 #define __ROOM_H
+#pragma message("Adding Room")
+
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;

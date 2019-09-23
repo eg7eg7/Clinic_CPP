@@ -1,5 +1,6 @@
 #ifndef __DOCTOR_H
 #define __DOCTOR_H
+#pragma message("Adding Doctor")
 #pragma warning(disable: 4996)
 
 #include <iostream>
@@ -7,6 +8,7 @@
 #include "MedicalStaff.h"
 #include <string.h>
 using namespace std;
+
 
 class Doctor : public MedicalStaff
 {
