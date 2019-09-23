@@ -22,7 +22,7 @@ private:
 	int numTurns;
 
 public:
-	Patient(const Person& person, Doctor* personalDoctor, bool clinicMember); // Constructor
+	Patient(const Person& person, Doctor& personalDoctor, bool clinicMember); // Constructor
 	Patient(Patient& other); // copy constructor
 	virtual ~Patient();
 
@@ -30,7 +30,7 @@ public:
 
 	// Methods
 	void answerCall();
-	void changeDoctor(Doctor* doctor);
+	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);
 	int getNumTurns() { return numTurns; };
 	// Show

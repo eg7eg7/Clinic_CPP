@@ -15,7 +15,7 @@ private:
 
 	Patient** patients;
 	int patientNumber;
-	Room& room;
+	Room* room;
 
 public:
 	OfficeStaff(const Staff& staff, Room& room); // Constructor

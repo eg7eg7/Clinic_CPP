@@ -1,9 +1,9 @@
 #include "Turn.h"
 
-Turn::Turn(MedicalStaff* medicalStaff, Patient* patient, long startTime, long duration)
+Turn::Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration)
 {
-	this->medicalStaff = medicalStaff;
-	this->patient = patient;
+	this->medicalStaff = &medicalStaff;
+	this->patient = &patient;
 
 	this->startTime = startTime;
 	this->duration = duration;

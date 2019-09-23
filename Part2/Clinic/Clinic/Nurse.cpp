@@ -1,10 +1,10 @@
 #include "Nurse.h"
 #pragma warning(disable: 4996)
 
-Nurse::Nurse(const MedicalStaff& medicalStaff, const char* the_service) : Staff(medicalStaff), MedicalStaff(medicalStaff) {
+Nurse::Nurse(const MedicalStaff& medicalStaff, const char* service) : Staff(medicalStaff), MedicalStaff(medicalStaff) {
 	num_services = 1;
 	services = new char*[MAX_NURSE_SERVICES];
-	services[0] = strdup(the_service);
+	services[0] = strdup(service);
 };
 
 Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other), services(NULL)

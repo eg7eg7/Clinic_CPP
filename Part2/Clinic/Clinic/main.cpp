@@ -25,12 +25,12 @@ using namespace std;
 #include "Patient.h"
 #include "Room.h"
 #include "Secretary.h"
-
+#include "Turn.h"
 int main()
 {
-	/*
+	
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
-
+	
 	// Rooms
 	Room room_1(11, 2, 120, false);
 	Room room_2(12, 2, 150, false);
@@ -39,7 +39,7 @@ int main()
 	Room room_5(15, 4, 250, false);
 	Room room_6(16, 4, 100, false);
 	Room room_7(17, 5, 90, false);
-
+	
 	clinic.addRoom(room_1);
 	clinic.addRoom(room_2);
 	clinic.addRoom(room_3);
@@ -47,7 +47,7 @@ int main()
 	clinic.addRoom(room_5);
 	clinic.addRoom(room_6);
 	clinic.addRoom(room_7);
-
+	
 	// Addresses
 	Address address_1("Israel", "Tel-Aviv", "einstein", 43, 9, 18);
 	Address address_2("Israel", "haifa", "karmel", 17, 12, 22);
@@ -59,7 +59,6 @@ int main()
 
 	// Persons
 	Person person_1(1000, "Doctor_1", "054-452-123", 34, address_1, Person::Male);
-	Person person_1(1000, "Doctor_1", "054-452-123", 34, address_1, Person::Male);
 	Person person_2(2000, "Doctor_2", "053-279-9012", 53,address_2, Person::Female);
 	Person person_3(3000, "Nurse_1", "050-327-1289", 19, address_3, Person::Male);
 	Person person_4(4000, "Nurse_2", "052-573-4379", 21, address_4, Person::Female);
@@ -70,20 +69,20 @@ int main()
 	Person person_8(3333, "patient_1", "050-231-4579", 92, address_3, Person::Male);
 	Person person_9(4444, "patient_2", "054-782-4362", 18, address_2, Person::Female);
 	Person person_10(5555, "patient_3", "052-451-0921", 54,address_4, Person::Female);
-
+	
 	// Staff
 	Doctor doctor_1(MedicalStaff(person_1, 12412, 10000, 800, 1400, room_1), "oncologist");
 	Doctor doctor_2(MedicalStaff(person_2, 12413, 15000, 1000, 1800, room_2), "surgery");
-
+	
 	Nurse nurse_1(MedicalStaff(person_3, 12414, 8000, 900, 1500, room_3), "Take blood");
 	Nurse nurse_2(MedicalStaff(person_4, 12415, 7000, 1100, 1700, room_4), "Give infusion");
-
+	
 	//FIX OfficeStaff
 	Secretary secretary_1(OfficeStaff(Staff(person_5, 12416, 5000), room_5));
 	Secretary secretary_2(OfficeStaff(Staff(person_6, 12417, 6000), room_6));
 
 	ClinicManager manager(OfficeStaff(Staff(person_7, 12418, 20000), room_7), Doctor(MedicalStaff(person_7, 12412, 10000, 800, 1400, room_7), "oncologist"));
-
+	
 	clinic.addStaff(doctor_1);
 	clinic.addStaff(doctor_2);
 	clinic.addStaff(nurse_1);
@@ -135,7 +134,8 @@ int main()
 	clinic.removeRoom(room_5);
 	clinic.printRooms();
 
-	*/
+	
+	return 0;
 }
 //Add virtual to destructors and functions?
 

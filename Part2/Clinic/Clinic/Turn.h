@@ -23,7 +23,7 @@ private:
 	//TODO add flag for turn - was it used or not
 
 public:
-	Turn(MedicalStaff* medicalStaff, Patient* patient, long startTime, long duration);	// Constructor
+	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
 	virtual ~Turn() {};
 

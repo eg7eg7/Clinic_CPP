@@ -1,13 +1,13 @@
 #include "Patient.h"
 
-Patient::Patient(const Person & person, Doctor* personalDoctor, bool clinicMember) : Person(person)
+Patient::Patient(const Person & person, Doctor& personalDoctor, bool clinicMember) : Person(person)
 {
 	numTurns = 0;
 	turns = new Turn*[MAX_TURNS_SIZE];
 	for (int i = 0; i < MAX_TURNS_SIZE; i++)
 		turns[i] = nullptr;
 	this->clinicMember = clinicMember;
-	this->personalDoctor = personalDoctor;
+	this->personalDoctor = &personalDoctor;
 }
 
 Patient::Patient(Patient & other) : Person(other)
@@ -35,9 +35,9 @@ void Patient::answerCall()
 	//TODO
 }
 
-void Patient::changeDoctor(Doctor* doctor)
+void Patient::changeDoctor(Doctor& doctor)
 {
-	personalDoctor = doctor;
+	personalDoctor = &doctor;
 }
 
 void Patient::changeClinicMember(bool clinicMember)

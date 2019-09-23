@@ -14,7 +14,7 @@ private:
 	char** services;
 	int num_services;
 public:
-	Nurse(const MedicalStaff& medicalStaff, const char* the_service);	// Constructor
+	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
 	virtual ~Nurse();
 

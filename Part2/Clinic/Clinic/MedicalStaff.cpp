@@ -1,11 +1,11 @@
 #include "MedicalStaff.h"
 
-MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, long acceptHoursF, long acceptHoursT, Room& the_room)
-	: Staff(person, extension, salary), room(the_room)
+MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, long acceptHoursF, long acceptHoursT, Room& room)
+	: Staff(person, extension, salary)
 {
 	acceptHoursFrom = acceptHoursF;
 	acceptHoursTo = acceptHoursT;
-
+	this->room = &room;
 	turns = new Turn*[TURN_SIZE];
 	for (int i = 0; i < TURN_SIZE; i++)
 	{
@@ -14,8 +14,9 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 	turnsNumber = 0;
 }
 
-MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other), room(other.room)
+MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 {
+	this->room = other.room;
 	acceptHoursFrom = other.acceptHoursFrom;
 	acceptHoursTo = other.acceptHoursTo;
 	turnsNumber = other.turnsNumber;
@@ -46,7 +47,7 @@ void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	}
 }
 
-void MedicalStaff::addTurn(Turn* turn)
+void MedicalStaff::addTurn(Turn& turn)
 {
 	if (turnsNumber < TURN_SIZE)
 	{
@@ -54,7 +55,7 @@ void MedicalStaff::addTurn(Turn* turn)
 		{
 			if (turns[i] == nullptr)
 			{
-				turns[i] = turn;
+				turns[i] = &turn;
 				++turnsNumber;
 				break;
 			}
@@ -62,11 +63,11 @@ void MedicalStaff::addTurn(Turn* turn)
 	}
 }
 
-void MedicalStaff::deleteTurn(const Turn* turn)
+void MedicalStaff::deleteTurn(const Turn& turn)
 {
 	for (int i = 0; i < TURN_SIZE; i++)
 	{
-		if (turns[i] == turn)
+		if (turns[i] == &turn)
 		{
 			turns[i] = nullptr;
 			--turnsNumber;

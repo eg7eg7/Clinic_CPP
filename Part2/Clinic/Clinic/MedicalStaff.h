@@ -17,7 +17,7 @@ private:
 
 	long acceptHoursFrom;
 	long acceptHoursTo;
-	Room& room;
+	Room* room;
 	Turn** turns;
 	int turnsNumber;
 
@@ -31,8 +31,8 @@ public:
 	// Methods
 	long getNextFreeTime() const { //TODO
 	};
-	void addTurn(Turn* turn);
-	void deleteTurn(const Turn* turn);
+	void addTurn(Turn& turn);
+	void deleteTurn(const Turn& turn);
 
 	Turn* operator[](int index);
 	// Show
