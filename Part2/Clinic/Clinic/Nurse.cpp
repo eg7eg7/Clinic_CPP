@@ -47,10 +47,11 @@ void Nurse::addServices(const char* service)
 	}
 }
 
-void Nurse::print() const
+
+void Nurse::toOs(ostream & os) const
 {
-	cout << "Nurse : Services [";
+	os << "**Nurse**" << endl
+		<< "Can do the following: ";
 	for (int i = 0; i < num_services; i++)
-		cout << services[i] << ", ";
-	cout << "\b\b]" << endl;
+		os << services[i] << endl;
 }

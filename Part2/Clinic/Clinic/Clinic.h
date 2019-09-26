@@ -58,10 +58,12 @@ public:
 	void updateTurn(const Turn& oldturn, const Turn& newturn);
 
 	// Show
-	void printStaff() const;
-	void printPatients() const;
-	void printRooms() const;
-	void printTurns() const;
+	void printStaff(ostream & os) const;
+	void printPatients(ostream & os) const;
+	void printRooms(ostream & os) const;
+	void printTurns(ostream & os) const;
+
+	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
 	void setClinicManager(ClinicManager* new_manager);
 };

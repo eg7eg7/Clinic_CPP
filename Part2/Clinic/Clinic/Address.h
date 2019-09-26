@@ -42,7 +42,7 @@ public:
 	void setHouseNum(int houseNum) { this->houseNum = houseNum; }
 
 	// Show
-	void print() const;
+	friend ostream& operator<<(ostream& os, const Address& add);
 };
 
 #endif // __ADDRESS_H

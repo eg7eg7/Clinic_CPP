@@ -15,7 +15,9 @@ const Doctor& Doctor::operator=(const Doctor& doctor)
 	return *this;
 }
 
-void Doctor::print() const
+
+void Doctor::toOs(ostream & os) const
 {
-	cout << "Doctor profession : " << profession << endl;
+	os << "**Doctor**" << endl
+		<< "Profession: " << profession << endl;
 }

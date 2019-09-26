@@ -57,6 +57,7 @@ int main()
 	Address address_6("Israel", "Herzliya", "bazel", 45, 1, 45);
 	Address address_7("Israel", "Tel-Aviv", "dizengoff", 28, 19, 48);
 
+
 	// Persons
 	Person person_1(1000, "Doctor_1", "054-452-123", 34, address_1, Person::Male);
 	Person person_2(2000, "Doctor_2", "053-279-9012", 53,address_2, Person::Female);
@@ -110,31 +111,20 @@ int main()
 	clinic.addTurn(turn_2);
 	clinic.addTurn(turn_3);
 
-	// Print clinic
-	clinic.printStaff();
-	clinic.printPatients();
-	clinic.printTurns();
+	cout << doctor_1;
 
 	clinic.updateTurn(turn_1, turn_4);
 	clinic.removeTurn(turn_3);
 	clinic.updateTurn(turn_1, turn_4);
 
-	clinic.printTurns();
-
 	clinic.removePatient(patient_2);
-	clinic.printPatients();
-	clinic.printTurns();
 
 	clinic.removeRoom(room_5);
-	clinic.printRooms();
 
 	clinic.removeStaff(secretary_1);
-	clinic.printStaff();
 
 	clinic.removeRoom(room_5);
-	clinic.printRooms();
 
-	
 	return 0;
 }
 //Add virtual to destructors and functions?
@@ -160,3 +150,9 @@ int main()
 //check TODO
 
 //Clinic should create turns
+
+//remove old prints
+
+//add override to toOs
+
+//add getters to clinic

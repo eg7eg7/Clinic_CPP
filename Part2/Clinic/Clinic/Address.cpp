@@ -62,7 +62,10 @@ void Address::setStreet(const char * street)
 	this->street = strdup(street);
 }
 
-void Address::print() const
+ostream & operator<<(ostream & os, const Address & add)
 {
-	cout << "in Address" << endl;
+	os << "Address : \n Country: " << add.getCountry() << " \n City: " << add.getCity()
+		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNO() << " Floor num: " <<
+		add.getFloor() << " \n House num: " << add.getHouseNO() << endl;
+	return os;
 }

@@ -9,3 +9,8 @@ void ClinicManager::setClinic(Clinic* new_clinic)
 			clinic->setClinicManager(this);
 	}
 }
+
+void ClinicManager::toOs(ostream & os) const
+{
+	os << "**ClinicManager**" << endl;
+}

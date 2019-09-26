@@ -6,12 +6,12 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 	acceptHoursFrom = acceptHoursF;
 	acceptHoursTo = acceptHoursT;
 	this->room = &room;
-	turns = new Turn*[TURN_SIZE];
-	for (int i = 0; i < TURN_SIZE; i++)
-	{
-		turns[i] = nullptr;
-	}
-	turnsNumber = 0;
+	//turns = new Turn*[TURN_SIZE];
+	//for (int i = 0; i < TURN_SIZE; i++)
+	//{
+	//	turns[i] = nullptr;
+	//}
+	//turnsNumber = 0;
 }
 
 MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
@@ -19,17 +19,17 @@ MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 	this->room = other.room;
 	acceptHoursFrom = other.acceptHoursFrom;
 	acceptHoursTo = other.acceptHoursTo;
-	turnsNumber = other.turnsNumber;
-	turns = new Turn*[TURN_SIZE];
-	for (int i = 0; i < turnsNumber; i++)
-	{
-		turns[i] = other.turns[i];
-	}
+	//turnsNumber = other.turnsNumber;
+	//turns = new Turn*[TURN_SIZE];
+	//for (int i = 0; i < turnsNumber; i++)
+	//{
+	//	turns[i] = other.turns[i];
+	//}
 }
 
 MedicalStaff::~MedicalStaff()
 {
-	delete[]turns;
+	//delete[]turns;
 }
 
 void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
@@ -38,15 +38,15 @@ void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	{
 		acceptHoursFrom = medicalstaff.acceptHoursFrom;
 		acceptHoursTo = medicalstaff.acceptHoursTo;
-		turnsNumber = medicalstaff.turnsNumber;
-		turns = new Turn*[TURN_SIZE];
-		for (int i = 0; i < turnsNumber; i++)
-		{
-			turns[i] = medicalstaff.turns[i];
-		}
+		//turnsNumber = medicalstaff.turnsNumber;
+		//turns = new Turn*[TURN_SIZE];
+		//for (int i = 0; i < turnsNumber; i++)
+		//{
+		//	turns[i] = medicalstaff.turns[i];
+		//}
 	}
 }
-
+/*
 void MedicalStaff::addTurn(Turn& turn)
 {
 	if (turnsNumber < TURN_SIZE)
@@ -80,8 +80,12 @@ Turn* MedicalStaff::operator[](int index)
 {
 	return turns[index];
 }
-
-void MedicalStaff::print() const
+*/
+void MedicalStaff::toOs(ostream & os) const
 {
-	cout << "in MedicalStaff" << endl;
+	os << "**Medical Staff**" << endl << "Accepting from " << acceptHoursFrom << " to " <<
+		acceptHoursTo << " in room " <<
+		""//*room
+		<< endl;
+	
 }

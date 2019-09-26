@@ -30,13 +30,18 @@ public:
 	//void operator=(const Turn& turn);
 
 	// Methods
+	const long getStartTime() const { return startTime; } ;
+	const long getDuration() const { return duration; } ;
+	const MedicalStaff* getMedicalStaff() const { return medicalStaff; };
+	const Patient* getPatient() const { return patient; };
+
 	void changeStartTime(long startTime);
 	void changeDuration(long duration);
 	void changeMedicalStaff(MedicalStaff* medicalStaff);
 	void changePatient(Patient* patient);
 
 	// Show
-	void print() const;
+	friend ostream & operator<<(ostream & os, const Turn & turn);
 };
 
 #endif // !__TURN_H

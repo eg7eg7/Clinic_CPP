@@ -1,6 +1,7 @@
 #include "Staff.h"
 
-void Staff::print() const
+
+void Staff::toOs(ostream & os) const
 {
-	cout << "in Staff" << endl;
+	os << "**Staff**" << endl << "Extension: " << extension << endl << "Salary : " << salary << endl;
 }

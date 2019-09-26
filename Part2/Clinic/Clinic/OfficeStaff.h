@@ -13,8 +13,8 @@ class OfficeStaff : virtual public Staff
 {
 private:
 
-	Patient** patients;
-	int patientNumber;
+	//Patient** patients;
+	//int patientNumber;
 	Room* room;
 
 public:
@@ -25,11 +25,11 @@ public:
 	//void operator=(const OfficeStaff& officestaff);
 
 	// Methods
-	void addPatient(Patient& patient);
-	void removePatient(const Patient& patient);
+	//void addPatient(Patient& patient);
+	//void removePatient(const Patient& patient);
 
 	// Show
-	void print() const;
+	void OfficeStaff::toOs(ostream & os) const;
 };
 
 #endif // !__OFFICESTAFF_H

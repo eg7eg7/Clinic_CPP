@@ -168,24 +168,28 @@ void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
 	//TODO
 }
 
-void Clinic::printStaff() const
+void Clinic::printStaff(ostream & os) const
 {
-	cout << "Printing staff.." << endl;
+	for(int i=0;i<numStaff;i++)
+		os << *(staff[i]) << endl;
 }
 
-void Clinic::printPatients() const
+void Clinic::printPatients(ostream & os) const
 {
-	cout << "Printing patients.." << endl;
+	for (int i = 0; i < numPatients; i++)
+		os << *(patients[i]) << endl;
 }
 
-void Clinic::printRooms() const
+void Clinic::printRooms(ostream & os) const
 {
-	cout << "Printing rooms.." << endl;
+	for (int i = 0; i < numRooms; i++)
+		os << *(rooms[i]) << endl;
 }
 
-void Clinic::printTurns() const
+void Clinic::printTurns(ostream & os) const
 {
-	cout << "Printing turns.." << endl;
+	for (int i = 0; i < numTurns; i++)
+		os << *(turns[i]) << endl;
 }
 
 void Clinic::setClinicManager(ClinicManager * new_manager)
@@ -199,4 +203,16 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 		if (manager != nullptr)
 			manager->setClinic(this);
 	}
+}
+
+ostream & operator<<(ostream & os, const Clinic & clinic)
+{
+	os << "**Clinic**" << endl;
+	//os << "name : " << clinic.getName()
+	clinic.printStaff(os);
+	clinic.printPatients(os);
+	clinic.printRooms(os);
+	clinic.printTurns(os);
+
+	return os;
 }

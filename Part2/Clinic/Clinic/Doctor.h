@@ -28,7 +28,9 @@ public:
 	const char* getProfession() const { return profession; }
 
 	// Show
-	void print() const;
+	
+	void toOs(ostream & os) const;
+
 };
 
 #endif // !__DOCTOR_H

@@ -38,7 +38,13 @@ void Turn::changePatient(Patient* patient)
 	this->patient = patient;
 }
 
-void Turn::print() const
+
+ostream & operator<<(ostream & os, const Turn & turn)
 {
-	cout << "printing Turn" << endl;
+	os << "Turn beginning at: " << turn.getStartTime() << endl <<
+		"Duration: " << turn.getDuration() << endl << "for patient:" << 
+		""//*(turn.getPatient())
+		<< endl << "with medical Staff: " << endl << *(turn.getMedicalStaff());
+	return os;
 }
+

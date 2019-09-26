@@ -25,7 +25,7 @@ public:
 	void setSalary(long salary) { this->salary = salary; }
 
 	// Show
-	void print() const;
+	virtual void toOs(ostream& os) const;
 };
 
 #endif // !__STAFF_H

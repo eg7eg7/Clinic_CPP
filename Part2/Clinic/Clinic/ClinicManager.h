@@ -28,6 +28,9 @@ public:
 	// Method
 	void fireStaff(const Staff& staff);
 	void hireStaff(const Staff& staff);
+
+	//show
+	void toOs(ostream & os) const override;
 };
 
 #endif // !__CLINICMANAGER_H

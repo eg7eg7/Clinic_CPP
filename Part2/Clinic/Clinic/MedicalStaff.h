@@ -18,8 +18,8 @@ private:
 	long acceptHoursFrom;
 	long acceptHoursTo;
 	Room* room;
-	Turn** turns;
-	int turnsNumber;
+	//Turn** turns;
+	//int turnsNumber;
 
 public:
 	MedicalStaff(const Person& person, long extension, long salary, long acceptHoursFrom, long acceptHoursTo, Room& room);
@@ -31,12 +31,13 @@ public:
 	// Methods
 	long getNextFreeTime() const { //TODO
 	};
-	void addTurn(Turn& turn);
-	void deleteTurn(const Turn& turn);
+	//void addTurn(Turn& turn);
+	//void deleteTurn(const Turn& turn);
 
-	Turn* operator[](int index);
+	//Turn* operator[](int index);
 	// Show
-	void print() const;
+	//friend ostream & operator<<(ostream & os, const MedicalStaff & staff);
+	virtual void toOs(ostream& os) const;
 };
 
 #endif // !__MEDICALSTAFF_H

@@ -35,7 +35,30 @@ void Person::setAddress(Address& address)
 {
 	this->address = address;
 }
-void Person::print() const
+void Person::toOs(ostream & os) const
 {
-	cout << "in Person" << endl;
+	//empty
+}
+const char * Person::displayGender() const
+{
+	switch (gender) {
+	case Person::Male:
+		return "Male";
+		break;
+	case Person::Female:
+		return "Female";
+		break;
+	default:
+		return nullptr;
+	}
+}
+ostream & operator<<(ostream & os, const Person & person)
+{
+	os << "**Person**" << endl << person.getName() << " - id" << person.getId() << endl
+		<< " Age " << person.getAge() << ", "
+		<< person.displayGender() << endl
+		<< person.getPhone() << endl
+		<< "lives in" << person.getAddress() << endl;
+	person.toOs(os);
+	return os;
 }

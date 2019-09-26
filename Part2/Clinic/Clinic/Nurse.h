@@ -29,7 +29,8 @@ public:
 	int getNumServices() const { return num_services; };
 
 	// Show
-	void print() const;
+	
+	void Nurse::toOs(ostream & os) const;
 };
 
 #endif // !__NURSE_H
