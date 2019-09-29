@@ -1,6 +1,5 @@
 #ifndef __CLINICMANAGER_H
 #define __CLINICMANAGER_H
-#pragma message("Adding ClinicManager")
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;

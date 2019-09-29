@@ -115,7 +115,9 @@ int main()
 	clinic.updateTurn(turn_1, turn_4);
 	clinic.removeTurn(turn_3);
 	clinic.updateTurn(turn_1, turn_4);
+	
 	cout << clinic << endl;
+	
 	clinic.removePatient(patient_2);
 
 	clinic.removeRoom(room_5);
@@ -124,6 +126,7 @@ int main()
 
 	clinic.removeRoom(room_5);
 
+	
 	return 0;
 }
 //Add virtual to destructors and functions?

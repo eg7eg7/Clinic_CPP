@@ -1,6 +1,5 @@
 #ifndef __PERSON_H
 #define __PERSON_H
-#pragma message("Adding Person")
 
 #pragma warning(disable: 4996)
 #include <iostream>

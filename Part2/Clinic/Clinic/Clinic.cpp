@@ -64,9 +64,10 @@ void Clinic::addStaff(Staff & staff)
 			if (this->staff[i] == nullptr)
 			{
 				this->staff[i] = &staff;
+				++numStaff;
+				break;
 			}
 		}
-		++numStaff;
 	}
 }
 
@@ -78,6 +79,7 @@ void Clinic::removeStaff(const Staff & staff)
 		{
 			this->staff[i] = nullptr;
 			--numStaff;
+			break;
 		}
 	}
 }
@@ -91,9 +93,11 @@ void Clinic::addPatient(Patient & patient)
 			if (this->patients[i] == nullptr)
 			{
 				this->patients[i] = &patient;
+				++numPatients;
+				break;
 			}
 		}
-		++numPatients;
+
 	}
 }
 
@@ -105,6 +109,7 @@ void Clinic::removePatient(const Patient & patient)
 		{
 			patients[i] = nullptr;
 			--numPatients;
+			break;
 		}
 	}
 }
@@ -117,10 +122,11 @@ void Clinic::addRoom(Room & room)
 		{
 			if (this->rooms[i] == nullptr)
 			{
+				++numRooms;
 				this->rooms[i] = &room;
+				break;
 			}
 		}
-		++numRooms;
 	}
 }
 
@@ -132,6 +138,7 @@ void Clinic::removeRoom(const Room & room)
 		{
 			rooms[i] = nullptr;
 			--numRooms;
+			break;
 		}
 	}
 }
@@ -145,9 +152,10 @@ void Clinic::addTurn(Turn & turn)
 			if (this->turns[i] == nullptr)
 			{
 				this->turns[i] = &turn;
+				++numTurns;
+				break;
 			}
 		}
-		++numTurns;
 	}
 }
 
@@ -159,6 +167,7 @@ void Clinic::removeTurn(const Turn & turn)
 		{
 			turns[i] = nullptr;
 			--numTurns;
+			break;
 		}
 	}
 }
@@ -170,35 +179,39 @@ void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
 
 void Clinic::printStaff(ostream & os) const
 {
-	os << endl <<"************ Printing staff at the clinic ****************" << endl;
-	for(int i=0;i<numStaff;i++)
-		os << *(staff[i]) << endl;
+	os << endl << "************ Printing staff at the clinic ****************" << numStaff << endl;
+	for (int i = 0; i < numStaff; i++)
+		if (&((*staff)[i]) != nullptr)
+			os << (*staff)[i] << endl;
 }
 
 void Clinic::printPatients(ostream & os) const
 {
-	os << endl <<"************ Printing patients at the clinic ****************" << endl;
+	os << endl << "************ Printing patients at the clinic ****************" << numPatients << endl;
 	for (int i = 0; i < numPatients; i++)
-		os << *(patients[i]) << endl;
+		if (&((*patients)[i]) != nullptr)
+			os << (*patients)[i] << endl;
 }
 
 void Clinic::printRooms(ostream & os) const
 {
-	os << endl << "************ Printing rooms at the clinic ****************" << endl;
+	os << endl << "************ Printing rooms at the clinic ****************" << numRooms << endl;
 
 	for (int i = 0; i < numRooms; i++)
-		os << *(rooms[i]) << endl;
+		if (&((*rooms)[i]) != nullptr)
+			os << (*rooms)[i] << endl;
 }
 
 void Clinic::printTurns(ostream & os) const
 {
-	os << endl << "************ Printing turns at the clinic ****************" << endl;
+	os << endl << "************ Printing turns at the clinic ****************" << numTurns << endl;
 
 	for (int i = 0; i < numTurns; i++)
 	{
-		os << (*(turns[i])) << endl;
+		if (&((*(turns))[i]) != nullptr)
+			os << (*(turns))[i] << endl;
 	}
-		
+
 }
 
 void Clinic::setClinicManager(ClinicManager * new_manager)
@@ -226,9 +239,9 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	os << clinic.getAddress() << endl;
 	os << " manager is " << clinic.getManager()->getName() << endl;
 
-	clinic.printStaff(os);
-	clinic.printPatients(os);
 	clinic.printRooms(os);
+	clinic.printPatients(os);
+	clinic.printStaff(os);
 	clinic.printTurns(os);
 
 	return os;

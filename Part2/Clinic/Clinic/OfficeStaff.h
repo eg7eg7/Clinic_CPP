@@ -1,6 +1,5 @@
 #ifndef __OFFICESTAFF_H
 #define __OFFICESTAFF_H
-#pragma message("Adding OfficeStaff")
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;

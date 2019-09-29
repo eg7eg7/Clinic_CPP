@@ -1,6 +1,5 @@
 #ifndef __ROOM_H
 #define __ROOM_H
-#pragma message("Adding Room")
 
 #pragma warning(disable: 4996)
 #include <iostream>
@@ -31,6 +30,7 @@ public:
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Room & room);
+
 };
 
 #endif // !__ROOM_H

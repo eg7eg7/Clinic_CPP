@@ -2,7 +2,15 @@
 
 OfficeStaff::OfficeStaff(const Staff & staff, Room & room) : Staff(staff)
 {
+	//if (!room.isOccupied())
+	//{
 	this->room = &room;
+	this->room->setOccupied(true);
+
+	//}
+	//else
+	//	this->room = nullptr;
+
 	//this->patientNumber = 0;
 	//patients = new Patient*[MAX_PATIENT_SIZE];
 	//for (int i = 0; i < MAX_PATIENT_SIZE; i++)
@@ -22,6 +30,8 @@ OfficeStaff::OfficeStaff(const OfficeStaff & other) : Staff(other)
 
 OfficeStaff::~OfficeStaff()
 {
+	//if (room != nullptr)
+	room->setOccupied(false);
 	//delete[]patients;
 }
 /*

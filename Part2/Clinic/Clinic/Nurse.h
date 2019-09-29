@@ -1,6 +1,5 @@
 #ifndef __NURSE_H
 #define __NURSE_H
-#pragma message("Adding Nurse")
 #pragma warning(disable: 4996)
 #include <iostream>
 #include <string.h>

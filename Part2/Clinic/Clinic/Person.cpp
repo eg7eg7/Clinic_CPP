@@ -54,7 +54,7 @@ const char * Person::displayGender() const
 }
 ostream & operator<<(ostream & os, const Person & person)
 {
-	os << "**Person**" << endl << person.getName() << " - id" << person.getId() << endl
+	os << "**Person**" << endl << person.getName() << " - id " << person.getId() << endl
 		<< " Age " << person.getAge() << ", "
 		<< person.displayGender() << endl
 		<< " Phone - "<<person.getPhone() << endl

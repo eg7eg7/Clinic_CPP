@@ -5,7 +5,15 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 {
 	acceptHoursFrom = acceptHoursF;
 	acceptHoursTo = acceptHoursT;
-	this->room = &room;
+	//if (!room.isOccupied())
+	//{
+		this->room = &room;
+		(this->room)->setOccupied(true);
+
+	//}
+	//else
+	//	this->room = nullptr;
+
 	//turns = new Turn*[TURN_SIZE];
 	//for (int i = 0; i < TURN_SIZE; i++)
 	//{
@@ -29,6 +37,8 @@ MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 
 MedicalStaff::~MedicalStaff()
 {
+	//if (room != nullptr)
+		room->setOccupied(false);
 	//delete[]turns;
 }
 

@@ -1,6 +1,5 @@
 #ifndef __PATIENT_H
 #define __PATIENT_H
-#pragma message("Adding Patient")
 
 #pragma warning(disable: 4996)
 #include <iostream>
@@ -16,7 +15,7 @@ class Patient : public Person
 {
 private:
 
-	Turn** turns;
+	//Turn** turns;
 	bool clinicMember;
 	Doctor* personalDoctor;
 	int numTurns;
@@ -32,9 +31,9 @@ public:
 	void answerCall();
 	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);
-	int getNumTurns() { return numTurns; };
+	//int getNumTurns() { return numTurns; };
 	// Show
-	void print() const;
+	void toOs(ostream & os) const override;
 };
 
 #endif // !__PATIENT_H
