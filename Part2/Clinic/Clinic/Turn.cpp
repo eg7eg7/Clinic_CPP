@@ -41,10 +41,9 @@ void Turn::changePatient(Patient* patient)
 
 ostream & operator<<(ostream & os, const Turn & turn)
 {
-	os << "Turn beginning at: " << turn.getStartTime() << endl <<
-		"Duration: " << turn.getDuration() << endl << "for patient:" << 
-		""//*(turn.getPatient())
-		<< endl << "with medical Staff: " << endl << *(turn.getMedicalStaff());
+	os << endl <<"Turn beginning at: " << turn.getStartTime() << endl <<
+		"Duration: " << turn.getDuration() << endl << "for patient:" << (turn.getPatient())->getName()
+		<< endl << "with medical Staff: " << (turn.getMedicalStaff())->getName();
 	return os;
 }
 

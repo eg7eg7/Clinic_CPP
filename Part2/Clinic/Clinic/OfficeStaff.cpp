@@ -57,6 +57,7 @@ void OfficeStaff::removePatient(const Patient & patient)
 */
 void OfficeStaff::toOs(ostream & os) const
 {
+	Staff::toOs(os);
 	os << "**OfficeStaff**" << endl
-		<< "is located at " << room;
+		<< "is located at " << *room;
 }

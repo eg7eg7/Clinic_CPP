@@ -84,13 +84,13 @@ int main()
 
 	ClinicManager manager(OfficeStaff(Staff(person_7, 12418, 20000), room_7), Doctor(MedicalStaff(person_7, 12412, 10000, 800, 1400, room_7), "oncologist"));
 	
+	clinic.setClinicManager(&manager);
 	clinic.addStaff(doctor_1);
 	clinic.addStaff(doctor_2);
 	clinic.addStaff(nurse_1);
 	clinic.addStaff(nurse_2);
 	clinic.addStaff(secretary_1);
 	clinic.addStaff(secretary_2);
-	clinic.addStaff(manager);
 
 	// Patients
 	Patient patient_1(person_8, doctor_1, true);
@@ -111,12 +111,11 @@ int main()
 	clinic.addTurn(turn_2);
 	clinic.addTurn(turn_3);
 
-	cout << doctor_1;
-
+	
 	clinic.updateTurn(turn_1, turn_4);
 	clinic.removeTurn(turn_3);
 	clinic.updateTurn(turn_1, turn_4);
-
+	cout << clinic << endl;
 	clinic.removePatient(patient_2);
 
 	clinic.removeRoom(room_5);

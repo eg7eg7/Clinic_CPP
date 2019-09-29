@@ -57,8 +57,8 @@ ostream & operator<<(ostream & os, const Person & person)
 	os << "**Person**" << endl << person.getName() << " - id" << person.getId() << endl
 		<< " Age " << person.getAge() << ", "
 		<< person.displayGender() << endl
-		<< person.getPhone() << endl
-		<< "lives in" << person.getAddress() << endl;
+		<< " Phone - "<<person.getPhone() << endl
+		<< person.getAddress() << endl;
 	person.toOs(os);
 	return os;
 }

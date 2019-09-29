@@ -30,7 +30,7 @@ public:
 	void setOccupied(bool occupied) { this->occupied = occupied; }
 
 	// Show
-	void print() const;
+	friend ostream & operator<<(ostream & os, const Room & room);
 };
 
 #endif // !__ROOM_H

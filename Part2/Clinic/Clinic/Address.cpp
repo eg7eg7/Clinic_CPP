@@ -64,7 +64,7 @@ void Address::setStreet(const char * street)
 
 ostream & operator<<(ostream & os, const Address & add)
 {
-	os << "Address : \n Country: " << add.getCountry() << " \n City: " << add.getCity()
+	os << endl <<"**Address**\n Country: " << add.getCountry() << " \n City: " << add.getCity()
 		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNO() << " Floor num: " <<
 		add.getFloor() << " \n House num: " << add.getHouseNO() << endl;
 	return os;

@@ -12,5 +12,7 @@ void ClinicManager::setClinic(Clinic* new_clinic)
 
 void ClinicManager::toOs(ostream & os) const
 {
+	Doctor::toOs(os);
+	OfficeStaff::toOs(os);
 	os << "**ClinicManager**" << endl;
 }

@@ -50,6 +50,7 @@ void Nurse::addServices(const char* service)
 
 void Nurse::toOs(ostream & os) const
 {
+	MedicalStaff::toOs(os);
 	os << "**Nurse**" << endl
 		<< "Can do the following: ";
 	for (int i = 0; i < num_services; i++)

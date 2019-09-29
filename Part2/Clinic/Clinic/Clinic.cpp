@@ -170,26 +170,35 @@ void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
 
 void Clinic::printStaff(ostream & os) const
 {
+	os << endl <<"************ Printing staff at the clinic ****************" << endl;
 	for(int i=0;i<numStaff;i++)
 		os << *(staff[i]) << endl;
 }
 
 void Clinic::printPatients(ostream & os) const
 {
+	os << endl <<"************ Printing patients at the clinic ****************" << endl;
 	for (int i = 0; i < numPatients; i++)
 		os << *(patients[i]) << endl;
 }
 
 void Clinic::printRooms(ostream & os) const
 {
+	os << endl << "************ Printing rooms at the clinic ****************" << endl;
+
 	for (int i = 0; i < numRooms; i++)
 		os << *(rooms[i]) << endl;
 }
 
 void Clinic::printTurns(ostream & os) const
 {
+	os << endl << "************ Printing turns at the clinic ****************" << endl;
+
 	for (int i = 0; i < numTurns; i++)
-		os << *(turns[i]) << endl;
+	{
+		os << (*(turns[i])) << endl;
+	}
+		
 }
 
 void Clinic::setClinicManager(ClinicManager * new_manager)
@@ -197,18 +206,26 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 	if (manager != new_manager)
 	{
 		if (manager != nullptr)
+		{
 			manager->setClinic(nullptr);
-
+			removeStaff(*manager);
+		}
 		manager = new_manager;
 		if (manager != nullptr)
+		{
 			manager->setClinic(this);
+			addStaff(*new_manager);
+		}
 	}
 }
 
 ostream & operator<<(ostream & os, const Clinic & clinic)
 {
 	os << "**Clinic**" << endl;
-	//os << "name : " << clinic.getName()
+	os << " Clinic name : " << clinic.getName() << endl;
+	os << clinic.getAddress() << endl;
+	os << " manager is " << clinic.getManager()->getName() << endl;
+
 	clinic.printStaff(os);
 	clinic.printPatients(os);
 	clinic.printRooms(os);

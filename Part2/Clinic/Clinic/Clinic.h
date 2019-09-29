@@ -8,7 +8,7 @@
 #include "ClinicManager.h"
 #include "Room.h"
 #include "Patient.h"
-
+#include "Turn.h"
 using namespace std;
 
 const int MAX_NUM_ROOMS = 20;
@@ -56,6 +56,10 @@ public:
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
 	void updateTurn(const Turn& oldturn, const Turn& newturn);
+
+	const char* getName() const { return name; };
+	const Address& getAddress() const { return address; };
+	const ClinicManager* getManager() const { return manager; };
 
 	// Show
 	void printStaff(ostream & os) const;

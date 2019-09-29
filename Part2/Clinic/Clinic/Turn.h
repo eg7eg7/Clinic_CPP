@@ -8,7 +8,6 @@
 using namespace std;
 #include "Patient.h"
 #include "MedicalStaff.h"
-
 class MedicalStaff;
 class Patient;
 
