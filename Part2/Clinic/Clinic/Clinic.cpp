@@ -179,37 +179,52 @@ void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
 
 void Clinic::printStaff(ostream & os) const
 {
+	int printed = 0;
 	os << endl << "************ Printing staff at the clinic ****************" << numStaff << endl;
-	for (int i = 0; i < numStaff; i++)
-		if (&((*staff)[i]) != nullptr)
-			os << (*staff)[i] << endl;
+	for (int i = 0; i < MAX_NUM_STAFF; i++)
+		if (&(*(staff[i])) != nullptr && printed < numStaff)
+		{
+			os << *(staff[i]) << endl;
+			++printed;
+		}
+
 }
 
 void Clinic::printPatients(ostream & os) const
 {
+	int printed = 0;
 	os << endl << "************ Printing patients at the clinic ****************" << numPatients << endl;
-	for (int i = 0; i < numPatients; i++)
-		if (&((*patients)[i]) != nullptr)
-			os << (*patients)[i] << endl;
+	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
+		if (&(*(patients[i])) != nullptr && printed < numPatients)
+		{
+			os << *(patients[i]) << endl;
+			++printed;
+		}
 }
 
 void Clinic::printRooms(ostream & os) const
 {
 	os << endl << "************ Printing rooms at the clinic ****************" << numRooms << endl;
-
-	for (int i = 0; i < numRooms; i++)
-		if (&((*rooms)[i]) != nullptr)
-			os << (*rooms)[i] << endl;
+	int printed = 0;
+	for (int i = 0; i < MAX_NUM_ROOMS; i++)
+		if (&(*(rooms[i])) != nullptr && printed < numRooms)
+		{
+			os << *(rooms[i]) << endl;
+			++printed;
+		}
 }
 
 void Clinic::printTurns(ostream & os) const
 {
 	os << endl << "************ Printing turns at the clinic ****************" << numTurns << endl;
-
-	for (int i = 0; i < numTurns; i++)
+	int printed = 0;
+	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
-		if (&((*(turns))[i]) != nullptr)
-			os << (*(turns))[i] << endl;
+		if (&(*(turns[i])) != nullptr && printed < numTurns)
+		{
+			os << *(turns[i]) << endl;
+			++printed;
+		}
 	}
 
 }
@@ -239,10 +254,10 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	os << clinic.getAddress() << endl;
 	os << " manager is " << clinic.getManager()->getName() << endl;
 
+	clinic.printTurns(os);
 	clinic.printRooms(os);
 	clinic.printPatients(os);
 	clinic.printStaff(os);
-	clinic.printTurns(os);
 
 	return os;
 }
