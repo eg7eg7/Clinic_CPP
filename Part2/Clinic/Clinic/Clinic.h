@@ -45,9 +45,10 @@ public:
 	void addStaff(Staff& staff);
 	void removeStaff(const Staff& staff);
 
-	void addPatient(Patient& patient);
+	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
 	void callPatient(const Patient& patient);
+	void createTurn(const Patient& patient);
 
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);

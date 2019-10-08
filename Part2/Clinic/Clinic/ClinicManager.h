@@ -14,7 +14,7 @@ class ClinicManager : public OfficeStaff, public Doctor
 {
 private:
 	Clinic* clinic;
-
+	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 public:
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor
 	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { this->clinic = other.clinic; }; // copy constructor
@@ -25,8 +25,8 @@ public:
 	void setClinic(Clinic* new_clinic);
 
 	// Method
-	void fireStaff(const Staff& staff);
-	void hireStaff(const Staff& staff);
+	void fireStaff(const Staff& staff) const;
+	void hireStaff(Staff& staff) const;
 
 	//show
 	void toOs(ostream & os) const override;

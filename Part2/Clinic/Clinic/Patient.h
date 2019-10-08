@@ -16,12 +16,11 @@ class Patient : public Person
 private:
 
 	//Turn** turns;
-	bool clinicMember;
 	Doctor* personalDoctor;
 	int numTurns;
 
 public:
-	Patient(const Person& person, Doctor& personalDoctor, bool clinicMember); // Constructor
+	Patient(const Person& person, Doctor& personalDoctor); // Constructor
 	Patient(Patient& other); // copy constructor
 	virtual ~Patient();
 

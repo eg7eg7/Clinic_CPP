@@ -9,12 +9,15 @@ using namespace std;
 class Secretary : public OfficeStaff
 {
 private:
+	Secretary(OfficeStaff&& officeStaff);	// move ctor
 
 public:
-	Secretary(const OfficeStaff& officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};	// Constructor
+	Secretary(const OfficeStaff& officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};	// copy ctor
 	virtual ~Secretary() {};
 	// Methods
 	void callPatient();
+
+	virtual void toOs(ostream& os) const override;
 };
 
 #endif // !__SECRETARY_H

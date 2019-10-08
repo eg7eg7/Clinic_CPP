@@ -12,6 +12,8 @@ class Nurse : public MedicalStaff
 private:
 	char** services;
 	int num_services;
+	Nurse(Nurse&& other); // move constructor
+	Nurse(MedicalStaff&& medicalStaff, const char* service); //move ctor
 public:
 	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
@@ -29,7 +31,7 @@ public:
 
 	// Show
 	
-	void Nurse::toOs(ostream & os) const;
+	void Nurse::toOs(ostream & os) const override;
 };
 
 #endif // !__NURSE_H

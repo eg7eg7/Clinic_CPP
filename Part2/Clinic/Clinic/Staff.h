@@ -15,6 +15,7 @@ private:
 public:
 	Staff(const Person& person, long extension, long salary) : Person(person), extension(extension), salary(salary) {};	//Constructor
 	Staff(const Staff& staff) : Person(staff), extension(staff.extension), salary(staff.salary) {};
+	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary) {};
 	virtual ~Staff() {};
 	// Getters
 	long getExtension() const { return extension; }
@@ -24,7 +25,7 @@ public:
 	void setSalary(long salary) { this->salary = salary; }
 
 	// Show
-	virtual void toOs(ostream& os) const;
+	virtual void toOs(ostream& os) const override;
 };
 
 #endif // !__STAFF_H

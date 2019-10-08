@@ -114,6 +114,11 @@ void Clinic::removePatient(const Patient & patient)
 	}
 }
 
+void Clinic::createTurn(const Patient & patient)
+{
+	//addTurn()
+}
+
 void Clinic::addRoom(Room & room)
 {
 	if (numRooms < MAX_NUM_ROOMS)
@@ -180,11 +185,13 @@ void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
 void Clinic::printStaff(ostream & os) const
 {
 	int printed = 0;
-	os << endl << "************ Printing staff at the clinic ****************" << numStaff << endl;
+	os << endl << "************ Printing staff at the clinic ****************" << endl;
 	for (int i = 0; i < MAX_NUM_STAFF; i++)
 		if (&(*(staff[i])) != nullptr && printed < numStaff)
 		{
+			
 			os << *(staff[i]) << endl;
+			os << "****************************************" << endl;
 			++printed;
 		}
 
@@ -193,7 +200,7 @@ void Clinic::printStaff(ostream & os) const
 void Clinic::printPatients(ostream & os) const
 {
 	int printed = 0;
-	os << endl << "************ Printing patients at the clinic ****************" << numPatients << endl;
+	os << endl << "************ Printing patients at the clinic ****************" << endl;
 	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
 		if (&(*(patients[i])) != nullptr && printed < numPatients)
 		{
@@ -204,7 +211,7 @@ void Clinic::printPatients(ostream & os) const
 
 void Clinic::printRooms(ostream & os) const
 {
-	os << endl << "************ Printing rooms at the clinic ****************" << numRooms << endl;
+	os << endl << "************ Printing rooms at the clinic ****************" << endl;
 	int printed = 0;
 	for (int i = 0; i < MAX_NUM_ROOMS; i++)
 		if (&(*(rooms[i])) != nullptr && printed < numRooms)
@@ -216,7 +223,7 @@ void Clinic::printRooms(ostream & os) const
 
 void Clinic::printTurns(ostream & os) const
 {
-	os << endl << "************ Printing turns at the clinic ****************" << numTurns << endl;
+	os << endl << "************ Printing turns at the clinic ****************" << endl;
 	int printed = 0;
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
@@ -252,7 +259,8 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	os << "**Clinic**" << endl;
 	os << " Clinic name : " << clinic.getName() << endl;
 	os << clinic.getAddress() << endl;
-	os << " manager is " << clinic.getManager()->getName() << endl;
+	if(clinic.getManager() !=nullptr)
+		os << " manager is " << clinic.getManager()->getName() << endl;
 
 	clinic.printTurns(os);
 	clinic.printRooms(os);

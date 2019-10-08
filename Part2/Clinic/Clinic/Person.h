@@ -27,6 +27,7 @@ private:
 public:
 	Person(int id, const char* name, const char* phone, int age, const Address& address, const eGender& gender);	// Constructor
 	Person(const Person& other); // copy constructor
+	Person(Person&& other); // move constructor
 	virtual ~Person();
 
 	// Getters

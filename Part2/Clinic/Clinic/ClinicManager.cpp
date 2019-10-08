@@ -10,9 +10,26 @@ void ClinicManager::setClinic(Clinic* new_clinic)
 	}
 }
 
+void ClinicManager::fireStaff(const Staff & staff) const
+{
+	if (clinic != nullptr)
+	{
+		clinic->removeStaff(staff);
+	}
+}
+
+void ClinicManager::hireStaff(Staff & staff) const
+{
+	if (clinic != nullptr)
+	{
+		clinic->addStaff(staff);
+	}
+}
+
 void ClinicManager::toOs(ostream & os) const
 {
-	Doctor::toOs(os);
-	OfficeStaff::toOs(os);
+	
 	os << "**ClinicManager**" << endl;
+	os << "**OfficeStaff**" << endl;
+	Doctor::toOs(os);
 }

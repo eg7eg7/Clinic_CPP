@@ -20,6 +20,18 @@ Person::Person(const Person & other) : address(other.address)
 	this->gender = other.gender;
 }
 
+Person::Person(Person && other) : address(other.address)
+{
+	this->id = other.id;
+	this->name = other.name;
+	this->phone = other.phone;
+	this->age = other.age;
+	this->gender = other.gender;
+
+	other.name = nullptr;
+	other.phone = nullptr;
+}
+
 Person::~Person()
 {
 	delete[]name;
@@ -37,7 +49,11 @@ void Person::setAddress(Address& address)
 }
 void Person::toOs(ostream & os) const
 {
-	//empty
+	os  << " " <<getName() << " - id " << getId() << endl
+		<< " Age " << getAge() << ", "
+		<< displayGender() << endl
+		<< " Phone - " << getPhone() << endl
+		<< getAddress() << endl;
 }
 const char * Person::displayGender() const
 {
@@ -54,11 +70,7 @@ const char * Person::displayGender() const
 }
 ostream & operator<<(ostream & os, const Person & person)
 {
-	os << "**Person**" << endl << person.getName() << " - id " << person.getId() << endl
-		<< " Age " << person.getAge() << ", "
-		<< person.displayGender() << endl
-		<< " Phone - "<<person.getPhone() << endl
-		<< person.getAddress() << endl;
+	
 	person.toOs(os);
 	return os;
 }

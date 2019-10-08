@@ -36,7 +36,7 @@ public:
 	//Turn* operator[](int index);
 	// Show
 	//friend ostream & operator<<(ostream & os, const MedicalStaff & staff);
-	virtual void toOs(ostream& os) const;
+	virtual void toOs(ostream& os) const override;
 };
 
 #endif // !__MEDICALSTAFF_H

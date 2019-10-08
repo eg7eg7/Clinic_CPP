@@ -1,12 +1,12 @@
 #include "Patient.h"
 
-Patient::Patient(const Person & person, Doctor& personalDoctor, bool clinicMember) : Person(person)
+Patient::Patient(const Person & person, Doctor& personalDoctor) : Person(person)
 {
 	//numTurns = 0;
 	//turns = new Turn*[MAX_TURNS_SIZE];
 	//for (int i = 0; i < MAX_TURNS_SIZE; i++)
 	//	turns[i] = nullptr;
-	this->clinicMember = clinicMember;
+	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
 }
 
@@ -16,7 +16,7 @@ Patient::Patient(Patient & other) : Person(other)
 	//turns = new Turn*[MAX_TURNS_SIZE];
 	//for (int i = 0; i < MAX_TURNS_SIZE; i++)
 	//	turns[i] = other.turns[i];
-	this->clinicMember = other.clinicMember;
+	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = other.personalDoctor;
 }
 
@@ -42,11 +42,15 @@ void Patient::changeDoctor(Doctor& doctor)
 
 void Patient::changeClinicMember(bool clinicMember)
 {
-	this->clinicMember = clinicMember;
+	//this->clinicMember = clinicMember;
 }
 
 void Patient::toOs(ostream & os) const
 {
+
 	os << "**Patient**" << endl;
-	os << " Personal doctor is " << this->personalDoctor->getName() <<endl;
+	Person::toOs(os);
+	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
+
 }
+

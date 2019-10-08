@@ -20,6 +20,8 @@ private:
 public:
 	Address(const char* country, const char* city, const char* street, int buildNum, int floorNum, int houseNum);
 	Address(const Address& other); // copy constructor
+	Address(Address&& other); // move constructor
+
 	virtual ~Address();
 
 	void operator=(const Address& address);

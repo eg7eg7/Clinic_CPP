@@ -93,8 +93,9 @@ Turn* MedicalStaff::operator[](int index)
 */
 void MedicalStaff::toOs(ostream & os) const
 {
+	os << "**Medical Staff**";
 	Staff::toOs(os);
-	os << "**Medical Staff**" << endl << "Accepting from " << acceptHoursFrom << " to " <<
+	os << " Accepting from " << acceptHoursFrom << " to " <<
 		acceptHoursTo << " in room " << *room << endl;
 	
 }

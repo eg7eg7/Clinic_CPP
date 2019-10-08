@@ -20,6 +20,17 @@ Address::Address(const Address & other)
 	this->houseNum = other.houseNum;
 }
 
+Address::Address(Address && other)
+{
+	this->country = std::move(other.country);
+	this->city = std::move(other.city);
+	this->street = std::move(other.street);
+	this->buildNum = other.buildNum;
+	this->floorNum = other.floorNum;
+	this->houseNum = other.houseNum;
+	
+}
+
 Address::~Address()
 {
 	delete[]country;
@@ -64,7 +75,7 @@ void Address::setStreet(const char * street)
 
 ostream & operator<<(ostream & os, const Address & add)
 {
-	os << endl <<"**Address**\n Country: " << add.getCountry() << " \n City: " << add.getCity()
+	os  <<" Country: " << add.getCountry() << " \n City: " << add.getCity()
 		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNO() << " Floor num: " <<
 		add.getFloor() << " \n House num: " << add.getHouseNO() << endl;
 	return os;

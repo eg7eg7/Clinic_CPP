@@ -19,6 +19,7 @@ private:
 public:
 	OfficeStaff(const Staff& staff, Room& room); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
+	OfficeStaff(OfficeStaff&& other); // move constructor
 	virtual ~OfficeStaff();
 
 	//void operator=(const OfficeStaff& officestaff);
@@ -28,7 +29,7 @@ public:
 	//void removePatient(const Patient& patient);
 
 	// Show
-	void OfficeStaff::toOs(ostream & os) const;
+	void OfficeStaff::toOs(ostream & os) const override;
 };
 
 #endif // !__OFFICESTAFF_H

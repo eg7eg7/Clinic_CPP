@@ -13,6 +13,9 @@ class Doctor : public MedicalStaff
 private:
 
 	char* profession;
+	Doctor(const Doctor&& other);
+	Doctor(const MedicalStaff&& medicalStaff, const char* profession);
+
 public:
 	Doctor(const MedicalStaff& medicalStaff, const char* profession)
 		: Staff(medicalStaff), MedicalStaff(medicalStaff) {
@@ -28,7 +31,7 @@ public:
 
 	// Show
 	
-	void toOs(ostream & os) const;
+	void toOs(ostream & os) const override;
 
 };
 

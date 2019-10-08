@@ -18,7 +18,6 @@ private:
 	long duration;
 	MedicalStaff* medicalStaff;
 	Patient* patient;
-	//TODO add flag for turn - was it used or not
 
 public:
 	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
