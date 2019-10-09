@@ -3,20 +3,26 @@
 
 #pragma warning(disable: 4996)
 #include "Person.h"
+#include "Room.h"
 #include <iostream>
 using namespace std;
 
 class Staff : public Person
 {
-private:
+protected:
 	long extension;
 	long salary;
+	Room* room;
 
+	
 public:
-	Staff(const Person& person, long extension, long salary) : Person(person), extension(extension), salary(salary) {};	//Constructor
-	Staff(const Staff& staff) : Person(staff), extension(staff.extension), salary(staff.salary) {};
-	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary) {};
-	virtual ~Staff() {};
+	Staff(const Person& person, long extension, long salary, Room & room);	//Constructor
+	Staff(const Staff& staff) : Person(staff) { room = staff.room; };
+	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary) 
+	{
+		room = std::move(staff.room);
+	};
+	virtual ~Staff() { room->removeOccupant(); };
 	// Getters
 	long getExtension() const { return extension; }
 	long getSalary() const { return salary; }

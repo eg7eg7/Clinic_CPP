@@ -1,6 +1,6 @@
 #include "Secretary.h"
 
-void Secretary::callPatient()
+void Secretary::callPatient(Patient & patient)
 {
 	//TODO
 }

@@ -6,16 +6,18 @@ using namespace std;
 #include "OfficeStaff.h"
 #include "Clinic.h"
 #include "Doctor.h"
-const int STAFF_SIZE = 20;
 
 class Clinic;
 
 class ClinicManager : public OfficeStaff, public Doctor
 {
-private:
-	Clinic* clinic;
-	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 public:
+	static const int STAFF_SIZE = 20;
+
+protected:
+	Clinic* clinic;
+public:
+	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor
 	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { this->clinic = other.clinic; }; // copy constructor
 	virtual ~ClinicManager() {};

@@ -4,17 +4,19 @@
 #include <iostream>
 #include <string.h>
 #include "MedicalStaff.h"
-#define MAX_NURSE_SERVICES 20
+
 using namespace std;
 
 class Nurse : public MedicalStaff
 {
-private:
+public:
+	static const int MAX_NURSE_SERVICES = 20;
+protected:
 	char** services;
 	int num_services;
+public:
 	Nurse(Nurse&& other); // move constructor
 	Nurse(MedicalStaff&& medicalStaff, const char* service); //move ctor
-public:
 	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
 	virtual ~Nurse();

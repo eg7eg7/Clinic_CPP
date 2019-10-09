@@ -114,7 +114,7 @@ void Clinic::removePatient(const Patient & patient)
 	}
 }
 
-void Clinic::createTurn(const Patient & patient)
+void Clinic::getAvailableTurn(const Patient & patient)
 {
 	//addTurn()
 }
@@ -157,6 +157,7 @@ void Clinic::addTurn(Turn & turn)
 			if (this->turns[i] == nullptr)
 			{
 				this->turns[i] = &turn;
+				turn.getMedicalStaff()->addTurn(turn);
 				++numTurns;
 				break;
 			}

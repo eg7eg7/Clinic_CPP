@@ -6,7 +6,7 @@ ostream & operator<<(ostream & os, const Room & room)
 	os << " Room number " << room.getRoomNumber() << endl << " floor " << room.getFloor() <<
 		endl << " size " << room.getSize() << endl << " occupied : ";
 	if (room.isOccupied())
-		os << "Yes";
+		os << "Yes - " << room.getNumOccupants() << " occupants";
 	else
 		os << "No";
 	return os << endl;

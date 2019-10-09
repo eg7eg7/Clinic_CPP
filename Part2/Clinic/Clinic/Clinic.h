@@ -10,29 +10,34 @@
 #include "Turn.h"
 using namespace std;
 
-const int MAX_NUM_ROOMS = 20;
-const int MAX_NUM_STAFF = 50;
-const int MAX_NUM_PATIENTS = 1000;
-const int MAX_NUM_TURNS = 500;
-
 class ClinicManager;
 
 class Clinic
 {
-private:
+public:
+	static const int MAX_NUM_ROOMS = 20;
+	static const int MAX_NUM_STAFF = 50;
+	static const int MAX_NUM_PATIENTS = 1000;
+	static const int MAX_NUM_TURNS = 500;
+
+protected:
 
 	char* name;
 	Address address;
+	ClinicManager* manager;
+
 	Room** rooms;
 	int numRooms;
+
 	Staff** staff;
 	int numStaff;
+
 	Patient** patients;
 	int numPatients;
+
 	Turn** turns;
 	int numTurns;
 
-	ClinicManager* manager;
 
 public:
 	Clinic(const char* name, const Address& address);
@@ -48,7 +53,7 @@ public:
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
 	void callPatient(const Patient& patient);
-	void createTurn(const Patient& patient);
+	void getAvailableTurn(const Patient& patient);
 
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);

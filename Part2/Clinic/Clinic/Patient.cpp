@@ -2,27 +2,27 @@
 
 Patient::Patient(const Person & person, Doctor& personalDoctor) : Person(person)
 {
-	//numTurns = 0;
-	//turns = new Turn*[MAX_TURNS_SIZE];
-	//for (int i = 0; i < MAX_TURNS_SIZE; i++)
-	//	turns[i] = nullptr;
+	numTurns = 0;
+	turns = new Turn*[MAX_TURNS_SIZE];
+	for (int i = 0; i < MAX_TURNS_SIZE; i++)
+		turns[i] = nullptr;
 	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
 }
 
 Patient::Patient(Patient & other) : Person(other)
 {
-	//numTurns = other.numTurns;
-	//turns = new Turn*[MAX_TURNS_SIZE];
-	//for (int i = 0; i < MAX_TURNS_SIZE; i++)
-	//	turns[i] = other.turns[i];
+	numTurns = other.numTurns;
+	turns = new Turn*[MAX_TURNS_SIZE];
+	for (int i = 0; i < MAX_TURNS_SIZE; i++)
+		turns[i] = other.turns[i];
 	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = other.personalDoctor;
 }
 
 Patient::~Patient()
 {
-	//delete[]turns;
+	delete[]turns;
 }
 
 void Patient::operator=(const Patient & patient)
@@ -43,6 +43,36 @@ void Patient::changeDoctor(Doctor& doctor)
 void Patient::changeClinicMember(bool clinicMember)
 {
 	//this->clinicMember = clinicMember;
+}
+
+void Patient::addTurn(Turn & turn)
+{
+	if (numTurns < MAX_TURNS_SIZE)
+	{
+		for (int i = 0; i < MAX_TURNS_SIZE; i++)
+		{
+			if (turns[i] == nullptr)
+			{
+				turns[i] = &turn;
+				++numTurns;
+				break;
+			}
+		}
+	}
+}
+
+void Patient::deleteTurn(Turn & turn)
+{
+
+	for (int i = 0; i < MAX_TURNS_SIZE; i++)
+	{
+		if (turns[i] == &turn)
+		{
+			turns[i] = nullptr;
+			--numTurns;
+			break;
+		}
+	}
 }
 
 void Patient::toOs(ostream & os) const

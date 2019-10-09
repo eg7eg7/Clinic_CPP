@@ -8,17 +8,20 @@
 
 using namespace std;
 class Turn;
-const int TURN_SIZE = 20;
+
 
 class MedicalStaff : virtual public Staff
 {
-private:
+public:
+	static const int TURN_SIZE = 20;
+protected:
 
 	long acceptHoursFrom;
 	long acceptHoursTo;
 	Room* room;
-	//Turn** turns;
-	//int turnsNumber;
+
+	mutable Turn** turns;
+	mutable int turnsNumber;
 
 public:
 	MedicalStaff(const Person& person, long extension, long salary, long acceptHoursFrom, long acceptHoursTo, Room& room);
@@ -30,12 +33,11 @@ public:
 	// Methods
 	long getNextFreeTime() const { //TODO
 	};
-	//void addTurn(Turn& turn);
-	//void deleteTurn(const Turn& turn);
+	void addTurn(Turn& turn) const;
+	void deleteTurn(const Turn& turn);
 
-	//Turn* operator[](int index);
+	Turn* operator[](int index);
 	// Show
-	//friend ostream & operator<<(ostream & os, const MedicalStaff & staff);
 	virtual void toOs(ostream& os) const override;
 };
 

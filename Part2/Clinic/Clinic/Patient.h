@@ -6,16 +6,18 @@
 using namespace std;
 #include "Person.h"
 #include "Doctor.h"
-const int MAX_TURNS_SIZE = 20;
+
 
 class Doctor;
 class Turn;
 
 class Patient : public Person
 {
-private:
+public:
+	static const int MAX_TURNS_SIZE = 20;
+protected:
 
-	//Turn** turns;
+	Turn** turns;
 	Doctor* personalDoctor;
 	int numTurns;
 
@@ -30,7 +32,10 @@ public:
 	void answerCall();
 	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);
-	//int getNumTurns() { return numTurns; };
+	int getNumTurns() { return numTurns; };
+
+	void addTurn(Turn & turn);
+	void deleteTurn(Turn & turn);
 	// Show
 	void toOs(ostream & os) const override;
 };

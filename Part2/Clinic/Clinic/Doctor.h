@@ -10,13 +10,12 @@ using namespace std;
 
 class Doctor : public MedicalStaff
 {
-private:
+protected:
 
 	char* profession;
+public:
 	Doctor(const Doctor&& other);
 	Doctor(const MedicalStaff&& medicalStaff, const char* profession);
-
-public:
 	Doctor(const MedicalStaff& medicalStaff, const char* profession)
 		: Staff(medicalStaff), MedicalStaff(medicalStaff) {
 		this->profession = strdup(profession);

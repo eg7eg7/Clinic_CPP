@@ -14,8 +14,7 @@ class Person
 public:
 	enum eGender { Male, Female };
 
-
-private:
+protected:
 
 	int id;
 	char* name;

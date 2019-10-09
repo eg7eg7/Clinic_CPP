@@ -1,45 +1,36 @@
 #include "MedicalStaff.h"
 
 MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, long acceptHoursF, long acceptHoursT, Room& room)
-	: Staff(person, extension, salary)
+	: Staff(person, extension, salary, room)
 {
 	acceptHoursFrom = acceptHoursF;
 	acceptHoursTo = acceptHoursT;
-	//if (!room.isOccupied())
-	//{
-		this->room = &room;
-		(this->room)->setOccupied(true);
-
-	//}
-	//else
-	//	this->room = nullptr;
-
-	//turns = new Turn*[TURN_SIZE];
-	//for (int i = 0; i < TURN_SIZE; i++)
-	//{
-	//	turns[i] = nullptr;
-	//}
-	//turnsNumber = 0;
+	
+	turns = new Turn*[TURN_SIZE];
+	for (int i = 0; i < TURN_SIZE; i++)
+	{
+		turns[i] = nullptr;
+	}
+	turnsNumber = 0;
 }
 
 MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 {
-	this->room = other.room;
+	
 	acceptHoursFrom = other.acceptHoursFrom;
 	acceptHoursTo = other.acceptHoursTo;
-	//turnsNumber = other.turnsNumber;
-	//turns = new Turn*[TURN_SIZE];
-	//for (int i = 0; i < turnsNumber; i++)
-	//{
-	//	turns[i] = other.turns[i];
-	//}
+	turnsNumber = other.turnsNumber;
+	turns = new Turn*[TURN_SIZE];
+	for (int i = 0; i < turnsNumber; i++)
+	{
+		turns[i] = other.turns[i];
+	}
 }
 
 MedicalStaff::~MedicalStaff()
 {
-	//if (room != nullptr)
-		room->setOccupied(false);
-	//delete[]turns;
+	
+	delete[]turns;
 }
 
 void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
@@ -48,16 +39,17 @@ void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	{
 		acceptHoursFrom = medicalstaff.acceptHoursFrom;
 		acceptHoursTo = medicalstaff.acceptHoursTo;
-		//turnsNumber = medicalstaff.turnsNumber;
-		//turns = new Turn*[TURN_SIZE];
-		//for (int i = 0; i < turnsNumber; i++)
-		//{
-		//	turns[i] = medicalstaff.turns[i];
-		//}
+		turnsNumber = medicalstaff.turnsNumber;
+		if(turns == nullptr)
+			turns = new Turn*[TURN_SIZE];
+		for (int i = 0; i < TURN_SIZE; i++)
+		{
+			turns[i] = medicalstaff.turns[i];
+		}
 	}
 }
-/*
-void MedicalStaff::addTurn(Turn& turn)
+
+void MedicalStaff::addTurn(Turn& turn) const
 {
 	if (turnsNumber < TURN_SIZE)
 	{
@@ -90,12 +82,11 @@ Turn* MedicalStaff::operator[](int index)
 {
 	return turns[index];
 }
-*/
+
 void MedicalStaff::toOs(ostream & os) const
 {
 	os << "**Medical Staff**";
 	Staff::toOs(os);
 	os << " Accepting from " << acceptHoursFrom << " to " <<
-		acceptHoursTo << " in room " << *room << endl;
-	
+		acceptHoursTo << endl;
 }

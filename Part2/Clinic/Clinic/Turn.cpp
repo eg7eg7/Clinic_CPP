@@ -18,6 +18,18 @@ Turn::Turn(const Turn & other)
 	this->duration = other.duration;
 }
 
+Turn::Turn(Turn && other)
+{
+	this->medicalStaff = other.medicalStaff;
+	this->patient = other.patient;
+
+	this->startTime = other.startTime;
+	this->duration = other.duration;
+
+	other.changeMedicalStaff(nullptr);
+	other.changePatient(nullptr);
+}
+
 void Turn::changeStartTime(long startTime)
 {
 	this->startTime = startTime;
@@ -30,12 +42,22 @@ void Turn::changeDuration(long duration)
 
 void Turn::changeMedicalStaff(MedicalStaff* medicalStaff)
 {
-	this->medicalStaff = medicalStaff;
+	if (medicalStaff != this->medicalStaff)
+	{
+		if(this->medicalStaff !=nullptr)
+			this->medicalStaff->deleteTurn(*this);
+		this->medicalStaff = medicalStaff;
+	}
 }
 
 void Turn::changePatient(Patient* patient)
 {
-	this->patient = patient;
+	if (patient != this->patient)
+	{
+		if (this->patient != nullptr)
+			this->patient->deleteTurn(*this);
+		this->patient = patient;
+	}
 }
 
 

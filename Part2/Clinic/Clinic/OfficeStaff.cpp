@@ -1,16 +1,8 @@
 #include "OfficeStaff.h"
 
-OfficeStaff::OfficeStaff(const Staff & staff, Room & roomm) : Staff(staff)
+OfficeStaff::OfficeStaff(const Staff & staff) : Staff(staff)
 {
-	//if (!room.isOccupied())
-	//{
-	roomm.setOccupied(true);
-	room = &roomm;
-	//this->room->setOccupied(true);
-
-	//}
-	//else
-	//	this->room = nullptr;
+	
 
 	//this->patientNumber = 0;
 	//patients = new Patient*[MAX_PATIENT_SIZE];
@@ -37,8 +29,8 @@ OfficeStaff::OfficeStaff(OfficeStaff && other) : Staff(other)
 
 OfficeStaff::~OfficeStaff()
 {
-	//if (room != nullptr)
-	room->setOccupied(false);
+	if (room != nullptr)
+		room->addOccupant();
 	//delete[]patients;
 }
 /*
@@ -77,5 +69,4 @@ void OfficeStaff::toOs(ostream & os) const
 	
 	os << "**OfficeStaff**" << endl;
 	Staff::toOs(os);
-	os << "is located at " << *room;
 }

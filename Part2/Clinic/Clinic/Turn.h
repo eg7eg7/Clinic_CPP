@@ -12,7 +12,7 @@ class Patient;
 
 class Turn
 {
-private:
+protected:
 
 	long startTime;
 	long duration;
@@ -22,6 +22,7 @@ private:
 public:
 	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
+	Turn(Turn&& other); //  move constructor
 	virtual ~Turn() {};
 
 	//void operator=(const Turn& turn);

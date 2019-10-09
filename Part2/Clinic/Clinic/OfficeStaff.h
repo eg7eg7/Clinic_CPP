@@ -6,18 +6,21 @@ using namespace std;
 #include "Staff.h"
 #include "Patient.h"
 
-const int MAX_PATIENT_SIZE = 20;
+
 
 class OfficeStaff : virtual public Staff
 {
-private:
+public:
+	static const int MAX_PATIENT_SIZE = 20;
+protected:
 
 	//Patient** patients;
 	//int patientNumber;
-	Room* room;
+	
 
 public:
-	OfficeStaff(const Staff& staff, Room& room); // Constructor
+	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person,extension, salary, room) {};
+	OfficeStaff(const Staff& staff); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
 	OfficeStaff(OfficeStaff&& other); // move constructor
 	virtual ~OfficeStaff();
