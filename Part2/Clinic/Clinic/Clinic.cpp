@@ -255,6 +255,15 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 	}
 }
 
+Secretary * Clinic::getSecretary() const
+{
+	Secretary* p;
+	for (int i = 0; i < MAX_NUM_STAFF; i++)
+		if (nullptr != (p = dynamic_cast<Secretary*>(staff[i])))
+			return p;
+	return nullptr;
+}
+
 ostream & operator<<(ostream & os, const Clinic & clinic)
 {
 	os << "**Clinic**" << endl;

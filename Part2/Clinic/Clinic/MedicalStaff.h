@@ -31,7 +31,12 @@ public:
 	void operator=(const MedicalStaff& medicalstaff);
 
 	// Methods
-	long getNextFreeTime() const { //TODO
+
+	/* Returns time where the medical staff has enough time */
+	long getNextFreeTime(long duration) const { 
+		
+		//TODO
+		return 0;
 	};
 	void addTurn(Turn& turn) const;
 	void deleteTurn(const Turn& turn);

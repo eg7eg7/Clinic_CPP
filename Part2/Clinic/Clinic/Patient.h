@@ -29,7 +29,7 @@ public:
 	void operator=(const Patient& patient);
 
 	// Methods
-	void answerCall();
+	int answerCall();
 	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);
 	int getNumTurns() { return numTurns; };
@@ -38,6 +38,9 @@ public:
 	void deleteTurn(Turn & turn);
 	// Show
 	void toOs(ostream & os) const override;
+
+	Doctor* getPersonalDoctor() const { return personalDoctor; };
+	void setPersonalDoctor(Doctor & doctor) { personalDoctor = &doctor; }
 };
 
 #endif // !__PATIENT_H

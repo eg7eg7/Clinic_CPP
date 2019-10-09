@@ -5,6 +5,7 @@
 #include <string.h>
 #include "Address.h"
 #include "ClinicManager.h"
+#include "Secretary.h"
 #include "Room.h"
 #include "Patient.h"
 #include "Turn.h"
@@ -75,6 +76,7 @@ public:
 	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
 	void setClinicManager(ClinicManager* new_manager);
+	Secretary* getSecretary() const;
 };
 
 #endif // !__CLINIC_H

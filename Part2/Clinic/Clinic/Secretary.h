@@ -5,7 +5,7 @@
 #include <iostream>
 using namespace std;
 #include "OfficeStaff.h"
-
+#include "Turn.h"
 class Secretary : public OfficeStaff
 {
 private:

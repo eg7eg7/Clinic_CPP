@@ -70,7 +70,7 @@ int main()
 	Person person_4(4000, "Nurse_2", "052-573-4379", 21, address_4, Person::Female);
 	Person person_5(5000, "Secretary_1", "052-879-2132", 84, address_5, Person::Male);
 	Person person_6(6000, "Secretary_2", "050-435-5676", 52, address_6, Person::Female);
-	Person person_7(7000, "Manager_1", "054-684-3452", 2, address_7, Person::Male);
+	Person person_7(7000, "Dr. House", "054-684-3452", 2, address_7, Person::Male);
 
 	Person person_8(3333, "patient_1", "050-231-4579", 92, address_3, Person::Male);
 	Person person_9(4444, "patient_2", "054-782-4362", 18, address_2, Person::Female);
@@ -122,21 +122,23 @@ int main()
 
 	// Turns
 
-	//clinic.createTurn(patient);
+	Secretary* secretary = clinic.getSecretary();
+	if(secretary !=nullptr)
+		secretary->callPatient(patient_1);
 
-	Turn turn_1(doctor_1, patient_1, 1000, 200);
-	Turn turn_2(doctor_2, patient_2, 1200, 100);
-	Turn turn_3(doctor_1, patient_3, 1400, 130);
-	Turn turn_4(doctor_1, patient_1, 1400, 130);
+	//Turn turn_1(doctor_1, patient_1, 1000, 200);
+	//Turn turn_2(doctor_2, patient_2, 1200, 100);
+	//Turn turn_3(doctor_1, patient_3, 1400, 130);
+	//Turn turn_4(doctor_1, patient_1, 1400, 130);
 
-	clinic.addTurn(turn_1);
-	clinic.addTurn(turn_2);
-	clinic.addTurn(turn_3);
+	//clinic.addTurn(turn_1);
+	//clinic.addTurn(turn_2);
+	//clinic.addTurn(turn_3);
 
 
-	clinic.updateTurn(turn_1, turn_4);
-	clinic.removeTurn(turn_3);
-	clinic.updateTurn(turn_1, turn_4);
+	//clinic.updateTurn(turn_1, turn_4);
+	//clinic.removeTurn(turn_3);
+	//clinic.updateTurn(turn_1, turn_4);
 	cout << "----------------------------------------------------------------------------\n";
 	cout << clinic << endl;
 

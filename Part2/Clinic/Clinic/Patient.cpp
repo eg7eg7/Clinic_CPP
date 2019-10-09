@@ -30,9 +30,11 @@ void Patient::operator=(const Patient & patient)
 	//TODO
 }
 
-void Patient::answerCall()
+int Patient::answerCall()
 {
-	//TODO
+	int ans;
+	cin >> ans;
+	return ans;
 }
 
 void Patient::changeDoctor(Doctor& doctor)
