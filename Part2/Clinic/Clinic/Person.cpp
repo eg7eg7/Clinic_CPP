@@ -49,7 +49,7 @@ void Person::setAddress(Address& address)
 }
 void Person::toOs(ostream & os) const
 {
-	os  << " " <<getName() << " - id " << getId() << endl
+	os << " " << getName() << " - id " << getId() << endl
 		<< " Age " << getAge() << ", "
 		<< displayGender() << endl
 		<< " Phone - " << getPhone() << endl
@@ -70,7 +70,6 @@ const char * Person::displayGender() const
 }
 ostream & operator<<(ostream & os, const Person & person)
 {
-	
 	person.toOs(os);
 	return os;
 }

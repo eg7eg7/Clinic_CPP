@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_medical_staff_8cpp" kind="file">
+    <compoundname>MedicalStaff.cpp</compoundname>
+    <includes refid="_medical_staff_8h" local="yes">MedicalStaff.h</includes>
+    <incdepgraph>
+      <node id="154">
+        <label>MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>Room.h</label>
+        <link refid="_room_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="156">
+        <label>Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>string.h</label>
+      </node>
+      <node id="153">
+        <label>Clinic/MedicalStaff.cpp</label>
+        <link refid="MedicalStaff.cpp"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_medical_staff_8h" kindref="compound">MedicalStaff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" refkind="member"><highlight class="normal"><ref refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" kindref="member">MedicalStaff::MedicalStaff</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_person" kindref="compound">Person</ref>&amp;<sp/>person,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>extension,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>salary,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>acceptHoursF,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>acceptHoursT,<sp/><ref refid="class_room" kindref="compound">Room</ref>&amp;<sp/>room)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/><ref refid="class_staff" kindref="compound">Staff</ref>(person,<sp/>extension,<sp/>salary,<sp/>room)</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref><sp/>=<sp/>acceptHoursF;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref><sp/>=<sp/>acceptHoursT;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>*[<ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>];</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_medical_staff_1a738ed9436082b11b6ee8a724eba3b7a0" refkind="member"><highlight class="normal"><ref refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" kindref="member">MedicalStaff::MedicalStaff</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>&amp;<sp/>other)<sp/>:<sp/><ref refid="class_staff" kindref="compound">Staff</ref>(other)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref><sp/>=<sp/>other.<ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref><sp/>=<sp/>other.<ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref><sp/>=<sp/>other.<ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>*[<ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>];</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>=<sp/>other.<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i];</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" refkind="member"><highlight class="normal"><ref refid="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" kindref="member">MedicalStaff::~MedicalStaff</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" kindref="member">MedicalStaff::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>&amp;<sp/>medicalstaff)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;medicalstaff)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref><sp/>=<sp/>medicalstaff.<ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref>;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref><sp/>=<sp/>medicalstaff.<ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref><sp/>=<sp/>medicalstaff.<ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>*[<ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>=<sp/>medicalstaff.<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i];</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" kindref="member">MedicalStaff::addTurn</ref>(<ref refid="class_turn" kindref="compound">Turn</ref>&amp;<sp/>turn)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="53"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref><sp/>&lt;<sp/><ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>=<sp/>&amp;turn;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref>;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" kindref="member">MedicalStaff::deleteTurn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>&amp;<sp/>turn)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" kindref="member">TURN_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>==<sp/>&amp;turn)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" kindref="member">turnsNumber</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" refkind="member"><highlight class="normal"><ref refid="class_turn" kindref="compound">Turn</ref>*<sp/><ref refid="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" kindref="member">MedicalStaff::operator[]</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" kindref="member">turns</ref>[index];</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" kindref="member">MedicalStaff::toOs</ref>(ostream<sp/>&amp;<sp/>os)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="87"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;**Medical<sp/>Staff**&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_staff_1a0a314f76acf32787fd48c128e8134601" kindref="member">Staff::toOs</ref>(os);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Accepting<sp/>from<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" kindref="member">acceptHoursFrom</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>to<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" kindref="member">acceptHoursTo</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp"/>
+  </compounddef>
+</doxygen>

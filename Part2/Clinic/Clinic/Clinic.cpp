@@ -55,10 +55,38 @@ Clinic::~Clinic()
 	delete[]turns;
 }
 
-void Clinic::addStaff(Staff & staff)
+void Clinic::addStaff(Staff * staff)
 {
-	if (numStaff < MAX_NUM_STAFF)
+	if (&staff != nullptr)
 	{
+		bool exists = false;
+		int index = -1;
+
+		for (int i = 0; i < MAX_NUM_STAFF; i++)
+		{
+			if (staff == this->staff[i])
+			{
+				exists = true;
+			}
+			if (exists)
+			{
+				index = i;
+				break;
+			}
+			if (this->staff[i] == nullptr)
+				index = i;
+		}
+
+		if (!exists && numStaff < MAX_NUM_STAFF)
+		{
+			this->staff[index] = staff;
+			++numStaff;
+		}
+
+		if (numStaff <= MAX_NUM_STAFF)
+			setStaff(&this->staff[index], staff);
+
+		/*
 		for (int i = 0; i < MAX_NUM_STAFF; i++)
 		{
 			if (this->staff[i] == nullptr)
@@ -67,6 +95,23 @@ void Clinic::addStaff(Staff & staff)
 				++numStaff;
 				break;
 			}
+		}
+		*/
+	}
+}
+
+void Clinic::setStaff(Staff ** old_staff, Staff * new_staff)
+{
+	if (*old_staff != new_staff)
+	{
+		if (*old_staff != nullptr)
+		{
+			(*old_staff)->setClinic(nullptr);
+		}
+		*old_staff = new_staff;
+		if (*old_staff != nullptr)
+		{
+			(*old_staff)->setClinic(nullptr);
 		}
 	}
 }
@@ -97,7 +142,6 @@ void Clinic::addPatient(Patient & patient)
 				break;
 			}
 		}
-
 	}
 }
 
@@ -190,12 +234,10 @@ void Clinic::printStaff(ostream & os) const
 	for (int i = 0; i < MAX_NUM_STAFF; i++)
 		if (&(*(staff[i])) != nullptr && printed < numStaff)
 		{
-			
 			os << *(staff[i]) << endl;
 			os << "****************************************" << endl;
 			++printed;
 		}
-
 }
 
 void Clinic::printPatients(ostream & os) const
@@ -234,7 +276,6 @@ void Clinic::printTurns(ostream & os) const
 			++printed;
 		}
 	}
-
 }
 
 void Clinic::setClinicManager(ClinicManager * new_manager)
@@ -250,7 +291,7 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 		if (manager != nullptr)
 		{
 			manager->setClinic(this);
-			addStaff(*new_manager);
+			addStaff(new_manager);
 		}
 	}
 }
@@ -269,7 +310,7 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	os << "**Clinic**" << endl;
 	os << " Clinic name : " << clinic.getName() << endl;
 	os << clinic.getAddress() << endl;
-	if(clinic.getManager() !=nullptr)
+	if (clinic.getManager() != nullptr)
 		os << " manager is " << clinic.getManager()->getName() << endl;
 
 	clinic.printTurns(os);

@@ -11,23 +11,13 @@
 //*****************************************************************************************
 //*****************************************************************************************
 
-
 #pragma warning(disable: 4996)
 #include <iostream>
 using namespace std;
-
-#include "Address.h"
-#include "Clinic.h"
 #include "ClinicManager.h"
 #include "Nurse.h"
-#include "OfficeStaff.h"
-#include "Patient.h"
-#include "Room.h"
-#include "Secretary.h"
-#include "Turn.h"
 int main()
 {
-
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
 	// Rooms
@@ -61,7 +51,6 @@ int main()
 	Address address_5("Israel", "Tel-Aviv", "yarkon", 5, 13, 14);
 	Address address_6("Israel", "Herzliya", "bazel", 45, 1, 45);
 	Address address_7("Israel", "Tel-Aviv", "dizengoff", 28, 19, 48);
-
 
 	// Persons
 	Person person_1(1000, "Dr. Hopkins", "054-452-123", 34, address_1, Person::Male);
@@ -113,8 +102,8 @@ int main()
 
 	// Patients
 	Patient patient_1(person_8, doctor_1);
-	Patient patient_2(person_9, doctor_2);
-	Patient patient_3(person_10, doctor_1);
+	Patient patient_2(person_9, doctor_2, true);
+	Patient patient_3(person_10, doctor_1, true);
 
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);
@@ -123,7 +112,7 @@ int main()
 	// Turns
 
 	Secretary* secretary = clinic.getSecretary();
-	if(secretary !=nullptr)
+	if (secretary != nullptr)
 		secretary->callPatient(patient_1);
 
 	//Turn turn_1(doctor_1, patient_1, 1000, 200);
@@ -134,7 +123,6 @@ int main()
 	//clinic.addTurn(turn_1);
 	//clinic.addTurn(turn_2);
 	//clinic.addTurn(turn_3);
-
 
 	//clinic.updateTurn(turn_1, turn_4);
 	//clinic.removeTurn(turn_3);
@@ -149,7 +137,6 @@ int main()
 	clinic.removeRoom(room_5);
 
 	clinic.removeRoom(room_6);
-
 
 	return 0;
 }
@@ -190,3 +177,5 @@ int main()
 //add more move ctors
 
 //add more operators? [optional]
+
+//copy ctor - use = operator (page 26, operators)

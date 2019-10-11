@@ -22,13 +22,12 @@ void ClinicManager::hireStaff(Staff & staff) const
 {
 	if (clinic != nullptr)
 	{
-		clinic->addStaff(staff);
+		clinic->addStaff(&staff);
 	}
 }
 
 void ClinicManager::toOs(ostream & os) const
 {
-	
 	os << "**ClinicManager**" << endl;
 	os << "**OfficeStaff**" << endl;
 	Doctor::toOs(os);

@@ -1,3 +1,4 @@
+#pragma message("Adding Secretary")
 #ifndef __SECRETARY_H
 #define __SECRETARY_H
 
@@ -9,7 +10,7 @@ using namespace std;
 class Secretary : public OfficeStaff
 {
 private:
-	
+
 public:
 	Secretary(OfficeStaff&& officeStaff);	// move ctor
 	Secretary(const OfficeStaff& officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};	// copy ctor

@@ -1,35 +1,39 @@
+#pragma message("Adding Staff")
 #ifndef __STAFF_H
 #define __STAFF_H
 
 #pragma warning(disable: 4996)
+#include <iostream>
 #include "Person.h"
 #include "Room.h"
-#include <iostream>
+//#include "Clinic.h"
+class Clinic;
 using namespace std;
-
 class Staff : public Person
 {
 protected:
 	long extension;
 	long salary;
 	Room* room;
+	Clinic* clinic = nullptr;
 
-	
 public:
 	Staff(const Person& person, long extension, long salary, Room & room);	//Constructor
 	Staff(const Staff& staff) : Person(staff) { room = staff.room; };
-	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary) 
+	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary)
 	{
 		room = std::move(staff.room);
+		clinic = std::move(staff.clinic);
 	};
 	virtual ~Staff() { room->removeOccupant(); };
 	// Getters
 	long getExtension() const { return extension; }
 	long getSalary() const { return salary; }
+	const Clinic* getClinic() const { return clinic; }
 
 	// Setters
 	void setSalary(long salary) { this->salary = salary; }
-
+	void setClinic(Clinic* clinic);
 	// Show
 	virtual void toOs(ostream& os) const override;
 };

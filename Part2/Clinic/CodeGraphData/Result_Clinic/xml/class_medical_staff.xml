@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_medical_staff" kind="class" prot="public">
+    <compoundname>MedicalStaff</compoundname>
+    <basecompoundref refid="class_staff" prot="public" virt="virtual">Staff</basecompoundref>
+    <derivedcompoundref refid="class_doctor" prot="public" virt="non-virtual">Doctor</derivedcompoundref>
+    <derivedcompoundref refid="class_nurse" prot="public" virt="non-virtual">Nurse</derivedcompoundref>
+    <includes refid="_medical_staff_8h" local="no">MedicalStaff.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int MedicalStaff::TURN_SIZE</definition>
+        <argsstring></argsstring>
+        <name>TURN_SIZE</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="16" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" compoundref="_medical_staff_8cpp" startline="52" endline="66">addTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" compoundref="_medical_staff_8cpp" startline="68" endline="79">deleteTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" compoundref="_medical_staff_8cpp" startline="3" endline="15">MedicalStaff</referencedby>
+        <referencedby refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" compoundref="_medical_staff_8cpp" startline="36" endline="50">operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MedicalStaff::acceptHoursFrom</definition>
+        <argsstring></argsstring>
+        <name>acceptHoursFrom</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="19" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" compoundref="_medical_staff_8cpp" startline="3" endline="15">MedicalStaff</referencedby>
+        <referencedby refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" compoundref="_medical_staff_8cpp" startline="36" endline="50">operator=</referencedby>
+        <referencedby refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" compoundref="_medical_staff_8cpp" startline="86" endline="92">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" prot="protected" static="no" mutable="no">
+        <type>long</type>
+        <definition>long MedicalStaff::acceptHoursTo</definition>
+        <argsstring></argsstring>
+        <name>acceptHoursTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="20" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" compoundref="_medical_staff_8cpp" startline="3" endline="15">MedicalStaff</referencedby>
+        <referencedby refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" compoundref="_medical_staff_8cpp" startline="36" endline="50">operator=</referencedby>
+        <referencedby refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" compoundref="_medical_staff_8cpp" startline="86" endline="92">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_medical_staff_1a3b1b758253c0f0ae00eb88731f3df9aa" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_room" kindref="compound">Room</ref> *</type>
+        <definition>Room* MedicalStaff::room</definition>
+        <argsstring></argsstring>
+        <name>room</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="21" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" prot="protected" static="no" mutable="yes">
+        <type><ref refid="class_turn" kindref="compound">Turn</ref> **</type>
+        <definition>Turn** MedicalStaff::turns</definition>
+        <argsstring></argsstring>
+        <name>turns</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="23" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" compoundref="_medical_staff_8cpp" startline="52" endline="66">addTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" compoundref="_medical_staff_8cpp" startline="68" endline="79">deleteTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" compoundref="_medical_staff_8cpp" startline="3" endline="15">MedicalStaff</referencedby>
+        <referencedby refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" compoundref="_medical_staff_8cpp" startline="36" endline="50">operator=</referencedby>
+        <referencedby refid="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" compoundref="_medical_staff_8cpp" startline="81" endline="84">operator[]</referencedby>
+        <referencedby refid="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" compoundref="_medical_staff_8cpp" startline="30" endline="34">~MedicalStaff</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" prot="protected" static="no" mutable="yes">
+        <type>int</type>
+        <definition>int MedicalStaff::turnsNumber</definition>
+        <argsstring></argsstring>
+        <name>turnsNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="24" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" compoundref="_medical_staff_8cpp" startline="52" endline="66">addTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" compoundref="_medical_staff_8cpp" startline="68" endline="79">deleteTurn</referencedby>
+        <referencedby refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" compoundref="_medical_staff_8cpp" startline="3" endline="15">MedicalStaff</referencedby>
+        <referencedby refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" compoundref="_medical_staff_8cpp" startline="36" endline="50">operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MedicalStaff::MedicalStaff</definition>
+        <argsstring>(const Person &amp;person, long extension, long salary, long acceptHoursFrom, long acceptHoursTo, Room &amp;room)</argsstring>
+        <name>MedicalStaff</name>
+        <param>
+          <type>const <ref refid="class_person" kindref="compound">Person</ref> &amp;</type>
+          <declname>person</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>salary</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>acceptHoursFrom</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>acceptHoursTo</declname>
+        </param>
+        <param>
+          <type><ref refid="class_room" kindref="compound">Room</ref> &amp;</type>
+          <declname>room</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="27" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="3" bodyend="15"/>
+        <references refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" compoundref="_medical_staff_8h" startline="19">acceptHoursFrom</references>
+        <references refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" compoundref="_medical_staff_8h" startline="20">acceptHoursTo</references>
+        <references refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" compoundref="_medical_staff_8h" startline="16">TURN_SIZE</references>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+        <references refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" compoundref="_medical_staff_8h" startline="24">turnsNumber</references>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a738ed9436082b11b6ee8a724eba3b7a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MedicalStaff::MedicalStaff</definition>
+        <argsstring>(const MedicalStaff &amp;other)</argsstring>
+        <name>MedicalStaff</name>
+        <param>
+          <type>const <ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="28" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="17" bodyend="28"/>
+        <references refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" compoundref="_medical_staff_8h" startline="19">acceptHoursFrom</references>
+        <references refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" compoundref="_medical_staff_8h" startline="20">acceptHoursTo</references>
+        <references refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" compoundref="_medical_staff_8h" startline="16">TURN_SIZE</references>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+        <references refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" compoundref="_medical_staff_8h" startline="24">turnsNumber</references>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>MedicalStaff::~MedicalStaff</definition>
+        <argsstring>()</argsstring>
+        <name>~MedicalStaff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="29" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="30" bodyend="34"/>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MedicalStaff::operator=</definition>
+        <argsstring>(const MedicalStaff &amp;medicalstaff)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref> &amp;</type>
+          <declname>medicalstaff</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="31" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="36" bodyend="50"/>
+        <references refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" compoundref="_medical_staff_8h" startline="19">acceptHoursFrom</references>
+        <references refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" compoundref="_medical_staff_8h" startline="20">acceptHoursTo</references>
+        <references refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" compoundref="_medical_staff_8h" startline="16">TURN_SIZE</references>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+        <references refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" compoundref="_medical_staff_8h" startline="24">turnsNumber</references>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a5ca2f161cfe6bf608d6c74da4370b07f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long MedicalStaff::getNextFreeTime</definition>
+        <argsstring>(long duration) const </argsstring>
+        <name>getNextFreeTime</name>
+        <param>
+          <type>long</type>
+          <declname>duration</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="36" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="36" bodyend="40"/>
+        <referencedby refid="class_secretary_1a06f774c2995cd15fbfd4d1c4b950198f" compoundref="_secretary_8cpp" startline="3" endline="17">Secretary::callPatient</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MedicalStaff::addTurn</definition>
+        <argsstring>(Turn &amp;turn) const </argsstring>
+        <name>addTurn</name>
+        <param>
+          <type><ref refid="class_turn" kindref="compound">Turn</ref> &amp;</type>
+          <declname>turn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="41" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="52" bodyend="66"/>
+        <references refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" compoundref="_medical_staff_8h" startline="16">TURN_SIZE</references>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+        <references refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" compoundref="_medical_staff_8h" startline="24">turnsNumber</references>
+        <referencedby refid="class_clinic_1a80caa5e15bb7041a73ea85889be1eb4a" compoundref="_clinic_8cpp" startline="201" endline="216">Clinic::addTurn</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a05dd2820265671835362cc79626b47cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MedicalStaff::deleteTurn</definition>
+        <argsstring>(const Turn &amp;turn)</argsstring>
+        <name>deleteTurn</name>
+        <param>
+          <type>const <ref refid="class_turn" kindref="compound">Turn</ref> &amp;</type>
+          <declname>turn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="42" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="68" bodyend="79"/>
+        <references refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" compoundref="_medical_staff_8h" startline="16">TURN_SIZE</references>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+        <references refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" compoundref="_medical_staff_8h" startline="24">turnsNumber</references>
+        <referencedby refid="class_turn_1ab4e5b5d8159a2dbc142175ac21bde8cf" compoundref="_turn_8cpp" startline="43" endline="51">Turn::changeMedicalStaff</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_turn" kindref="compound">Turn</ref> *</type>
+        <definition>Turn * MedicalStaff::operator[]</definition>
+        <argsstring>(int index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="44" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="81" bodyend="84"/>
+        <references refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" compoundref="_medical_staff_8h" startline="23">turns</references>
+      </memberdef>
+      <memberdef kind="function" id="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MedicalStaff::toOs</definition>
+        <argsstring>(ostream &amp;os) const override</argsstring>
+        <name>toOs</name>
+        <reimplements refid="class_staff_1a0a314f76acf32787fd48c128e8134601">toOs</reimplements>
+        <reimplementedby refid="class_doctor_1aed26215fc7a16ed5e0554ed9c28b4f2a">toOs</reimplementedby>
+        <reimplementedby refid="class_clinic_manager_1a2d3b1f84f9d6d5c85411cbd2fb2a1827">toOs</reimplementedby>
+        <reimplementedby refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260">toOs</reimplementedby>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="46" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.cpp" bodystart="86" bodyend="92"/>
+        <references refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" compoundref="_medical_staff_8h" startline="19">acceptHoursFrom</references>
+        <references refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" compoundref="_medical_staff_8h" startline="20">acceptHoursTo</references>
+        <references refid="class_staff_1a0a314f76acf32787fd48c128e8134601" compoundref="_staff_8cpp" startline="22" endline="30">Staff::toOs</references>
+        <referencedby refid="class_doctor_1aed26215fc7a16ed5e0554ed9c28b4f2a" compoundref="_doctor_8cpp" startline="19" endline="25">Doctor::toOs</referencedby>
+        <referencedby refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260" compoundref="_nurse_8cpp" startline="51" endline="58">Nurse::toOs</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>Nurse</label>
+        <link refid="class_nurse"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>Staff</label>
+        <link refid="class_staff"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>MedicalStaff</label>
+        <link refid="class_medical_staff"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>Person</label>
+        <link refid="class_person"/>
+      </node>
+      <node id="51">
+        <label>ClinicManager</label>
+        <link refid="class_clinic_manager"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>Doctor</label>
+        <link refid="class_doctor"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>Staff</label>
+        <link refid="class_staff"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>clinic</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>room</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>MedicalStaff</label>
+        <link refid="class_medical_staff"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>room</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>Address</label>
+        <link refid="class_address"/>
+      </node>
+      <node id="62">
+        <label>Turn</label>
+        <link refid="class_turn"/>
+        <childnode refid="61" relation="usage">
+          <edgelabel>patient</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>medicalStaff</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>Clinic</label>
+        <link refid="class_clinic"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>manager</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>patients</edgelabel>
+        </childnode>
+        <childnode refid="63" relation="usage">
+          <edgelabel>rooms</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>staff</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>Patient</label>
+        <link refid="class_patient"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>personalDoctor</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Person</label>
+        <link refid="class_person"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>ClinicManager</label>
+        <link refid="class_clinic_manager"/>
+        <childnode refid="59" relation="public-inheritance">
+        </childnode>
+        <childnode refid="60" relation="public-inheritance">
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>clinic</edgelabel>
+        </childnode>
+      </node>
+      <node id="63">
+        <label>Room</label>
+        <link refid="class_room"/>
+      </node>
+      <node id="59">
+        <label>OfficeStaff</label>
+        <link refid="class_office_staff"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>Doctor</label>
+        <link refid="class_doctor"/>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" line="14" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/MedicalStaff.h" bodystart="13" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>acceptHoursFrom</name></member>
+      <member refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>acceptHoursTo</name></member>
+      <member refid="class_person_1a83cf1fc90cc6a575638757a0b6683436" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>address</name></member>
+      <member refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>addTurn</name></member>
+      <member refid="class_person_1acf9db1a60683f40b20ae569d29852d69" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>age</name></member>
+      <member refid="class_staff_1ac8ddd182e686dc2c25a955878b75fcc9" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>clinic</name></member>
+      <member refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>deleteTurn</name></member>
+      <member refid="class_person_1ac0c9fb8a33cede2854ff27bf95479050" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>displayGender</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>eGender</name></member>
+      <member refid="class_staff_1af85c87ad30b0c9bb01c7b4ca484efd0c" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>extension</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a7027cf94656ed6b308e128220d8c2a2e" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Female</name></member>
+      <member refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>gender</name></member>
+      <member refid="class_person_1acc3490277e1a945ffc1c5ad223d5ce6e" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getAddress</name></member>
+      <member refid="class_person_1a29f417d3222ae3c9e20bffb881ca17b4" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getAge</name></member>
+      <member refid="class_staff_1afb9d524f1a240ce616ee460f1e14cb5f" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getClinic</name></member>
+      <member refid="class_staff_1acfd586fc46a99dd7ab835281eb38e910" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getExtension</name></member>
+      <member refid="class_person_1aa927312eb028061dd674a53966513629" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getGender</name></member>
+      <member refid="class_person_1acaef9cee62443d15b3abcf426b1f8bf1" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getId</name></member>
+      <member refid="class_person_1a6da618d68519ead50a723e018a1365aa" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getName</name></member>
+      <member refid="class_medical_staff_1a5ca2f161cfe6bf608d6c74da4370b07f" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getNextFreeTime</name></member>
+      <member refid="class_person_1aa834b1e2cd575ce4184468da755f7658" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getPhone</name></member>
+      <member refid="class_staff_1a9ac96b8074262183ac03cbf1da22e00c" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>getSalary</name></member>
+      <member refid="class_person_1aec48a92f614a854ff380a15eb8e2f479" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>id</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a650f4b60ad9f224e14c607a4bb05c8a6" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Male</name></member>
+      <member refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>MedicalStaff</name></member>
+      <member refid="class_medical_staff_1a738ed9436082b11b6ee8a724eba3b7a0" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>MedicalStaff</name></member>
+      <member refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>name</name></member>
+      <member refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>operator=</name></member>
+      <member refid="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>operator[]</name></member>
+      <member refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Person</name></member>
+      <member refid="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Person</name></member>
+      <member refid="class_person_1a086475ed9df90992bcdf73901de67e48" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Person</name></member>
+      <member refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>phone</name></member>
+      <member refid="class_medical_staff_1a3b1b758253c0f0ae00eb88731f3df9aa" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>room</name></member>
+      <member refid="class_staff_1aec759352f28647466760c59affabec1c" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>salary</name></member>
+      <member refid="class_person_1a51497829ea8bd6fe8990642f0ecbdf0e" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>setAddress</name></member>
+      <member refid="class_staff_1aa17b2e23e4f2a0e00fc5a81798c23acf" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>setClinic</name></member>
+      <member refid="class_person_1a53821823de8fa7a62c9660505f375044" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>setPhone</name></member>
+      <member refid="class_staff_1a4c99f4dd69ec7c2e24c59d0c469fbae7" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>setSalary</name></member>
+      <member refid="class_staff_1a430c130c6ab241a6fce032febd2f5eaa" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Staff</name></member>
+      <member refid="class_staff_1a5151c918b064b5926cbf7278502fcfeb" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Staff</name></member>
+      <member refid="class_staff_1a76aa9ee991bde6eb1ae64e83ac119c35" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>Staff</name></member>
+      <member refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" prot="public" virt="virtual"><scope>MedicalStaff</scope><name>toOs</name></member>
+      <member refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" prot="public" virt="non-virtual"><scope>MedicalStaff</scope><name>TURN_SIZE</name></member>
+      <member refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>turns</name></member>
+      <member refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" prot="protected" virt="non-virtual"><scope>MedicalStaff</scope><name>turnsNumber</name></member>
+      <member refid="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" prot="public" virt="virtual"><scope>MedicalStaff</scope><name>~MedicalStaff</name></member>
+      <member refid="class_person_1a700ffd693321c5fe6880262acf43d4da" prot="public" virt="virtual"><scope>MedicalStaff</scope><name>~Person</name></member>
+      <member refid="class_staff_1ab7ae31008728fc1c384d749b2927bc66" prot="public" virt="virtual"><scope>MedicalStaff</scope><name>~Staff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

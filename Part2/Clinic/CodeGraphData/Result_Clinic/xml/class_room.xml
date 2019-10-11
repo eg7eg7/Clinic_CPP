@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_room" kind="class" prot="public">
+    <compoundname>Room</compoundname>
+    <includes refid="_room_8h" local="no">Room.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_room_1a25fa14e2fbbf132a5f568343d2ec0650" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Room::roomNumber</definition>
+        <argsstring></argsstring>
+        <name>roomNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="13" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_room_1a4310313750cfae6b76b9982e81698223" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Room::floor</definition>
+        <argsstring></argsstring>
+        <name>floor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="14" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_room_1ab40f3aae741c16cfe02bb1487b9e815b" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Room::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="15" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_room_1a461d78db35ce6f067c030df68740b27a" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Room::num_occupants</definition>
+        <argsstring></argsstring>
+        <name>num_occupants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="16" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_room_1a43187ba19aa202a0fdf0efc385ad45f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Room::Room</definition>
+        <argsstring>(const Room &amp;other)</argsstring>
+        <name>Room</name>
+        <param>
+          <type>const <ref refid="class_room" kindref="compound">Room</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_room_1a33f5581d8760c4c4fec58623e1448434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Room::Room</definition>
+        <argsstring>(const Room &amp;&amp;other)</argsstring>
+        <name>Room</name>
+        <param>
+          <type>const <ref refid="class_room" kindref="compound">Room</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1a0dece256f243b09d7aaebd4a5e69ee98" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Room::Room</definition>
+        <argsstring>(int roomNumber, int floor, int size)</argsstring>
+        <name>Room</name>
+        <param>
+          <type>int</type>
+          <declname>roomNumber</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>floor</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="23" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1af385c01e0ca219565093fe4da2c5eceb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Room::~Room</definition>
+        <argsstring>()</argsstring>
+        <name>~Room</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="24" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1ac953dbe7cd710d0316f20d52c5483447" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Room::getRoomNumber</definition>
+        <argsstring>() const </argsstring>
+        <name>getRoomNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="26" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="26" bodyend="26"/>
+        <referencedby refid="_room_8cpp_1a93c0786dd87d387239436c5417026681" compoundref="_room_8cpp" startline="3" endline="13">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1a4916fc246ced829d512cd12a1ece2e0b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Room::getFloor</definition>
+        <argsstring>() const </argsstring>
+        <name>getFloor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="27" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="27" bodyend="27"/>
+        <referencedby refid="_room_8cpp_1a93c0786dd87d387239436c5417026681" compoundref="_room_8cpp" startline="3" endline="13">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1af3913a983b9a6f7957bb018ce3955cd3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Room::getSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="28" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="28" bodyend="28"/>
+        <referencedby refid="_room_8cpp_1a93c0786dd87d387239436c5417026681" compoundref="_room_8cpp" startline="3" endline="13">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1a7c8b575ca577bc34920c6850f50a50e8" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Room::isOccupied</definition>
+        <argsstring>() const </argsstring>
+        <name>isOccupied</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="29" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="29" bodyend="34"/>
+        <referencedby refid="_room_8cpp_1a93c0786dd87d387239436c5417026681" compoundref="_room_8cpp" startline="3" endline="13">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1a13069b7d376ffd6eb7d65f8c3d7d6ab0" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Room::getNumOccupants</definition>
+        <argsstring>() const </argsstring>
+        <name>getNumOccupants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="37" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="37" bodyend="37"/>
+        <referencedby refid="_room_8cpp_1a93c0786dd87d387239436c5417026681" compoundref="_room_8cpp" startline="3" endline="13">operator&lt;&lt;</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1ace2165b8dcc4dd67e6cd186ab30b9259" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Room::addOccupant</definition>
+        <argsstring>()</argsstring>
+        <name>addOccupant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="38" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="38" bodyend="38"/>
+        <referencedby refid="class_staff_1a430c130c6ab241a6fce032febd2f5eaa" compoundref="_staff_8cpp" startline="3" endline="7">Staff::Staff</referencedby>
+        <referencedby refid="class_office_staff_1a6e7aa2641bccdccfdfc60d27d18d8909" compoundref="_office_staff_8cpp" startline="30" endline="35">OfficeStaff::~OfficeStaff</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_room_1a5874a822a35109189a7882d21ebdc7ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Room::removeOccupant</definition>
+        <argsstring>()</argsstring>
+        <name>removeOccupant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="39" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_room_1a93c0786dd87d387239436c5417026681" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const Room &amp;room)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_room" kindref="compound">Room</ref> &amp;</type>
+          <declname>room</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="44" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.cpp" bodystart="3" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" line="10" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h" bodystart="9" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_room_1ace2165b8dcc4dd67e6cd186ab30b9259" prot="public" virt="non-virtual"><scope>Room</scope><name>addOccupant</name></member>
+      <member refid="class_room_1a4310313750cfae6b76b9982e81698223" prot="protected" virt="non-virtual"><scope>Room</scope><name>floor</name></member>
+      <member refid="class_room_1a4916fc246ced829d512cd12a1ece2e0b" prot="public" virt="non-virtual"><scope>Room</scope><name>getFloor</name></member>
+      <member refid="class_room_1a13069b7d376ffd6eb7d65f8c3d7d6ab0" prot="public" virt="non-virtual"><scope>Room</scope><name>getNumOccupants</name></member>
+      <member refid="class_room_1ac953dbe7cd710d0316f20d52c5483447" prot="public" virt="non-virtual"><scope>Room</scope><name>getRoomNumber</name></member>
+      <member refid="class_room_1af3913a983b9a6f7957bb018ce3955cd3" prot="public" virt="non-virtual"><scope>Room</scope><name>getSize</name></member>
+      <member refid="class_room_1a7c8b575ca577bc34920c6850f50a50e8" prot="public" virt="non-virtual"><scope>Room</scope><name>isOccupied</name></member>
+      <member refid="class_room_1a461d78db35ce6f067c030df68740b27a" prot="protected" virt="non-virtual"><scope>Room</scope><name>num_occupants</name></member>
+      <member refid="class_room_1a93c0786dd87d387239436c5417026681" prot="public" virt="non-virtual"><scope>Room</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_room_1a5874a822a35109189a7882d21ebdc7ae" prot="public" virt="non-virtual"><scope>Room</scope><name>removeOccupant</name></member>
+      <member refid="class_room_1a43187ba19aa202a0fdf0efc385ad45f2" prot="private" virt="non-virtual"><scope>Room</scope><name>Room</name></member>
+      <member refid="class_room_1a33f5581d8760c4c4fec58623e1448434" prot="public" virt="non-virtual"><scope>Room</scope><name>Room</name></member>
+      <member refid="class_room_1a0dece256f243b09d7aaebd4a5e69ee98" prot="public" virt="non-virtual"><scope>Room</scope><name>Room</name></member>
+      <member refid="class_room_1a25fa14e2fbbf132a5f568343d2ec0650" prot="protected" virt="non-virtual"><scope>Room</scope><name>roomNumber</name></member>
+      <member refid="class_room_1ab40f3aae741c16cfe02bb1487b9e815b" prot="protected" virt="non-virtual"><scope>Room</scope><name>size</name></member>
+      <member refid="class_room_1af385c01e0ca219565093fe4da2c5eceb" prot="public" virt="virtual"><scope>Room</scope><name>~Room</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

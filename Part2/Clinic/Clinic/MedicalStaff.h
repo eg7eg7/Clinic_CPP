@@ -1,14 +1,13 @@
+#pragma message("Adding MedicalStaff")
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
 #pragma warning(disable: 4996)
 
 #include <iostream>
 #include "Staff.h"
-#include "Room.h"
 
 using namespace std;
 class Turn;
-
 
 class MedicalStaff : virtual public Staff
 {
@@ -33,8 +32,7 @@ public:
 	// Methods
 
 	/* Returns time where the medical staff has enough time */
-	long getNextFreeTime(long duration) const { 
-		
+	long getNextFreeTime(long duration) const {
 		//TODO
 		return 0;
 	};

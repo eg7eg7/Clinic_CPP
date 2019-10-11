@@ -1,3 +1,4 @@
+#pragma message("Adding Turn")
 #ifndef __TURN_H
 #define __TURN_H
 
@@ -6,7 +7,6 @@
 #include <iostream>
 using namespace std;
 #include "Patient.h"
-#include "MedicalStaff.h"
 class MedicalStaff;
 class Patient;
 
@@ -28,8 +28,8 @@ public:
 	//void operator=(const Turn& turn);
 
 	// Methods
-	const long getStartTime() const { return startTime; } ;
-	const long getDuration() const { return duration; } ;
+	const long getStartTime() const { return startTime; };
+	const long getDuration() const { return duration; };
 	const MedicalStaff* getMedicalStaff() const { return medicalStaff; };
 	const Patient* getPatient() const { return patient; };
 

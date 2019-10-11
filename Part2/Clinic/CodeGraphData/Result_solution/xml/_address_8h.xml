@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_address_8h" kind="file">
+    <compoundname>Address.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="_address_8cpp" local="yes">Clinic/Address.cpp</includedby>
+    <includedby refid="_person_8h" local="yes">Clinic/Person.h</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>Clinic/Address.h</label>
+        <link refid="Address.h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string.h</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>Clinic/MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>Clinic/Staff.cpp</label>
+        <link refid="_staff_8cpp"/>
+      </node>
+      <node id="26">
+        <label>Clinic/Patient.cpp</label>
+        <link refid="_patient_8cpp"/>
+      </node>
+      <node id="19">
+        <label>Clinic/ClinicManager.cpp</label>
+        <link refid="_clinic_manager_8cpp"/>
+      </node>
+      <node id="27">
+        <label>Clinic/Doctor.cpp</label>
+        <link refid="_doctor_8cpp"/>
+      </node>
+      <node id="28">
+        <label>Clinic/Nurse.h</label>
+        <link refid="_nurse_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Clinic/Address.h</label>
+        <link refid="Address.h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Clinic/Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>Clinic/Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Clinic/OfficeStaff.h</label>
+        <link refid="_office_staff_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Clinic/Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>Clinic/Secretary.cpp</label>
+        <link refid="_secretary_8cpp"/>
+      </node>
+      <node id="18">
+        <label>Clinic/Clinic.cpp</label>
+        <link refid="_clinic_8cpp"/>
+      </node>
+      <node id="24">
+        <label>Clinic/Turn.h</label>
+        <link refid="_turn_8h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>Clinic/Nurse.cpp</label>
+        <link refid="_nurse_8cpp"/>
+      </node>
+      <node id="30">
+        <label>Clinic/MedicalStaff.cpp</label>
+        <link refid="_medical_staff_8cpp"/>
+      </node>
+      <node id="16">
+        <label>Clinic/ClinicManager.h</label>
+        <link refid="_clinic_manager_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Clinic/Address.cpp</label>
+        <link refid="_address_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Clinic/Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>Clinic/Turn.cpp</label>
+        <link refid="_turn_8cpp"/>
+      </node>
+      <node id="32">
+        <label>Clinic/Person.cpp</label>
+        <link refid="_person_8cpp"/>
+      </node>
+      <node id="20">
+        <label>Clinic/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="17">
+        <label>Clinic/Clinic.h</label>
+        <link refid="_clinic_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Clinic/Secretary.h</label>
+        <link refid="_secretary_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Clinic/OfficeStaff.cpp</label>
+        <link refid="_office_staff_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_address" prot="public">Address</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>message(&quot;Adding<sp/>Address&quot;)</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>__ADDRESS_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__ADDRESS_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:<sp/>4996)</highlight></codeline>
+<codeline lineno="5"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="10" refid="class_address" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_address" kindref="compound">Address</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_address_1ab077eb872f2aa9925494ee86ff6f3c96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1ab077eb872f2aa9925494ee86ff6f3c96" kindref="member">country</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_address_1a9d6afb987f6fa234fb687b3ca942d4ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1a9d6afb987f6fa234fb687b3ca942d4ea" kindref="member">city</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_address_1a012d522027653a4ae5f6fb11928eae70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1a012d522027653a4ae5f6fb11928eae70" kindref="member">street</ref>;</highlight></codeline>
+<codeline lineno="17" refid="class_address_1aa4912ea4011694bdb2c267a212ad7439" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1aa4912ea4011694bdb2c267a212ad7439" kindref="member">buildNum</ref>;</highlight></codeline>
+<codeline lineno="18" refid="class_address_1a40c8e1d1f22fb698a38e7e28157abd30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1a40c8e1d1f22fb698a38e7e28157abd30" kindref="member">floorNum</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_address_1ac7911d55ae5a02a7adf3e68c2b4c5066" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1ac7911d55ae5a02a7adf3e68c2b4c5066" kindref="member">houseNum</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_address" kindref="compound">Address</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>country,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>city,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>street,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buildNum,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floorNum,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>houseNum);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_address" kindref="compound">Address</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_address" kindref="compound">Address</ref>&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/>copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_address" kindref="compound">Address</ref>(<ref refid="class_address" kindref="compound">Address</ref>&amp;&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/>move<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="class_address" kindref="compound">Address</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_address" kindref="compound">Address</ref>&amp;<sp/>address);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_address_1a07eee77df340e8fd82e0af8e4abbf075" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1a07eee77df340e8fd82e0af8e4abbf075" kindref="member">getCountry</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>country;<sp/>}</highlight></codeline>
+<codeline lineno="32" refid="class_address_1ad7debb9dce3cd20e6890ecc366821a63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1ad7debb9dce3cd20e6890ecc366821a63" kindref="member">getCity</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>city;<sp/>}</highlight></codeline>
+<codeline lineno="33" refid="class_address_1ad3a5e19fd9b091ce1629c120c7310ba7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_address_1ad3a5e19fd9b091ce1629c120c7310ba7" kindref="member">getStreet</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>street;<sp/>}</highlight></codeline>
+<codeline lineno="34" refid="class_address_1ae5f1f000260e7e9a1819f3a4738800d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1ae5f1f000260e7e9a1819f3a4738800d2" kindref="member">getBuildNO</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>floorNum;<sp/>}</highlight></codeline>
+<codeline lineno="35" refid="class_address_1aa4e6e3e250899473216caa64fff1b6f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1aa4e6e3e250899473216caa64fff1b6f7" kindref="member">getFloor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>buildNum;<sp/>}</highlight></codeline>
+<codeline lineno="36" refid="class_address_1afb9002366f6ad33329b7973a19258ce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_address_1afb9002366f6ad33329b7973a19258ce9" kindref="member">getHouseNO</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>houseNum;<sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCountry(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>country);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setCity(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>city);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setStreet(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>street);</highlight></codeline>
+<codeline lineno="42" refid="class_address_1a1e1ec0f1da54207847b3baedfe5d8b45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_address_1a1e1ec0f1da54207847b3baedfe5d8b45" kindref="member">setBuildNum</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floor)<sp/>{<sp/>this-&gt;buildNum<sp/>=<sp/>floor;<sp/>}</highlight></codeline>
+<codeline lineno="43" refid="class_address_1aa1af15abdfe4614ef7d0151d73759ff9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_address_1aa1af15abdfe4614ef7d0151d73759ff9" kindref="member">setFloorNum</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floor)<sp/>{<sp/>this-&gt;floorNum<sp/>=<sp/>floor;<sp/>}</highlight></codeline>
+<codeline lineno="44" refid="class_address_1a445df60386a7a2e7351a5bb486de0e5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_address_1a445df60386a7a2e7351a5bb486de0e5e" kindref="member">setHouseNum</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>houseNum)<sp/>{<sp/>this-&gt;houseNum<sp/>=<sp/>houseNum;<sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>ostream&amp;<sp/><ref refid="_address_8cpp_1a6caba883406cb277780bfe8b4fbd2129" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_address" kindref="compound">Address</ref>&amp;<sp/>add);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__ADDRESS_H</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Address.h"/>
+  </compounddef>
+</doxygen>

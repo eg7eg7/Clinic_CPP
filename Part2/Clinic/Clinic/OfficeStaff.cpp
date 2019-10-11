@@ -2,8 +2,6 @@
 
 OfficeStaff::OfficeStaff(const Staff & staff) : Staff(staff)
 {
-	
-
 	//this->patientNumber = 0;
 	//patients = new Patient*[MAX_PATIENT_SIZE];
 	//for (int i = 0; i < MAX_PATIENT_SIZE; i++)
@@ -66,7 +64,6 @@ void OfficeStaff::removePatient(const Patient & patient)
 */
 void OfficeStaff::toOs(ostream & os) const
 {
-	
 	os << "**OfficeStaff**" << endl;
 	Staff::toOs(os);
 }

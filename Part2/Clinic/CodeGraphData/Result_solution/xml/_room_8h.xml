@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_room_8h" kind="file">
+    <compoundname>Room.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includedby refid="_staff_8h" local="yes">Clinic/Staff.h</includedby>
+    <includedby refid="_room_8cpp" local="yes">Clinic/Room.cpp</includedby>
+    <incdepgraph>
+      <node id="310">
+        <label>Clinic/Room.h</label>
+        <link refid="Room.h"/>
+        <childnode refid="311" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="314">
+        <label>Clinic/MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="315" relation="include">
+        </childnode>
+        <childnode refid="330" relation="include">
+        </childnode>
+        <childnode refid="332" relation="include">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>Clinic/Staff.cpp</label>
+        <link refid="_staff_8cpp"/>
+      </node>
+      <node id="328">
+        <label>Clinic/Patient.cpp</label>
+        <link refid="_patient_8cpp"/>
+      </node>
+      <node id="312">
+        <label>Clinic/Room.h</label>
+        <link refid="Room.h"/>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="334" relation="include">
+        </childnode>
+      </node>
+      <node id="321">
+        <label>Clinic/ClinicManager.cpp</label>
+        <link refid="_clinic_manager_8cpp"/>
+      </node>
+      <node id="329">
+        <label>Clinic/Doctor.cpp</label>
+        <link refid="_doctor_8cpp"/>
+      </node>
+      <node id="330">
+        <label>Clinic/Nurse.h</label>
+        <link refid="_nurse_8h"/>
+        <childnode refid="322" relation="include">
+        </childnode>
+        <childnode refid="331" relation="include">
+        </childnode>
+      </node>
+      <node id="313">
+        <label>Clinic/Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="333" relation="include">
+        </childnode>
+      </node>
+      <node id="317">
+        <label>Clinic/OfficeStaff.h</label>
+        <link refid="_office_staff_8h"/>
+        <childnode refid="318" relation="include">
+        </childnode>
+        <childnode refid="323" relation="include">
+        </childnode>
+        <childnode refid="325" relation="include">
+        </childnode>
+      </node>
+      <node id="315">
+        <label>Clinic/Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="329" relation="include">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>Clinic/Secretary.cpp</label>
+        <link refid="_secretary_8cpp"/>
+      </node>
+      <node id="320">
+        <label>Clinic/Clinic.cpp</label>
+        <link refid="_clinic_8cpp"/>
+      </node>
+      <node id="326">
+        <label>Clinic/Turn.h</label>
+        <link refid="_turn_8h"/>
+        <childnode refid="323" relation="include">
+        </childnode>
+        <childnode refid="327" relation="include">
+        </childnode>
+      </node>
+      <node id="331">
+        <label>Clinic/Nurse.cpp</label>
+        <link refid="_nurse_8cpp"/>
+      </node>
+      <node id="332">
+        <label>Clinic/MedicalStaff.cpp</label>
+        <link refid="_medical_staff_8cpp"/>
+      </node>
+      <node id="318">
+        <label>Clinic/ClinicManager.h</label>
+        <link refid="_clinic_manager_8h"/>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="321" relation="include">
+        </childnode>
+        <childnode refid="322" relation="include">
+        </childnode>
+      </node>
+      <node id="316">
+        <label>Clinic/Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="317" relation="include">
+        </childnode>
+        <childnode refid="326" relation="include">
+        </childnode>
+        <childnode refid="328" relation="include">
+        </childnode>
+      </node>
+      <node id="327">
+        <label>Clinic/Turn.cpp</label>
+        <link refid="_turn_8cpp"/>
+      </node>
+      <node id="322">
+        <label>Clinic/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="319">
+        <label>Clinic/Clinic.h</label>
+        <link refid="_clinic_8h"/>
+        <childnode refid="320" relation="include">
+        </childnode>
+        <childnode refid="318" relation="include">
+        </childnode>
+      </node>
+      <node id="334">
+        <label>Clinic/Room.cpp</label>
+        <link refid="_room_8cpp"/>
+      </node>
+      <node id="323">
+        <label>Clinic/Secretary.h</label>
+        <link refid="_secretary_8h"/>
+        <childnode refid="319" relation="include">
+        </childnode>
+        <childnode refid="324" relation="include">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>Clinic/OfficeStaff.cpp</label>
+        <link refid="_office_staff_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_room" prot="public">Room</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>message(&quot;Adding<sp/>Room&quot;)</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>__ROOM_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__ROOM_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:<sp/>4996)</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="class_room" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_room" kindref="compound">Room</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_room_1a25fa14e2fbbf132a5f568343d2ec0650" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1a25fa14e2fbbf132a5f568343d2ec0650" kindref="member">roomNumber</ref>;</highlight></codeline>
+<codeline lineno="14" refid="class_room_1a4310313750cfae6b76b9982e81698223" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1a4310313750cfae6b76b9982e81698223" kindref="member">floor</ref>;</highlight></codeline>
+<codeline lineno="15" refid="class_room_1ab40f3aae741c16cfe02bb1487b9e815b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1ab40f3aae741c16cfe02bb1487b9e815b" kindref="member">size</ref>;</highlight></codeline>
+<codeline lineno="16" refid="class_room_1a461d78db35ce6f067c030df68740b27a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1a461d78db35ce6f067c030df68740b27a" kindref="member">num_occupants</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_room" kindref="compound">Room</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_room" kindref="compound">Room</ref>&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/>private<sp/>copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_room" kindref="compound">Room</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_room" kindref="compound">Room</ref>&amp;&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/>private<sp/>move<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_room_1a0dece256f243b09d7aaebd4a5e69ee98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_room_1a0dece256f243b09d7aaebd4a5e69ee98" kindref="member">Room</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>roomNumber,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>floor,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)<sp/>:<sp/>roomNumber(roomNumber),<sp/>floor(floor),<sp/>size(size),<sp/>num_occupants(0)<sp/>{};<sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_room_1af385c01e0ca219565093fe4da2c5eceb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_room_1af385c01e0ca219565093fe4da2c5eceb" kindref="member">~Room</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_room_1ac953dbe7cd710d0316f20d52c5483447" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1ac953dbe7cd710d0316f20d52c5483447" kindref="member">getRoomNumber</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>roomNumber;<sp/>}</highlight></codeline>
+<codeline lineno="27" refid="class_room_1a4916fc246ced829d512cd12a1ece2e0b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1a4916fc246ced829d512cd12a1ece2e0b" kindref="member">getFloor</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>floor;<sp/>}</highlight></codeline>
+<codeline lineno="28" refid="class_room_1af3913a983b9a6f7957bb018ce3955cd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1af3913a983b9a6f7957bb018ce3955cd3" kindref="member">getSize</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>size;<sp/>}</highlight></codeline>
+<codeline lineno="29" refid="class_room_1a7c8b575ca577bc34920c6850f50a50e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_room_1a7c8b575ca577bc34920c6850f50a50e8" kindref="member">isOccupied</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(num_occupants<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="class_room_1a13069b7d376ffd6eb7d65f8c3d7d6ab0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_room_1a13069b7d376ffd6eb7d65f8c3d7d6ab0" kindref="member">getNumOccupants</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>num_occupants;<sp/>};</highlight></codeline>
+<codeline lineno="38" refid="class_room_1ace2165b8dcc4dd67e6cd186ab30b9259" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_room_1ace2165b8dcc4dd67e6cd186ab30b9259" kindref="member">addOccupant</ref>()<sp/>{<sp/>++num_occupants;<sp/>}</highlight></codeline>
+<codeline lineno="39" refid="class_room_1a5874a822a35109189a7882d21ebdc7ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_room_1a5874a822a35109189a7882d21ebdc7ae" kindref="member">removeOccupant</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(num_occupants<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--num_occupants;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>ostream<sp/>&amp;<sp/><ref refid="_address_8cpp_1a6caba883406cb277780bfe8b4fbd2129" kindref="member">operator&lt;&lt;</ref>(ostream<sp/>&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_room" kindref="compound">Room</ref><sp/>&amp;<sp/>room);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!__ROOM_H</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Room.h"/>
+  </compounddef>
+</doxygen>

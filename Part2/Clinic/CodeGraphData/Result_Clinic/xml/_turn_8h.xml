@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_turn_8h" kind="file">
+    <compoundname>Turn.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes refid="_patient_8h" local="yes">Patient.h</includes>
+    <includedby refid="_secretary_8h" local="yes">Clinic/Secretary.h</includedby>
+    <includedby refid="_turn_8cpp" local="yes">Clinic/Turn.cpp</includedby>
+    <incdepgraph>
+      <node id="419">
+        <label>MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>Room.h</label>
+        <link refid="_room_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+      </node>
+      <node id="423">
+        <label>Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+      </node>
+      <node id="420">
+        <label>Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="424" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+      </node>
+      <node id="418">
+        <label>Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+      </node>
+      <node id="422">
+        <label>string.h</label>
+      </node>
+      <node id="415">
+        <label>Clinic/Turn.h</label>
+        <link refid="Turn.h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>iostream</label>
+      </node>
+      <node id="417">
+        <label>Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="430">
+        <label>Clinic/ClinicManager.cpp</label>
+        <link refid="_clinic_manager_8cpp"/>
+      </node>
+      <node id="432">
+        <label>Clinic/Secretary.cpp</label>
+        <link refid="_secretary_8cpp"/>
+      </node>
+      <node id="428">
+        <label>Clinic/Clinic.cpp</label>
+        <link refid="_clinic_8cpp"/>
+      </node>
+      <node id="425">
+        <label>Clinic/Turn.h</label>
+        <link refid="Turn.h"/>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>Clinic/ClinicManager.h</label>
+        <link refid="_clinic_manager_8h"/>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+      </node>
+      <node id="433">
+        <label>Clinic/Turn.cpp</label>
+        <link refid="_turn_8cpp"/>
+      </node>
+      <node id="431">
+        <label>Clinic/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="427">
+        <label>Clinic/Clinic.h</label>
+        <link refid="_clinic_8h"/>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>Clinic/Secretary.h</label>
+        <link refid="_secretary_8h"/>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_turn" prot="public">Turn</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>message(&quot;Adding<sp/>Turn&quot;)</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifndef<sp/>__TURN_H</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__TURN_H</highlight></codeline>
+<codeline lineno="4"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:<sp/>4996)</highlight></codeline>
+<codeline lineno="6"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_patient_8h" kindref="compound">Patient.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_patient" kindref="compound">Patient</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_turn" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_turn" kindref="compound">Turn</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_turn_1a4da227e7db0289cba846ca1f77c1adbf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_turn_1a4da227e7db0289cba846ca1f77c1adbf" kindref="member">startTime</ref>;</highlight></codeline>
+<codeline lineno="18" refid="class_turn_1a3a8a424d0cc581660911c0dde47742f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_turn_1a3a8a424d0cc581660911c0dde47742f6" kindref="member">duration</ref>;</highlight></codeline>
+<codeline lineno="19" refid="class_turn_1a8a0c53c914d120f4f46ff78d5c27a078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>*<sp/><ref refid="class_turn_1a8a0c53c914d120f4f46ff78d5c27a078" kindref="member">medicalStaff</ref>;</highlight></codeline>
+<codeline lineno="20" refid="class_turn_1afc76a39e741e61d9ac8fc9366dc46445" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient" kindref="compound">Patient</ref>*<sp/><ref refid="class_turn_1afc76a39e741e61d9ac8fc9366dc46445" kindref="member">patient</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_turn" kindref="compound">Turn</ref>(<ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>&amp;<sp/>medicalStaff,<sp/><ref refid="class_patient" kindref="compound">Patient</ref>&amp;<sp/>patient,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>startTime,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>duration);<sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_turn" kindref="compound">Turn</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/><sp/>copy<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_turn" kindref="compound">Turn</ref>(<ref refid="class_turn" kindref="compound">Turn</ref>&amp;&amp;<sp/>other);<sp/></highlight><highlight class="comment">//<sp/><sp/>move<sp/>constructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_turn_1acfadbf3a5743faf36e9bf56daf1a0636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_turn_1acfadbf3a5743faf36e9bf56daf1a0636" kindref="member">~Turn</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//void<sp/>operator=(const<sp/>Turn&amp;<sp/>turn);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_turn_1aaee416886fa2734545c5db780304107f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_turn_1aaee416886fa2734545c5db780304107f" kindref="member">getStartTime</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>startTime;<sp/>}<sp/>;</highlight></codeline>
+<codeline lineno="32" refid="class_turn_1a03683e2e01f443a3718056a8e13da3da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_turn_1a03683e2e01f443a3718056a8e13da3da" kindref="member">getDuration</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>duration;<sp/>}<sp/>;</highlight></codeline>
+<codeline lineno="33" refid="class_turn_1a2f8c78e3aeb03cef2c9bf38dc417886c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>*<sp/><ref refid="class_turn_1a2f8c78e3aeb03cef2c9bf38dc417886c" kindref="member">getMedicalStaff</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>medicalStaff;<sp/>};</highlight></codeline>
+<codeline lineno="34" refid="class_turn_1a71be811957820805cf2af11396546e11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_patient" kindref="compound">Patient</ref>*<sp/><ref refid="class_turn_1a71be811957820805cf2af11396546e11" kindref="member">getPatient</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>patient;<sp/>};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeStartTime(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>startTime);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeDuration(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>duration);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeMedicalStaff(<ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref>*<sp/>medicalStaff);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changePatient(<ref refid="class_patient" kindref="compound">Patient</ref>*<sp/>patient);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>ostream<sp/>&amp;<sp/><ref refid="_address_8cpp_1a6caba883406cb277780bfe8b4fbd2129" kindref="member">operator&lt;&lt;</ref>(ostream<sp/>&amp;<sp/>os,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref><sp/>&amp;<sp/>turn);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>!__TURN_H</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Turn.h"/>
+  </compounddef>
+</doxygen>

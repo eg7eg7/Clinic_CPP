@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_office_staff_8cpp" kind="file">
+    <compoundname>OfficeStaff.cpp</compoundname>
+    <includes refid="_office_staff_8h" local="yes">OfficeStaff.h</includes>
+    <incdepgraph>
+      <node id="214">
+        <label>MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="215" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>Room.h</label>
+        <link refid="_room_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
+        <label>Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
+        <label>Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>OfficeStaff.h</label>
+        <link refid="_office_staff_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>string.h</label>
+      </node>
+      <node id="211">
+        <label>iostream</label>
+      </node>
+      <node id="212">
+        <label>Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="213" relation="include">
+        </childnode>
+      </node>
+      <node id="209">
+        <label>Clinic/OfficeStaff.cpp</label>
+        <link refid="OfficeStaff.cpp"/>
+        <childnode refid="210" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_office_staff_8h" kindref="compound">OfficeStaff.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_office_staff_1a49ee7645da0420ebc8f0e644fa40a326" refkind="member"><highlight class="normal"><ref refid="class_office_staff_1a70bbe355de25361db976c551b3e10816" kindref="member">OfficeStaff::OfficeStaff</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_staff" kindref="compound">Staff</ref><sp/>&amp;<sp/>staff)<sp/>:<sp/><ref refid="class_staff" kindref="compound">Staff</ref>(staff)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;patientNumber<sp/>=<sp/>0;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//patients<sp/>=<sp/>new<sp/>Patient*[MAX_PATIENT_SIZE];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_PATIENT_SIZE;<sp/>i++)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//patients[i]<sp/>=<sp/>nullptr;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_office_staff_1a7a2945fd1f727a8ee4bc7634596ca8c1" refkind="member"><highlight class="normal"><ref refid="class_office_staff_1a70bbe355de25361db976c551b3e10816" kindref="member">OfficeStaff::OfficeStaff</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_office_staff" kindref="compound">OfficeStaff</ref><sp/>&amp;<sp/>other)<sp/>:<sp/><ref refid="class_staff" kindref="compound">Staff</ref>(other)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_staff_1a1a315b69f6d687ec7fc7d83a828e139e" kindref="member">room</ref><sp/>=<sp/>other.<ref refid="class_staff_1a1a315b69f6d687ec7fc7d83a828e139e" kindref="member">room</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;patientNumber<sp/>=<sp/>other.patientNumber;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//patients<sp/>=<sp/>new<sp/>Patient*[MAX_PATIENT_SIZE];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_PATIENT_SIZE;<sp/>i++)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>patients[i]<sp/>=<sp/>other.patients[i];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_office_staff_1aba739c85b93df4efebe45ff5e73640b8" refkind="member"><highlight class="normal"><ref refid="class_office_staff_1a70bbe355de25361db976c551b3e10816" kindref="member">OfficeStaff::OfficeStaff</ref>(<ref refid="class_office_staff" kindref="compound">OfficeStaff</ref><sp/>&amp;&amp;<sp/>other)<sp/>:<sp/><ref refid="class_staff" kindref="compound">Staff</ref>(other)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_staff_1a1a315b69f6d687ec7fc7d83a828e139e" kindref="member">room</ref><sp/>=<sp/>other.room;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>other.room<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_office_staff_1a6e7aa2641bccdccfdfc60d27d18d8909" refkind="member"><highlight class="normal"><ref refid="class_office_staff_1a6e7aa2641bccdccfdfc60d27d18d8909" kindref="member">OfficeStaff::~OfficeStaff</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_staff_1a1a315b69f6d687ec7fc7d83a828e139e" kindref="member">room</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_staff_1a1a315b69f6d687ec7fc7d83a828e139e" kindref="member">room</ref>-&gt;<ref refid="class_room_1ace2165b8dcc4dd67e6cd186ab30b9259" kindref="member">addOccupant</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//delete[]patients;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">void<sp/>OfficeStaff::addPatient(Patient<sp/>&amp;<sp/>patient)</highlight></codeline>
+<codeline lineno="38"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(patientNumber<sp/>&lt;<sp/>MAX_PATIENT_SIZE)</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_PATIENT_SIZE;<sp/>i++)</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(patients[i]<sp/>==<sp/>nullptr)</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>patients[i]<sp/>=<sp/>&amp;patient;</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++patientNumber;</highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"></highlight></codeline>
+<codeline lineno="53"><highlight class="comment">void<sp/>OfficeStaff::removePatient(const<sp/>Patient<sp/>&amp;<sp/>patient)</highlight></codeline>
+<codeline lineno="54"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>MAX_PATIENT_SIZE;<sp/>i++)</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(patients[i]<sp/>==<sp/>&amp;patient)</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>patients[i]<sp/>=<sp/>nullptr;</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--patientNumber;</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>break;</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"></highlight></codeline>
+<codeline lineno="66"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_office_staff_1a9b6e718cd144add497e629be1acd9a75" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_office_staff_1a9b6e718cd144add497e629be1acd9a75" kindref="member">OfficeStaff::toOs</ref>(ostream<sp/>&amp;<sp/>os)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="68"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;**OfficeStaff**&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_staff_1a0a314f76acf32787fd48c128e8134601" kindref="member">Staff::toOs</ref>(os);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/OfficeStaff.cpp"/>
+  </compounddef>
+</doxygen>

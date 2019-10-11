@@ -47,7 +47,6 @@ void Nurse::addServices(const char* service)
 	}
 }
 
-
 void Nurse::toOs(ostream & os) const
 {
 	os << "**Nurse**" << endl;

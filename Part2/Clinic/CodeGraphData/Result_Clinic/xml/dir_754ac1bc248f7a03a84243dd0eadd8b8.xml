@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_754ac1bc248f7a03a84243dd0eadd8b8" kind="dir">
+    <compoundname>Clinic</compoundname>
+    <innerfile refid="_address_8cpp">Address.cpp</innerfile>
+    <innerfile refid="_address_8h">Address.h</innerfile>
+    <innerfile refid="_clinic_8cpp">Clinic.cpp</innerfile>
+    <innerfile refid="_clinic_8h">Clinic.h</innerfile>
+    <innerfile refid="_clinic_manager_8cpp">ClinicManager.cpp</innerfile>
+    <innerfile refid="_clinic_manager_8h">ClinicManager.h</innerfile>
+    <innerfile refid="_doctor_8cpp">Doctor.cpp</innerfile>
+    <innerfile refid="_doctor_8h">Doctor.h</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="_medical_staff_8cpp">MedicalStaff.cpp</innerfile>
+    <innerfile refid="_medical_staff_8h">MedicalStaff.h</innerfile>
+    <innerfile refid="_nurse_8cpp">Nurse.cpp</innerfile>
+    <innerfile refid="_nurse_8h">Nurse.h</innerfile>
+    <innerfile refid="_office_staff_8cpp">OfficeStaff.cpp</innerfile>
+    <innerfile refid="_office_staff_8h">OfficeStaff.h</innerfile>
+    <innerfile refid="_patient_8cpp">Patient.cpp</innerfile>
+    <innerfile refid="_patient_8h">Patient.h</innerfile>
+    <innerfile refid="_person_8cpp">Person.cpp</innerfile>
+    <innerfile refid="_person_8h">Person.h</innerfile>
+    <innerfile refid="_room_8cpp">Room.cpp</innerfile>
+    <innerfile refid="_room_8h">Room.h</innerfile>
+    <innerfile refid="_secretary_8cpp">Secretary.cpp</innerfile>
+    <innerfile refid="_secretary_8h">Secretary.h</innerfile>
+    <innerfile refid="_staff_8cpp">Staff.cpp</innerfile>
+    <innerfile refid="_staff_8h">Staff.h</innerfile>
+    <innerfile refid="_turn_8cpp">Turn.cpp</innerfile>
+    <innerfile refid="_turn_8h">Turn.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/"/>
+  </compounddef>
+</doxygen>

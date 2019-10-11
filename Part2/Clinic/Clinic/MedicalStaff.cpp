@@ -5,7 +5,7 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 {
 	acceptHoursFrom = acceptHoursF;
 	acceptHoursTo = acceptHoursT;
-	
+
 	turns = new Turn*[TURN_SIZE];
 	for (int i = 0; i < TURN_SIZE; i++)
 	{
@@ -16,7 +16,6 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 
 MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 {
-	
 	acceptHoursFrom = other.acceptHoursFrom;
 	acceptHoursTo = other.acceptHoursTo;
 	turnsNumber = other.turnsNumber;
@@ -29,7 +28,6 @@ MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 
 MedicalStaff::~MedicalStaff()
 {
-	
 	delete[]turns;
 }
 
@@ -40,7 +38,7 @@ void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 		acceptHoursFrom = medicalstaff.acceptHoursFrom;
 		acceptHoursTo = medicalstaff.acceptHoursTo;
 		turnsNumber = medicalstaff.turnsNumber;
-		if(turns == nullptr)
+		if (turns == nullptr)
 			turns = new Turn*[TURN_SIZE];
 		for (int i = 0; i < TURN_SIZE; i++)
 		{
@@ -85,7 +83,7 @@ Turn* MedicalStaff::operator[](int index)
 
 void MedicalStaff::toOs(ostream & os) const
 {
-	os << "**Medical Staff**";
+	os << "**Medical Staff**" <<endl;
 	Staff::toOs(os);
 	os << " Accepting from " << acceptHoursFrom << " to " <<
 		acceptHoursTo << endl;

@@ -1,0 +1,462 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_nurse" kind="class" prot="public">
+    <compoundname>Nurse</compoundname>
+    <basecompoundref refid="class_medical_staff" prot="public" virt="non-virtual">MedicalStaff</basecompoundref>
+    <includes refid="_nurse_8h" local="no">Nurse.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_nurse_1a5788b587eb269d09bb6d264c017b1713" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int Nurse::MAX_NURSE_SERVICES</definition>
+        <argsstring></argsstring>
+        <name>MAX_NURSE_SERVICES</name>
+        <initializer>= 20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="15" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_nurse_1a17ac2bcb32e06857177d5096391c6516" compoundref="_nurse_8cpp" startline="41" endline="48">addServices</referencedby>
+        <referencedby refid="class_nurse_1af87d40d2c1748ad504bee26f4ba21cc4" compoundref="_nurse_8cpp" startline="4" endline="8">Nurse</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" prot="protected" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** Nurse::services</definition>
+        <argsstring></argsstring>
+        <name>services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="17" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="class_nurse_1a17ac2bcb32e06857177d5096391c6516" compoundref="_nurse_8cpp" startline="41" endline="48">addServices</referencedby>
+        <referencedby refid="class_nurse_1af87d40d2c1748ad504bee26f4ba21cc4" compoundref="_nurse_8cpp" startline="4" endline="8">Nurse</referencedby>
+        <referencedby refid="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" compoundref="_nurse_8cpp" startline="25" endline="39">operator=</referencedby>
+        <referencedby refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260" compoundref="_nurse_8cpp" startline="51" endline="58">toOs</referencedby>
+        <referencedby refid="class_nurse_1aa49af3f6459afc647cb976841dc97468" compoundref="_nurse_8cpp" startline="18" endline="23">~Nurse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Nurse::num_services</definition>
+        <argsstring></argsstring>
+        <name>num_services</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="18" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="class_nurse_1a17ac2bcb32e06857177d5096391c6516" compoundref="_nurse_8cpp" startline="41" endline="48">addServices</referencedby>
+        <referencedby refid="class_nurse_1af87d40d2c1748ad504bee26f4ba21cc4" compoundref="_nurse_8cpp" startline="4" endline="8">Nurse</referencedby>
+        <referencedby refid="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" compoundref="_nurse_8cpp" startline="25" endline="39">operator=</referencedby>
+        <referencedby refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260" compoundref="_nurse_8cpp" startline="51" endline="58">toOs</referencedby>
+        <referencedby refid="class_nurse_1aa49af3f6459afc647cb976841dc97468" compoundref="_nurse_8cpp" startline="18" endline="23">~Nurse</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_nurse_1aa9c1d66b76a45a8a74b3aebfc1302ca6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Nurse::Nurse</definition>
+        <argsstring>(Nurse &amp;&amp;other)</argsstring>
+        <name>Nurse</name>
+        <param>
+          <type><ref refid="class_nurse" kindref="compound">Nurse</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1a4ca78bfae8dbd2f20ac4ea9e1fecc051" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Nurse::Nurse</definition>
+        <argsstring>(MedicalStaff &amp;&amp;medicalStaff, const char *service)</argsstring>
+        <name>Nurse</name>
+        <param>
+          <type><ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref> &amp;&amp;</type>
+          <declname>medicalStaff</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1af87d40d2c1748ad504bee26f4ba21cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Nurse::Nurse</definition>
+        <argsstring>(const MedicalStaff &amp;medicalStaff, const char *service)</argsstring>
+        <name>Nurse</name>
+        <param>
+          <type>const <ref refid="class_medical_staff" kindref="compound">MedicalStaff</ref> &amp;</type>
+          <declname>medicalStaff</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="22" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="4" bodyend="8"/>
+        <references refid="class_nurse_1a5788b587eb269d09bb6d264c017b1713" compoundref="_nurse_8h" startline="15">MAX_NURSE_SERVICES</references>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1aada920d0864c898c6f067d7883c54889" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Nurse::Nurse</definition>
+        <argsstring>(const Nurse &amp;other)</argsstring>
+        <name>Nurse</name>
+        <param>
+          <type>const <ref refid="class_nurse" kindref="compound">Nurse</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="23" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="10" bodyend="16"/>
+        <references refid="class_nurse_1a44c7ead6e5721eb39c9c3c924830f7d1" compoundref="_nurse_8h" startline="34" endline="34">getNumServices</references>
+        <references refid="class_nurse_1a1f9c39a37365804650897bd2125d3564" compoundref="_nurse_8h" startline="29" endline="29">getServices</references>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1aa49af3f6459afc647cb976841dc97468" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Nurse::~Nurse</definition>
+        <argsstring>()</argsstring>
+        <name>~Nurse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="24" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="18" bodyend="23"/>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="class_nurse" kindref="compound">Nurse</ref> &amp;</type>
+        <definition>const Nurse &amp; Nurse::operator=</definition>
+        <argsstring>(const Nurse &amp;nurse)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_nurse" kindref="compound">Nurse</ref> &amp;</type>
+          <declname>nurse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="26" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="25" bodyend="39"/>
+        <references refid="class_nurse_1a44c7ead6e5721eb39c9c3c924830f7d1" compoundref="_nurse_8h" startline="34" endline="34">getNumServices</references>
+        <references refid="class_nurse_1a1f9c39a37365804650897bd2125d3564" compoundref="_nurse_8h" startline="29" endline="29">getServices</references>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1a1f9c39a37365804650897bd2125d3564" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>char **</type>
+        <definition>char** Nurse::getServices</definition>
+        <argsstring>() const </argsstring>
+        <name>getServices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="29" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="29" bodyend="29"/>
+        <referencedby refid="class_nurse_1aada920d0864c898c6f067d7883c54889" compoundref="_nurse_8cpp" startline="10" endline="16">Nurse</referencedby>
+        <referencedby refid="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" compoundref="_nurse_8cpp" startline="25" endline="39">operator=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1a17ac2bcb32e06857177d5096391c6516" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Nurse::addServices</definition>
+        <argsstring>(const char *service)</argsstring>
+        <name>addServices</name>
+        <param>
+          <type>const char *</type>
+          <declname>service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="32" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="41" bodyend="48"/>
+        <references refid="class_nurse_1a5788b587eb269d09bb6d264c017b1713" compoundref="_nurse_8h" startline="15">MAX_NURSE_SERVICES</references>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1a44c7ead6e5721eb39c9c3c924830f7d1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Nurse::getNumServices</definition>
+        <argsstring>() const </argsstring>
+        <name>getNumServices</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="34" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="34" bodyend="34"/>
+        <referencedby refid="class_nurse_1aada920d0864c898c6f067d7883c54889" compoundref="_nurse_8cpp" startline="10" endline="16">Nurse</referencedby>
+        <referencedby refid="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" compoundref="_nurse_8cpp" startline="25" endline="39">operator=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_nurse_1ab86cc77eded002a3d75c1151e88d2260" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Nurse::toOs</definition>
+        <argsstring>(ostream &amp;os) const override</argsstring>
+        <name>toOs</name>
+        <reimplements refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6">toOs</reimplements>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="38" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.cpp" bodystart="51" bodyend="58"/>
+        <references refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" compoundref="_nurse_8h" startline="18">num_services</references>
+        <references refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" compoundref="_nurse_8h" startline="17">services</references>
+        <references refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6" compoundref="_medical_staff_8cpp" startline="86" endline="92">MedicalStaff::toOs</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="64">
+        <label>Nurse</label>
+        <link refid="class_nurse"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>Staff</label>
+        <link refid="class_staff"/>
+        <childnode refid="67" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>MedicalStaff</label>
+        <link refid="class_medical_staff"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>Person</label>
+        <link refid="class_person"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="68">
+        <label>Nurse</label>
+        <link refid="class_nurse"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>Staff</label>
+        <link refid="class_staff"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>clinic</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>room</edgelabel>
+        </childnode>
+      </node>
+      <node id="69">
+        <label>MedicalStaff</label>
+        <link refid="class_medical_staff"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>room</edgelabel>
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Address</label>
+        <link refid="class_address"/>
+      </node>
+      <node id="78">
+        <label>Turn</label>
+        <link refid="class_turn"/>
+        <childnode refid="77" relation="usage">
+          <edgelabel>patient</edgelabel>
+        </childnode>
+        <childnode refid="69" relation="usage">
+          <edgelabel>medicalStaff</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Clinic</label>
+        <link refid="class_clinic"/>
+        <childnode refid="74" relation="usage">
+          <edgelabel>manager</edgelabel>
+        </childnode>
+        <childnode refid="72" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+        <childnode refid="77" relation="usage">
+          <edgelabel>patients</edgelabel>
+        </childnode>
+        <childnode refid="79" relation="usage">
+          <edgelabel>rooms</edgelabel>
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+        <childnode refid="70" relation="usage">
+          <edgelabel>staff</edgelabel>
+        </childnode>
+      </node>
+      <node id="77">
+        <label>Patient</label>
+        <link refid="class_patient"/>
+        <childnode refid="71" relation="public-inheritance">
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>personalDoctor</edgelabel>
+        </childnode>
+        <childnode refid="78" relation="usage">
+          <edgelabel>turns</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>Person</label>
+        <link refid="class_person"/>
+        <childnode refid="72" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+      <node id="74">
+        <label>ClinicManager</label>
+        <link refid="class_clinic_manager"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>clinic</edgelabel>
+        </childnode>
+      </node>
+      <node id="79">
+        <label>Room</label>
+        <link refid="class_room"/>
+      </node>
+      <node id="75">
+        <label>OfficeStaff</label>
+        <link refid="class_office_staff"/>
+        <childnode refid="70" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>Doctor</label>
+        <link refid="class_doctor"/>
+        <childnode refid="69" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" line="13" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Nurse.h" bodystart="12" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_medical_staff_1a46df8f39962b8404d08674e99de98ef6" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>acceptHoursFrom</name></member>
+      <member refid="class_medical_staff_1a766d413e441a8be14835667f6d9a5cc9" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>acceptHoursTo</name></member>
+      <member refid="class_person_1a83cf1fc90cc6a575638757a0b6683436" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>address</name></member>
+      <member refid="class_nurse_1a17ac2bcb32e06857177d5096391c6516" prot="public" virt="non-virtual"><scope>Nurse</scope><name>addServices</name></member>
+      <member refid="class_medical_staff_1a2f3256f590df5a827526f7efbceb3401" prot="public" virt="non-virtual"><scope>Nurse</scope><name>addTurn</name></member>
+      <member refid="class_person_1acf9db1a60683f40b20ae569d29852d69" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>age</name></member>
+      <member refid="class_staff_1ac8ddd182e686dc2c25a955878b75fcc9" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>clinic</name></member>
+      <member refid="class_medical_staff_1a05dd2820265671835362cc79626b47cd" prot="public" virt="non-virtual"><scope>Nurse</scope><name>deleteTurn</name></member>
+      <member refid="class_person_1ac0c9fb8a33cede2854ff27bf95479050" prot="public" virt="non-virtual"><scope>Nurse</scope><name>displayGender</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" prot="public" virt="non-virtual"><scope>Nurse</scope><name>eGender</name></member>
+      <member refid="class_staff_1af85c87ad30b0c9bb01c7b4ca484efd0c" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>extension</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a7027cf94656ed6b308e128220d8c2a2e" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Female</name></member>
+      <member refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>gender</name></member>
+      <member refid="class_person_1acc3490277e1a945ffc1c5ad223d5ce6e" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getAddress</name></member>
+      <member refid="class_person_1a29f417d3222ae3c9e20bffb881ca17b4" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getAge</name></member>
+      <member refid="class_staff_1afb9d524f1a240ce616ee460f1e14cb5f" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getClinic</name></member>
+      <member refid="class_staff_1acfd586fc46a99dd7ab835281eb38e910" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getExtension</name></member>
+      <member refid="class_person_1aa927312eb028061dd674a53966513629" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getGender</name></member>
+      <member refid="class_person_1acaef9cee62443d15b3abcf426b1f8bf1" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getId</name></member>
+      <member refid="class_person_1a6da618d68519ead50a723e018a1365aa" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getName</name></member>
+      <member refid="class_medical_staff_1a5ca2f161cfe6bf608d6c74da4370b07f" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getNextFreeTime</name></member>
+      <member refid="class_nurse_1a44c7ead6e5721eb39c9c3c924830f7d1" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getNumServices</name></member>
+      <member refid="class_person_1aa834b1e2cd575ce4184468da755f7658" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getPhone</name></member>
+      <member refid="class_staff_1a9ac96b8074262183ac03cbf1da22e00c" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getSalary</name></member>
+      <member refid="class_nurse_1a1f9c39a37365804650897bd2125d3564" prot="public" virt="non-virtual"><scope>Nurse</scope><name>getServices</name></member>
+      <member refid="class_person_1aec48a92f614a854ff380a15eb8e2f479" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>id</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a650f4b60ad9f224e14c607a4bb05c8a6" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Male</name></member>
+      <member refid="class_nurse_1a5788b587eb269d09bb6d264c017b1713" prot="public" virt="non-virtual"><scope>Nurse</scope><name>MAX_NURSE_SERVICES</name></member>
+      <member refid="class_medical_staff_1a232c3a0bced5c6c74123d07722d5e0f3" prot="public" virt="non-virtual"><scope>Nurse</scope><name>MedicalStaff</name></member>
+      <member refid="class_medical_staff_1a738ed9436082b11b6ee8a724eba3b7a0" prot="public" virt="non-virtual"><scope>Nurse</scope><name>MedicalStaff</name></member>
+      <member refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>name</name></member>
+      <member refid="class_nurse_1a9acc1ac3399736c16ef9e57474178f98" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>num_services</name></member>
+      <member refid="class_nurse_1aa9c1d66b76a45a8a74b3aebfc1302ca6" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Nurse</name></member>
+      <member refid="class_nurse_1a4ca78bfae8dbd2f20ac4ea9e1fecc051" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Nurse</name></member>
+      <member refid="class_nurse_1af87d40d2c1748ad504bee26f4ba21cc4" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Nurse</name></member>
+      <member refid="class_nurse_1aada920d0864c898c6f067d7883c54889" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Nurse</name></member>
+      <member refid="class_nurse_1a269329235fb1a36339e4a73fb8a9fa3f" prot="public" virt="non-virtual"><scope>Nurse</scope><name>operator=</name></member>
+      <member refid="class_medical_staff_1a317e0df18afe8c11710aa61676b27f4d" prot="public" virt="non-virtual" ambiguityscope="MedicalStaff::"><scope>Nurse</scope><name>operator=</name></member>
+      <member refid="class_medical_staff_1ad89144260db4ebf8d7c72e3ff0d48807" prot="public" virt="non-virtual"><scope>Nurse</scope><name>operator[]</name></member>
+      <member refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Person</name></member>
+      <member refid="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Person</name></member>
+      <member refid="class_person_1a086475ed9df90992bcdf73901de67e48" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Person</name></member>
+      <member refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>phone</name></member>
+      <member refid="class_medical_staff_1a3b1b758253c0f0ae00eb88731f3df9aa" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>room</name></member>
+      <member refid="class_staff_1aec759352f28647466760c59affabec1c" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>salary</name></member>
+      <member refid="class_nurse_1a02d35cfc8df0e49cfb00e33a9504c36d" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>services</name></member>
+      <member refid="class_person_1a51497829ea8bd6fe8990642f0ecbdf0e" prot="public" virt="non-virtual"><scope>Nurse</scope><name>setAddress</name></member>
+      <member refid="class_staff_1aa17b2e23e4f2a0e00fc5a81798c23acf" prot="public" virt="non-virtual"><scope>Nurse</scope><name>setClinic</name></member>
+      <member refid="class_person_1a53821823de8fa7a62c9660505f375044" prot="public" virt="non-virtual"><scope>Nurse</scope><name>setPhone</name></member>
+      <member refid="class_staff_1a4c99f4dd69ec7c2e24c59d0c469fbae7" prot="public" virt="non-virtual"><scope>Nurse</scope><name>setSalary</name></member>
+      <member refid="class_staff_1a430c130c6ab241a6fce032febd2f5eaa" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Staff</name></member>
+      <member refid="class_staff_1a5151c918b064b5926cbf7278502fcfeb" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Staff</name></member>
+      <member refid="class_staff_1a76aa9ee991bde6eb1ae64e83ac119c35" prot="public" virt="non-virtual"><scope>Nurse</scope><name>Staff</name></member>
+      <member refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260" prot="public" virt="virtual"><scope>Nurse</scope><name>toOs</name></member>
+      <member refid="class_medical_staff_1a5b5148bfc305c413a39f06349b82b810" prot="public" virt="non-virtual"><scope>Nurse</scope><name>TURN_SIZE</name></member>
+      <member refid="class_medical_staff_1acbd0ce9a2a9c697f750a6992297cfb33" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>turns</name></member>
+      <member refid="class_medical_staff_1a2da3be45327b88df7ae816ce727e3b15" prot="protected" virt="non-virtual"><scope>Nurse</scope><name>turnsNumber</name></member>
+      <member refid="class_medical_staff_1ae355f9302dc3aca1ce0906a3dc318926" prot="public" virt="virtual"><scope>Nurse</scope><name>~MedicalStaff</name></member>
+      <member refid="class_nurse_1aa49af3f6459afc647cb976841dc97468" prot="public" virt="virtual"><scope>Nurse</scope><name>~Nurse</name></member>
+      <member refid="class_person_1a700ffd693321c5fe6880262acf43d4da" prot="public" virt="virtual"><scope>Nurse</scope><name>~Person</name></member>
+      <member refid="class_staff_1ab7ae31008728fc1c384d749b2927bc66" prot="public" virt="virtual"><scope>Nurse</scope><name>~Staff</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

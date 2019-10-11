@@ -15,11 +15,9 @@ const Doctor& Doctor::operator=(const Doctor& doctor)
 	return *this;
 }
 
-
 void Doctor::toOs(ostream & os) const
 {
-	
 	os << "**Doctor**" << endl;
 	MedicalStaff::toOs(os);
-	os	<< "Profession: " << profession << endl;
+	os << "Profession: " << profession << endl;
 }

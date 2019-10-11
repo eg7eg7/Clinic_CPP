@@ -1,6 +1,8 @@
+#pragma message("Adding Nurse")
 #ifndef __NURSE_H
 #define __NURSE_H
 #pragma warning(disable: 4996)
+
 #include <iostream>
 #include <string.h>
 #include "MedicalStaff.h"
@@ -32,7 +34,7 @@ public:
 	int getNumServices() const { return num_services; };
 
 	// Show
-	
+
 	void Nurse::toOs(ostream & os) const override;
 };
 

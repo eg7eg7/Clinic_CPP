@@ -44,7 +44,7 @@ void Turn::changeMedicalStaff(MedicalStaff* medicalStaff)
 {
 	if (medicalStaff != this->medicalStaff)
 	{
-		if(this->medicalStaff !=nullptr)
+		if (this->medicalStaff != nullptr)
 			this->medicalStaff->deleteTurn(*this);
 		this->medicalStaff = medicalStaff;
 	}
@@ -60,12 +60,10 @@ void Turn::changePatient(Patient* patient)
 	}
 }
 
-
 ostream & operator<<(ostream & os, const Turn & turn)
 {
-	os << endl <<"Turn beginning at: " << turn.getStartTime() << endl <<
+	os << endl << "Turn beginning at: " << turn.getStartTime() << endl <<
 		"Duration: " << turn.getDuration() << endl << "for patient:" << (turn.getPatient())->getName()
 		<< endl << "with medical Staff: " << (turn.getMedicalStaff())->getName();
 	return os;
 }
-

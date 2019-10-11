@@ -1,0 +1,522 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_person" kind="class" prot="public">
+    <compoundname>Person</compoundname>
+    <derivedcompoundref refid="class_patient" prot="public" virt="non-virtual">Patient</derivedcompoundref>
+    <derivedcompoundref refid="class_staff" prot="public" virt="non-virtual">Staff</derivedcompoundref>
+    <includes refid="_person_8h" local="no">Person.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_person_1ae722ba3532c60a6aec483b7da11d7f85" prot="public" static="no">
+        <name>eGender</name>
+        <enumvalue id="class_person_1ae722ba3532c60a6aec483b7da11d7f85a650f4b60ad9f224e14c607a4bb05c8a6" prot="public">
+          <name>Male</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_person_1ae722ba3532c60a6aec483b7da11d7f85a7027cf94656ed6b308e128220d8c2a2e" prot="public">
+          <name>Female</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="16" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="16" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_person_1aec48a92f614a854ff380a15eb8e2f479" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Person::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="20" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" compoundref="_person_8cpp" startline="4" endline="12">Person</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" prot="protected" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Person::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="21" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="class_secretary_1a06f774c2995cd15fbfd4d1c4b950198f" compoundref="_secretary_8cpp" startline="3" endline="17">Secretary::callPatient</referencedby>
+        <referencedby refid="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" compoundref="_person_8cpp" startline="14" endline="21">Person</referencedby>
+        <referencedby refid="class_person_1a700ffd693321c5fe6880262acf43d4da" compoundref="_person_8cpp" startline="35" endline="39">~Person</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" prot="protected" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Person::phone</definition>
+        <argsstring></argsstring>
+        <name>phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="22" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="22" bodyend="-1"/>
+        <referencedby refid="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" compoundref="_person_8cpp" startline="14" endline="21">Person</referencedby>
+        <referencedby refid="class_person_1a53821823de8fa7a62c9660505f375044" compoundref="_person_8cpp" startline="41" endline="45">setPhone</referencedby>
+        <referencedby refid="class_person_1a700ffd693321c5fe6880262acf43d4da" compoundref="_person_8cpp" startline="35" endline="39">~Person</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1acf9db1a60683f40b20ae569d29852d69" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Person::age</definition>
+        <argsstring></argsstring>
+        <name>age</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="23" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" compoundref="_person_8cpp" startline="4" endline="12">Person</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1a83cf1fc90cc6a575638757a0b6683436" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_address" kindref="compound">Address</ref></type>
+        <definition>Address Person::address</definition>
+        <argsstring></argsstring>
+        <name>address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="24" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="class_person_1a51497829ea8bd6fe8990642f0ecbdf0e" compoundref="_person_8cpp" startline="46" endline="49">setAddress</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_person_1a9a8aaff8360d77a302b035450602c6e4" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" kindref="member">eGender</ref></type>
+        <definition>eGender Person::gender</definition>
+        <argsstring></argsstring>
+        <name>gender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="25" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_person_1ac0c9fb8a33cede2854ff27bf95479050" compoundref="_person_8cpp" startline="58" endline="70">displayGender</referencedby>
+        <referencedby refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" compoundref="_person_8cpp" startline="4" endline="12">Person</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_person_1ab02c252e277d4ff16208420b4d5f8e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Person::Person</definition>
+        <argsstring>(int id, const char *name, const char *phone, int age, const Address &amp;address, const eGender &amp;gender)</argsstring>
+        <name>Person</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>phone</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>age</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_address" kindref="compound">Address</ref> &amp;</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" kindref="member">eGender</ref> &amp;</type>
+          <declname>gender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="28" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="4" bodyend="12"/>
+        <references refid="class_person_1acf9db1a60683f40b20ae569d29852d69" compoundref="_person_8h" startline="23">age</references>
+        <references refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" compoundref="_person_8h" startline="25">gender</references>
+        <references refid="class_person_1aec48a92f614a854ff380a15eb8e2f479" compoundref="_person_8h" startline="20">id</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Person::Person</definition>
+        <argsstring>(const Person &amp;other)</argsstring>
+        <name>Person</name>
+        <param>
+          <type>const <ref refid="class_person" kindref="compound">Person</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="29" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="14" bodyend="21"/>
+        <references refid="class_person_1acf9db1a60683f40b20ae569d29852d69" compoundref="_person_8h" startline="23">age</references>
+        <references refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" compoundref="_person_8h" startline="25">gender</references>
+        <references refid="class_person_1aec48a92f614a854ff380a15eb8e2f479" compoundref="_person_8h" startline="20">id</references>
+        <references refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" compoundref="_person_8h" startline="21">name</references>
+        <references refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" compoundref="_person_8h" startline="22">phone</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a086475ed9df90992bcdf73901de67e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Person::Person</definition>
+        <argsstring>(Person &amp;&amp;other)</argsstring>
+        <name>Person</name>
+        <param>
+          <type><ref refid="class_person" kindref="compound">Person</ref> &amp;&amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="30" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="23" bodyend="33"/>
+        <references refid="class_person_1acf9db1a60683f40b20ae569d29852d69" compoundref="_person_8h" startline="23">age</references>
+        <references refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" compoundref="_person_8h" startline="25">gender</references>
+        <references refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" compoundref="_person_8h" startline="21">name</references>
+        <references refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" compoundref="_person_8h" startline="22">phone</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a700ffd693321c5fe6880262acf43d4da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Person::~Person</definition>
+        <argsstring>()</argsstring>
+        <name>~Person</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="31" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="35" bodyend="39"/>
+        <references refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" compoundref="_person_8h" startline="21">name</references>
+        <references refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" compoundref="_person_8h" startline="22">phone</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1acaef9cee62443d15b3abcf426b1f8bf1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Person::getId</definition>
+        <argsstring>() const </argsstring>
+        <name>getId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="34" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="34" bodyend="34"/>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a6da618d68519ead50a723e018a1365aa" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Person::getName</definition>
+        <argsstring>() const </argsstring>
+        <name>getName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="35" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="35" bodyend="35"/>
+        <referencedby refid="class_secretary_1a06f774c2995cd15fbfd4d1c4b950198f" compoundref="_secretary_8cpp" startline="3" endline="17">Secretary::callPatient</referencedby>
+        <referencedby refid="_clinic_8cpp_1ac119f57830740ce6e7a22981ccc9030c" compoundref="_clinic_8cpp" startline="319" endline="333">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_patient_1adc7caf189a700e6107a245b16a4729d5" compoundref="_patient_8cpp" startline="81" endline="88">Patient::toOs</referencedby>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1aa834b1e2cd575ce4184468da755f7658" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char* Person::getPhone</definition>
+        <argsstring>() const </argsstring>
+        <name>getPhone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="36" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="36" bodyend="36"/>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a29f417d3222ae3c9e20bffb881ca17b4" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const int</type>
+        <definition>const int Person::getAge</definition>
+        <argsstring>() const </argsstring>
+        <name>getAge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="37" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="37" bodyend="37"/>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1aa927312eb028061dd674a53966513629" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" kindref="member">eGender</ref></type>
+        <definition>const eGender Person::getGender</definition>
+        <argsstring>() const </argsstring>
+        <name>getGender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="38" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1acc3490277e1a945ffc1c5ad223d5ce6e" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="class_address" kindref="compound">Address</ref> &amp;</type>
+        <definition>const Address&amp; Person::getAddress</definition>
+        <argsstring>() const </argsstring>
+        <name>getAddress</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="39" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="39" bodyend="39"/>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a53821823de8fa7a62c9660505f375044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Person::setPhone</definition>
+        <argsstring>(const char *phone)</argsstring>
+        <name>setPhone</name>
+        <param>
+          <type>const char *</type>
+          <declname>phone</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="42" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="41" bodyend="45"/>
+        <references refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" compoundref="_person_8h" startline="22">phone</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a51497829ea8bd6fe8990642f0ecbdf0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Person::setAddress</definition>
+        <argsstring>(Address &amp;address)</argsstring>
+        <name>setAddress</name>
+        <param>
+          <type><ref refid="class_address" kindref="compound">Address</ref> &amp;</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="43" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="46" bodyend="49"/>
+        <references refid="class_person_1a83cf1fc90cc6a575638757a0b6683436" compoundref="_person_8h" startline="24">address</references>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1a6229da664a4db8940d9517291102da55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Person::toOs</definition>
+        <argsstring>(ostream &amp;os) const </argsstring>
+        <name>toOs</name>
+        <reimplementedby refid="class_secretary_1ae797f52e2cf330ea9927e04fcdda0c8f">toOs</reimplementedby>
+        <reimplementedby refid="class_doctor_1aed26215fc7a16ed5e0554ed9c28b4f2a">toOs</reimplementedby>
+        <reimplementedby refid="class_clinic_manager_1a2d3b1f84f9d6d5c85411cbd2fb2a1827">toOs</reimplementedby>
+        <reimplementedby refid="class_office_staff_1a9b6e718cd144add497e629be1acd9a75">toOs</reimplementedby>
+        <reimplementedby refid="class_staff_1a0a314f76acf32787fd48c128e8134601">toOs</reimplementedby>
+        <reimplementedby refid="class_nurse_1ab86cc77eded002a3d75c1151e88d2260">toOs</reimplementedby>
+        <reimplementedby refid="class_patient_1adc7caf189a700e6107a245b16a4729d5">toOs</reimplementedby>
+        <reimplementedby refid="class_medical_staff_1a21edb471edd2a346f7562d147e1c2df6">toOs</reimplementedby>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="47" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="50" bodyend="57"/>
+        <references refid="class_person_1ac0c9fb8a33cede2854ff27bf95479050" compoundref="_person_8cpp" startline="58" endline="70">displayGender</references>
+        <references refid="class_person_1acc3490277e1a945ffc1c5ad223d5ce6e" compoundref="_person_8h" startline="39" endline="39">getAddress</references>
+        <references refid="class_person_1a29f417d3222ae3c9e20bffb881ca17b4" compoundref="_person_8h" startline="37" endline="37">getAge</references>
+        <references refid="class_person_1acaef9cee62443d15b3abcf426b1f8bf1" compoundref="_person_8h" startline="34" endline="34">getId</references>
+        <references refid="class_person_1a6da618d68519ead50a723e018a1365aa" compoundref="_person_8h" startline="35" endline="35">getName</references>
+        <references refid="class_person_1aa834b1e2cd575ce4184468da755f7658" compoundref="_person_8h" startline="36" endline="36">getPhone</references>
+        <referencedby refid="_person_8cpp_1a09aa373e37f4eea49e2ad4f84b0a7802" compoundref="_person_8cpp" startline="71" endline="76">operator&lt;&lt;</referencedby>
+        <referencedby refid="class_staff_1a0a314f76acf32787fd48c128e8134601" compoundref="_staff_8cpp" startline="22" endline="30">Staff::toOs</referencedby>
+        <referencedby refid="class_patient_1adc7caf189a700e6107a245b16a4729d5" compoundref="_patient_8cpp" startline="81" endline="88">Patient::toOs</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_person_1ac0c9fb8a33cede2854ff27bf95479050" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * Person::displayGender</definition>
+        <argsstring>() const </argsstring>
+        <name>displayGender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="48" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="58" bodyend="70"/>
+        <references refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a7027cf94656ed6b308e128220d8c2a2e" compoundref="_person_8h" startline="16">Female</references>
+        <references refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" compoundref="_person_8h" startline="25">gender</references>
+        <references refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a650f4b60ad9f224e14c607a4bb05c8a6" compoundref="_person_8h" startline="16">Male</references>
+        <referencedby refid="class_person_1a6229da664a4db8940d9517291102da55" compoundref="_person_8cpp" startline="50" endline="57">toOs</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_person_1a09aa373e37f4eea49e2ad4f84b0a7802" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const Person &amp;person)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_person" kindref="compound">Person</ref> &amp;</type>
+          <declname>person</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="46" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.cpp" bodystart="71" bodyend="76"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="115">
+        <label>Nurse</label>
+        <link refid="class_nurse"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="117">
+        <label>Secretary</label>
+        <link refid="class_secretary"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="111">
+        <label>Staff</label>
+        <link refid="class_staff"/>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="112">
+        <label>MedicalStaff</label>
+        <link refid="class_medical_staff"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>Patient</label>
+        <link refid="class_patient"/>
+        <childnode refid="109" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="109">
+        <label>Person</label>
+        <link refid="class_person"/>
+      </node>
+      <node id="114">
+        <label>ClinicManager</label>
+        <link refid="class_clinic_manager"/>
+        <childnode refid="113" relation="public-inheritance">
+        </childnode>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>OfficeStaff</label>
+        <link refid="class_office_staff"/>
+        <childnode refid="111" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>Doctor</label>
+        <link refid="class_doctor"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="119">
+        <label>Address</label>
+        <link refid="class_address"/>
+      </node>
+      <node id="118">
+        <label>Person</label>
+        <link refid="class_person"/>
+        <childnode refid="119" relation="usage">
+          <edgelabel>address</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" line="14" column="1" bodyfile="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Person.h" bodystart="13" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_person_1a83cf1fc90cc6a575638757a0b6683436" prot="protected" virt="non-virtual"><scope>Person</scope><name>address</name></member>
+      <member refid="class_person_1acf9db1a60683f40b20ae569d29852d69" prot="protected" virt="non-virtual"><scope>Person</scope><name>age</name></member>
+      <member refid="class_person_1ac0c9fb8a33cede2854ff27bf95479050" prot="public" virt="non-virtual"><scope>Person</scope><name>displayGender</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85" prot="public" virt="non-virtual"><scope>Person</scope><name>eGender</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a7027cf94656ed6b308e128220d8c2a2e" prot="public" virt="non-virtual"><scope>Person</scope><name>Female</name></member>
+      <member refid="class_person_1a9a8aaff8360d77a302b035450602c6e4" prot="protected" virt="non-virtual"><scope>Person</scope><name>gender</name></member>
+      <member refid="class_person_1acc3490277e1a945ffc1c5ad223d5ce6e" prot="public" virt="non-virtual"><scope>Person</scope><name>getAddress</name></member>
+      <member refid="class_person_1a29f417d3222ae3c9e20bffb881ca17b4" prot="public" virt="non-virtual"><scope>Person</scope><name>getAge</name></member>
+      <member refid="class_person_1aa927312eb028061dd674a53966513629" prot="public" virt="non-virtual"><scope>Person</scope><name>getGender</name></member>
+      <member refid="class_person_1acaef9cee62443d15b3abcf426b1f8bf1" prot="public" virt="non-virtual"><scope>Person</scope><name>getId</name></member>
+      <member refid="class_person_1a6da618d68519ead50a723e018a1365aa" prot="public" virt="non-virtual"><scope>Person</scope><name>getName</name></member>
+      <member refid="class_person_1aa834b1e2cd575ce4184468da755f7658" prot="public" virt="non-virtual"><scope>Person</scope><name>getPhone</name></member>
+      <member refid="class_person_1aec48a92f614a854ff380a15eb8e2f479" prot="protected" virt="non-virtual"><scope>Person</scope><name>id</name></member>
+      <member refid="class_person_1ae722ba3532c60a6aec483b7da11d7f85a650f4b60ad9f224e14c607a4bb05c8a6" prot="public" virt="non-virtual"><scope>Person</scope><name>Male</name></member>
+      <member refid="class_person_1aae27f7c10e2e9d18da3cd4b927e98402" prot="protected" virt="non-virtual"><scope>Person</scope><name>name</name></member>
+      <member refid="class_person_1a09aa373e37f4eea49e2ad4f84b0a7802" prot="public" virt="non-virtual"><scope>Person</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_person_1ab02c252e277d4ff16208420b4d5f8e11" prot="public" virt="non-virtual"><scope>Person</scope><name>Person</name></member>
+      <member refid="class_person_1a3dde1e2821318a3d2ec019f4d65f403c" prot="public" virt="non-virtual"><scope>Person</scope><name>Person</name></member>
+      <member refid="class_person_1a086475ed9df90992bcdf73901de67e48" prot="public" virt="non-virtual"><scope>Person</scope><name>Person</name></member>
+      <member refid="class_person_1a8af7022b1a3ef8320972abcf6f6777c2" prot="protected" virt="non-virtual"><scope>Person</scope><name>phone</name></member>
+      <member refid="class_person_1a51497829ea8bd6fe8990642f0ecbdf0e" prot="public" virt="non-virtual"><scope>Person</scope><name>setAddress</name></member>
+      <member refid="class_person_1a53821823de8fa7a62c9660505f375044" prot="public" virt="non-virtual"><scope>Person</scope><name>setPhone</name></member>
+      <member refid="class_person_1a6229da664a4db8940d9517291102da55" prot="public" virt="virtual"><scope>Person</scope><name>toOs</name></member>
+      <member refid="class_person_1a700ffd693321c5fe6880262acf43d4da" prot="public" virt="virtual"><scope>Person</scope><name>~Person</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

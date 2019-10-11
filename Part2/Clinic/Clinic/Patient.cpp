@@ -1,6 +1,6 @@
 #include "Patient.h"
 
-Patient::Patient(const Person & person, Doctor& personalDoctor) : Person(person)
+Patient::Patient(const Person & person, Doctor& personalDoctor, bool sick) : Person(person)
 {
 	numTurns = 0;
 	turns = new Turn*[MAX_TURNS_SIZE];
@@ -8,6 +8,7 @@ Patient::Patient(const Person & person, Doctor& personalDoctor) : Person(person)
 		turns[i] = nullptr;
 	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
+	isSick = false;
 }
 
 Patient::Patient(Patient & other) : Person(other)
@@ -18,6 +19,7 @@ Patient::Patient(Patient & other) : Person(other)
 		turns[i] = other.turns[i];
 	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = other.personalDoctor;
+	isSick = other.isSick;
 }
 
 Patient::~Patient()
@@ -32,9 +34,7 @@ void Patient::operator=(const Patient & patient)
 
 int Patient::answerCall()
 {
-	int ans;
-	cin >> ans;
-	return ans;
+	return isSick;
 }
 
 void Patient::changeDoctor(Doctor& doctor)
@@ -44,6 +44,7 @@ void Patient::changeDoctor(Doctor& doctor)
 
 void Patient::changeClinicMember(bool clinicMember)
 {
+	//TODO remove func
 	//this->clinicMember = clinicMember;
 }
 
@@ -65,7 +66,6 @@ void Patient::addTurn(Turn & turn)
 
 void Patient::deleteTurn(Turn & turn)
 {
-
 	for (int i = 0; i < MAX_TURNS_SIZE; i++)
 	{
 		if (turns[i] == &turn)
@@ -79,10 +79,7 @@ void Patient::deleteTurn(Turn & turn)
 
 void Patient::toOs(ostream & os) const
 {
-
 	os << "**Patient**" << endl;
 	Person::toOs(os);
 	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
-
 }
-

@@ -1,9 +1,9 @@
+#pragma message("Adding Doctor")
 #ifndef __DOCTOR_H
 #define __DOCTOR_H
 #pragma warning(disable: 4996)
 
 #include <iostream>
-#include "Staff.h"
 #include "MedicalStaff.h"
 #include <string.h>
 using namespace std;
@@ -29,9 +29,8 @@ public:
 	const char* getProfession() const { return profession; }
 
 	// Show
-	
-	void toOs(ostream & os) const override;
 
+	void toOs(ostream & os) const override;
 };
 
 #endif // !__DOCTOR_H

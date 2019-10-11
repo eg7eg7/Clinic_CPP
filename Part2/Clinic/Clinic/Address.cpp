@@ -28,7 +28,6 @@ Address::Address(Address && other)
 	this->buildNum = other.buildNum;
 	this->floorNum = other.floorNum;
 	this->houseNum = other.houseNum;
-	
 }
 
 Address::~Address()
@@ -75,7 +74,7 @@ void Address::setStreet(const char * street)
 
 ostream & operator<<(ostream & os, const Address & add)
 {
-	os  <<" Country: " << add.getCountry() << " \n City: " << add.getCity()
+	os << " Country: " << add.getCountry() << " \n City: " << add.getCity()
 		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNO() << " Floor num: " <<
 		add.getFloor() << " \n House num: " << add.getHouseNO() << endl;
 	return os;

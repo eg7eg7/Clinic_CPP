@@ -1,18 +1,18 @@
+#pragma message("Adding Clinic")
 #ifndef __CLINIC_H
 #define __CLINIC_H
 #pragma warning(disable: 4996)
+
 #include <iostream>
 #include <string.h>
-#include "Address.h"
 #include "ClinicManager.h"
 #include "Secretary.h"
-#include "Room.h"
-#include "Patient.h"
-#include "Turn.h"
+
 using namespace std;
 
 class ClinicManager;
-
+//class Staff;
+//class Staff;
 class Clinic
 {
 public:
@@ -36,19 +36,19 @@ protected:
 	Patient** patients;
 	int numPatients;
 
-	Turn** turns;
-	int numTurns;
-
+	mutable Turn** turns;
+	mutable int numTurns;
 
 public:
 	Clinic(const char* name, const Address& address);
 	Clinic(const Clinic& other); // copy constructor
 	virtual ~Clinic();
 
+	void addStaff(Staff * staff);
+
 	//void operator=(const Clinic& clinic);
 
 	// Methods
-	void addStaff(Staff& staff);
 	void removeStaff(const Staff& staff);
 
 	void addPatient(Patient & patient);
@@ -62,7 +62,7 @@ public:
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
 	void updateTurn(const Turn& oldturn, const Turn& newturn);
-
+	void setStaff(Staff ** old_staff, Staff * new_staff);
 	const char* getName() const { return name; };
 	const Address& getAddress() const { return address; };
 	const ClinicManager* getManager() const { return manager; };

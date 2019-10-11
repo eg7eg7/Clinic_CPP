@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_clinic_manager_8cpp" kind="file">
+    <compoundname>ClinicManager.cpp</compoundname>
+    <includes refid="_clinic_manager_8h" local="yes">ClinicManager.h</includes>
+    <incdepgraph>
+      <node id="74">
+        <label>MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>Room.h</label>
+        <link refid="_room_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>Clinic/ClinicManager.cpp</label>
+        <link refid="ClinicManager.cpp"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>OfficeStaff.h</label>
+        <link refid="_office_staff_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>string.h</label>
+      </node>
+      <node id="82">
+        <label>Turn.h</label>
+        <link refid="_turn_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>ClinicManager.h</label>
+        <link refid="_clinic_manager_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>iostream</label>
+      </node>
+      <node id="72">
+        <label>Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>Clinic.h</label>
+        <link refid="_clinic_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>Secretary.h</label>
+        <link refid="_secretary_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_clinic_manager_8h" kindref="compound">ClinicManager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_clinic_manager_1ad5cff54bf3ccd65e6f8aad5b40d76715" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_clinic_manager_1ad5cff54bf3ccd65e6f8aad5b40d76715" kindref="member">ClinicManager::setClinic</ref>(<ref refid="class_clinic" kindref="compound">Clinic</ref>*<sp/>new_clinic)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref><sp/>!=<sp/>new_clinic)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref><sp/>=<sp/>new_clinic;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref>-&gt;<ref refid="class_clinic_1a294394f85350351b2aaa0068108d5e5c" kindref="member">setClinicManager</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="class_clinic_manager_1a07e10c83fdf1ade88cb062c85ec46cf8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_clinic_manager_1a07e10c83fdf1ade88cb062c85ec46cf8" kindref="member">ClinicManager::fireStaff</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_staff" kindref="compound">Staff</ref><sp/>&amp;<sp/>staff)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="14"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref>-&gt;<ref refid="class_clinic_1ad310c7d4ba3d05c6cf7b5744817f72fc" kindref="member">removeStaff</ref>(staff);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_clinic_manager_1a7bd88cb35eb8c42fc226155485fb8b6e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_clinic_manager_1a7bd88cb35eb8c42fc226155485fb8b6e" kindref="member">ClinicManager::hireStaff</ref>(<ref refid="class_staff" kindref="compound">Staff</ref><sp/>&amp;<sp/>staff)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="22"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_clinic_manager_1ae5def574d7fd2f571c61c7a9105674cf" kindref="member">clinic</ref>-&gt;<ref refid="class_clinic_1a7bf59e14ce95ed3d175f355145ac441a" kindref="member">addStaff</ref>(&amp;staff);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="class_clinic_manager_1a2d3b1f84f9d6d5c85411cbd2fb2a1827" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_clinic_manager_1a2d3b1f84f9d6d5c85411cbd2fb2a1827" kindref="member">ClinicManager::toOs</ref>(ostream<sp/>&amp;<sp/>os)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="30"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;**ClinicManager**&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;**OfficeStaff**&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_doctor_1aed26215fc7a16ed5e0554ed9c28b4f2a" kindref="member">Doctor::toOs</ref>(os);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/ClinicManager.cpp"/>
+  </compounddef>
+</doxygen>

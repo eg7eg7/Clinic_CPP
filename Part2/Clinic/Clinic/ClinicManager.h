@@ -1,13 +1,12 @@
+#pragma message("Adding ClinicManager")
 #ifndef __CLINICMANAGER_H
 #define __CLINICMANAGER_H
 #pragma warning(disable: 4996)
+
 #include <iostream>
 using namespace std;
 #include "OfficeStaff.h"
 #include "Clinic.h"
-#include "Doctor.h"
-
-class Clinic;
 
 class ClinicManager : public OfficeStaff, public Doctor
 {

@@ -1,12 +1,11 @@
+#pragma message("Adding OfficeStaff")
 #ifndef __OFFICESTAFF_H
 #define __OFFICESTAFF_H
 #pragma warning(disable: 4996)
+
 #include <iostream>
 using namespace std;
-#include "Staff.h"
 #include "Patient.h"
-
-
 
 class OfficeStaff : virtual public Staff
 {
@@ -16,10 +15,9 @@ protected:
 
 	//Patient** patients;
 	//int patientNumber;
-	
 
 public:
-	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person,extension, salary, room) {};
+	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person, extension, salary, room) {};
 	OfficeStaff(const Staff& staff); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
 	OfficeStaff(OfficeStaff&& other); // move constructor

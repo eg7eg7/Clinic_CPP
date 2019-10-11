@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_patient_8cpp" kind="file">
+    <compoundname>Patient.cpp</compoundname>
+    <includes refid="_patient_8h" local="yes">Patient.h</includes>
+    <incdepgraph>
+      <node id="244">
+        <label>MedicalStaff.h</label>
+        <link refid="_medical_staff_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>Clinic/Patient.cpp</label>
+        <link refid="Patient.cpp"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>Room.h</label>
+        <link refid="_room_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="248">
+        <label>Address.h</label>
+        <link refid="_address_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="245">
+        <label>Staff.h</label>
+        <link refid="_staff_8h"/>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>Person.h</label>
+        <link refid="_person_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>Doctor.h</label>
+        <link refid="_doctor_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>string.h</label>
+      </node>
+      <node id="242">
+        <label>iostream</label>
+      </node>
+      <node id="241">
+        <label>Patient.h</label>
+        <link refid="_patient_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_patient_8h" kindref="compound">Patient.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="class_patient_1afc247b6f82f7c731d033fc0534e1e138" refkind="member"><highlight class="normal"><ref refid="class_patient_1afc247b6f82f7c731d033fc0534e1e138" kindref="member">Patient::Patient</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_person" kindref="compound">Person</ref><sp/>&amp;<sp/>person,<sp/><ref refid="class_doctor" kindref="compound">Doctor</ref>&amp;<sp/>personalDoctor,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>sick)<sp/>:<sp/><ref refid="class_person" kindref="compound">Person</ref>(person)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>*[<ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>];</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;clinicMember<sp/>=<sp/>clinicMember;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;personalDoctor<sp/>=<sp/>&amp;<ref refid="class_patient_1a8ae6771cd4ee6b1de6908c6d7c801b1e" kindref="member">personalDoctor</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1aef71c9f01299994b5a82ea8560ba2be8" kindref="member">isSick</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="class_patient_1a0d2eb61b8375c619b11eb8790dab2ed9" refkind="member"><highlight class="normal"><ref refid="class_patient_1afc247b6f82f7c731d033fc0534e1e138" kindref="member">Patient::Patient</ref>(<ref refid="class_patient" kindref="compound">Patient</ref><sp/>&amp;<sp/>other)<sp/>:<sp/><ref refid="class_person" kindref="compound">Person</ref>(other)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref><sp/>=<sp/>other.<ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_turn" kindref="compound">Turn</ref>*[<ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>];</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>=<sp/>other.<ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i];</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;clinicMember<sp/>=<sp/>other.clinicMember;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;personalDoctor<sp/>=<sp/>other.<ref refid="class_patient_1a8ae6771cd4ee6b1de6908c6d7c801b1e" kindref="member">personalDoctor</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1aef71c9f01299994b5a82ea8560ba2be8" kindref="member">isSick</ref><sp/>=<sp/>other.<ref refid="class_patient_1aef71c9f01299994b5a82ea8560ba2be8" kindref="member">isSick</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_patient_1ad37fb0570742c7b90b0437dde4bcc11a" refkind="member"><highlight class="normal"><ref refid="class_patient_1ad37fb0570742c7b90b0437dde4bcc11a" kindref="member">Patient::~Patient</ref>()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal">[]<ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_patient_1ade4befa2dce804a00b2c2d04097a773a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1ade4befa2dce804a00b2c2d04097a773a" kindref="member">Patient::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_patient" kindref="compound">Patient</ref><sp/>&amp;<sp/>patient)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_patient_1a2a2c7081f10de55a3e60ab35aa0ed49d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_patient_1a2a2c7081f10de55a3e60ab35aa0ed49d" kindref="member">Patient::answerCall</ref>()</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_patient_1aef71c9f01299994b5a82ea8560ba2be8" kindref="member">isSick</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="class_patient_1acfa198094105b23f7727d6d9d5870493" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1acfa198094105b23f7727d6d9d5870493" kindref="member">Patient::changeDoctor</ref>(<ref refid="class_doctor" kindref="compound">Doctor</ref>&amp;<sp/>doctor)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_patient_1a8ae6771cd4ee6b1de6908c6d7c801b1e" kindref="member">personalDoctor</ref><sp/>=<sp/>&amp;doctor;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="class_patient_1ad96d465f4149dfefa8281786f60d3ba7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1ad96d465f4149dfefa8281786f60d3ba7" kindref="member">Patient::changeClinicMember</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>clinicMember)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>remove<sp/>func</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;clinicMember<sp/>=<sp/>clinicMember;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="class_patient_1a85365ececb01a5ad8aaf81297482fda2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1a85365ececb01a5ad8aaf81297482fda2" kindref="member">Patient::addTurn</ref>(<ref refid="class_turn" kindref="compound">Turn</ref><sp/>&amp;<sp/>turn)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref><sp/>&lt;<sp/><ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>=<sp/>&amp;turn;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++<ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref>;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="class_patient_1a475051c81576fba110f7aa6cb7626beb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1a475051c81576fba110f7aa6cb7626beb" kindref="member">Patient::deleteTurn</ref>(<ref refid="class_turn" kindref="compound">Turn</ref><sp/>&amp;<sp/>turn)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="class_patient_1a950ff91fa1ba9458287aa019456463ee" kindref="member">MAX_TURNS_SIZE</ref>;<sp/>i++)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>==<sp/>&amp;turn)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_patient_1a18fda501d1128bdb3dd6fd9f17d08cbb" kindref="member">turns</ref>[i]<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<ref refid="class_patient_1a949fdd0387501f7fdfea6fab4e38ce08" kindref="member">numTurns</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_patient_1adc7caf189a700e6107a245b16a4729d5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_patient_1adc7caf189a700e6107a245b16a4729d5" kindref="member">Patient::toOs</ref>(ostream<sp/>&amp;<sp/>os)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="82"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;**Patient**&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_person_1a6229da664a4db8940d9517291102da55" kindref="member">Person::toOs</ref>(os);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>os<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Personal<sp/>doctor<sp/>is<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>this-&gt;<ref refid="class_patient_1a8ae6771cd4ee6b1de6908c6d7c801b1e" kindref="member">personalDoctor</ref>-&gt;<ref refid="class_person_1a6da618d68519ead50a723e018a1365aa" kindref="member">getName</ref>()<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/Clinic_CPP/Part2/Clinic/Clinic/Patient.cpp"/>
+  </compounddef>
+</doxygen>
