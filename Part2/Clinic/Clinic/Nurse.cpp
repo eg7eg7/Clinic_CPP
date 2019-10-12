@@ -7,13 +7,16 @@ Nurse::Nurse(const MedicalStaff& medicalStaff, const char* service) : Staff(medi
 	services[0] = strdup(service);
 };
 
-Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other), services(NULL)
+Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other)
 {
-	num_services = other.getNumServices();
-	char** otherServices = other.getServices();
-	for (int i = 0; i < num_services; i++)
-		services[i] = strdup(otherServices[i]);
-};
+	*this = other;
+}
+Nurse::Nurse(Nurse && other) : Staff(std::move(other)),MedicalStaff(std::move(other))
+{
+	services = std::move(other.services);
+	num_services = std::move(other.num_services);
+}
+
 
 Nurse::~Nurse()
 {
@@ -27,6 +30,7 @@ const Nurse& Nurse::operator=(const Nurse& nurse)
 	char** nurseServices;
 	if (this != &nurse)
 	{
+		MedicalStaff::operator=(nurse);
 		nurseServices = nurse.getServices();
 		num_services = nurse.getNumServices();
 		for (int i = 0; i < num_services; i++)

@@ -25,7 +25,7 @@ public:
 
 	virtual ~Address();
 
-	void operator=(const Address& address);
+	const Address& operator=(const Address& address);
 
 	// Getters
 	const char* getCountry() const { return country; }

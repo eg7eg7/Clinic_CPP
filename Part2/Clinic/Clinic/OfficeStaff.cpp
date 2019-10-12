@@ -1,16 +1,9 @@
 #include "OfficeStaff.h"
 
-OfficeStaff::OfficeStaff(const Staff & staff) : Staff(staff)
-{
-	//this->patientNumber = 0;
-	//patients = new Patient*[MAX_PATIENT_SIZE];
-	//for (int i = 0; i < MAX_PATIENT_SIZE; i++)
-		//patients[i] = nullptr;
-}
-
 OfficeStaff::OfficeStaff(const OfficeStaff & other) : Staff(other)
 {
-	room = other.room;
+	*this = other;
+	
 	//this->patientNumber = other.patientNumber;
 	//patients = new Patient*[MAX_PATIENT_SIZE];
 	//for (int i = 0; i < MAX_PATIENT_SIZE; i++)
@@ -19,10 +12,9 @@ OfficeStaff::OfficeStaff(const OfficeStaff & other) : Staff(other)
 	//}
 }
 
-OfficeStaff::OfficeStaff(OfficeStaff && other) : Staff(other)
+OfficeStaff::OfficeStaff(OfficeStaff && other) : Staff(std::move(other))
 {
-	room = other.room;
-	other.room = nullptr;
+	room = std::move(other.room);
 }
 
 OfficeStaff::~OfficeStaff()
@@ -30,6 +22,15 @@ OfficeStaff::~OfficeStaff()
 	if (room != nullptr)
 		room->addOccupant();
 	//delete[]patients;
+}
+const OfficeStaff & OfficeStaff::operator=(const OfficeStaff & other)
+{
+	if (this != &other)
+	{
+		Staff::operator=(other);
+		room = other.room;
+	}
+	return *this;
 }
 /*
 void OfficeStaff::addPatient(Patient & patient)

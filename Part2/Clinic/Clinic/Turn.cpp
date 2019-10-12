@@ -11,24 +11,9 @@ Turn::Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long du
 
 Turn::Turn(const Turn & other)
 {
-	this->medicalStaff = other.medicalStaff;
-	this->patient = other.patient;
-
-	this->startTime = other.startTime;
-	this->duration = other.duration;
+	*this = other;
 }
 
-Turn::Turn(Turn && other)
-{
-	this->medicalStaff = other.medicalStaff;
-	this->patient = other.patient;
-
-	this->startTime = other.startTime;
-	this->duration = other.duration;
-
-	other.changeMedicalStaff(nullptr);
-	other.changePatient(nullptr);
-}
 
 void Turn::changeStartTime(long startTime)
 {
@@ -58,6 +43,18 @@ void Turn::changePatient(Patient* patient)
 			this->patient->deleteTurn(*this);
 		this->patient = patient;
 	}
+}
+
+const Turn & Turn::operator=(const Turn & other)
+{
+	if (this != &other)
+	{
+		this->medicalStaff = other.medicalStaff;
+		this->patient = other.patient;
+		this->startTime = other.startTime;
+		this->duration = other.duration;
+	}
+	return *this;
 }
 
 ostream & operator<<(ostream & os, const Turn & turn)

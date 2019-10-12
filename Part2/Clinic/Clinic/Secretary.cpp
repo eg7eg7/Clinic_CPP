@@ -1,5 +1,10 @@
 #include "Secretary.h"
 
+Secretary::Secretary(Secretary && Secretary) : Staff(std::move(Secretary)), OfficeStaff(std::move(Secretary))
+{
+	//nothing
+}
+
 void Secretary::callPatient(Patient & patient)
 {
 	cout << "Hi, " << patient.getName() << ". My name is " << name << ", and " << endl;
@@ -11,8 +16,7 @@ void Secretary::callPatient(Patient & patient)
 		Doctor* doctor = patient.getPersonalDoctor();
 		Turn turn(*doctor, patient, doctor->getNextFreeTime(30), 30);
 
-		//TODO add clinic (in Staff)
-		//clinic.addTurn(turn);
+		clinic->addTurn(turn);
 	}
 }
 
@@ -20,4 +24,14 @@ void Secretary::toOs(ostream & os) const
 {
 	os << "**Secretary**" << endl;
 	OfficeStaff::toOs(os);
+}
+
+const Secretary & Secretary::operator=(const Secretary & other)
+{
+	if (this != &other)
+	{
+		OfficeStaff::operator=(other);
+		//nothing
+	}
+	return *this;
 }

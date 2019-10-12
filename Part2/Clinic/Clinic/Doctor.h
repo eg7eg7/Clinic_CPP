@@ -20,7 +20,7 @@ public:
 		: Staff(medicalStaff), MedicalStaff(medicalStaff) {
 		this->profession = strdup(profession);
 	};	// Constructor
-	Doctor(const Doctor& other) : Staff(other), MedicalStaff(other), profession(nullptr) { this->profession = strdup(other.profession); }; // copy constructor
+	Doctor(const Doctor& other) : Staff(other), MedicalStaff(other) { *this = other; }; // copy constructor
 	virtual ~Doctor();
 
 	const Doctor& operator=(const Doctor& doctor);

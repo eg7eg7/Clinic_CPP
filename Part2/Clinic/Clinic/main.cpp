@@ -90,6 +90,7 @@ int main()
 	MedicalStaff manager_medical(person_7, 12412, 10000, 800, 1400, room_7);
 	Doctor manager_doctor(manager_medical, "oncologist");
 	ClinicManager manager(manager_office, manager_doctor);
+	
 
 	clinic.setClinicManager(&manager);
 
@@ -179,3 +180,5 @@ int main()
 //add more operators? [optional]
 
 //copy ctor - use = operator (page 26, operators)
+
+//add mutables??

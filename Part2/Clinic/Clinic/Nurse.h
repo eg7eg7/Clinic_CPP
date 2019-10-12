@@ -17,10 +17,9 @@ protected:
 	char** services;
 	int num_services;
 public:
-	Nurse(Nurse&& other); // move constructor
-	Nurse(MedicalStaff&& medicalStaff, const char* service); //move ctor
 	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
+	Nurse(Nurse&& other); // move constructor
 	virtual ~Nurse();
 
 	const Nurse& operator=(const Nurse& nurse);

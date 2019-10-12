@@ -18,11 +18,12 @@ protected:
 	long duration;
 	MedicalStaff* medicalStaff;
 	Patient* patient;
-
+private:
+	Turn(Turn&& other); //  move constructor
 public:
 	Turn(MedicalStaff& medicalStaff, Patient& patient, long startTime, long duration);	// Constructor
 	Turn(const Turn& other); //  copy constructor
-	Turn(Turn&& other); //  move constructor
+	
 	virtual ~Turn() {};
 
 	//void operator=(const Turn& turn);
@@ -40,6 +41,7 @@ public:
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Turn & turn);
+	const Turn& operator=(const Turn& other);
 };
 
 #endif // !__TURN_H

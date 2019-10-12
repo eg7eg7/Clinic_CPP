@@ -25,13 +25,14 @@ protected:
 public:
 	MedicalStaff(const Person& person, long extension, long salary, long acceptHoursFrom, long acceptHoursTo, Room& room);
 	MedicalStaff(const MedicalStaff& other); // copy constructor
+	MedicalStaff(MedicalStaff&& other); // move constructor
 	virtual ~MedicalStaff();
 
-	void operator=(const MedicalStaff& medicalstaff);
+	const MedicalStaff& operator=(const MedicalStaff& medicalstaff);
 
 	// Methods
 
-	/* Returns time where the medical staff has enough time */
+	/* Returns time where the medical staff has enough time for an appointment */
 	long getNextFreeTime(long duration) const {
 		//TODO
 		return 0;

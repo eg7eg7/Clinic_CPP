@@ -12,12 +12,7 @@ Address::Address(const char * country, const char * city, const char * street, i
 
 Address::Address(const Address & other)
 {
-	this->country = strdup(other.country);
-	this->city = strdup(other.city);
-	this->street = strdup(other.street);
-	this->buildNum = other.buildNum;
-	this->floorNum = other.floorNum;
-	this->houseNum = other.houseNum;
+	*this = other;
 }
 
 Address::Address(Address && other)
@@ -37,7 +32,7 @@ Address::~Address()
 	delete[]street;
 }
 
-void Address::operator=(const Address & other)
+const Address& Address::operator=(const Address & other)
 {
 	if (this != &other)
 	{
@@ -52,6 +47,7 @@ void Address::operator=(const Address & other)
 		this->floorNum = other.floorNum;
 		this->houseNum = other.houseNum;
 	}
+	return *this;
 }
 
 void Address::setCountry(const char * country)

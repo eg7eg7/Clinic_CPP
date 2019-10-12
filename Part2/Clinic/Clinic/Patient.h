@@ -20,10 +20,11 @@ protected:
 	bool isSick;
 public:
 	Patient(const Person& person, Doctor& personalDoctor, bool sick = false); // Constructor
+	Patient(Patient&& other); //move ctor
 	Patient(Patient& other); // copy constructor
 	virtual ~Patient();
 
-	void operator=(const Patient& patient);
+	const Patient& operator=(const Patient& other);
 
 	// Methods
 

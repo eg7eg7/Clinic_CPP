@@ -13,23 +13,17 @@ Person::Person(int id, const char* name, const char* phone,
 
 Person::Person(const Person & other) : address(other.address)
 {
-	this->id = other.id;
-	this->name = strdup(other.name);
-	this->phone = strdup(other.phone);
-	this->age = other.age;
-	this->gender = other.gender;
+	*this = other;
 }
 
-Person::Person(Person && other) : address(other.address)
+Person::Person(Person && other) : address(std::move(other.address))
 {
 	this->id = other.id;
-	this->name = other.name;
-	this->phone = other.phone;
+	this->name = std::move(other.name);
+	this->phone = std::move(other.phone);
 	this->age = other.age;
 	this->gender = other.gender;
 
-	other.name = nullptr;
-	other.phone = nullptr;
 }
 
 Person::~Person()
@@ -46,6 +40,21 @@ void Person::setPhone(const char* phone)
 void Person::setAddress(Address& address)
 {
 	this->address = address;
+}
+const Person & Person::operator=(const Person & other)
+{
+	if (this != &other)
+	{
+		delete[]name;
+		delete[]phone;
+
+		this->id = other.id;
+		this->name = strdup(other.name);
+		this->phone = strdup(other.phone);
+		this->age = other.age;
+		this->gender = other.gender;
+	}
+	return *this;
 }
 void Person::toOs(ostream & os) const
 {

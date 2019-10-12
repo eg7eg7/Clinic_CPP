@@ -1,5 +1,21 @@
 #include "ClinicManager.h"
 
+ClinicManager::ClinicManager(const OfficeStaff && officeStaff, const Doctor && doctor) : Staff(std::move(officeStaff)), OfficeStaff(std::move(officeStaff)), Doctor(std::move(doctor))
+{
+	//nothing
+}
+
+const ClinicManager & ClinicManager::operator=(const ClinicManager & other)
+{
+	if (this != &other)
+	{
+		Doctor::operator=(other);
+		OfficeStaff::operator=(other);
+		//nothing
+	}
+	return *this;
+}
+
 void ClinicManager::setClinic(Clinic* new_clinic)
 {
 	if (clinic != new_clinic)
@@ -10,7 +26,7 @@ void ClinicManager::setClinic(Clinic* new_clinic)
 	}
 }
 
-void ClinicManager::fireStaff(const Staff & staff) const
+void ClinicManager::fireStaff(Staff & staff) const
 {
 	if (clinic != nullptr)
 	{

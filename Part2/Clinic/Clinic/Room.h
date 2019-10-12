@@ -19,7 +19,7 @@ private:
 	Room(const Room& other); // private copy constructor
 
 public:
-	Room(const Room&& other); // private move constructor
+	Room(Room&& other); // private move constructor
 	Room(int roomNumber, int floor, int size) : roomNumber(roomNumber), floor(floor), size(size), num_occupants(0) {};	// Constructor
 	virtual ~Room() {};
 	// Getters

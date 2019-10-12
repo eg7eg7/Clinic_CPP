@@ -11,22 +11,24 @@ using namespace std;
 class ClinicManager : public OfficeStaff, public Doctor
 {
 public:
+	//TODO remove
 	static const int STAFF_SIZE = 20;
-
-protected:
-	Clinic* clinic;
+private:
+	
+	ClinicManager(const OfficeStaff& officeStaff, const Doctor&& doctor);
+	ClinicManager(const OfficeStaff&& officeStaff, const Doctor& doctor);
 public:
 	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor
-	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { this->clinic = other.clinic; }; // copy constructor
+	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { *this = other; }; // copy constructor
 	virtual ~ClinicManager() {};
 
-	//void operator=(const ClinicManager& clinicmanager);
+	const ClinicManager& operator=(const ClinicManager& other);
 
 	void setClinic(Clinic* new_clinic);
 
 	// Method
-	void fireStaff(const Staff& staff) const;
+	void fireStaff(Staff& staff) const;
 	void hireStaff(Staff& staff) const;
 
 	//show

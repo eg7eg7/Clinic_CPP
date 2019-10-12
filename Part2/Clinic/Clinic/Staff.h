@@ -19,12 +19,8 @@ protected:
 
 public:
 	Staff(const Person& person, long extension, long salary, Room & room);	//Constructor
-	Staff(const Staff& staff) : Person(staff) { room = staff.room; };
-	Staff(Staff && staff) : Person(staff), extension(staff.extension), salary(staff.salary)
-	{
-		room = std::move(staff.room);
-		clinic = std::move(staff.clinic);
-	};
+	Staff(const Staff& staff) : Person(staff) { *this = staff; };
+	Staff(Staff && staff);
 	virtual ~Staff() { room->removeOccupant(); };
 	// Getters
 	long getExtension() const { return extension; }
@@ -36,6 +32,7 @@ public:
 	void setClinic(Clinic* clinic);
 	// Show
 	virtual void toOs(ostream& os) const override;
+	const Staff& operator=(const Staff& other);
 };
 
 #endif // !__STAFF_H

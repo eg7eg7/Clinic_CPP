@@ -24,25 +24,26 @@ Clinic::Clinic(const char * name, const Address & address) : address(address)
 
 Clinic::Clinic(const Clinic & other) : address(other.address)
 {
-	this->name = strdup(other.name);
+	*this = other;
+}
+
+Clinic::Clinic(Clinic && other) : address(std::move(other.address))
+{
+
+	this->name = std::move(other.name);
+
 	numRooms = other.numRooms;
 	numStaff = other.numStaff;
 	numPatients = other.numPatients;
 	numTurns = other.numTurns;
-	manager = other.manager;
-	rooms = new Room*[MAX_NUM_ROOMS];
-	staff = new Staff*[MAX_NUM_STAFF];
-	patients = new Patient*[MAX_NUM_PATIENTS];
-	turns = new Turn*[MAX_NUM_TURNS];
+	manager = std::move(manager);
+	manager->setClinic(this);
 
-	for (int i = 0; i < MAX_NUM_ROOMS; i++)
-		rooms[i] = other.rooms[i];
-	for (int i = 0; i < MAX_NUM_STAFF; i++)
-		staff[i] = other.staff[i];
-	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
-		patients[i] = other.patients[i];
-	for (int i = 0; i < MAX_NUM_TURNS; i++)
-		turns[i] = other.turns[i];
+	rooms = std::move(other.rooms);
+	staff = std::move(other.staff);
+	patients = std::move(other.patients);
+	turns = std::move(other.turns);
+
 }
 
 Clinic::~Clinic()
@@ -82,22 +83,41 @@ void Clinic::addStaff(Staff * staff)
 			this->staff[index] = staff;
 			++numStaff;
 		}
-
-		if (numStaff <= MAX_NUM_STAFF)
-			setStaff(&this->staff[index], staff);
-
-		/*
-		for (int i = 0; i < MAX_NUM_STAFF; i++)
-		{
-			if (this->staff[i] == nullptr)
-			{
-				this->staff[i] = &staff;
-				++numStaff;
-				break;
-			}
-		}
-		*/
+		staff->setClinic(this);
 	}
+}
+
+const Clinic& Clinic::operator=(const Clinic & other)
+{
+	if (this != &other)
+	{
+	delete[]this->name;
+	delete[]this->rooms;
+	delete[]this->staff;
+	delete[]this->patients;
+	delete[]this->turns;
+
+	this->name = strdup(other.name);
+	numRooms = other.numRooms;
+	numStaff = other.numStaff;
+	numPatients = other.numPatients;
+	numTurns = other.numTurns;
+	manager = other.manager;
+	rooms = new Room*[MAX_NUM_ROOMS];
+	staff = new Staff*[MAX_NUM_STAFF];
+	patients = new Patient*[MAX_NUM_PATIENTS];
+	turns = new Turn*[MAX_NUM_TURNS];
+
+	for (int i = 0; i < MAX_NUM_ROOMS; i++)
+		rooms[i] = other.rooms[i];
+	for (int i = 0; i < MAX_NUM_STAFF; i++)
+		staff[i] = other.staff[i];
+	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
+		patients[i] = other.patients[i];
+	for (int i = 0; i < MAX_NUM_TURNS; i++)
+		turns[i] = other.turns[i];
+	}
+	return *this;
 }
 
 void Clinic::setStaff(Staff ** old_staff, Staff * new_staff)
@@ -116,13 +136,15 @@ void Clinic::setStaff(Staff ** old_staff, Staff * new_staff)
 	}
 }
 
-void Clinic::removeStaff(const Staff & staff)
+void Clinic::removeStaff(Staff & staff)
 {
 	for (int i = 0; i < MAX_NUM_STAFF; i++)
 	{
 		if (this->staff[i] == &staff)
 		{
+			staff.setClinic(nullptr);
 			this->staff[i] = nullptr;
+
 			--numStaff;
 			break;
 		}

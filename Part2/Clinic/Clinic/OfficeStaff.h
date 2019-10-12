@@ -18,13 +18,12 @@ protected:
 
 public:
 	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person, extension, salary, room) {};
-	OfficeStaff(const Staff& staff); // Constructor
 	OfficeStaff(const OfficeStaff& other); // copy constructor
 	OfficeStaff(OfficeStaff&& other); // move constructor
 	virtual ~OfficeStaff();
 
-	//void operator=(const OfficeStaff& officestaff);
-
+	const OfficeStaff& operator=(const OfficeStaff& other);
+	
 	// Methods
 	//void addPatient(Patient& patient);
 	//void removePatient(const Patient& patient);

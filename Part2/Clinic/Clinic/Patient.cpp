@@ -11,15 +11,19 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, bool sick) : Per
 	isSick = false;
 }
 
-Patient::Patient(Patient & other) : Person(other)
+Patient::Patient(Patient && other) : Person(std::move(other))
 {
 	numTurns = other.numTurns;
-	turns = new Turn*[MAX_TURNS_SIZE];
-	for (int i = 0; i < MAX_TURNS_SIZE; i++)
-		turns[i] = other.turns[i];
+	turns = std::move(other.turns);
+	
 	//this->clinicMember = other.clinicMember;
-	this->personalDoctor = other.personalDoctor;
+	this->personalDoctor = std::move(other.personalDoctor);
 	isSick = other.isSick;
+}
+
+Patient::Patient(Patient & other) : Person(other)
+{
+	*this = other;
 }
 
 Patient::~Patient()
@@ -27,9 +31,21 @@ Patient::~Patient()
 	delete[]turns;
 }
 
-void Patient::operator=(const Patient & patient)
+const Patient & Patient::operator=(const Patient & other)
 {
-	//TODO
+	if (this != &other)
+	{
+		Person::operator=(other);
+		delete[]turns;
+		numTurns = other.numTurns;
+		turns = new Turn*[MAX_TURNS_SIZE];
+		for (int i = 0; i < MAX_TURNS_SIZE; i++)
+			turns[i] = other.turns[i];
+		//this->clinicMember = other.clinicMember;
+		this->personalDoctor = other.personalDoctor;
+		isSick = other.isSick;
+	}
+	return *this;
 }
 
 int Patient::answerCall()

@@ -16,14 +16,15 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, lo
 
 MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 {
+	*this = other;
+}
+
+MedicalStaff::MedicalStaff(MedicalStaff && other) : Staff(std::move(other))
+{
 	acceptHoursFrom = other.acceptHoursFrom;
 	acceptHoursTo = other.acceptHoursTo;
 	turnsNumber = other.turnsNumber;
-	turns = new Turn*[TURN_SIZE];
-	for (int i = 0; i < turnsNumber; i++)
-	{
-		turns[i] = other.turns[i];
-	}
+	turns = std::move(other.turns);
 }
 
 MedicalStaff::~MedicalStaff()
@@ -31,20 +32,21 @@ MedicalStaff::~MedicalStaff()
 	delete[]turns;
 }
 
-void MedicalStaff::operator=(const MedicalStaff& medicalstaff)
+const MedicalStaff& MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 {
 	if (this != &medicalstaff)
 	{
+		delete[]turns;
 		acceptHoursFrom = medicalstaff.acceptHoursFrom;
 		acceptHoursTo = medicalstaff.acceptHoursTo;
 		turnsNumber = medicalstaff.turnsNumber;
-		if (turns == nullptr)
-			turns = new Turn*[TURN_SIZE];
+		turns = new Turn*[TURN_SIZE];
 		for (int i = 0; i < TURN_SIZE; i++)
 		{
 			turns[i] = medicalstaff.turns[i];
 		}
 	}
+	return *this;
 }
 
 void MedicalStaff::addTurn(Turn& turn) const
