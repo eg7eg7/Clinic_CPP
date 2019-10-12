@@ -1,5 +1,5 @@
 #include "Secretary.h"
-
+#include "Clinic.h"
 Secretary::Secretary(Secretary && Secretary) : Staff(std::move(Secretary)), OfficeStaff(std::move(Secretary))
 {
 	//nothing
