@@ -189,3 +189,5 @@ int main()
 //copy ctor - use = operator (page 26, operators)
 
 //add mutables??
+
+//TODO remove exceptions
