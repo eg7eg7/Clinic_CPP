@@ -49,6 +49,10 @@ Clinic::Clinic(Clinic && other) : address(std::move(other.address))
 Clinic::~Clinic()
 {
 	setClinicManager(nullptr);
+	for (int i = 0; i < MAX_NUM_TURNS; i++)
+	{
+		delete turns[i];
+	}
 	delete[]name;
 	delete[]rooms;
 	delete[]staff;
@@ -91,31 +95,31 @@ const Clinic& Clinic::operator=(const Clinic & other)
 {
 	if (this != &other)
 	{
-	delete[]this->name;
-	delete[]this->rooms;
-	delete[]this->staff;
-	delete[]this->patients;
-	delete[]this->turns;
+		delete[]this->name;
+		delete[]this->rooms;
+		delete[]this->staff;
+		delete[]this->patients;
+		delete[]this->turns;
 
-	this->name = strdup(other.name);
-	numRooms = other.numRooms;
-	numStaff = other.numStaff;
-	numPatients = other.numPatients;
-	numTurns = other.numTurns;
-	manager = other.manager;
-	rooms = new Room*[MAX_NUM_ROOMS];
-	staff = new Staff*[MAX_NUM_STAFF];
-	patients = new Patient*[MAX_NUM_PATIENTS];
-	turns = new Turn*[MAX_NUM_TURNS];
+		this->name = strdup(other.name);
+		numRooms = other.numRooms;
+		numStaff = other.numStaff;
+		numPatients = other.numPatients;
+		numTurns = other.numTurns;
+		manager = other.manager;
+		rooms = new Room*[MAX_NUM_ROOMS];
+		staff = new Staff*[MAX_NUM_STAFF];
+		patients = new Patient*[MAX_NUM_PATIENTS];
+		turns = new Turn*[MAX_NUM_TURNS];
 
-	for (int i = 0; i < MAX_NUM_ROOMS; i++)
-		rooms[i] = other.rooms[i];
-	for (int i = 0; i < MAX_NUM_STAFF; i++)
-		staff[i] = other.staff[i];
-	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
-		patients[i] = other.patients[i];
-	for (int i = 0; i < MAX_NUM_TURNS; i++)
-		turns[i] = other.turns[i];
+		for (int i = 0; i < MAX_NUM_ROOMS; i++)
+			rooms[i] = other.rooms[i];
+		for (int i = 0; i < MAX_NUM_STAFF; i++)
+			staff[i] = other.staff[i];
+		for (int i = 0; i < MAX_NUM_PATIENTS; i++)
+			patients[i] = other.patients[i];
+		for (int i = 0; i < MAX_NUM_TURNS; i++)
+			turns[i] = other.turns[i];
 	}
 	return *this;
 }
@@ -180,6 +184,27 @@ void Clinic::removePatient(const Patient & patient)
 	}
 }
 
+void Clinic::checkPatients()
+{
+
+	try {
+		for (int i = 0; i < MAX_NUM_PATIENTS; i++)
+		{
+
+			if (patients[i] != nullptr)
+			{
+				getSecretary().callPatient(*(patients[i]));
+			}
+		}
+	}
+	catch (const char* msg)
+	{
+		cout << msg << endl;
+	}
+
+
+}
+
 void Clinic::getAvailableTurn(const Patient & patient)
 {
 	//addTurn()
@@ -214,6 +239,7 @@ void Clinic::removeRoom(const Room & room)
 	}
 }
 
+
 void Clinic::addTurn(Turn & turn)
 {
 	if (numTurns < MAX_NUM_TURNS)
@@ -229,6 +255,7 @@ void Clinic::addTurn(Turn & turn)
 			}
 		}
 	}
+	Turn::sortTurns(turns, MAX_NUM_TURNS);
 }
 
 void Clinic::removeTurn(const Turn & turn)
@@ -318,13 +345,28 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 	}
 }
 
-Secretary * Clinic::getSecretary() const
+const Secretary& Clinic::getSecretary() const throw (const char*)
 {
+	static int last_index = 0;
 	Secretary* p;
-	for (int i = 0; i < MAX_NUM_STAFF; i++)
+	if (last_index == MAX_NUM_STAFF)
+		last_index = 0;
+	int i = last_index, count = 0;
+
+	while (count < MAX_NUM_STAFF)
+	{
 		if (nullptr != (p = dynamic_cast<Secretary*>(staff[i])))
-			return p;
-	return nullptr;
+		{
+			last_index = i + 1;
+			
+			return *p;
+		}
+		++i;
+		if (i == MAX_NUM_STAFF)
+			i = 0;
+		++count;
+	}
+	throw "No secretaries in the clinic!";
 }
 
 ostream & operator<<(ostream & os, const Clinic & clinic)

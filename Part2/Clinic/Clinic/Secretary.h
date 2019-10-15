@@ -20,7 +20,7 @@ public:
 	};	// copy ctor
 	virtual ~Secretary() {};
 	// Methods
-	void callPatient(Patient & patient);
+	void callPatient(Patient & patient) const;
 
 	virtual void toOs(ostream& os) const override;
 	const Secretary& operator=(const Secretary& other);

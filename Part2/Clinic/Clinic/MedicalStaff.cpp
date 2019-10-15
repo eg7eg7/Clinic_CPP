@@ -1,6 +1,8 @@
 #include "MedicalStaff.h"
+#include "Turn.h"
 
-MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, long acceptHoursF, long acceptHoursT, Room& room)
+
+MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, Time acceptHoursF, Time acceptHoursT, Room& room)
 	: Staff(person, extension, salary, room)
 {
 	acceptHoursFrom = acceptHoursF;
@@ -21,8 +23,8 @@ MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other)
 
 MedicalStaff::MedicalStaff(MedicalStaff && other) : Staff(std::move(other))
 {
-	acceptHoursFrom = other.acceptHoursFrom;
-	acceptHoursTo = other.acceptHoursTo;
+	acceptHoursFrom = std::move(other.acceptHoursFrom);
+	acceptHoursTo = std::move(other.acceptHoursTo);
 	turnsNumber = other.turnsNumber;
 	turns = std::move(other.turns);
 }
@@ -49,7 +51,34 @@ const MedicalStaff& MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	return *this;
 }
 
-void MedicalStaff::addTurn(Turn& turn) const
+Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
+{
+	int timeDifference1 = 0;
+	int timeDifference2 = 0;
+	if (turns[0] != nullptr)
+		timeDifference1 = Time::getTimeDifference(this->acceptHoursFrom, turns[0]->getStartTime());
+	else
+		return this->acceptHoursFrom;
+	if (timeDifference1 >= sessionDurationMins)
+		return this->acceptHoursTo;
+	for (int i = 0; i < TURN_SIZE - 1; i++)
+	{
+		if (turns[i] != nullptr && turns[i + 1] != nullptr)
+		{
+			//check if doctor has a time gap for desired duration
+			timeDifference1 = Time::getTimeDifference(turns[i]->getEndTime(), turns[i + 1]->getStartTime());
+			timeDifference2 = Time::getTimeDifference(turns[i]->getEndTime(), this->acceptHoursTo);
+
+			if (timeDifference1 >= sessionDurationMins && timeDifference2 >= sessionDurationMins)
+			{
+				return turns[i]->getEndTime();
+			}
+		}
+	}
+	return Time();
+}
+
+void MedicalStaff::addTurn(Turn& turn)
 {
 	if (turnsNumber < TURN_SIZE)
 	{
@@ -63,6 +92,7 @@ void MedicalStaff::addTurn(Turn& turn) const
 			}
 		}
 	}
+	Turn::sortTurns(turns,TURN_SIZE);
 }
 
 void MedicalStaff::deleteTurn(const Turn& turn)
@@ -78,6 +108,7 @@ void MedicalStaff::deleteTurn(const Turn& turn)
 	}
 }
 
+
 Turn* MedicalStaff::operator[](int index)
 {
 	return turns[index];
@@ -85,7 +116,7 @@ Turn* MedicalStaff::operator[](int index)
 
 void MedicalStaff::toOs(ostream & os) const
 {
-	os << "**Medical Staff**" <<endl;
+	os << "**Medical Staff**" << endl;
 	Staff::toOs(os);
 	os << " Accepting from " << acceptHoursFrom << " to " <<
 		acceptHoursTo << endl;

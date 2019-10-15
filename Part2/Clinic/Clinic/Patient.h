@@ -29,7 +29,7 @@ public:
 	// Methods
 
 	/* Returns true if sick and needs a turn*/
-	int answerCall();
+	bool answerCall();
 
 	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);

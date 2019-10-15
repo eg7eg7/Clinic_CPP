@@ -55,14 +55,14 @@ public:
 
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
-	void callPatient(const Patient& patient);
+	void checkPatients();
 	void getAvailableTurn(const Patient& patient);
 
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);
-
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
+	
 	void updateTurn(const Turn& oldturn, const Turn& newturn);
 
 	void setStaff(Staff ** old_staff, Staff * new_staff);
@@ -80,7 +80,7 @@ public:
 	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
 	void setClinicManager(ClinicManager* new_manager);
-	Secretary* getSecretary() const;
+	const Secretary& getSecretary() const throw (const char*);
 };
 
 #endif // !__CLINIC_H

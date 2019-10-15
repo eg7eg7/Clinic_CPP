@@ -16,8 +16,13 @@
 using namespace std;
 #include "ClinicManager.h"
 #include "Nurse.h"
+#include "Time.h"
 int main()
 {
+	try
+	{
+
+	
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
 	// Rooms
@@ -66,14 +71,14 @@ int main()
 	Person person_10(5555, "patient_3", "052-451-0921", 54, address_4, Person::Female);
 
 	// Staff
-	MedicalStaff doctor1_medical(person_1, 12412, 10000, 800, 1400, room_1);
-	MedicalStaff doctor2_medical(person_2, 12413, 15000, 1000, 1800, room_2);
+	MedicalStaff doctor1_medical(person_1, 12412, 10000, Time(8, 0), Time(14, 0), room_1);
+	MedicalStaff doctor2_medical(person_2, 12413, 15000, Time(10, 0), Time(18, 0), room_2);
 
 	Doctor doctor_1(doctor1_medical, "Oncologist");
 	Doctor doctor_2(doctor2_medical, "Spine surgeon");
 
-	MedicalStaff nurse1_medical(person_3, 12414, 8000, 900, 1500, room_3);
-	MedicalStaff nurse2_medical(person_4, 12415, 7000, 1100, 1700, room_4);
+	MedicalStaff nurse1_medical(person_3, 12414, 8000, Time(9,0), Time(15, 0), room_3);
+	MedicalStaff nurse2_medical(person_4, 12415, 7000, Time(11, 0), Time(17, 0), room_4);
 
 	Nurse nurse_1(nurse1_medical, "Take blood samples");
 	Nurse nurse_2(nurse2_medical, "Give infusion");
@@ -87,7 +92,7 @@ int main()
 
 	OfficeStaff manager_office(person_7, 12418, 20000, room_7);
 
-	MedicalStaff manager_medical(person_7, 12412, 10000, 800, 1400, room_7);
+	MedicalStaff manager_medical(person_7, 12412, 10000, Time(8, 0), Time(14, 0), room_7);
 	Doctor manager_doctor(manager_medical, "oncologist");
 	ClinicManager manager(manager_office, manager_doctor);
 	
@@ -112,9 +117,7 @@ int main()
 
 	// Turns
 
-	Secretary* secretary = clinic.getSecretary();
-	if (secretary != nullptr)
-		secretary->callPatient(patient_1);
+	clinic.checkPatients();
 
 	//Turn turn_1(doctor_1, patient_1, 1000, 200);
 	//Turn turn_2(doctor_2, patient_2, 1200, 100);
@@ -138,7 +141,11 @@ int main()
 	clinic.removeRoom(room_5);
 
 	clinic.removeRoom(room_6);
-
+	}
+	catch (const char* msg)
+	{
+		cout << msg << endl;
+	}
 	return 0;
 }
 

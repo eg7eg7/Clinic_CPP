@@ -149,6 +149,7 @@
     <ClCompile Include="Address.cpp" />
     <ClCompile Include="Clinic.cpp" />
     <ClCompile Include="ClinicManager.cpp" />
+    <ClCompile Include="Time.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MedicalStaff.cpp" />
@@ -165,6 +166,7 @@
     <ClInclude Include="Address.h" />
     <ClInclude Include="Clinic.h" />
     <ClInclude Include="ClinicManager.h" />
+    <ClInclude Include="Time.h" />
     <ClInclude Include="Doctor.h" />
     <ClInclude Include="MedicalStaff.h" />
     <ClInclude Include="Nurse.h" />

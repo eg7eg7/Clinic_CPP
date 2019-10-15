@@ -8,7 +8,7 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, bool sick) : Per
 		turns[i] = nullptr;
 	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
-	isSick = false;
+	isSick = sick;
 }
 
 Patient::Patient(Patient && other) : Person(std::move(other))
@@ -48,7 +48,7 @@ const Patient & Patient::operator=(const Patient & other)
 	return *this;
 }
 
-int Patient::answerCall()
+bool Patient::answerCall()
 {
 	return isSick;
 }
