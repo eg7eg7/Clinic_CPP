@@ -362,7 +362,7 @@ const Secretary& Clinic::getSecretary() const throw (const char*)
 		if (nullptr != (p = dynamic_cast<Secretary*>(staff[i])))
 		{
 			last_index = i + 1;
-			
+
 			return *p;
 		}
 		++i;
@@ -370,7 +370,31 @@ const Secretary& Clinic::getSecretary() const throw (const char*)
 			i = 0;
 		++count;
 	}
-	throw "No secretaries in the clinic!";
+	throw "No secretaries at the clinic!";
+}
+
+Nurse& Clinic::getNurse() const throw (const char*)
+{
+	static int last_index = 0;
+	Nurse* p;
+	if (last_index == MAX_NUM_STAFF)
+		last_index = 0;
+	int i = last_index, count = 0;
+
+	while (count < MAX_NUM_STAFF)
+	{
+		if (nullptr != (p = dynamic_cast<Nurse*>(staff[i])))
+		{
+			last_index = i + 1;
+
+			return *p;
+		}
+		++i;
+		if (i == MAX_NUM_STAFF)
+			i = 0;
+		++count;
+	}
+	throw "No nurses at the clinic!";
 }
 
 ostream & operator<<(ostream & os, const Clinic & clinic)

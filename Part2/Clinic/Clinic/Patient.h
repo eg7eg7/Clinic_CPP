@@ -7,19 +7,21 @@
 #include <iostream>
 using namespace std;
 #include "Doctor.h"
-
 class Patient : public Person
 {
 public:
 	static const int MAX_TURNS_SIZE = 20;
+	enum eStatus{HEALTHY,SICK,REQUIRE_TREATMENT};
+	static const char* eStatusString[];
+
 protected:
 
 	Turn** turns;
 	Doctor* personalDoctor;
 	int numTurns;
-	bool isSick;
+	eStatus status;
 public:
-	Patient(const Person& person, Doctor& personalDoctor, bool sick = false); // Constructor
+	Patient(const Person& person, Doctor& personalDoctor, eStatus status = HEALTHY); // Constructor
 	Patient(Patient&& other); //move ctor
 	Patient(Patient& other); // copy constructor
 	virtual ~Patient();
@@ -29,7 +31,7 @@ public:
 	// Methods
 
 	/* Returns true if sick and needs a turn*/
-	bool answerCall();
+	eStatus answerCall();
 
 	void changeDoctor(Doctor & doctor);
 	void changeClinicMember(bool clinicMember);
@@ -43,8 +45,8 @@ public:
 	Doctor* getPersonalDoctor() const { return personalDoctor; };
 	void setPersonalDoctor(Doctor & doctor) { personalDoctor = &doctor; }
 
-	bool getIsSick() const { return isSick; };
-	void setIsSick(const bool sick) { isSick = sick; };
+	eStatus getIsSick() const { return status; };
+	void setIsSick(const eStatus sick) { status = sick; };
 };
 
 #endif // !__PATIENT_H

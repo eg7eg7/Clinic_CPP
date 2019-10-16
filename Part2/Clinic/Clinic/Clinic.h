@@ -7,7 +7,7 @@
 #include <string.h>
 #include "ClinicManager.h"
 #include "Secretary.h"
-
+#include "Nurse.h"
 using namespace std;
 
 class ClinicManager;
@@ -82,6 +82,7 @@ public:
 
 	void setClinicManager(ClinicManager* new_manager);
 	const Secretary& getSecretary() const throw (const char*);
+	Nurse& getNurse() const throw (const char*);
 };
 
 #endif // !__CLINIC_H

@@ -131,14 +131,14 @@ int main()
 
 	// Patients
 	Patient patient_1(person_8, doctor_1);
-	Patient patient_2(person_9, doctor_2, true);
-	Patient patient_3(person_10, doctor_1, true);
-	Patient patient_4(person_11, doctor_1);
-	Patient patient_5(person_12, doctor_2, true);
-	Patient patient_6(person_13, doctor_1, true);
-	Patient patient_7(person_14, doctor_1);
-	Patient patient_8(person_15, doctor_2, true);
-	Patient patient_9(person_16, doctor_1, true);
+	Patient patient_2(person_9, doctor_2, Patient::SICK);
+	Patient patient_3(person_10, doctor_1, Patient::SICK);
+	Patient patient_4(person_11, doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient patient_5(person_12, doctor_2 , Patient::SICK);
+	Patient patient_6(person_13, doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient patient_7(person_14, doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient patient_8(person_15, doctor_2);
+	Patient patient_9(person_16, doctor_1, Patient::SICK);
 
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);

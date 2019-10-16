@@ -1,6 +1,7 @@
 #include "Patient.h"
+const char* Patient::eStatusString[] = { "Healthy", "Sick","Needs Treatment" };
 
-Patient::Patient(const Person & person, Doctor& personalDoctor, bool sick) : Person(person)
+Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) : Person(person)
 {
 	numTurns = 0;
 	turns = new Turn*[MAX_TURNS_SIZE];
@@ -8,7 +9,7 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, bool sick) : Per
 		turns[i] = nullptr;
 	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
-	isSick = sick;
+	this->status = status;
 }
 
 Patient::Patient(Patient && other) : Person(std::move(other))
@@ -18,7 +19,7 @@ Patient::Patient(Patient && other) : Person(std::move(other))
 	
 	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = std::move(other.personalDoctor);
-	isSick = other.isSick;
+	status = other.status;
 }
 
 Patient::Patient(Patient & other) : Person(other)
@@ -43,18 +44,18 @@ const Patient & Patient::operator=(const Patient & other)
 			turns[i] = other.turns[i];
 		//this->clinicMember = other.clinicMember;
 		this->personalDoctor = other.personalDoctor;
-		isSick = other.isSick;
+		status = other.status;
 	}
 	return *this;
 }
 
-bool Patient::answerCall()
+Patient::eStatus Patient::answerCall()
 {
-	if (isSick)
-		cout << this->getName() << ">>I'm not feeling well, i'd like to get checked up." << endl;
+	if (status)
+		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up." << endl;
 	else
 		cout << this->getName() <<">> It's ok I'm healthy." << endl;
-	return isSick;
+	return status;
 }
 
 void Patient::changeDoctor(Doctor& doctor)
@@ -102,4 +103,5 @@ void Patient::toOs(ostream & os) const
 	os << "**Patient**" << endl;
 	Person::toOs(os);
 	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
+	os << " Status : " << eStatusString[this->status] << endl;
 }

@@ -10,11 +10,27 @@ void Secretary::callPatient(Patient & patient) const
 	int length = Clinic::DEFAULT_TURN_LENGTH_MINS;
 	cout << endl << this->getName() << ">> Hi, " << patient.getName() << ". My name is " << name << ", and " << endl;
 	cout << this->getName() << ">> I'm calling to ask whether you want to make an appointment for your annual check-up" << endl;
-	bool answer = patient.answerCall();
-	if (answer)
+	Patient::eStatus answer = patient.answerCall();
+	if (answer != Patient::eStatus::HEALTHY)
 	{
-		Doctor* doctor = patient.getPersonalDoctor();
-		Turn* turn = new Turn(*doctor, patient, doctor->getNextFreeTime(length), length);
+
+		MedicalStaff* medical = nullptr;
+		if (answer == Patient::eStatus::REQUIRE_TREATMENT)
+		{
+			try {
+				medical = &(clinic->getNurse());
+			}
+			catch (const char* msg) {
+				cout << msg << endl;
+			}
+		}
+			
+		else if (answer == Patient::eStatus::SICK || medical == nullptr)
+		{
+			medical = patient.getPersonalDoctor();
+		}
+		
+		Turn* turn = new Turn(*medical, patient, medical->getNextFreeTime(length), length);
 		clinic->addTurn(*turn);
 		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n" << *turn << endl;
 	}
