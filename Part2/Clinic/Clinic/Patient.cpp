@@ -50,6 +50,10 @@ const Patient & Patient::operator=(const Patient & other)
 
 bool Patient::answerCall()
 {
+	if (isSick)
+		cout << this->getName() << ">>I'm not feeling well, i'd like to get checked up." << endl;
+	else
+		cout << this->getName() <<">> It's ok I'm healthy." << endl;
 	return isSick;
 }
 

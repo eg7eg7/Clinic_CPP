@@ -15,6 +15,7 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 {
 	int hrs = t2.getHour() - t1.getHour();
 	int min = t2.getMinute() - t1.getMinute();
+
 	int totalMinutes = hrs * 60 + min;
 	
 	return totalMinutes;
@@ -22,25 +23,18 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 
 
 
-int Time::operator<(const Time & t) const
+bool Time::operator<(const Time & t) const
 {
 	if (hours < t.hours)
-		return 1;
-	else if (hours == t.hours)
-	{
-		if (minutes < t.minutes)
-			return 1;
-		else if (minutes == t.minutes)
-			return 0;
-		else return -1;
-	}
-	else
-		return -1;
+		return true;
+	else if (hours == t.hours && minutes < t.minutes)
+		return true;
+	return false;
 }
 
-int Time::operator>(const Time & t) const
+bool Time::operator>(const Time & t) const
 {
-	return -1 * operator<(t);
+	return !operator<(t);
 }
 
 const Time& Time::operator=(const Time & t)
@@ -53,30 +47,30 @@ const Time& Time::operator=(const Time & t)
 	return *this;
 }
 
-int Time::operator==(const Time & t) const
+bool Time::operator==(const Time & t) const
 {
 	if (t.hours == hours && t.minutes == minutes)
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
-int Time::operator<=(const Time & t) const
+bool Time::operator<=(const Time & t) const
 {
 	if (operator<(t) || operator==(t))
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
-int Time::operator>=(const Time & t) const
+bool Time::operator>=(const Time & t) const
 {
 	if (operator>(t) || operator==(t))
-		return 1;
-	return 0;
+		return true;
+	return false;
 }
 
 ostream & operator<<(ostream & os, const Time & t)
 {
-	os << "Time: "<< t.hours << ":" << t.minutes << endl;
+	os << "Time: "<< t.hours << ":" << t.minutes << (t.minutes==0?"0":"") << endl;
 	return os;
 }
 

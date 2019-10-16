@@ -59,13 +59,18 @@ int main()
 	clinic.addRoom(room_10);
 
 	// Addresses
-	Address address_1("Israel", "Tel-Aviv", "einstein", 43, 9, 18);
-	Address address_2("Israel", "haifa", "karmel", 17, 12, 22);
-	Address address_3("Israel", "Tel-Aviv", "bograshov", 64, 1, 2);
-	Address address_4("Israel", "Bat-Yam", "balfour", 6, 8, 10);
-	Address address_5("Israel", "Tel-Aviv", "yarkon", 5, 13, 14);
-	Address address_6("Israel", "Herzliya", "bazel", 45, 1, 45);
-	Address address_7("Israel", "Tel-Aviv", "dizengoff", 28, 19, 48);
+	Address address_1("Israel", "Tel-Aviv", "Einstein", 43, 9, 18);
+	Address address_2("Israel", "Haifa", "Hakarmel", 17, 12, 22);
+	Address address_3("Israel", "Tel-Aviv", "Bograshov", 64, 1, 2);
+	Address address_4("Israel", "Bat-Yam", "Balfour", 6, 8, 10);
+	Address address_5("Israel", "Tel-Aviv", "Yarkon", 5, 13, 14);
+	Address address_6("Israel", "Herzliya", "Basel", 45, 1, 45);
+	Address address_7("Israel", "Tel-Aviv", "Dizengoff", 28, 19, 48);
+	Address address_8("Israel", "Eilat", "Habanim", 2, 19, 48);
+	Address address_9("Israel", "Jaffa", "Bernoulli", 8, 3, 48);
+	Address address_10("Israel", "Ashkelon", "Newton", 3, 29, 48);
+	Address address_11("Israel", "Rehovot", "Cantor", 5, 69, 48);
+	Address address_12("Israel", "Rishon-Letzion", "Leibniz", 7, 9, 48);
 
 	// Persons
 	Person person_1(1000, "Dr. Hopkins", "054-452-123", 34, address_1, Person::Male);
@@ -79,6 +84,14 @@ int main()
 	Person person_8(3333, "patient_1", "050-231-4579", 92, address_3, Person::Male);
 	Person person_9(4444, "patient_2", "054-782-4362", 18, address_2, Person::Female);
 	Person person_10(5555, "patient_3", "052-451-0921", 54, address_4, Person::Female);
+
+	Person person_11(3333, "patient_4", "052-231-4579", 17, address_7, Person::Male);
+	Person person_12(4444, "patient_5", "051-782-4362", 13, address_6, Person::Female);
+	Person person_13(5555, "patient_6", "053-451-0921", 104, address_9, Person::Female);
+
+	Person person_14(3333, "patient_7", "054-231-4579", 3, address_10, Person::Male);
+	Person person_15(4444, "patient_8", "055-782-4362", 21, address_11, Person::Female);
+	Person person_16(5555, "patient_9", "056-451-0921", 36, address_12, Person::Female);
 
 	// Staff
 	MedicalStaff doctor1_medical(person_1, 12412, 10000, Time(8, 0), Time(14, 0), room_1);
@@ -120,15 +133,27 @@ int main()
 	Patient patient_1(person_8, doctor_1);
 	Patient patient_2(person_9, doctor_2, true);
 	Patient patient_3(person_10, doctor_1, true);
+	Patient patient_4(person_11, doctor_1);
+	Patient patient_5(person_12, doctor_2, true);
+	Patient patient_6(person_13, doctor_1, true);
+	Patient patient_7(person_14, doctor_1);
+	Patient patient_8(person_15, doctor_2, true);
+	Patient patient_9(person_16, doctor_1, true);
 
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);
 	clinic.addPatient(patient_3);
+	clinic.addPatient(patient_4);
+	clinic.addPatient(patient_5);
+	clinic.addPatient(patient_6);
+	clinic.addPatient(patient_7);
+	clinic.addPatient(patient_8);
+	clinic.addPatient(patient_9);
 
 	// Turns
 
 	clinic.checkPatients();
-
+	
 	//Turn turn_1(doctor_1, patient_1, 1000, 200);
 	//Turn turn_2(doctor_2, patient_2, 1200, 100);
 	//Turn turn_3(doctor_1, patient_3, 1400, 130);

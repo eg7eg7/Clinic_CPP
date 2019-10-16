@@ -18,9 +18,9 @@ Turn::Turn(const Turn & other)
 Time Turn::getEndTime() const
 {
 	int newMin = (startTime.getMinute() + sessionDurationMins) % 60;
-	int newHour = (startTime.getHour() + ((startTime.getMinute()+sessionDurationMins) / 60)) % 24;
-	
-	return Time(newHour,newMin);
+	int newHour = (startTime.getHour() + ((startTime.getMinute() + sessionDurationMins) / 60)) % 24;
+
+	return Time(newHour, newMin);
 }
 
 void Turn::changeStartTime(Time startTime)
@@ -46,7 +46,7 @@ void Turn::changeMedicalStaff(MedicalStaff* medicalStaff)
 void Turn::sortTurns(Turn** turns, int size)
 {
 	int count = -1;
-	//defrag
+	//defrag - nullptrs at the end of array
 	for (int i = 0; i < size; i++)
 	{
 		if (turns[i] == nullptr)
@@ -54,6 +54,7 @@ void Turn::sortTurns(Turn** turns, int size)
 		if (count != -1 && turns[i] != nullptr)
 		{
 			turns[count] = turns[i];
+			turns[i] = nullptr;
 			count = -1;
 		}
 	}
@@ -65,7 +66,7 @@ void Turn::sortTurns(Turn** turns, int size)
 			if (turns[i] != nullptr && turns[i + 1] != nullptr)
 			{
 				//check
-				if (((*(turns[i])).getStartTime() < (*(turns[i + 1])).getStartTime()) == -1)
+				if (((*(turns[i])).getStartTime() > (*(turns[i + 1])).getStartTime()))
 				{
 					//swap
 					std::swap(turns[i], turns[i + 1]);
@@ -100,7 +101,7 @@ const Turn & Turn::operator=(const Turn & other)
 ostream & operator<<(ostream & os, const Turn & turn)
 {
 	os << endl << "Turn beginning at: " << turn.getStartTime() << endl <<
-		"Duration: " << turn.getDurationMins() << endl << "for patient:" << (turn.getPatient())->getName()
+		"Duration: " << turn.getDurationMins() << " minutes" << endl << "for patient:" << (turn.getPatient())->getName()
 		<< endl << "with medical Staff: " << (turn.getMedicalStaff())->getName();
 	return os;
 }

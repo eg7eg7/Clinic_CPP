@@ -7,18 +7,19 @@ Secretary::Secretary(Secretary && Secretary) : Staff(std::move(Secretary)), Offi
 
 void Secretary::callPatient(Patient & patient) const
 {
-	cout << ">> Hi, " << patient.getName() << ". My name is " << name << ", and " << endl;
-	cout << ">> I'm calling to ask whether you want to make an appointment for your annual check-up" << endl;
+	int length = Clinic::DEFAULT_TURN_LENGTH_MINS;
+	cout << endl << this->getName() << ">> Hi, " << patient.getName() << ". My name is " << name << ", and " << endl;
+	cout << this->getName() << ">> I'm calling to ask whether you want to make an appointment for your annual check-up" << endl;
 	bool answer = patient.answerCall();
 	if (answer)
 	{
 		Doctor* doctor = patient.getPersonalDoctor();
-		Turn* turn = new Turn(*doctor, patient, doctor->getNextFreeTime(30), 30);
+		Turn* turn = new Turn(*doctor, patient, doctor->getNextFreeTime(length), length);
 		clinic->addTurn(*turn);
-		cout << ">> Ok, I have created an appointment for you\n" << *turn << endl;
+		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n" << *turn << endl;
 	}
 	else
-		cout << ">> Stay healthy" << endl;
+		cout << this->getName() << ">> Stay healthy!" << endl;
 }
 
 void Secretary::toOs(ostream & os) const

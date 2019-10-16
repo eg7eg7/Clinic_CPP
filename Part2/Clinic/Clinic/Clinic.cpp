@@ -186,7 +186,9 @@ void Clinic::removePatient(const Patient & patient)
 
 void Clinic::checkPatients()
 {
-
+	cout << "******************************************************" << endl;
+	cout << "Checking patients status and creating new appointments" << endl;
+	cout << "******************************************************" << endl;
 	try {
 		for (int i = 0; i < MAX_NUM_PATIENTS; i++)
 		{
@@ -194,6 +196,7 @@ void Clinic::checkPatients()
 			if (patients[i] != nullptr)
 			{
 				getSecretary().callPatient(*(patients[i]));
+				cout << "-----------------------------------------" << endl;
 			}
 		}
 	}
@@ -269,6 +272,7 @@ void Clinic::removeTurn(const Turn & turn)
 			break;
 		}
 	}
+	Turn::sortTurns(turns, MAX_NUM_TURNS);
 }
 
 void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)

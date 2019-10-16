@@ -74,6 +74,12 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 				return turns[i]->getEndTime();
 			}
 		}
+		else if (turns[i] != nullptr && turns[i + 1] == nullptr)
+		{
+			timeDifference1 = Time::getTimeDifference(turns[i]->getEndTime(), this->acceptHoursTo);
+			if (timeDifference1 >= sessionDurationMins)
+				return turns[i]->getEndTime();
+		}
 	}
 	return Time();
 }
@@ -106,6 +112,7 @@ void MedicalStaff::deleteTurn(const Turn& turn)
 			break;
 		}
 	}
+	Turn::sortTurns(turns, TURN_SIZE);
 }
 
 
