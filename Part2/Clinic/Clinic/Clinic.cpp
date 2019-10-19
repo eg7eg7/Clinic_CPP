@@ -208,10 +208,6 @@ void Clinic::checkPatients()
 
 }
 
-void Clinic::getAvailableTurn(const Patient & patient)
-{
-	//addTurn()
-}
 
 void Clinic::addRoom(Room & room)
 {

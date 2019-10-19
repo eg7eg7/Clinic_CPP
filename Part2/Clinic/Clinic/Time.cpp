@@ -4,9 +4,17 @@
 Time::Time(int hrs, int mins) throw (const char*)
 {
 	if (hrs > 23 || hrs < 0)
+	{
+		hours = 0;
+		mins = 0;
 		throw "Invalid hour";
-	if (mins < 0 || mins >59)
+	}
+		if (mins < 0 || mins >59)
+	{
+		mins = 0;
 		throw "Invalid minutes";
+	}
+		
 	hours = hrs; 
 	minutes = mins;
 }

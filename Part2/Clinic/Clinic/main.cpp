@@ -224,3 +224,7 @@ int main()
 //copy ctor - use = operator (page 26, operators)
 
 //add mutables??
+
+//throw exception if no place to add new turn in clinic, and delete turn
+
+//add try catch where Time is created

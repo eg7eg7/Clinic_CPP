@@ -15,6 +15,7 @@ class ClinicManager;
 //class Staff;
 class Clinic
 {
+	friend class ClinicManager;
 public:
 	static const int MAX_NUM_ROOMS = 20;
 	static const int MAX_NUM_STAFF = 50;
@@ -47,17 +48,16 @@ public:
 
 	virtual ~Clinic();
 
-	void addStaff(Staff * staff);
+	
 
 	const Clinic& operator=(const Clinic& clinic);
 
 	// Methods
-	void removeStaff(Staff& staff);
+	
 
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
 	void checkPatients();
-	void getAvailableTurn(const Patient& patient);
 
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);
@@ -83,6 +83,9 @@ public:
 	void setClinicManager(ClinicManager* new_manager);
 	const Secretary& getSecretary() const throw (const char*);
 	Nurse& getNurse() const throw (const char*);
+private:
+	void addStaff(Staff * staff);
+	void removeStaff(Staff& staff);
 };
 
 #endif // !__CLINIC_H
