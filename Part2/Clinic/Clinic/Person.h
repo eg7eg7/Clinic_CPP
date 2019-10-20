@@ -31,16 +31,16 @@ public:
 	virtual ~Person();
 
 	// Getters
-	int getId() const { return id; }
+	const int& getId() const { return id; }
 	const char* getName() const { return name; }
 	const char* getPhone() const { return phone; }
-	const int getAge() const { return age; }
-	const eGender getGender() const { return gender; };
+	const int& getAge() const { return age; }
+	const eGender& getGender() const { return gender; };
 	const Address& getAddress() const { return address; };
 
 	// Setters
 	void setPhone(const char* phone);
-	void setAddress(Address& address);
+	void setAddress(const Address& address);
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Person & person);

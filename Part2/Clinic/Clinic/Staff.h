@@ -23,12 +23,12 @@ public:
 	Staff(Staff && staff);
 	virtual ~Staff() { room->removeOccupant(); };
 	// Getters
-	long getExtension() const { return extension; }
-	long getSalary() const { return salary; }
+	const long& getExtension() const { return extension; }
+	const long& getSalary() const { return salary; }
 	const Clinic* getClinic() const { return clinic; }
 
 	// Setters
-	void setSalary(long salary) { this->salary = salary; }
+	void setSalary(const long& salary) { this->salary = salary; }
 	void setClinic(Clinic* clinic);
 	// Show
 	virtual void toOs(ostream& os) const override;

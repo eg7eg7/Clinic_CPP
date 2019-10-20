@@ -45,7 +45,7 @@ const Patient & Patient::operator=(const Patient & other)
 	return *this;
 }
 
-Patient::eStatus Patient::answerCall()
+const Patient::eStatus& Patient::answerCall() const
 {
 	if (status)
 		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up." << endl;

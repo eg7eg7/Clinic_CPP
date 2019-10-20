@@ -36,7 +36,7 @@ void Person::setPhone(const char* phone)
 	delete[]this->phone;
 	phone = strdup(phone);
 }
-void Person::setAddress(Address& address)
+void Person::setAddress(const Address& address)
 {
 	this->address = address;
 }

@@ -23,23 +23,15 @@ public:
 	Room(int roomNumber, int floor, int size) : roomNumber(roomNumber), floor(floor), size(size), num_occupants(0) {};	// Constructor
 	~Room() {};
 	// Getters
-	int getRoomNumber() const { return roomNumber; }
-	int getFloor() const { return floor; }
-	int getSize() const { return size; }
-	bool isOccupied() const {
-		if (num_occupants > 0)
-			return true;
-		else
-			return false;
-	}
+	const int& getRoomNumber() const { return roomNumber; }
+	const int& getFloor() const { return floor; }
+	const int& getSize() const { return size; }
+	const bool& isOccupied() const;
 
 	// Setters
-	int getNumOccupants() const { return num_occupants; };
+	const int& getNumOccupants() const { return num_occupants; };
 	void addOccupant() { ++num_occupants; }
-	void removeOccupant() {
-		if (num_occupants > 0)
-			--num_occupants;
-	}
+	void removeOccupant();
 	// Show
 	friend ostream & operator<<(ostream & os, const Room & room);
 };

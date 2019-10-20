@@ -31,7 +31,7 @@ public:
 	// Methods
 
 	/* Returns true if sick and needs a turn*/
-	eStatus answerCall();
+	const eStatus& answerCall() const;
 
 	void changeDoctor(Doctor & doctor);
 	int getNumTurns() { return numTurns; };

@@ -34,16 +34,18 @@ public:
 	const Turn& operator=(const Turn& other);
 
 	// Methods
-	static void sortTurns(Turn** turns, int size);
-	const Time getStartTime() const { return startTime; };
-	const long getDurationMins() const { return sessionDurationMins; };
+	static void sortTurns(Turn** turns, const int& size);
+	const Time& getStartTime() const { return startTime; };
+	const long& getDurationMins() const { return sessionDurationMins; };
+	
+	/* calculated end time */
 	Time getEndTime() const;
 
-	MedicalStaff* getMedicalStaff() const { return medicalStaff; };
+	const MedicalStaff* getMedicalStaff() const { return medicalStaff; };
 	const Patient* getPatient() const { return patient; };
 
-	void changeStartTime(Time startTime);
-	void changeDuration(long sessionDurationMins);
+	void changeStartTime(const Time& startTime);
+	void changeDuration(const long& sessionDurationMins);
 	void changeMedicalStaff(MedicalStaff* medicalStaff);
 	void changePatient(Patient* patient);
 

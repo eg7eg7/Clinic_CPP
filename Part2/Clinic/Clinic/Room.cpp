@@ -19,3 +19,14 @@ Room::Room(Room && other)
 	size = other.size;
 	num_occupants = other.num_occupants;
 }
+
+const bool & Room::isOccupied() const
+{
+	return num_occupants > 0 ? true : false;
+}
+
+void Room::removeOccupant()
+{
+	if (num_occupants > 0)
+		--num_occupants;
+}

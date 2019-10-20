@@ -34,12 +34,12 @@ void Turn::setDurationsMins(const int & time)
 	sessionDurationMins = time;
 }
 
-void Turn::changeStartTime(Time startTime)
+void Turn::changeStartTime(const Time& startTime)
 {
 	this->startTime = startTime;
 }
 
-void Turn::changeDuration(long sessionDurationMins)
+void Turn::changeDuration(const long& sessionDurationMins)
 {
 	this->sessionDurationMins = sessionDurationMins;
 }
@@ -54,7 +54,7 @@ void Turn::changeMedicalStaff(MedicalStaff* medicalStaff)
 	}
 }
 
-void Turn::sortTurns(Turn** turns, int size)
+void Turn::sortTurns(Turn** turns, const int& size)
 {
 	int count = -1;
 	//defrag - nullptrs at the end of array

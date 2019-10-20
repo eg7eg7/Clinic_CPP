@@ -1,6 +1,6 @@
 #include "Time.h"
 
-Time::Time(int hrs, int mins)
+Time::Time(const int& hrs, const int& mins)
 {
 	try {
 		setTime(hrs, mins);
@@ -11,7 +11,7 @@ Time::Time(int hrs, int mins)
 	}
 }
 
-void Time::setTime(const int hrs, const int mins)
+void Time::setTime(const int& hrs, const int& mins)
 {
 	if (hrs > 23 || hrs < 0)
 	{
@@ -38,7 +38,7 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 	return totalMinutes;
 }
 
-bool Time::operator<(const Time & t) const
+const bool& Time::operator<(const Time & t) const
 {
 	if (hours < t.hours)
 		return true;
@@ -47,7 +47,7 @@ bool Time::operator<(const Time & t) const
 	return false;
 }
 
-bool Time::operator>(const Time & t) const
+const bool& Time::operator>(const Time & t) const
 {
 	return !operator<(t);
 }
@@ -62,21 +62,21 @@ const Time& Time::operator=(const Time & t)
 	return *this;
 }
 
-bool Time::operator==(const Time & t) const
+const bool& Time::operator==(const Time & t) const
 {
 	if (t.hours == hours && t.minutes == minutes)
 		return true;
 	return false;
 }
 
-bool Time::operator<=(const Time & t) const
+const bool& Time::operator<=(const Time & t) const
 {
 	if (operator<(t) || operator==(t))
 		return true;
 	return false;
 }
 
-bool Time::operator>=(const Time & t) const
+const bool& Time::operator>=(const Time & t) const
 {
 	if (operator>(t) || operator==(t))
 		return true;
