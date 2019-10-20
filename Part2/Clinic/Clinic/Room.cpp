@@ -18,5 +18,4 @@ Room::Room(Room && other)
 	floor = other.floor;
 	size = other.size;
 	num_occupants = other.num_occupants;
-
 }

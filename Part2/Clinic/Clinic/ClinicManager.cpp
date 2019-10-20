@@ -11,7 +11,6 @@ const ClinicManager & ClinicManager::operator=(const ClinicManager & other)
 	{
 		Doctor::operator=(other);
 		OfficeStaff::operator=(other);
-		//nothing
 	}
 	return *this;
 }

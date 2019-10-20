@@ -11,8 +11,7 @@
 using namespace std;
 
 class ClinicManager;
-//class Staff;
-//class Staff;
+
 class Clinic
 {
 	friend class ClinicManager;
@@ -46,14 +45,11 @@ public:
 	Clinic(const Clinic& other); // copy constructor
 	Clinic(Clinic&& other); // move constructor
 
-	virtual ~Clinic();
-
-	
+	~Clinic();
 
 	const Clinic& operator=(const Clinic& clinic);
 
 	// Methods
-	
 
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
@@ -63,11 +59,7 @@ public:
 	void removeRoom(const Room& room);
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
-	
-	void updateTurn(const Turn& oldturn, const Turn& newturn);
 
-	void setStaff(Staff ** old_staff, Staff * new_staff);
-	
 	const char* getName() const { return name; };
 	const Address& getAddress() const { return address; };
 	const ClinicManager* getManager() const { return manager; };
@@ -83,6 +75,7 @@ public:
 	void setClinicManager(ClinicManager* new_manager);
 	const Secretary& getSecretary() const throw (const char*);
 	Nurse& getNurse() const throw (const char*);
+
 private:
 	void addStaff(Staff * staff);
 	void removeStaff(Staff& staff);

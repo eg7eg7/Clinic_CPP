@@ -36,7 +36,7 @@ public:
 	Time getNextFreeTime(long sessionDurationMins) const;
 	void addTurn(Turn& turn);
 	void deleteTurn(const Turn& turn);
-	
+
 	Turn* operator[](int index);
 	// Show
 	virtual void toOs(ostream& os) const override;

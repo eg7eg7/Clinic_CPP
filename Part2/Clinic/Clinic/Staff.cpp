@@ -1,6 +1,6 @@
 #include "Staff.h"
 
-Staff::Staff(const Person& person, long extension, long salary, Room & room) : Person(person), extension(extension), salary(salary) {
+Staff::Staff(const Person& person, long extension, long salary, Room & room) : Person(person), extension(extension), salary(salary), clinic(nullptr) {
 	room.addOccupant();
 	this->room = &room;
 }
@@ -10,17 +10,10 @@ Staff::Staff(Staff && staff) : Person(staff), extension(staff.extension), salary
 	clinic = std::move(staff.clinic);
 }
 
-
 void Staff::setClinic(Clinic * new_clinic)
 {
-	clinic = new_clinic;
-	//func = clinic->addStaff;
-	//if (clinic != new_clinic)
-	//{
-	//	clinic = new_clinic;
-	//	if (clinic != nullptr)
-	//		clinic->addStaff(this);
-	//}
+	if (clinic == nullptr)
+		clinic = new_clinic;
 }
 
 void Staff::toOs(ostream & os) const

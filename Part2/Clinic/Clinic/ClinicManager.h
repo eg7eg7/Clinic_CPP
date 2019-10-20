@@ -10,18 +10,15 @@ using namespace std;
 
 class ClinicManager : public OfficeStaff, public Doctor
 {
-public:
-	//TODO remove
-	static const int STAFF_SIZE = 20;
 private:
-	
+
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff&& officeStaff, const Doctor& doctor);
 public:
 	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor
 	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { *this = other; }; // copy constructor
-	virtual ~ClinicManager() {};
+	~ClinicManager() {};
 
 	const ClinicManager& operator=(const ClinicManager& other);
 

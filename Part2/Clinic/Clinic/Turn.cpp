@@ -14,13 +14,24 @@ Turn::Turn(const Turn & other)
 	*this = other;
 }
 
-
 Time Turn::getEndTime() const
 {
 	int newMin = (startTime.getMinute() + sessionDurationMins) % 60;
 	int newHour = (startTime.getHour() + ((startTime.getMinute() + sessionDurationMins) / 60)) % 24;
 
-	return Time(newHour, newMin);
+	Time t = Time(newHour, newMin);
+
+	return t;
+}
+
+void Turn::setStartTime(const Time & time)
+{
+	startTime = time;
+}
+
+void Turn::setDurationsMins(const int & time)
+{
+	sessionDurationMins = time;
 }
 
 void Turn::changeStartTime(Time startTime)

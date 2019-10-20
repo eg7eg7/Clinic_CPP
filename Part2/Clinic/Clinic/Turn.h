@@ -12,8 +12,9 @@ class Patient;
 
 class Turn
 {
+	friend class secretary;
 protected:
-	
+
 	long sessionDurationMins;
 
 	Time startTime;
@@ -21,21 +22,23 @@ protected:
 	Patient* patient;
 private:
 	Turn(Turn&& other); //  move constructor
-	
+	void setStartTime(const Time& time);
+	void setDurationsMins(const int& time);
 public:
-	
+
 	Turn(MedicalStaff& medicalStaff, Patient& patient, Time startTime, long sessionDurationMins);	// Constructor
 	Turn(const Turn& other); //  copy constructor
-	
-	virtual ~Turn() {};
 
-	//void operator=(const Turn& turn);
+	~Turn() {};
+
+	const Turn& operator=(const Turn& other);
 
 	// Methods
 	static void sortTurns(Turn** turns, int size);
 	const Time getStartTime() const { return startTime; };
 	const long getDurationMins() const { return sessionDurationMins; };
 	Time getEndTime() const;
+
 	MedicalStaff* getMedicalStaff() const { return medicalStaff; };
 	const Patient* getPatient() const { return patient; };
 
@@ -46,7 +49,6 @@ public:
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Turn & turn);
-	const Turn& operator=(const Turn& other);
 };
 
 #endif // !__TURN_H

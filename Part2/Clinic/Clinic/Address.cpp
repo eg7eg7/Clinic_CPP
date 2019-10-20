@@ -1,6 +1,6 @@
 #include "Address.h"
 
-Address::Address(const char * country, const char * city, const char * street, int buildNum, int floorNum, int houseNum)
+Address::Address(const char * country, const char * city, const char * street, int buildNum, int floorNum, int houseNum) : country(NULL), city(NULL),street(NULL)
 {
 	this->country = strdup(country);
 	this->city = strdup(city);

@@ -11,10 +11,6 @@ class OfficeStaff : virtual public Staff
 {
 public:
 	static const int MAX_PATIENT_SIZE = 20;
-protected:
-
-	//Patient** patients;
-	//int patientNumber;
 
 public:
 	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person, extension, salary, room) {};
@@ -23,10 +19,6 @@ public:
 	virtual ~OfficeStaff();
 
 	const OfficeStaff& operator=(const OfficeStaff& other);
-	
-	// Methods
-	//void addPatient(Patient& patient);
-	//void removePatient(const Patient& patient);
 
 	// Show
 	void OfficeStaff::toOs(ostream & os) const override;

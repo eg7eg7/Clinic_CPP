@@ -11,7 +11,7 @@ class Patient : public Person
 {
 public:
 	static const int MAX_TURNS_SIZE = 20;
-	enum eStatus{HEALTHY,SICK,REQUIRE_TREATMENT};
+	enum eStatus { HEALTHY, SICK, REQUIRE_TREATMENT };
 	static const char* eStatusString[];
 
 protected:
@@ -24,7 +24,7 @@ public:
 	Patient(const Person& person, Doctor& personalDoctor, eStatus status = HEALTHY); // Constructor
 	Patient(Patient&& other); //move ctor
 	Patient(Patient& other); // copy constructor
-	virtual ~Patient();
+	~Patient();
 
 	const Patient& operator=(const Patient& other);
 
@@ -34,7 +34,6 @@ public:
 	eStatus answerCall();
 
 	void changeDoctor(Doctor & doctor);
-	void changeClinicMember(bool clinicMember);
 	int getNumTurns() { return numTurns; };
 
 	void addTurn(Turn & turn);

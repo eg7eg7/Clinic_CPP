@@ -12,8 +12,7 @@
 //***************************	ID	 :	204808596		     ******************************
 //***************************                                ******************************
 //***************************	Name :	INBAL AZAR           ******************************
-//***************************	ID	 :	  		     ******************************
-
+//***************************	ID	 :	307943001  		     ******************************
 
 #pragma warning(disable: 4996)
 #include <iostream>
@@ -29,10 +28,7 @@ void exceptionCatcher()
 int main()
 {
 	set_terminate(exceptionCatcher);
-	try
-	{
 
-	
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
 	// Rooms
@@ -100,7 +96,7 @@ int main()
 	Doctor doctor_1(doctor1_medical, "Oncologist");
 	Doctor doctor_2(doctor2_medical, "Spine surgeon");
 
-	MedicalStaff nurse1_medical(person_3, 12414, 8000, Time(9,0), Time(15, 0), room_3);
+	MedicalStaff nurse1_medical(person_3, 12414, 8000, Time(9, 0), Time(15, 0), room_3);
 	MedicalStaff nurse2_medical(person_4, 12415, 7000, Time(11, 0), Time(17, 0), room_4);
 
 	Nurse nurse_1(nurse1_medical, "Take blood samples");
@@ -118,7 +114,6 @@ int main()
 	MedicalStaff manager_medical(person_7, 12412, 10000, Time(8, 0), Time(14, 0), room_7);
 	Doctor manager_doctor(manager_medical, "oncologist");
 	ClinicManager manager(manager_office, manager_doctor);
-	
 
 	clinic.setClinicManager(&manager);
 
@@ -134,7 +129,7 @@ int main()
 	Patient patient_2(person_9, doctor_2, Patient::SICK);
 	Patient patient_3(person_10, doctor_1, Patient::SICK);
 	Patient patient_4(person_11, doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient patient_5(person_12, doctor_2 , Patient::SICK);
+	Patient patient_5(person_12, doctor_2, Patient::SICK);
 	Patient patient_6(person_13, doctor_1, Patient::REQUIRE_TREATMENT);
 	Patient patient_7(person_14, doctor_1, Patient::REQUIRE_TREATMENT);
 	Patient patient_8(person_15, doctor_2);
@@ -153,19 +148,7 @@ int main()
 	// Turns
 
 	clinic.checkPatients();
-	
-	//Turn turn_1(doctor_1, patient_1, 1000, 200);
-	//Turn turn_2(doctor_2, patient_2, 1200, 100);
-	//Turn turn_3(doctor_1, patient_3, 1400, 130);
-	//Turn turn_4(doctor_1, patient_1, 1400, 130);
 
-	//clinic.addTurn(turn_1);
-	//clinic.addTurn(turn_2);
-	//clinic.addTurn(turn_3);
-
-	//clinic.updateTurn(turn_1, turn_4);
-	//clinic.removeTurn(turn_3);
-	//clinic.updateTurn(turn_1, turn_4);
 	cout << "----------------------------------------------------------------------------\n";
 	cout << clinic << endl;
 
@@ -176,11 +159,7 @@ int main()
 	clinic.removeRoom(room_5);
 
 	clinic.removeRoom(room_6);
-	}
-	catch (const char* msg)
-	{
-		cout << msg << endl;
-	}
+
 	return 0;
 }
 
@@ -198,24 +177,13 @@ int main()
 
 //ref to pointer in classes
 
-//name(NULL) add to classes
-
-//check TODO
-
 //Clinic should create turns
 
 //add getters to clinic
 
 //check which functions need to return refs
 
-//move defines to class as static
-
-//improve prints
-
 //remove unneccassary comments
-
-//implement dates in turns, add pointer array for turns in medical staff, medical staff should return next available turn
-//sort array by date/time
 
 //add more move ctors
 
@@ -227,4 +195,5 @@ int main()
 
 //throw exception if no place to add new turn in clinic, and delete turn
 
-//add try catch where Time is created
+
+//add documentation

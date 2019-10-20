@@ -1,7 +1,6 @@
 #include "MedicalStaff.h"
 #include "Turn.h"
 
-
 MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, Time acceptHoursF, Time acceptHoursT, Room& room)
 	: Staff(person, extension, salary, room)
 {
@@ -56,11 +55,14 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 	int timeDifference1 = 0;
 	int timeDifference2 = 0;
 	if (turns[0] != nullptr)
+	{
 		timeDifference1 = Time::getTimeDifference(this->acceptHoursFrom, turns[0]->getStartTime());
+		if (timeDifference1 >= sessionDurationMins)
+			return this->acceptHoursTo;
+	}
 	else
 		return this->acceptHoursFrom;
-	if (timeDifference1 >= sessionDurationMins)
-		return this->acceptHoursTo;
+
 	for (int i = 0; i < TURN_SIZE - 1; i++)
 	{
 		if (turns[i] != nullptr && turns[i + 1] != nullptr)
@@ -81,7 +83,8 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 				return turns[i]->getEndTime();
 		}
 	}
-	return Time();
+	Time t = Time();
+	return t;
 }
 
 void MedicalStaff::addTurn(Turn& turn)
@@ -98,7 +101,7 @@ void MedicalStaff::addTurn(Turn& turn)
 			}
 		}
 	}
-	Turn::sortTurns(turns,TURN_SIZE);
+	Turn::sortTurns(turns, TURN_SIZE);
 }
 
 void MedicalStaff::deleteTurn(const Turn& turn)
@@ -114,7 +117,6 @@ void MedicalStaff::deleteTurn(const Turn& turn)
 	}
 	Turn::sortTurns(turns, TURN_SIZE);
 }
-
 
 Turn* MedicalStaff::operator[](int index)
 {

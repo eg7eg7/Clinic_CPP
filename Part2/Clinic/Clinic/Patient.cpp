@@ -16,7 +16,7 @@ Patient::Patient(Patient && other) : Person(std::move(other))
 {
 	numTurns = other.numTurns;
 	turns = std::move(other.turns);
-	
+
 	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = std::move(other.personalDoctor);
 	status = other.status;
@@ -54,19 +54,13 @@ Patient::eStatus Patient::answerCall()
 	if (status)
 		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up." << endl;
 	else
-		cout << this->getName() <<">> It's ok I'm healthy." << endl;
+		cout << this->getName() << ">> It's ok I'm healthy." << endl;
 	return status;
 }
 
 void Patient::changeDoctor(Doctor& doctor)
 {
 	personalDoctor = &doctor;
-}
-
-void Patient::changeClinicMember(bool clinicMember)
-{
-	//TODO remove func
-	//this->clinicMember = clinicMember;
 }
 
 void Patient::addTurn(Turn & turn)

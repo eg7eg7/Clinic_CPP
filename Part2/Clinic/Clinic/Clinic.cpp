@@ -29,7 +29,6 @@ Clinic::Clinic(const Clinic & other) : address(other.address)
 
 Clinic::Clinic(Clinic && other) : address(std::move(other.address))
 {
-
 	this->name = std::move(other.name);
 
 	numRooms = other.numRooms;
@@ -43,7 +42,6 @@ Clinic::Clinic(Clinic && other) : address(std::move(other.address))
 	staff = std::move(other.staff);
 	patients = std::move(other.patients);
 	turns = std::move(other.turns);
-
 }
 
 Clinic::~Clinic()
@@ -62,7 +60,7 @@ Clinic::~Clinic()
 
 void Clinic::addStaff(Staff * staff)
 {
-	if (&staff != nullptr)
+	if (&staff != nullptr && staff->getClinic() == nullptr)
 	{
 		bool exists = false;
 		int index = -1;
@@ -124,22 +122,6 @@ const Clinic& Clinic::operator=(const Clinic & other)
 	return *this;
 }
 
-void Clinic::setStaff(Staff ** old_staff, Staff * new_staff)
-{
-	if (*old_staff != new_staff)
-	{
-		if (*old_staff != nullptr)
-		{
-			(*old_staff)->setClinic(nullptr);
-		}
-		*old_staff = new_staff;
-		if (*old_staff != nullptr)
-		{
-			(*old_staff)->setClinic(nullptr);
-		}
-	}
-}
-
 void Clinic::removeStaff(Staff & staff)
 {
 	for (int i = 0; i < MAX_NUM_STAFF; i++)
@@ -192,7 +174,6 @@ void Clinic::checkPatients()
 	try {
 		for (int i = 0; i < MAX_NUM_PATIENTS; i++)
 		{
-
 			if (patients[i] != nullptr)
 			{
 				getSecretary().callPatient(*(patients[i]));
@@ -204,10 +185,7 @@ void Clinic::checkPatients()
 	{
 		cout << msg << endl;
 	}
-
-
 }
-
 
 void Clinic::addRoom(Room & room)
 {
@@ -237,7 +215,6 @@ void Clinic::removeRoom(const Room & room)
 		}
 	}
 }
-
 
 void Clinic::addTurn(Turn & turn)
 {
@@ -269,11 +246,6 @@ void Clinic::removeTurn(const Turn & turn)
 		}
 	}
 	Turn::sortTurns(turns, MAX_NUM_TURNS);
-}
-
-void Clinic::updateTurn(const Turn & oldturn, const Turn & newturn)
-{
-	//TODO
 }
 
 void Clinic::printStaff(ostream & os) const

@@ -23,7 +23,7 @@ public:
 	Address(const Address& other); // copy constructor
 	Address(Address&& other); // move constructor
 
-	virtual ~Address();
+	~Address();
 
 	const Address& operator=(const Address& address);
 

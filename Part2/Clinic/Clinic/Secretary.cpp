@@ -13,7 +13,6 @@ void Secretary::callPatient(Patient & patient) const
 	Patient::eStatus answer = patient.answerCall();
 	if (answer != Patient::eStatus::HEALTHY)
 	{
-
 		MedicalStaff* medical = nullptr;
 		if (answer == Patient::eStatus::REQUIRE_TREATMENT)
 		{
@@ -24,15 +23,16 @@ void Secretary::callPatient(Patient & patient) const
 				cout << msg << endl;
 			}
 		}
-			
+
 		else if (answer == Patient::eStatus::SICK || medical == nullptr)
 		{
 			medical = patient.getPersonalDoctor();
 		}
-		
+
 		Turn* turn = new Turn(*medical, patient, medical->getNextFreeTime(length), length);
 		clinic->addTurn(*turn);
 		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n" << *turn << endl;
+
 	}
 	else
 		cout << this->getName() << ">> Stay healthy!" << endl;

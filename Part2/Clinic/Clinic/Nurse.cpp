@@ -11,12 +11,11 @@ Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other)
 {
 	*this = other;
 }
-Nurse::Nurse(Nurse && other) : Staff(std::move(other)),MedicalStaff(std::move(other))
+Nurse::Nurse(Nurse && other) : Staff(std::move(other)), MedicalStaff(std::move(other))
 {
 	services = std::move(other.services);
 	num_services = std::move(other.num_services);
 }
-
 
 Nurse::~Nurse()
 {

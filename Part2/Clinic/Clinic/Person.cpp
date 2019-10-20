@@ -2,7 +2,7 @@
 #pragma warning(disable: 4996)
 
 Person::Person(int id, const char* name, const char* phone,
-	int age, const Address& address, const eGender& gender) : address(address)
+	int age, const Address& address, const eGender& gender) : address(address), name(NULL),phone(NULL)
 {
 	this->id = id;
 	this->name = strdup(name);
@@ -16,14 +16,13 @@ Person::Person(const Person & other) : address(other.address)
 	*this = other;
 }
 
-Person::Person(Person && other) : address(std::move(other.address))
+Person::Person(Person && other) : address(std::move(other.address)), name(NULL), phone(NULL)
 {
 	this->id = other.id;
 	this->name = std::move(other.name);
 	this->phone = std::move(other.phone);
 	this->age = other.age;
 	this->gender = other.gender;
-
 }
 
 Person::~Person()

@@ -21,7 +21,7 @@ private:
 public:
 	Room(Room&& other); // private move constructor
 	Room(int roomNumber, int floor, int size) : roomNumber(roomNumber), floor(floor), size(size), num_occupants(0) {};	// Constructor
-	virtual ~Room() {};
+	~Room() {};
 	// Getters
 	int getRoomNumber() const { return roomNumber; }
 	int getFloor() const { return floor; }
