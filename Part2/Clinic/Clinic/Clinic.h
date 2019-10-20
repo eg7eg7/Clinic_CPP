@@ -73,7 +73,7 @@ public:
 	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
 	void setClinicManager(ClinicManager* new_manager);
-	const Secretary& getSecretary() const throw (const char*);
+	const Secretary* getSecretary() const throw (const char*);
 	Nurse& getNurse() const throw (const char*);
 
 private:

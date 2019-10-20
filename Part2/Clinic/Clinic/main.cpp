@@ -177,7 +177,6 @@ int main()
 
 //ref to pointer in classes
 
-//Clinic should create turns
 
 //add getters to clinic
 

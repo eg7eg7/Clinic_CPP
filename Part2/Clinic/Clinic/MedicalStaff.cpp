@@ -87,7 +87,7 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 	return t;
 }
 
-void MedicalStaff::addTurn(Turn& turn)
+void MedicalStaff::addTurn(Turn& turn) const
 {
 	if (turnsNumber < TURN_SIZE)
 	{
@@ -104,7 +104,7 @@ void MedicalStaff::addTurn(Turn& turn)
 	Turn::sortTurns(turns, TURN_SIZE);
 }
 
-void MedicalStaff::deleteTurn(const Turn& turn)
+void MedicalStaff::deleteTurn(const Turn& turn) const
 {
 	for (int i = 0; i < TURN_SIZE; i++)
 	{

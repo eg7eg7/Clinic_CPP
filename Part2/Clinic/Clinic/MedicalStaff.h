@@ -34,8 +34,9 @@ public:
 
 	/* Returns time where the medical staff has enough time for an appointment */
 	Time getNextFreeTime(long sessionDurationMins) const;
-	void addTurn(Turn& turn);
-	void deleteTurn(const Turn& turn);
+
+	void addTurn(Turn& turn) const;
+	void deleteTurn(const Turn& turn) const;
 
 	Turn* operator[](int index);
 	// Show

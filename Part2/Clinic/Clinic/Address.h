@@ -39,9 +39,9 @@ public:
 	void setCountry(const char* country);
 	void setCity(const char* city);
 	void setStreet(const char* street);
-	void setBuildNum(int floor) { this->buildNum = floor; }
-	void setFloorNum(int floor) { this->floorNum = floor; }
-	void setHouseNum(int houseNum) { this->houseNum = houseNum; }
+	void setBuildNum(const int& buildNum) { this->buildNum = buildNum; }
+	void setFloorNum(const int& floor) { this->floorNum = floor; }
+	void setHouseNum(const int& houseNum) { this->houseNum = houseNum; }
 
 	// Show
 	friend ostream& operator<<(ostream& os, const Address& add);

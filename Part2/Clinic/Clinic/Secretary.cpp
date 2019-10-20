@@ -24,7 +24,7 @@ void Secretary::callPatient(Patient & patient) const
 			try {
 				medical = &(clinic->getNurse());
 			}
-			catch (const char* msg) {
+			catch (const char*& msg) {
 				cout << msg << endl;
 			}
 		}
