@@ -37,6 +37,7 @@ const MedicalStaff& MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 {
 	if (this != &medicalstaff)
 	{
+		Staff::operator=(medicalstaff);
 		delete[]turns;
 		acceptHoursFrom = medicalstaff.acceptHoursFrom;
 		acceptHoursTo = medicalstaff.acceptHoursTo;

@@ -16,11 +16,8 @@ protected:
 public:
 	Doctor(const Doctor&& other);
 	Doctor(const MedicalStaff&& medicalStaff, const char* profession);
-	Doctor(const MedicalStaff& medicalStaff, const char* profession)
-		: Staff(medicalStaff), MedicalStaff(medicalStaff) {
-		this->profession = strdup(profession);
-	};	// Constructor
-	Doctor(const Doctor& other) : Staff(other), MedicalStaff(other) { *this = other; }; // copy constructor
+	Doctor(const MedicalStaff& medicalStaff, const char* profession);	// Constructor
+	Doctor(const Doctor& other); // copy constructor
 	virtual ~Doctor();
 
 	const Doctor& operator=(const Doctor& doctor);

@@ -54,7 +54,6 @@ public:
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
 
-
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);
 
@@ -65,13 +64,12 @@ public:
 	const Address& getAddress() const { return address; };
 	const ClinicManager* getManager() const { return manager; };
 
-
 	void checkPatients();
 
 	void setClinicManager(ClinicManager* new_manager);
-	
+
 	void setAddress(const Address& address);
-	
+
 	const Secretary& getSecretary() const throw (const char*);
 	Nurse& getNurse() const throw (const char*);
 
@@ -92,7 +90,6 @@ private:
 	Staff** getStaff() const { return staff; }
 	Patient** getPatients() const { return patients; }
 	Room** getRooms() const { return rooms; }
-
 };
 
 #endif // !__CLINIC_H

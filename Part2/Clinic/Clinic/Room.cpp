@@ -17,16 +17,16 @@ Room::Room(Room && other)
 	roomNumber = other.roomNumber;
 	floor = other.floor;
 	size = other.size;
-	num_occupants = other.num_occupants;
+	numOccupants = other.numOccupants;
 }
 
-const bool & Room::isOccupied() const
+const bool Room::isOccupied() const
 {
-	return num_occupants > 0 ? true : false;
+	return numOccupants > 0 ? true : false;
 }
 
 void Room::removeOccupant()
 {
-	if (num_occupants > 0)
-		--num_occupants;
+	if (numOccupants > 0)
+		--numOccupants;
 }

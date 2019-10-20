@@ -22,6 +22,7 @@ protected:
 	Patient* patient;
 private:
 	Turn(Turn&& other); //  move constructor
+
 	void setStartTime(const Time& time);
 	void setDurationsMins(const int& time);
 public:
@@ -37,7 +38,7 @@ public:
 	static void sortTurns(Turn** turns, const int& size);
 	const Time& getStartTime() const { return startTime; };
 	const long& getDurationMins() const { return sessionDurationMins; };
-	
+
 	/* calculated end time */
 	Time getEndTime() const;
 

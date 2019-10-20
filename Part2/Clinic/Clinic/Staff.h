@@ -6,7 +6,6 @@
 #include <iostream>
 #include "Person.h"
 #include "Room.h"
-//#include "Clinic.h"
 class Clinic;
 using namespace std;
 class Staff : public Person

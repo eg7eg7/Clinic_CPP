@@ -2,7 +2,7 @@
 #pragma warning(disable: 4996)
 
 Person::Person(int id, const char* name, const char* phone,
-	int age, const Address& address, const eGender& gender) : address(address), name(NULL),phone(NULL)
+	int age, const Address& address, const eGender& gender) : address(address), name(NULL), phone(NULL)
 {
 	this->id = id;
 	this->name = strdup(name);

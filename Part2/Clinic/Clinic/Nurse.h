@@ -15,7 +15,7 @@ public:
 	static const int MAX_NURSE_SERVICES = 20;
 protected:
 	char** services;
-	int num_services;
+	int numServices;
 public:
 	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
@@ -30,7 +30,7 @@ public:
 	// Method
 	void addServices(const char* service);
 
-	int getNumServices() const { return num_services; };
+	int getNumServices() const { return numServices; };
 
 	// Show
 

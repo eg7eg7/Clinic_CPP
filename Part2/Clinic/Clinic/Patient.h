@@ -44,7 +44,7 @@ public:
 	Doctor* getPersonalDoctor() const { return personalDoctor; };
 	void setPersonalDoctor(Doctor & doctor) { personalDoctor = &doctor; }
 
-	eStatus getIsSick() const { return status; };
+	const eStatus& getIsSick() const { return status; };
 	void setIsSick(const eStatus sick) { status = sick; };
 };
 
