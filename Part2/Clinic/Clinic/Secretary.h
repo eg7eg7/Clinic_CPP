@@ -12,8 +12,8 @@ class Secretary : public OfficeStaff
 {
 public:
 	Secretary(OfficeStaff & officeStaff) : Staff(officeStaff), OfficeStaff(officeStaff) {};
-	Secretary(Secretary&& Secretary);	// move ctor
-	Secretary(const Secretary& Secretary) : Staff(Secretary), OfficeStaff(Secretary) {*this = Secretary;};	// copy ctor
+	Secretary(Secretary&& secretary);	// move ctor
+	Secretary(const Secretary& secretary);	// copy ctor
 	~Secretary() {};
 	// Methods
 	void callPatient(Patient & patient) const;

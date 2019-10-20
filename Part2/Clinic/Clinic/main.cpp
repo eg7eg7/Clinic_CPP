@@ -197,3 +197,5 @@ int main()
 
 
 //add documentation
+
+//implement copy ctor in cpp and not h

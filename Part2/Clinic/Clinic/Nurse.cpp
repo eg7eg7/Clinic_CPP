@@ -2,7 +2,8 @@
 #pragma warning(disable: 4996)
 
 Nurse::Nurse(const MedicalStaff& medicalStaff, const char* service) : Staff(medicalStaff), MedicalStaff(medicalStaff) {
-	num_services = 1;
+	if(service != nullptr)
+		num_services = 1;
 	services = new char*[MAX_NURSE_SERVICES];
 	services[0] = strdup(service);
 };

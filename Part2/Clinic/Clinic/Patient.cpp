@@ -7,7 +7,6 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) 
 	turns = new Turn*[MAX_TURNS_SIZE];
 	for (int i = 0; i < MAX_TURNS_SIZE; i++)
 		turns[i] = nullptr;
-	//this->clinicMember = clinicMember;
 	this->personalDoctor = &personalDoctor;
 	this->status = status;
 }
@@ -16,8 +15,6 @@ Patient::Patient(Patient && other) : Person(std::move(other))
 {
 	numTurns = other.numTurns;
 	turns = std::move(other.turns);
-
-	//this->clinicMember = other.clinicMember;
 	this->personalDoctor = std::move(other.personalDoctor);
 	status = other.status;
 }
@@ -42,7 +39,6 @@ const Patient & Patient::operator=(const Patient & other)
 		turns = new Turn*[MAX_TURNS_SIZE];
 		for (int i = 0; i < MAX_TURNS_SIZE; i++)
 			turns[i] = other.turns[i];
-		//this->clinicMember = other.clinicMember;
 		this->personalDoctor = other.personalDoctor;
 		status = other.status;
 	}
