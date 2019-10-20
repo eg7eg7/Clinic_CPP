@@ -53,16 +53,27 @@ public:
 
 	void addPatient(Patient & patient);
 	void removePatient(const Patient& patient);
-	void checkPatients();
+
 
 	void addRoom(Room& room);
 	void removeRoom(const Room& room);
+
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
 
 	const char* getName() const { return name; };
 	const Address& getAddress() const { return address; };
 	const ClinicManager* getManager() const { return manager; };
+
+
+	void checkPatients();
+
+	void setClinicManager(ClinicManager* new_manager);
+	
+	void setAddress(const Address& address);
+	
+	const Secretary& getSecretary() const throw (const char*);
+	Nurse& getNurse() const throw (const char*);
 
 	// Show
 	void printStaff(ostream & os) const;
@@ -72,13 +83,16 @@ public:
 
 	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
-	void setClinicManager(ClinicManager* new_manager);
-	const Secretary* getSecretary() const throw (const char*);
-	Nurse& getNurse() const throw (const char*);
-
 private:
 	void addStaff(Staff * staff);
 	void removeStaff(Staff& staff);
+	void setName(const char* new_name);
+
+	Turn** getTurns() const { return turns; }
+	Staff** getStaff() const { return staff; }
+	Patient** getPatients() const { return patients; }
+	Room** getRooms() const { return rooms; }
+
 };
 
 #endif // !__CLINIC_H

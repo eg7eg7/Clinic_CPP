@@ -28,7 +28,7 @@ void exceptionCatcher()
 int main()
 {
 	set_terminate(exceptionCatcher);
-
+	
 	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
 
 	// Rooms
@@ -101,8 +101,7 @@ int main()
 
 	Nurse nurse_1(nurse1_medical, "Take blood samples");
 	Nurse nurse_2(nurse2_medical, "Give infusion");
-
-	//FIX OfficeStaff
+	
 
 	OfficeStaff staff1(person_5, 12416, 5000, room_5);
 	OfficeStaff staff2(person_6, 12417, 6000, room_6);
@@ -159,28 +158,11 @@ int main()
 	clinic.removeRoom(room_5);
 
 	clinic.removeRoom(room_6);
-
+	
 	return 0;
 }
 
-//Add virtual to destructors and functions?
-
-//fix inheritance
-
-//add const where missing
-
 //camelCase vs camel_case
-
-//add virtual to functions
-
-//add "this" to constructors
-
-//ref to pointer in classes
-
-
-//add getters to clinic
-
-//check which functions need to return refs
 
 //remove unneccassary comments
 

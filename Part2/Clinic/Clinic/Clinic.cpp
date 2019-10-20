@@ -176,8 +176,8 @@ void Clinic::checkPatients()
 		{
 			if (patients[i] != nullptr)
 			{
-				const Secretary* s = getSecretary();
-				s->callPatient(*(patients[i]));
+				const Secretary& s = getSecretary();
+				s.callPatient(*(patients[i]));
 				cout << "-----------------------------------------" << endl;
 			}
 		}
@@ -318,7 +318,21 @@ void Clinic::setClinicManager(ClinicManager * new_manager)
 	}
 }
 
-const Secretary* Clinic::getSecretary() const throw (const char*)
+void Clinic::setAddress(const Address & address)
+{
+	this->address = address;
+}
+
+void Clinic::setName(const char * new_name)
+{
+	if (strcmp(this->name, new_name))
+	{
+		delete[]this->name;
+		this->name = strdup(new_name);
+	}
+}
+
+const Secretary& Clinic::getSecretary() const throw (const char*)
 {
 	static int last_index = 0;
 	Secretary* p;
@@ -332,7 +346,7 @@ const Secretary* Clinic::getSecretary() const throw (const char*)
 		{
 			last_index = i + 1;
 
-			return p;
+			return *p;
 		}
 		++i;
 		if (i == MAX_NUM_STAFF)
