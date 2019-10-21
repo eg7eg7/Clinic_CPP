@@ -13,6 +13,7 @@ Secretary::Secretary(const Secretary & secretary) : Staff(secretary), OfficeStaf
 void Secretary::callPatient(Patient & patient) const
 {
 	int length = Clinic::DEFAULT_TURN_LENGTH_MINS;
+	cout << "Making a call to patient " << patient.getName() << "...." << endl;
 	cout << endl << this->getName() << ">> Hi, " << patient.getName() << ". My name is " << name << ", and " << endl;
 	cout << this->getName() << ">> I'm calling to ask whether you want to make an appointment for your annual check-up" << endl;
 	Patient::eStatus answer = patient.answerCall();

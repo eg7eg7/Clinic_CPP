@@ -29,6 +29,7 @@ void ClinicManager::fireStaff(Staff & staff) const
 {
 	if (clinic != nullptr)
 	{
+		cout << "manager " << this->getName() << " is firing staff " << staff.getName() << endl;
 		clinic->removeStaff(staff);
 	}
 }
@@ -37,7 +38,17 @@ void ClinicManager::hireStaff(Staff & staff) const
 {
 	if (clinic != nullptr)
 	{
+		cout << "manager " << this->getName() << " is hiring a new staff " << staff.getName() << endl;
 		clinic->addStaff(&staff);
+	}
+}
+
+void ClinicManager::changeClinicName(const char * newName) const
+{
+	if (clinic != nullptr)
+	{
+		cout << "manager " << this->getName() << " is changing clinic name from " << clinic->getName() << " to " << newName << endl;
+		clinic->setName(newName);
 	}
 }
 

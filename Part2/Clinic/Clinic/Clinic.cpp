@@ -49,8 +49,25 @@ Clinic::~Clinic()
 	setClinicManager(nullptr);
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
-		delete turns[i];
+		if(turns[i] !=nullptr)
+			delete turns[i];
 	}
+	for (int i = 0; i < MAX_NUM_ROOMS; i++)
+	{
+		if (rooms[i] != nullptr)
+			delete rooms[i];
+	}
+	for (int i = 0; i < MAX_NUM_STAFF; i++)
+	{
+		if (staff[i] != nullptr)
+			delete staff[i];
+	}
+	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
+	{
+		if (patients[i] != nullptr)
+			delete patients[i];
+	}
+
 	delete[]name;
 	delete[]rooms;
 	delete[]staff;
@@ -60,7 +77,7 @@ Clinic::~Clinic()
 
 void Clinic::addStaff(Staff * staff)
 {
-	if (&staff != nullptr && staff->getClinic() == nullptr)
+	if (staff != nullptr && staff->getClinic() == nullptr)
 	{
 		bool exists = false;
 		int index = -1;
@@ -130,22 +147,22 @@ void Clinic::removeStaff(Staff & staff)
 		{
 			staff.setClinic(nullptr);
 			this->staff[i] = nullptr;
-
+			delete &staff;
 			--numStaff;
 			break;
 		}
 	}
 }
 
-void Clinic::addPatient(Patient & patient)
+void Clinic::addPatient(Patient * patient)
 {
-	if (numPatients < MAX_NUM_PATIENTS)
+	if (numPatients < MAX_NUM_PATIENTS && patient != nullptr)
 	{
 		for (int i = 0; i < MAX_NUM_PATIENTS; i++)
 		{
 			if (this->patients[i] == nullptr)
 			{
-				this->patients[i] = &patient;
+				this->patients[i] = patient;
 				++numPatients;
 				break;
 			}
@@ -160,6 +177,7 @@ void Clinic::removePatient(const Patient & patient)
 		if (patients[i] == &patient)
 		{
 			patients[i] = nullptr;
+			delete &patient;
 			--numPatients;
 			break;
 		}
@@ -168,7 +186,7 @@ void Clinic::removePatient(const Patient & patient)
 
 void Clinic::checkPatients()
 {
-	cout << "******************************************************" << endl;
+	cout << endl <<"******************************************************" << endl;
 	cout << "Checking patients status and creating new appointments" << endl;
 	cout << "******************************************************" << endl;
 	try {
@@ -188,16 +206,16 @@ void Clinic::checkPatients()
 	}
 }
 
-void Clinic::addRoom(Room & room)
+void Clinic::addRoom(Room * room)
 {
-	if (numRooms < MAX_NUM_ROOMS)
+	if (numRooms < MAX_NUM_ROOMS && room != nullptr)
 	{
 		for (int i = 0; i < MAX_NUM_ROOMS; i++)
 		{
 			if (this->rooms[i] == nullptr)
 			{
 				++numRooms;
-				this->rooms[i] = &room;
+				this->rooms[i] = room;
 				break;
 			}
 		}
@@ -210,6 +228,7 @@ void Clinic::removeRoom(const Room & room)
 	{
 		if (rooms[i] == &room)
 		{
+			delete &room;
 			rooms[i] = nullptr;
 			--numRooms;
 			break;
@@ -242,6 +261,7 @@ void Clinic::removeTurn(const Turn & turn)
 		if (turns[i] == &turn)
 		{
 			turns[i] = nullptr;
+			delete &turn;
 			--numTurns;
 			break;
 		}
@@ -323,12 +343,12 @@ void Clinic::setAddress(const Address & address)
 	this->address = address;
 }
 
-void Clinic::setName(const char * new_name)
+void Clinic::setName(const char * newName)
 {
-	if (strcmp(this->name, new_name))
+	if (strcmp(this->name, newName))
 	{
 		delete[]this->name;
-		this->name = strdup(new_name);
+		this->name = strdup(newName);
 	}
 }
 
@@ -382,7 +402,7 @@ Nurse& Clinic::getNurse() const throw (const char*)
 
 ostream & operator<<(ostream & os, const Clinic & clinic)
 {
-	os << "**Clinic**" << endl;
+	os << "********************************Clinic********************************" << endl;
 	os << " Clinic name : " << clinic.getName() << endl;
 	os << clinic.getAddress() << endl;
 	if (clinic.getManager() != nullptr)

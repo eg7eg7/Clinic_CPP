@@ -27,7 +27,7 @@ public:
 	// Method
 	void fireStaff(Staff& staff) const;
 	void hireStaff(Staff& staff) const;
-
+	void changeClinicName(const char* newName) const;
 	//show
 	void toOs(ostream & os) const override;
 };

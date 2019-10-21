@@ -23,23 +23,21 @@ void exceptionCatcher()
 	cout << "An error was caught during runtime, please debug!" << endl;
 	exit(1);
 }
-int main()
+
+void populateClinic(Clinic& clinic)
 {
-	set_terminate(exceptionCatcher);
-
-	Clinic clinic("clinic", Address("Israel", "Tel-Aviv", "Hamoraim", 13, 4, 14));
-
+	cout << "Populating clinic " << clinic.getName() << "...." << endl << endl;
 	// Rooms
-	Room room_1(101, 2, 120);
-	Room room_2(102, 2, 150);
-	Room room_3(103, 3, 190);
-	Room room_4(104, 3, 80);
-	Room room_5(105, 4, 250);
-	Room room_6(106, 4, 100);
-	Room room_7(107, 5, 90);
-	Room room_8(108, 6, 30);
-	Room room_9(109, 6, 90);
-	Room room_10(110, 6, 90);
+	Room* room_1 = new Room(101, 2, 120);
+	Room* room_2 = new Room(102, 2, 150);
+	Room* room_3 = new Room(103, 3, 190);
+	Room* room_4 = new Room(104, 3, 80);
+	Room* room_5 = new Room(105, 4, 250);
+	Room* room_6 = new Room(106, 4, 100);
+	Room* room_7 = new Room(107, 5, 90);
+	Room* room_8 = new Room(108, 6, 30);
+	Room* room_9 = new Room(109, 6, 90);
+	Room* room_10 = new Room(110, 6, 90);
 
 	clinic.addRoom(room_1);
 	clinic.addRoom(room_2);
@@ -88,48 +86,48 @@ int main()
 	Person person_16(5555, "patient_9", "056-451-0921", 36, address_12, Person::Female);
 
 	// Staff
-	MedicalStaff doctor1_medical(person_1, 12412, 10000, Time(8, 0), Time(14, 0), room_1);
-	MedicalStaff doctor2_medical(person_2, 12413, 15000, Time(10, 0), Time(18, 0), room_2);
+	MedicalStaff doctor1_medical(person_1, 12412, 10000, Time(8, 0), Time(14, 0), *room_1);
+	MedicalStaff doctor2_medical(person_2, 12413, 15000, Time(10, 0), Time(18, 0), *room_2);
 
-	Doctor doctor_1(doctor1_medical, "Oncologist");
-	Doctor doctor_2(doctor2_medical, "Spine surgeon");
+	Doctor* doctor_1 = new Doctor(doctor1_medical, "Oncologist");
+	Doctor* doctor_2 = new Doctor(doctor2_medical, "Spine surgeon");
 
-	MedicalStaff nurse1_medical(person_3, 12414, 8000, Time(9, 0), Time(15, 0), room_3);
-	MedicalStaff nurse2_medical(person_4, 12415, 7000, Time(11, 0), Time(17, 0), room_4);
+	MedicalStaff nurse1_medical(person_3, 12414, 8000, Time(9, 0), Time(15, 0), *room_3);
+	MedicalStaff nurse2_medical(person_4, 12415, 7000, Time(11, 0), Time(17, 0), *room_4);
 
-	Nurse nurse_1(nurse1_medical, "Take blood samples");
-	Nurse nurse_2(nurse2_medical, "Give infusion");
+	Nurse* nurse_1 = new Nurse(nurse1_medical, "Take blood samples");
+	Nurse* nurse_2 = new Nurse(nurse2_medical, "Give infusion");
 
-	OfficeStaff staff1(person_5, 12416, 5000, room_5);
-	OfficeStaff staff2(person_6, 12417, 6000, room_6);
-	Secretary secretary_1(staff1);
-	Secretary secretary_2(staff2);
+	OfficeStaff staff1(person_5, 12416, 5000, *room_5);
+	OfficeStaff staff2(person_6, 12417, 6000, *room_6);
+	Secretary* secretary_1 = new Secretary(staff1);
+	Secretary* secretary_2 = new Secretary(staff2);
 
-	OfficeStaff manager_office(person_7, 12418, 20000, room_7);
+	OfficeStaff manager_office(person_7, 12418, 20000, *room_7);
 
-	MedicalStaff manager_medical(person_7, 12412, 10000, Time(8, 0), Time(14, 0), room_7);
+	MedicalStaff manager_medical(person_7, 12412, 10000, Time(8, 0), Time(14, 0), *room_7);
 	Doctor manager_doctor(manager_medical, "oncologist");
-	ClinicManager manager(manager_office, manager_doctor);
+	ClinicManager* manager = new ClinicManager(manager_office, manager_doctor);
 
-	clinic.setClinicManager(&manager);
+	clinic.setClinicManager(manager);
 
-	manager.hireStaff(doctor_1);
-	manager.hireStaff(doctor_2);
-	manager.hireStaff(nurse_1);
-	manager.hireStaff(nurse_2);
-	manager.hireStaff(secretary_1);
-	manager.hireStaff(secretary_2);
+	manager->hireStaff(*doctor_1);
+	manager->hireStaff(*doctor_2);
+	manager->hireStaff(*nurse_1);
+	manager->hireStaff(*nurse_2);
+	manager->hireStaff(*secretary_1);
+	manager->hireStaff(*secretary_2);
 
 	// Patients
-	Patient patient_1(person_8, doctor_1);
-	Patient patient_2(person_9, doctor_2, Patient::SICK);
-	Patient patient_3(person_10, doctor_1, Patient::SICK);
-	Patient patient_4(person_11, doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient patient_5(person_12, doctor_2, Patient::SICK);
-	Patient patient_6(person_13, doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient patient_7(person_14, doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient patient_8(person_15, doctor_2);
-	Patient patient_9(person_16, doctor_1, Patient::SICK);
+	Patient* patient_1 = new Patient(person_8, *doctor_1);
+	Patient* patient_2 = new Patient(person_9, *doctor_2, Patient::SICK);
+	Patient* patient_3 = new Patient(person_10, *doctor_1, Patient::SICK);
+	Patient* patient_4 = new Patient(person_11, *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_5 = new Patient(person_12, *doctor_2, Patient::SICK);
+	Patient* patient_6 = new Patient(person_13, *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_7 = new Patient(person_14, *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_8 = new Patient(person_15, *doctor_2);
+	Patient* patient_9 = new Patient(person_16, *doctor_1, Patient::SICK);
 
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);
@@ -141,28 +139,30 @@ int main()
 	clinic.addPatient(patient_8);
 	clinic.addPatient(patient_9);
 
-	// Turns
+	cout << "Populating clinic finished." << endl << endl;
+}
+int main()
+{
+	set_terminate(exceptionCatcher);
 
+	Clinic clinic("Macabbi", Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
+
+	populateClinic(clinic);
+
+	clinic.getManager()->changeClinicName("Clalit");
+	
 	clinic.checkPatients();
 
-	cout << "----------------------------------------------------------------------------\n";
+	
 	cout << clinic << endl;
-
-	manager.fireStaff(secretary_1);
-
-	clinic.removePatient(patient_2);
-
-	clinic.removeRoom(room_5);
-
-	clinic.removeRoom(room_6);
-
+	try
+	{
+		clinic.getManager()->fireStaff(clinic.getNurse());
+	}
+	catch (const char* msg)
+	{
+		cout << msg << endl;
+	}
+	cout << "---------------------------------END MAIN-------------------------------------------\n";
 	return 0;
 }
-
-//camelCase vs camel_case
-
-//throw exception if no place to add new turn in clinic, and delete turn
-
-//add documentation
-
-//implement copy ctor in cpp and not h

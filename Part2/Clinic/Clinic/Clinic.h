@@ -51,10 +51,10 @@ public:
 
 	// Methods
 
-	void addPatient(Patient & patient);
+	void addPatient(Patient * patient);
 	void removePatient(const Patient& patient);
 
-	void addRoom(Room& room);
+	void addRoom(Room* room);
 	void removeRoom(const Room& room);
 
 	void addTurn(Turn& turn);
@@ -84,7 +84,7 @@ public:
 private:
 	void addStaff(Staff * staff);
 	void removeStaff(Staff& staff);
-	void setName(const char* new_name);
+	void setName(const char* newName);
 
 	Turn** getTurns() const { return turns; }
 	Staff** getStaff() const { return staff; }

@@ -31,6 +31,7 @@ const Staff & Staff::operator=(const Staff & other)
 	{
 		Person::operator=(other);
 		room = other.room;
+		room->addOccupant();
 		extension = other.extension;
 		salary = other.salary;
 		clinic = other.clinic;
