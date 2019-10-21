@@ -18,6 +18,36 @@
 #include <iostream>
 using namespace std;
 #include "ClinicManager.h"
+
+void populateClinic(Clinic& clinic);
+void exceptionCatcher();
+
+int main()
+{
+	set_terminate(exceptionCatcher);
+
+	Clinic clinic("Macabbi", Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
+
+	populateClinic(clinic);
+
+	clinic.getManager()->changeClinicName("Clalit");
+	
+	clinic.checkPatients();
+
+	
+	cout << clinic << endl;
+	try
+	{
+		clinic.getManager()->fireStaff(clinic.getNurse());
+	}
+	catch (const char* msg)
+	{
+		cout << msg << endl;
+	}
+	cout << "---------------------------------END MAIN-------------------------------------------\n";
+	return 0;
+}
+
 void exceptionCatcher()
 {
 	cout << "An error was caught during runtime, please debug!" << endl;
@@ -140,29 +170,4 @@ void populateClinic(Clinic& clinic)
 	clinic.addPatient(patient_9);
 
 	cout << "Populating clinic finished." << endl << endl;
-}
-int main()
-{
-	set_terminate(exceptionCatcher);
-
-	Clinic clinic("Macabbi", Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
-
-	populateClinic(clinic);
-
-	clinic.getManager()->changeClinicName("Clalit");
-	
-	clinic.checkPatients();
-
-	
-	cout << clinic << endl;
-	try
-	{
-		clinic.getManager()->fireStaff(clinic.getNurse());
-	}
-	catch (const char* msg)
-	{
-		cout << msg << endl;
-	}
-	cout << "---------------------------------END MAIN-------------------------------------------\n";
-	return 0;
 }
