@@ -18,35 +18,35 @@ public:
 protected:
 
 	int id;
-	char* name;
-	char* phone;
+	string name;
+	string phone;
 	int age;
 	Address address;
 	eGender gender;
 
 public:
-	Person(int id, const char* name, const char* phone, int age, const Address& address, const eGender& gender);	// Constructor
+	Person(int id, const string& name, const string& phone, int age, const Address& address, const eGender& gender);	// Constructor
 	Person(const Person& other); // copy constructor
 	Person(Person&& other); // move constructor
 	virtual ~Person();
 
 	// Getters
 	const int& getId() const { return id; }
-	const char* getName() const { return name; }
-	const char* getPhone() const { return phone; }
+	const string& getName() const { return name; }
+	const string& getPhone() const { return phone; }
 	const int& getAge() const { return age; }
 	const eGender& getGender() const { return gender; };
 	const Address& getAddress() const { return address; };
 
 	// Setters
-	void setPhone(const char* phone);
+	void setPhone(const string& phone);
 	void setAddress(const Address& address);
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Person & person);
 	const Person& operator=(const Person& other);
 	virtual void toOs(ostream& os) const;
-	const char* displayGender() const;
+	const string displayGender() const;
 };
 
 #endif // !__PERSON_H

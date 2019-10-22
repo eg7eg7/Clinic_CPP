@@ -1,6 +1,7 @@
 #ifndef __TIME_H
 #define __TIME_H
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Time
@@ -14,12 +15,12 @@ public:
 	~Time() {};
 
 	friend ostream& operator<<(ostream& os, const Time& t);
-	const bool& operator<(const Time& t) const;
-	const bool& operator>(const Time& t) const;
+	bool operator<(const Time& t) const;
+	bool operator>(const Time& t) const;
 	const Time& operator=(const Time& t);
-	const bool& operator==(const Time& t) const;
-	const bool& operator<=(const Time& t) const;
-	const bool& operator>=(const Time& t) const;
+	bool operator==(const Time& t) const;
+	bool operator<=(const Time& t) const;
+	bool operator>=(const Time& t) const;
 
 	const int& getHour() const { return hours; };
 	const int& getMinute() const { return minutes; };

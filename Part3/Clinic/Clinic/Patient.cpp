@@ -1,5 +1,5 @@
 #include "Patient.h"
-const char* Patient::eStatusString[] = { "Healthy", "Sick","Needs Treatment" };
+const string Patient::eStatusString[] = { "Healthy", "Sick","Needs Treatment" };
 
 Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) : Person(person)
 {

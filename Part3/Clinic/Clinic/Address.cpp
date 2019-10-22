@@ -1,25 +1,21 @@
 #include "Address.h"
 
-Address::Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum)
+Address::Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum) :country(country), city(city),street(street)
 {
-	this->country = country;
-	this->city = city;
-	this->street = street;
 	this->buildNum = buildNum;
 	this->floorNum = floorNum;
 	this->houseNum = houseNum;
 }
 
-Address::Address(const Address & other)
+Address::Address(const Address & other) :country(other.country), city(other.city), street(other.street)
 {
-	*this = other;
+	this->buildNum = other.buildNum;
+	this->floorNum = other.floorNum;
+	this->houseNum = other.houseNum;
 }
 
-Address::Address(Address && other)
+Address::Address(Address && other) : country(std::move(other.country)), city(std::move(other.city)), street(std::move(other.street))
 {
-	this->country = std::move(other.country);
-	this->city = std::move(other.city);
-	this->street = std::move(other.street);
 	this->buildNum = other.buildNum;
 	this->floorNum = other.floorNum;
 	this->houseNum = other.houseNum;

@@ -43,7 +43,7 @@ void ClinicManager::hireStaff(Staff & staff) const
 	}
 }
 
-void ClinicManager::changeClinicName(const char * newName) const
+void ClinicManager::changeClinicName(const string& newName) const
 {
 	if (clinic != nullptr)
 	{

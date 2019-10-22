@@ -1,8 +1,7 @@
 #include "Clinic.h"
 
-Clinic::Clinic(const string& name, const Address & address) : address(address)
+Clinic::Clinic(const string& name, const Address & address) : address(address), name(name)
 {
-	this->name = name;
 	numRooms = 0;
 	numStaff = 0;
 	numPatients = 0;
@@ -22,15 +21,13 @@ Clinic::Clinic(const string& name, const Address & address) : address(address)
 		turns[i] = nullptr;
 }
 
-Clinic::Clinic(const Clinic & other) : address(other.address)
+Clinic::Clinic(const Clinic & other) : address(other.address), name(other.name)
 {
 	*this = other;
 }
 
-Clinic::Clinic(Clinic && other) : address(std::move(other.address))
+Clinic::Clinic(Clinic && other) : address(std::move(other.address)), name(std::move(other.name))
 {
-	this->name = std::move(other.name);
-
 	numRooms = other.numRooms;
 	numStaff = other.numStaff;
 	numPatients = other.numPatients;
@@ -199,7 +196,7 @@ void Clinic::checkPatients()
 			}
 		}
 	}
-	catch (const char* msg)
+	catch (const string msg)
 	{
 		cout << msg << endl;
 	}
@@ -368,7 +365,7 @@ const Secretary& Clinic::getSecretary() const throw (const string)
 	throw "No secretaries at the clinic!";
 }
 
-Nurse& Clinic::getNurse() const throw (const char*)
+Nurse& Clinic::getNurse() const throw (const string)
 {
 	static int last_index = 0;
 	Nurse* p;

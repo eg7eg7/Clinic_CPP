@@ -1,40 +1,36 @@
 #include "Person.h"
 #pragma warning(disable: 4996)
 
-Person::Person(int id, const char* name, const char* phone,
-	int age, const Address& address, const eGender& gender) : address(address), name(NULL), phone(NULL)
+Person::Person(int id, const string& name, const string& phone,
+	int age, const Address& address, const eGender& gender) : address(address), name(name), phone(phone)
 {
 	this->id = id;
-	this->name = strdup(name);
-	this->phone = strdup(phone);
 	this->age = age;
 	this->gender = gender;
 }
 
-Person::Person(const Person & other) : address(other.address)
-{
-	*this = other;
-}
-
-Person::Person(Person && other) : address(std::move(other.address)), name(NULL), phone(NULL)
+Person::Person(const Person & other) : address(other.address), name(other.name), phone(other.phone)
 {
 	this->id = other.id;
-	this->name = std::move(other.name);
-	this->phone = std::move(other.phone);
+	this->age = other.age;
+	this->gender = other.gender;
+}
+
+Person::Person(Person && other) : address(std::move(other.address)), name(std::move(other.name)), phone(std::move(other.phone))
+{
+	this->id = other.id;
 	this->age = other.age;
 	this->gender = other.gender;
 }
 
 Person::~Person()
 {
-	delete[]name;
-	delete[]phone;
+	//nothing
 }
 
-void Person::setPhone(const char* phone)
+void Person::setPhone(const string& phone)
 {
-	delete[]this->phone;
-	phone = strdup(phone);
+	this->phone = phone;
 }
 void Person::setAddress(const Address& address)
 {
@@ -44,14 +40,12 @@ const Person & Person::operator=(const Person & other)
 {
 	if (this != &other)
 	{
-		delete[]name;
-		delete[]phone;
-
 		this->id = other.id;
-		this->name = strdup(other.name);
-		this->phone = strdup(other.phone);
+		this->name = other.name;
+		this->phone = other.phone;
 		this->age = other.age;
 		this->gender = other.gender;
+		this->address = other.address;
 	}
 	return *this;
 }
@@ -63,7 +57,7 @@ void Person::toOs(ostream & os) const
 		<< " Phone - " << getPhone() << endl
 		<< getAddress() << endl;
 }
-const char * Person::displayGender() const
+const string Person::displayGender() const
 {
 	switch (gender) {
 	case Person::Male:

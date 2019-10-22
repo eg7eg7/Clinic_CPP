@@ -74,7 +74,7 @@ public:
 	int size() const { return length; }
 
 
-	T& operator[](int index) throw (const char*);
+	T& operator[](int index) throw (const string);
 	const LinkedList<T>& operator=(const LinkedList<T>& other);
 
 
@@ -84,7 +84,7 @@ public:
 	void sort(const Comparator& compare);
 	void clear();
 	void add(const T& data);
-	void remove(int index) throw (const char*);
+	void remove(int index) throw (const string);
 	bool remove(const T& data);
 };
 
@@ -118,7 +118,7 @@ LinkedList<T>::~LinkedList() {
 }
 
 template<class T>
-T& LinkedList<T>::operator[](int index) throw (const char*)
+T& LinkedList<T>::operator[](int index) throw (const string)
 {
 	if (index >= length || index < 0)
 		throw "index out of bounds in LinkedList operator[]";
@@ -166,7 +166,6 @@ void LinkedList<T>::clear()
 template <class T>
 void LinkedList<T>::add(const T& data) {
 	Node* node = new Node(data);
-	cout << "adding to Node " << node << " data " << data << endl;
 	node->setNext(nullptr);
 	if (head == nullptr)
 	{
@@ -184,7 +183,7 @@ void LinkedList<T>::add(const T& data) {
 }
 
 template<class T>
-void LinkedList<T>::remove(int index) throw (const char*)
+void LinkedList<T>::remove(int index) throw (const string)
 {
 	if (index >= length || index < 0)
 		throw "index out of bounds in LinkedList";

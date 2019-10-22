@@ -5,7 +5,7 @@ Time::Time(const int& hrs, const int& mins)
 	try {
 		setTime(hrs, mins);
 	}
-	catch (const char* msg)
+	catch (const string msg)
 	{
 		cout << msg << endl;
 	}
@@ -38,7 +38,7 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 	return totalMinutes;
 }
 
-const bool& Time::operator<(const Time & t) const
+bool Time::operator<(const Time & t) const
 {
 	if (hours < t.hours)
 		return true;
@@ -47,7 +47,7 @@ const bool& Time::operator<(const Time & t) const
 	return false;
 }
 
-const bool& Time::operator>(const Time & t) const
+bool Time::operator>(const Time & t) const
 {
 	return !operator<(t);
 }
@@ -62,21 +62,21 @@ const Time& Time::operator=(const Time & t)
 	return *this;
 }
 
-const bool& Time::operator==(const Time & t) const
+bool Time::operator==(const Time & t) const
 {
 	if (t.hours == hours && t.minutes == minutes)
 		return true;
 	return false;
 }
 
-const bool& Time::operator<=(const Time & t) const
+bool Time::operator<=(const Time & t) const
 {
 	if (operator<(t) || operator==(t))
 		return true;
 	return false;
 }
 
-const bool& Time::operator>=(const Time & t) const
+bool Time::operator>=(const Time & t) const
 {
 	if (operator>(t) || operator==(t))
 		return true;

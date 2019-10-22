@@ -14,10 +14,10 @@ class Nurse : public MedicalStaff
 public:
 	static const int MAX_NURSE_SERVICES = 20;
 protected:
-	char** services;
+	string* services;
 	int numServices;
 public:
-	Nurse(const MedicalStaff& medicalStaff, const char* service);	// Constructor
+	Nurse(const MedicalStaff& medicalStaff, const string& service);	// Constructor
 	Nurse(const Nurse& other); // copy constructor
 	Nurse(Nurse&& other); // move constructor
 	virtual ~Nurse();
@@ -25,10 +25,10 @@ public:
 	const Nurse& operator=(const Nurse& nurse);
 
 	// Getters
-	char** getServices() const { return services; }
+	string* getServices() const { return services; }
 
 	// Method
-	void addServices(const char* service);
+	void addServices(const string& service);
 
 	int getNumServices() const { return numServices; };
 

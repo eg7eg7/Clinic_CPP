@@ -1,11 +1,11 @@
 #include "Nurse.h"
 #pragma warning(disable: 4996)
 
-Nurse::Nurse(const MedicalStaff& medicalStaff, const char* service) : Staff(medicalStaff), MedicalStaff(medicalStaff) {
-	if (service != nullptr)
-		numServices = 1;
-	services = new char*[MAX_NURSE_SERVICES];
-	services[0] = strdup(service);
+Nurse::Nurse(const MedicalStaff& medicalStaff, const string& service) : Staff(medicalStaff), MedicalStaff(medicalStaff) 
+{
+	numServices = 1;
+	services = new string[MAX_NURSE_SERVICES];
+	services[0] = service;
 };
 
 Nurse::Nurse(const Nurse& other) : Staff(other), MedicalStaff(other)
@@ -20,14 +20,12 @@ Nurse::Nurse(Nurse && other) : Staff(std::move(other)), MedicalStaff(std::move(o
 
 Nurse::~Nurse()
 {
-	for (int i = 0; i < numServices; i++)
-		delete[]services[i];
 	delete[]services;
 }
 
 const Nurse& Nurse::operator=(const Nurse& nurse)
 {
-	char** nurseServices;
+	string* nurseServices;
 	if (this != &nurse)
 	{
 		MedicalStaff::operator=(nurse);
@@ -35,18 +33,17 @@ const Nurse& Nurse::operator=(const Nurse& nurse)
 		numServices = nurse.getNumServices();
 		for (int i = 0; i < numServices; i++)
 		{
-			delete[]services[i];
-			services[i] = strdup(nurseServices[i]);
+			services[i] = nurseServices[i];
 		}
 	}
 	return *this;
 }
 
-void Nurse::addServices(const char* service)
+void Nurse::addServices(const string& service)
 {
 	if (numServices <= MAX_NURSE_SERVICES)
 	{
-		services[numServices] = strdup(service);
+		services[numServices] = service;
 		++numServices;
 	}
 }

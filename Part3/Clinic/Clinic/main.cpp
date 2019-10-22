@@ -43,7 +43,7 @@ int main()
 	{
 		clinic.getManager()->fireStaff(clinic.getNurse());
 	}
-	catch (const char* msg)
+	catch (const string msg)
 	{
 		cout << msg << endl;
 	}
@@ -192,5 +192,13 @@ void populateClinic(Clinic& clinic)
 
 //in part2 and part3 - make getSecretary return a non-const object
 
-//in part2, remove ref from catch in clinic.cpp
+//in part2, remove ref from catch in clinic.cpp and secretary.cpp
 //this line catch (const char*& msg)
+
+//add const to functions in LinkedList
+
+//in part 2 - person.cpp - in operator= , other.address not included!
+
+//add throws to setTime in part2 and part3
+
+//remove in Time.h const bool& ---> change to bool

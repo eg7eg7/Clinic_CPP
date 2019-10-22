@@ -12,7 +12,7 @@ class Patient : public Person
 public:
 	static const int MAX_TURNS_SIZE = 20;
 	enum eStatus { HEALTHY, SICK, REQUIRE_TREATMENT };
-	static const char* eStatusString[];
+	static const string eStatusString[];
 
 protected:
 
