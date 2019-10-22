@@ -202,3 +202,5 @@ void populateClinic(Clinic& clinic)
 //add throws to setTime in part2 and part3
 
 //remove in Time.h const bool& ---> change to bool
+
+//remove empty dtor, copy ctor, operator=, also in part2

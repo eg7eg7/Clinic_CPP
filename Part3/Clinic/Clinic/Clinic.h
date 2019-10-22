@@ -5,9 +5,11 @@
 
 #include <iostream>
 #include <string.h>
+#include <vector>
 #include "ClinicManager.h"
 #include "Secretary.h"
 #include "Nurse.h"
+
 using namespace std;
 
 class ClinicManager;
