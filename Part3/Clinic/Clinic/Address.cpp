@@ -1,10 +1,10 @@
 #include "Address.h"
 
-Address::Address(const char * country, const char * city, const char * street, int buildNum, int floorNum, int houseNum) : country(NULL), city(NULL), street(NULL)
+Address::Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum)
 {
-	this->country = strdup(country);
-	this->city = strdup(city);
-	this->street = strdup(street);
+	this->country = country;
+	this->city = city;
+	this->street = street;
 	this->buildNum = buildNum;
 	this->floorNum = floorNum;
 	this->houseNum = houseNum;
@@ -27,22 +27,16 @@ Address::Address(Address && other)
 
 Address::~Address()
 {
-	delete[]country;
-	delete[]city;
-	delete[]street;
+	//nothing
 }
 
 const Address& Address::operator=(const Address & other)
 {
 	if (this != &other)
 	{
-		delete[]country;
-		delete[]city;
-		delete[]street;
-
-		this->country = strdup(other.country);
-		this->city = strdup(other.city);
-		this->street = strdup(other.street);
+		this->country = other.country;
+		this->city = other.city;
+		this->street = other.street;
 		this->buildNum = other.buildNum;
 		this->floorNum = other.floorNum;
 		this->houseNum = other.houseNum;
@@ -50,23 +44,7 @@ const Address& Address::operator=(const Address & other)
 	return *this;
 }
 
-void Address::setCountry(const char * country)
-{
-	delete[]this->country;
-	this->country = strdup(country);
-}
 
-void Address::setCity(const char * city)
-{
-	delete[]this->city;
-	this->city = strdup(city);
-}
-
-void Address::setStreet(const char * street)
-{
-	delete[]this->street;
-	this->street = strdup(street);
-}
 
 ostream & operator<<(ostream & os, const Address & add)
 {

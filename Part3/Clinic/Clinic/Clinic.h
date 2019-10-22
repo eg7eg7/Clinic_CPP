@@ -24,7 +24,7 @@ public:
 
 protected:
 
-	char* name;
+	string name;
 	Address address;
 	ClinicManager* manager;
 
@@ -41,7 +41,7 @@ protected:
 	mutable int numTurns;
 
 public:
-	Clinic(const char* name, const Address& address);
+	Clinic(const string& name, const Address& address);
 	Clinic(const Clinic& other); // copy constructor
 	Clinic(Clinic&& other); // move constructor
 
@@ -60,7 +60,7 @@ public:
 	void addTurn(Turn& turn);
 	void removeTurn(const Turn& turn);
 
-	const char* getName() const { return name; };
+	const string& getName() const { return name; };
 	const Address& getAddress() const { return address; };
 	const ClinicManager* getManager() const { return manager; };
 
@@ -70,8 +70,8 @@ public:
 
 	void setAddress(const Address& address);
 
-	const Secretary& getSecretary() const throw (const char*);
-	Nurse& getNurse() const throw (const char*);
+	const Secretary& getSecretary() const throw (string);
+	Nurse& getNurse() const throw (string);
 
 	// Show
 	void printStaff(ostream & os) const;
@@ -84,7 +84,7 @@ public:
 private:
 	void addStaff(Staff * staff);
 	void removeStaff(Staff& staff);
-	void setName(const char* newName);
+	void setName(const string& newName) { name = newName; };
 
 	Turn** getTurns() const { return turns; }
 	Staff** getStaff() const { return staff; }

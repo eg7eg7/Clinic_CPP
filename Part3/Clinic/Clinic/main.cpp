@@ -17,6 +17,7 @@
 
 
 #pragma warning(disable: 4996)
+
 #include <iostream>
 using namespace std;
 #include "ClinicManager.h"
@@ -180,3 +181,16 @@ void populateClinic(Clinic& clinic)
 //use setter getters instead of direct access in LinkedList to nodes
 
 //finish implementing node
+
+//catch exceptions
+
+//review iterator at the end
+
+//design patterns
+
+//switch to strings
+
+//in part2 and part3 - make getSecretary return a non-const object
+
+//in part2, remove ref from catch in clinic.cpp
+//this line catch (const char*& msg)

@@ -1,8 +1,8 @@
 #include "Clinic.h"
 
-Clinic::Clinic(const char * name, const Address & address) : address(address)
+Clinic::Clinic(const string& name, const Address & address) : address(address)
 {
-	this->name = strdup(name);
+	this->name = name;
 	numRooms = 0;
 	numStaff = 0;
 	numPatients = 0;
@@ -49,7 +49,7 @@ Clinic::~Clinic()
 	setClinicManager(nullptr);
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
-		if(turns[i] !=nullptr)
+		if (turns[i] != nullptr)
 			delete turns[i];
 	}
 	for (int i = 0; i < MAX_NUM_ROOMS; i++)
@@ -68,7 +68,7 @@ Clinic::~Clinic()
 			delete patients[i];
 	}
 
-	delete[]name;
+
 	delete[]rooms;
 	delete[]staff;
 	delete[]patients;
@@ -110,13 +110,12 @@ const Clinic& Clinic::operator=(const Clinic & other)
 {
 	if (this != &other)
 	{
-		delete[]this->name;
 		delete[]this->rooms;
 		delete[]this->staff;
 		delete[]this->patients;
 		delete[]this->turns;
 
-		this->name = strdup(other.name);
+		this->name = other.name;
 		numRooms = other.numRooms;
 		numStaff = other.numStaff;
 		numPatients = other.numPatients;
@@ -186,7 +185,7 @@ void Clinic::removePatient(const Patient & patient)
 
 void Clinic::checkPatients()
 {
-	cout << endl <<"******************************************************" << endl;
+	cout << endl << "******************************************************" << endl;
 	cout << "Checking patients status and creating new appointments" << endl;
 	cout << "******************************************************" << endl;
 	try {
@@ -200,7 +199,7 @@ void Clinic::checkPatients()
 			}
 		}
 	}
-	catch (const char*& msg)
+	catch (const char* msg)
 	{
 		cout << msg << endl;
 	}
@@ -343,16 +342,9 @@ void Clinic::setAddress(const Address & address)
 	this->address = address;
 }
 
-void Clinic::setName(const char * newName)
-{
-	if (strcmp(this->name, newName))
-	{
-		delete[]this->name;
-		this->name = strdup(newName);
-	}
-}
 
-const Secretary& Clinic::getSecretary() const throw (const char*)
+
+const Secretary& Clinic::getSecretary() const throw (const string)
 {
 	static int last_index = 0;
 	Secretary* p;
@@ -389,7 +381,6 @@ Nurse& Clinic::getNurse() const throw (const char*)
 		if (nullptr != (p = dynamic_cast<Nurse*>(staff[i])))
 		{
 			last_index = i + 1;
-
 			return *p;
 		}
 		++i;

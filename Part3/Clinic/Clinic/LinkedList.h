@@ -36,15 +36,18 @@ public:
 template <class T>
 class LinkedList
 {
-private:
+public:
 	class Node
 	{
+	public:
 		friend class LinkedList;
+	private:
 		Node* next;
 		Node* prev;
 		T* data;
-	public:
+
 		Node(const T& newData) { data = new T(newData); }
+		Node(const Node& other) = delete;
 		~Node() { delete data; }
 		T* getData() { return data; }
 		Node* getNext() { return next; }
@@ -54,9 +57,9 @@ private:
 		void setNext(Node* nextNode) { next = nextNode; };
 		void setPrev(Node* prevNode) { prev = prevNode; };
 
-		operator T*() { return data; }
+		operator T&() { return *data; }
 	};
-
+private:
 	int length;
 	Node* head;
 	Node* tail;
@@ -71,7 +74,7 @@ public:
 	int size() const { return length; }
 
 
-	T& operator[](int index);
+	T& operator[](int index) throw (const char*);
 	const LinkedList<T>& operator=(const LinkedList<T>& other);
 
 
@@ -81,12 +84,8 @@ public:
 	void sort(const Comparator& compare);
 	void clear();
 	void add(const T& data);
-	void remove(int index);
-	//throw (const char*);
+	void remove(int index) throw (const char*);
 	bool remove(const T& data);
-
-
-
 };
 
 template <class T>
@@ -119,7 +118,7 @@ LinkedList<T>::~LinkedList() {
 }
 
 template<class T>
-T& LinkedList<T>::operator[](int index)
+T& LinkedList<T>::operator[](int index) throw (const char*)
 {
 	if (index >= length || index < 0)
 		throw "index out of bounds in LinkedList operator[]";
@@ -127,12 +126,12 @@ T& LinkedList<T>::operator[](int index)
 	for (int i = 0; i < length; i++)
 	{
 		if (i == index)
-			return *(cur->getData());
+			return (T)*cur;
 		cur = head->next;
 	}
 	if (head != nullptr)
-		return *(head->getData());
-	else throw "index out of bounds";
+		return (T)*head;
+	else throw "index out of bounds - empty LinkedList";
 }
 
 template<class T>
@@ -167,20 +166,28 @@ void LinkedList<T>::clear()
 template <class T>
 void LinkedList<T>::add(const T& data) {
 	Node* node = new Node(data);
+	cout << "adding to Node " << node << " data " << data << endl;
 	node->setNext(nullptr);
-	node->setPrev(node);
 	if (head == nullptr)
+	{
 		head = node;
-	tail = node;
+		tail = node;
+		node->setPrev(nullptr);
+	}
+	else
+	{
+		tail->setNext(node);
+		node->setPrev(tail);
+		tail = node;
+	}
 	++length;
 }
 
 template<class T>
-void LinkedList<T>::remove(int index)
-//throw (const char*)
+void LinkedList<T>::remove(int index) throw (const char*)
 {
-	//if (index >= length || index < 0)
-	//	throw "index out of bounds in LinkedList";
+	if (index >= length || index < 0)
+		throw "index out of bounds in LinkedList";
 	int count = 0;
 	Node * current = head;
 	while (count < length && index < count)
@@ -227,12 +234,12 @@ bool LinkedList<T>::remove(const T & data)
 template <class T>
 ostream & operator<<(ostream & os, const LinkedList<T> & l) {
 	Node* head = l.head;
-	os << "LinkedList of type " << typeof(T).name() << "." << endl << "Length: " << l.length << endl;
+	os << "LinkedList<" << typeof(T).name() << "> " << "Length: " << l.length << endl;
 	os << "Head is " << l.head << endl;
 	os << "Tail is " << l.tail << endl;
 	int i = 1;
 	while (head->next) {
-		os << i << ". " << head << endl;
+		os << i << ". " << *head << endl;
 		head = head->next;
 		++i;
 	}
