@@ -1,5 +1,5 @@
 #include "Clinic.h"
-
+#include <typeinfo>
 Clinic::Clinic(const string& name, const Address & address) : address(address), name(name)
 {
 	manager = nullptr;
@@ -224,10 +224,12 @@ void Clinic::setAddress(const Address & address)
 Secretary& Clinic::getSecretary() const throw (const string)
 {
 	static Staff* last_secretary = nullptr;
-	vector<Staff*>::const_iterator iter = iter = staff.begin();
-	if (!last_secretary)
+	vector<Staff*>::const_iterator iter = staff.begin();
+	if (last_secretary)
 	{
-		vector<Staff*>::const_iterator iter = find(staff.begin(), staff.end(), last_secretary);
+		iter = find(staff.begin(), staff.end(), last_secretary);
+		if (iter != staff.end())
+			++iter;
 		if (iter == staff.end())
 			iter = staff.begin();
 	}
@@ -252,15 +254,15 @@ Secretary& Clinic::getSecretary() const throw (const string)
 Nurse& Clinic::getNurse() const throw (const string)
 {
 	static Staff* last_nurse = nullptr;
-	vector<Staff*>::const_iterator iter;
-	if (!last_nurse)
+	vector<Staff*>::const_iterator iter = staff.begin();
+	if (last_nurse)
 	{
-		vector<Staff*>::const_iterator iter = find(staff.begin(), staff.end(), last_nurse);
+		iter = find(staff.begin(), staff.end(), last_nurse);
+		if (iter != staff.end())
+			++iter;
 		if (iter == staff.end())
 			iter = staff.begin();
 	}
-	else
-		iter = staff.begin();
 
 	Nurse* p;
 	int count = 0;
