@@ -1,7 +1,7 @@
 #ifndef __LINKEDLIST
 #define __LINKEDLIST
 #include <iostream>
-
+#pragma warning(disable:4290)
 using namespace std;
 
 
@@ -121,7 +121,7 @@ template<class T>
 T& LinkedList<T>::operator[](int index) throw (const string)
 {
 	if (index >= length || index < 0)
-		throw "index out of bounds in LinkedList operator[]";
+		throw string("index out of bounds in LinkedList operator[]");
 	Node * cur = head;
 	for (int i = 0; i < length; i++)
 	{
@@ -131,7 +131,7 @@ T& LinkedList<T>::operator[](int index) throw (const string)
 	}
 	if (head != nullptr)
 		return (T)*head;
-	else throw "index out of bounds - empty LinkedList";
+	else throw string("index out of bounds - empty LinkedList");
 }
 
 template<class T>
@@ -186,7 +186,7 @@ template<class T>
 void LinkedList<T>::remove(int index) throw (const string)
 {
 	if (index >= length || index < 0)
-		throw "index out of bounds in LinkedList";
+		throw string("index out of bounds in LinkedList");
 	int count = 0;
 	Node * current = head;
 	while (count < length && index < count)
@@ -250,7 +250,6 @@ template<class T>
 template<class Comparator>
 void LinkedList<T>::sort(const Comparator & compare)
 {
-	//cout << "sorting" <<*this << endl;;
 	Node* current;
 	for (int i = 0; i < length; ++i)
 	{

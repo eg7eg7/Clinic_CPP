@@ -19,15 +19,13 @@ protected:
 public:
 	Nurse(const MedicalStaff& medicalStaff, const string& service);	// Constructor
 	
-
-
 	// Getters
 	const vector<string>& getServices() const { return services; }
 
 	// Method
 	void addServices(const string& service);
 
-	int getNumServices() const { return services.size(); };
+	int getNumServices() const { return (int) services.size(); };
 
 	// Show
 

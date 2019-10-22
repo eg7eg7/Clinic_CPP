@@ -17,6 +17,7 @@
 
 
 #pragma warning(disable: 4996)
+#pragma warning(disable: 4290)
 
 #include <iostream>
 using namespace std;
@@ -42,6 +43,7 @@ int main()
 	try
 	{
 		clinic.getManager()->fireStaff(clinic.getNurse());
+		clinic.getManager()->fireStaff(clinic.getSecretary());
 	}
 	catch (const string msg)
 	{
@@ -204,3 +206,18 @@ void populateClinic(Clinic& clinic)
 //remove in Time.h const bool& ---> change to bool
 
 //remove empty dtor, copy ctor, operator=, also in part2
+
+//remove copy c'tor for clinic
+
+//add to part 2 #pragma warning(disable: 4290)
+
+//remove printed variable in prints at clinic
+
+//make printpatients, printstaff..etc a general func that gets a vector to print
+
+//add is_heap http://www.cplusplus.com/reference/algorithm/
+
+//go over TODO
+
+//part 2 - in secretary cpp - (if (answer == Patient::eStatus::SICK || medical == nullptr)) 
+//remove else before if

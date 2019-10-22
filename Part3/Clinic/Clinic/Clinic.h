@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string.h>
 #include <vector>
+#include <algorithm>
 #include "ClinicManager.h"
 #include "Secretary.h"
 #include "Nurse.h"
@@ -30,26 +31,23 @@ protected:
 	Address address;
 	ClinicManager* manager;
 
-	Room** rooms;
-	int numRooms;
+	vector<Room*> rooms;
 
-	Staff** staff;
-	int numStaff;
+	vector<Staff*> staff;
 
-	Patient** patients;
-	int numPatients;
+	vector<Patient*> patients;
 
-	mutable Turn** turns;
-	mutable int numTurns;
-
+	mutable vector<Turn*> turns;
+private:
+	Clinic(const Clinic& other) = delete;
+	const Clinic& operator=(const Clinic& clinic) = delete;
 public:
 	Clinic(const string& name, const Address& address);
-	Clinic(const Clinic& other); // copy constructor
+	
 	Clinic(Clinic&& other); // move constructor
 
 	~Clinic();
 
-	const Clinic& operator=(const Clinic& clinic);
 
 	// Methods
 
@@ -72,8 +70,8 @@ public:
 
 	void setAddress(const Address& address);
 
-	const Secretary& getSecretary() const throw (string);
-	Nurse& getNurse() const throw (string);
+	Secretary& getSecretary() const throw (const string);
+	Nurse& getNurse() const throw (const string);
 
 	// Show
 	void printStaff(ostream & os) const;
@@ -88,10 +86,11 @@ private:
 	void removeStaff(Staff& staff);
 	void setName(const string& newName) { name = newName; };
 
-	Turn** getTurns() const { return turns; }
-	Staff** getStaff() const { return staff; }
-	Patient** getPatients() const { return patients; }
-	Room** getRooms() const { return rooms; }
+	void reserveVectors();
+	const vector<Turn*>& getTurns() const { return turns; }
+	const vector<Staff*>& getStaff() const { return staff; }
+	const vector<Patient*>& getPatients() const { return patients; }
+	const vector<Room*>& getRooms() const { return rooms; }
 };
 
 #endif // !__CLINIC_H

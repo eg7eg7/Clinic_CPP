@@ -30,7 +30,7 @@ void Secretary::callPatient(Patient & patient) const
 			}
 		}
 
-		else if (answer == Patient::eStatus::SICK || medical == nullptr)
+		if (answer == Patient::eStatus::SICK || medical == nullptr)
 		{
 			medical = patient.getPersonalDoctor();
 		}

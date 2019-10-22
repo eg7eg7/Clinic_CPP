@@ -49,7 +49,7 @@ public:
 	void changeDuration(const long& sessionDurationMins);
 	void changeMedicalStaff(MedicalStaff* medicalStaff);
 	void changePatient(Patient* patient);
-
+	static bool compareTurnPointer(const Turn* t1, const Turn* t2) { return *t1 < *t2; }
 	// Show
 	friend ostream & operator<<(ostream & os, const Turn & turn);
 	bool operator==(const Turn & other) const;
