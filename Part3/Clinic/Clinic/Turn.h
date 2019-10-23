@@ -1,4 +1,3 @@
-#pragma message("Adding Turn")
 #ifndef __TURN_H
 #define __TURN_H
 

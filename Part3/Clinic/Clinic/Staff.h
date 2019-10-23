@@ -1,4 +1,3 @@
-#pragma message("Adding Staff")
 #ifndef __STAFF_H
 #define __STAFF_H
 

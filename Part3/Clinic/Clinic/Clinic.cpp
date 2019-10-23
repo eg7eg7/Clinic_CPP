@@ -159,43 +159,6 @@ void Clinic::removeTurn(const Turn & turn)
 	std::sort(turns.begin(), turns.end(), Turn::compareTurnPointer);
 }
 
-void Clinic::printStaff(ostream & os) const
-{
-	os << endl << "************ Printing staff at the clinic ****************" << endl;
-	for (auto it = staff.begin(); it != staff.end(); ++it)
-	{
-		os << **it << endl;
-		os << "****************************************" << endl;
-	}
-}
-
-void Clinic::printPatients(ostream & os) const
-{
-	os << endl << "************ Printing patients at the clinic ****************" << endl;
-	for (auto it = patients.begin(); it != patients.end(); ++it)
-	{
-		os << **it << endl;
-	}
-}
-
-void Clinic::printRooms(ostream & os) const
-{
-	os << endl << "************ Printing rooms at the clinic ****************" << endl;
-	for (auto it = rooms.begin(); it != rooms.end(); ++it)
-	{
-		os << **it << endl;
-	}
-}
-
-void Clinic::printTurns(ostream & os) const
-{
-	os << endl << "************ Printing turns at the clinic ****************" << endl;
-	for (auto it = turns.begin(); it != turns.end(); ++it)
-	{
-		os << **it << endl;
-	}
-}
-
 void Clinic::setClinicManager(ClinicManager * new_manager)
 {
 	if (manager != new_manager)
@@ -287,11 +250,15 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	if (clinic.getManager() != nullptr)
 		os << " manager is " << clinic.getManager()->getName() << endl;
 
-	//os << turns << endl; //TODO
-	clinic.printTurns(os);
-	clinic.printRooms(os);
-	clinic.printPatients(os);
-	clinic.printStaff(os);
+	os << endl << "************ Printing turns at the clinic ****************" << endl;
+	clinic.printVector(os, clinic.turns);
+	os << endl << "************ Printing rooms at the clinic ****************" << endl;
+	clinic.printVector(os, clinic.rooms);
+	os << endl << "************ Printing patients at the clinic ****************" << endl;
+	clinic.printVector(os, clinic.patients);
+	os << endl << "************ Printing staff at the clinic ****************" << endl;
+	clinic.printVector(os, clinic.staff);
+
 
 	return os;
 }

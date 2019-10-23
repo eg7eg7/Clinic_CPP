@@ -1,4 +1,3 @@
-#pragma message("Adding ClinicManager")
 #ifndef __CLINICMANAGER_H
 #define __CLINICMANAGER_H
 #pragma warning(disable: 4996)

@@ -149,7 +149,6 @@
     <ClCompile Include="Address.cpp" />
     <ClCompile Include="Clinic.cpp" />
     <ClCompile Include="ClinicManager.cpp" />
-    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Doctor.cpp" />
     <ClCompile Include="main.cpp" />

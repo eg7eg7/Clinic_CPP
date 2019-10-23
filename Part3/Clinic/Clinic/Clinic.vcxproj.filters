@@ -60,9 +60,6 @@
     <ClCompile Include="Time.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>Resource Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Room.h">

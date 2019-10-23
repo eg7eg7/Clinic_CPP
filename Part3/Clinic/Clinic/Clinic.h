@@ -1,4 +1,3 @@
-#pragma message("Adding Clinic")
 #ifndef __CLINIC_H
 #define __CLINIC_H
 #pragma warning(disable: 4996)
@@ -71,12 +70,9 @@ public:
 
 	Secretary& getSecretary() const throw (const string);
 	Nurse& getNurse() const throw (const string);
-
-	// Show
-	void printStaff(ostream & os) const;
-	void printPatients(ostream & os) const;
-	void printRooms(ostream & os) const;
-	void printTurns(ostream & os) const;
+	
+	template <class T>
+	void printVector(ostream& os, const vector<T*>& vector) const;
 
 	friend ostream & operator<<(ostream & os, const Clinic & clinic);
 
@@ -92,4 +88,15 @@ private:
 	const vector<Room*>& getRooms() const { return rooms; }
 };
 
+template<class T>
+void Clinic::printVector(ostream& os, const vector<T*>& vec) const
+{
+	for (auto it = vec.begin(); it != vec.end(); ++it)
+	{
+		os << **it << endl;
+		os << "---------------------------------------------------------" << endl;
+	}
+}
 #endif // !__CLINIC_H
+
+

@@ -1,4 +1,3 @@
-#pragma message("Adding MedicalStaff")
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
 #pragma warning(disable: 4996)

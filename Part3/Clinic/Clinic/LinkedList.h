@@ -7,25 +7,32 @@ using namespace std;
 class CompareValue
 {
 public:
+	//T is a class - must have operator < >
 	template<class T>
 	int operator()(const T* t1, const T* t2) const
 	{
-		if (*t1 < *t2) return -1;
-		else if (*t1 > *t2) return 1;
-		else return 0;
+		if (*t1 < *t2) 
+			return -1;
+		else if (*t1 > *t2) 
+			return 1;
+		else 
+			return 0;
 	}
 };
 
 class ComparePointer
 {
 public:
-	//T is a pointer
+	//T is a pointer to a class with <, > operators
 	template<class T>
 	int operator()(const T* t1, const T* t2) const
 	{
-		if (**t1 < **t2) return -1;
-		else if (**t1 > **t2) return 1;
-		else return 0;
+		if (**t1 < **t2) 
+			return -1;
+		else if (**t1 > **t2) 
+			return 1;
+		else 
+			return 0;
 	}
 };
 
@@ -86,6 +93,7 @@ public:
 	bool remove(const T& data);
 };
 
+
 template <class T>
 LinkedList<T>::LinkedList() {
 	this->length = 0;
@@ -142,6 +150,7 @@ const LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>& other)
 	return *this;
 }
 
+
 template<class T>
 void LinkedList<T>::clear()
 {
@@ -157,6 +166,7 @@ void LinkedList<T>::clear()
 	head = nullptr;
 	tail = nullptr;
 }
+
 
 template <class T>
 void LinkedList<T>::add(const T& data) {
@@ -213,10 +223,10 @@ bool LinkedList<T>::remove(const T & data)
 	int count = 0;
 	while (cur != nullptr)
 	{
-		cout << "Removing " << data << "match " << *(cur->getData()) << " index "<< count<<  endl;
+		cout << "Removing " << data << "match " << *(cur->getData()) << " index " << count << endl;
 		if (*(cur->getData()) == data)
 		{
-			
+
 			removeIndex(count);
 			return true;
 		}
@@ -245,4 +255,5 @@ void LinkedList<T>::sort(const Comparator & compare)
 		}
 	}
 }
+
 #endif //__LINKEDLIST

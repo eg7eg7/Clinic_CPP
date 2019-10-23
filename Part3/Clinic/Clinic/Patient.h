@@ -1,4 +1,3 @@
-#pragma message("Adding Patient")
 #ifndef __PATIENT_H
 #define __PATIENT_H
 

@@ -1,4 +1,3 @@
-#pragma message("Adding Nurse")
 #ifndef __NURSE_H
 #define __NURSE_H
 #pragma warning(disable: 4996)

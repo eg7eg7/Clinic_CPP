@@ -227,7 +227,6 @@ void populateClinic(Clinic& clinic)
 
 //make printpatients, printstaff..etc a general func that gets a vector to print (only in part 3 - use STL)
 
-//add is_heap http://www.cplusplus.com/reference/algorithm/
 
 //go over TODO
 

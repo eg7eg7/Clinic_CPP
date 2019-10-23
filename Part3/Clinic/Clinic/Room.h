@@ -1,4 +1,3 @@
-#pragma message("Adding Room")
 #ifndef __ROOM_H
 #define __ROOM_H
 

@@ -1,5 +1,6 @@
 #ifndef __TIME_H
 #define __TIME_H
+#pragma warning(disable:4290)
 #include <iostream>
 #include <string>
 using namespace std;
