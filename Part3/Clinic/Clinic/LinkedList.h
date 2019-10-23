@@ -4,7 +4,6 @@
 #pragma warning(disable:4290)
 using namespace std;
 
-
 class CompareValue
 {
 public:
@@ -28,10 +27,6 @@ public:
 		else return 0;
 	}
 };
-
-
-
-
 
 template <class T>
 class LinkedList
@@ -73,10 +68,8 @@ public:
 	const Node* getTail() const { return tail; }
 	int size() const { return length; }
 
-
 	T& operator[](int index) throw (const string);
 	const LinkedList<T>& operator=(const LinkedList<T>& other);
-
 
 	friend ostream & operator<<(ostream & os, const LinkedList<T> & l);
 
@@ -111,7 +104,6 @@ LinkedList<T>::LinkedList(LinkedList<T> && list)
 	list.tail = nullptr;
 }
 
-
 template <class T>
 LinkedList<T>::~LinkedList() {
 	clear();
@@ -126,11 +118,11 @@ T& LinkedList<T>::operator[](int index) throw (const string)
 	for (int i = 0; i < length; i++)
 	{
 		if (i == index)
-			return (T)*cur;
+			return *(cur->data);
 		cur = head->next;
 	}
 	if (head != nullptr)
-		return (T)*head;
+		return *(head->data);
 	else throw string("index out of bounds - empty LinkedList");
 }
 
@@ -229,7 +221,6 @@ bool LinkedList<T>::remove(const T & data)
 	return false;
 }
 
-
 template <class T>
 ostream & operator<<(ostream & os, const LinkedList<T> & l) {
 	Node* head = l.head;
@@ -244,7 +235,6 @@ ostream & operator<<(ostream & os, const LinkedList<T> & l) {
 	}
 	return os;
 }
-
 
 template<class T>
 template<class Comparator>
@@ -263,8 +253,5 @@ void LinkedList<T>::sort(const Comparator & compare)
 			current = current->next;
 		}
 	}
-
-
-
 }
 #endif //__LINKEDLIST

@@ -34,7 +34,6 @@ void Secretary::callPatient(Patient & patient) const
 		{
 			medical = patient.getPersonalDoctor();
 		}
-
 		Turn* turn = new Turn(*medical, patient, medical->getNextFreeTime(length), length);
 		clinic->addTurn(*turn);
 		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n" << *turn << endl;

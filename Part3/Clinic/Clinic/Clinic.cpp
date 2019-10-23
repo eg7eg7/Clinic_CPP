@@ -6,7 +6,6 @@ Clinic::Clinic(const string& name, const Address & address) : address(address), 
 	reserveVectors();
 }
 
-
 Clinic::Clinic(Clinic && other) : address(std::move(other.address)), name(std::move(other.name))
 {
 	reserveVectors();
@@ -45,7 +44,6 @@ void Clinic::addStaff(Staff * newStaff)
 		newStaff->setClinic(this);
 	}
 }
-
 
 void Clinic::removeStaff(Staff & newStaff)
 {
@@ -98,9 +96,9 @@ void Clinic::checkPatients()
 	try {
 		for (auto it = patients.begin(); it != patients.end(); ++it)
 		{
-				Secretary& s = getSecretary();
-				s.callPatient(**it);
-				cout << "-----------------------------------------" << endl;
+			Secretary& s = getSecretary();
+			s.callPatient(**it);
+			cout << "-----------------------------------------" << endl;
 		}
 	}
 	catch (const string msg)
@@ -142,9 +140,10 @@ void Clinic::addTurn(Turn & turn)
 		if (iterFound == turns.end())
 		{
 			turns.push_back(&turn);
+			turn.getMedicalStaff()->addTurn(turn);
 		}
 	}
-	std::sort(turns.begin(),turns.end(),Turn::compareTurnPointer);
+	std::sort(turns.begin(), turns.end(), Turn::compareTurnPointer);
 }
 
 void Clinic::removeTurn(const Turn & turn)
@@ -172,10 +171,10 @@ void Clinic::printStaff(ostream & os) const
 void Clinic::printPatients(ostream & os) const
 {
 	os << endl << "************ Printing patients at the clinic ****************" << endl;
-		for (auto it = patients.begin(); it != patients.end(); ++it)
-		{
-			os << **it << endl;
-		}
+	for (auto it = patients.begin(); it != patients.end(); ++it)
+	{
+		os << **it << endl;
+	}
 }
 
 void Clinic::printRooms(ostream & os) const
@@ -218,8 +217,6 @@ void Clinic::setAddress(const Address & address)
 {
 	this->address = address;
 }
-
-
 
 Secretary& Clinic::getSecretary() const throw (const string)
 {
@@ -289,7 +286,6 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	if (clinic.getManager() != nullptr)
 		os << " manager is " << clinic.getManager()->getName() << endl;
 
-	
 	//os << turns << endl; //TODO
 	clinic.printTurns(os);
 	clinic.printRooms(os);

@@ -19,9 +19,7 @@ Time Turn::getEndTime() const
 	int newMin = (startTime.getMinute() + sessionDurationMins) % 60;
 	int newHour = (startTime.getHour() + ((startTime.getMinute() + sessionDurationMins) / 60)) % 24;
 
-	Time t = Time(newHour, newMin);
-
-	return t;
+	return Time(newHour, newMin);
 }
 
 void Turn::setStartTime(const Time & time)

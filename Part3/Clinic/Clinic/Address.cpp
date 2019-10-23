@@ -1,6 +1,6 @@
 #include "Address.h"
 
-Address::Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum) :country(country), city(city),street(street)
+Address::Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum) :country(country), city(city), street(street)
 {
 	this->buildNum = buildNum;
 	this->floorNum = floorNum;
@@ -39,8 +39,6 @@ const Address& Address::operator=(const Address & other)
 	}
 	return *this;
 }
-
-
 
 ostream & operator<<(ostream & os, const Address & add)
 {

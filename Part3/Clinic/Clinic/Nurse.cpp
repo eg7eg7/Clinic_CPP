@@ -1,7 +1,7 @@
 #include "Nurse.h"
 #pragma warning(disable: 4996)
 
-Nurse::Nurse(const MedicalStaff& medicalStaff, const string& service) : Staff(medicalStaff), MedicalStaff(medicalStaff) 
+Nurse::Nurse(const MedicalStaff& medicalStaff, const string& service) : Staff(medicalStaff), MedicalStaff(medicalStaff)
 {
 	services.push_back(service);
 };
@@ -27,5 +27,4 @@ void Nurse::toOs(ostream & os) const
 		os << *iter << endl;
 		++iter;
 	}
-		
 }

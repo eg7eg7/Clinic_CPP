@@ -33,7 +33,7 @@ public:
 	// Methods
 
 	/* Returns time where the medical staff has enough time for an appointment */
-	Time getNextFreeTime(long sessionDurationMins) const;
+	Time getNextFreeTime(long sessionDurationMins) const throw(const string);
 
 	void addTurn(Turn& turn) const;
 	void deleteTurn(Turn& turn) const;

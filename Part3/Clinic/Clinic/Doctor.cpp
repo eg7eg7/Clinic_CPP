@@ -15,9 +15,8 @@ Doctor::Doctor(const MedicalStaff & medicalStaff, const  string& profession) : S
 	//nothing
 }
 
-
 Doctor::Doctor(const Doctor & other) : Staff(other), MedicalStaff(other), profession(other.profession)
-{ 
+{
 	//nothing
 }
 

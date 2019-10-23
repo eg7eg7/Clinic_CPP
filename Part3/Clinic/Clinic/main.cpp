@@ -15,7 +15,6 @@
 //***************************	ID	 :	307943001  		     ******************************
 //*****************************************************************************************
 
-
 #pragma warning(disable: 4996)
 #pragma warning(disable: 4290)
 
@@ -35,10 +34,9 @@ int main()
 	populateClinic(clinic);
 
 	clinic.getManager()->changeClinicName("Clalit");
-	
+
 	clinic.checkPatients();
 
-	
 	cout << clinic << endl;
 	try
 	{
@@ -177,7 +175,6 @@ void populateClinic(Clinic& clinic)
 	cout << "Populating clinic finished." << endl << endl;
 }
 
-
 //split LinkedList to cpp and h
 
 //use setter getters instead of direct access in LinkedList to nodes
@@ -219,5 +216,14 @@ void populateClinic(Clinic& clinic)
 
 //go over TODO
 
-//part 2 - in secretary cpp - (if (answer == Patient::eStatus::SICK || medical == nullptr)) 
+//part 2 - in secretary cpp - (if (answer == Patient::eStatus::SICK || medical == nullptr))
 //remove else before if
+
+//part2 - make getNextFreeTime throw an error
+//also change:
+
+//timeDifference1 = Time::getTimeDifference(this->acceptHoursFrom, turns[0]->getStartTime());
+//if (timeDifference1 >= sessionDurationMins)
+//*****************return this->acceptHoursTo; TO return this->acceptHoursFrom
+
+//indent all code

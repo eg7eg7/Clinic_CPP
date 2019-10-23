@@ -23,7 +23,7 @@ public:
 	static const int MAX_NUM_STAFF = 50;
 	static const int MAX_NUM_PATIENTS = 1000;
 	static const int MAX_NUM_TURNS = 500;
-	static const int DEFAULT_TURN_LENGTH_MINS = 30;
+	static const int DEFAULT_TURN_LENGTH_MINS = 45;
 
 protected:
 
@@ -43,11 +43,10 @@ private:
 	const Clinic& operator=(const Clinic& clinic) = delete;
 public:
 	Clinic(const string& name, const Address& address);
-	
+
 	Clinic(Clinic&& other); // move constructor
 
 	~Clinic();
-
 
 	// Methods
 

@@ -19,7 +19,7 @@ protected:
 	int houseNum;
 
 public:
-	Address(const string& country, const string& city,const string& street, int buildNum, int floorNum, int houseNum);
+	Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum);
 	Address(const Address& other); // copy constructor
 	Address(Address&& other); // move constructor
 
