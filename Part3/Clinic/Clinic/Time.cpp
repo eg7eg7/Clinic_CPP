@@ -11,18 +11,18 @@ Time::Time(const int& hrs, const int& mins)
 	}
 }
 
-void Time::setTime(const int& hrs, const int& mins)
+void Time::setTime(const int& hrs, const int& mins) throw(string)
 {
 	if (hrs > 23 || hrs < 0)
 	{
 		hours = 0;
 		minutes = 0;
-		throw "Invalid hour";
+		throw string("Invalid hour");
 	}
 	if (mins < 0 || mins >59)
 	{
 		minutes = 0;
-		throw "Invalid minutes";
+		throw string("Invalid minutes");
 	}
 	hours = hrs;
 	minutes = mins;

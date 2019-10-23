@@ -1,8 +1,7 @@
-#pragma message("Adding Clinic")
 #ifndef __CLINIC_H
 #define __CLINIC_H
 #pragma warning(disable: 4996)
-
+#pragma warning(disable: 4290)
 #include <iostream>
 #include <string.h>
 #include "ClinicManager.h"
@@ -70,7 +69,7 @@ public:
 
 	void setAddress(const Address& address);
 
-	const Secretary& getSecretary() const throw (const char*);
+	Secretary& getSecretary() const throw (const char*);
 	Nurse& getNurse() const throw (const char*);
 
 	// Show

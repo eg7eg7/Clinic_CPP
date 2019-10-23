@@ -34,9 +34,17 @@ void Secretary::callPatient(Patient & patient) const
 		{
 			medical = patient.getPersonalDoctor();
 		}
-		Turn* turn = new Turn(*medical, patient, medical->getNextFreeTime(length), length);
-		clinic->addTurn(*turn);
-		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n\n" << *turn << endl;
+		try {
+			Time t = medical->getNextFreeTime(length);
+			Turn* turn = new Turn(*medical, patient, t, length);
+			clinic->addTurn(*turn);
+			cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n\n" << *turn << endl;
+		}
+		catch (const char* msg)
+		{
+			cout << msg << endl;
+			cout << this->getName() << ">> I'm sorry there are isn't a time slot available for you. try again tomorrow." << endl;
+		}
 		
 	}
 	else

@@ -9,11 +9,6 @@ Turn::Turn(MedicalStaff& medicalStaff, Patient& patient, Time startTime, long se
 	this->sessionDurationMins = sessionDurationMins;
 }
 
-Turn::Turn(const Turn & other)
-{
-	*this = other;
-}
-
 Time Turn::getEndTime() const
 {
 	int newMin = (startTime.getMinute() + sessionDurationMins) % 60;
@@ -97,22 +92,9 @@ void Turn::changePatient(Patient* patient)
 	}
 }
 
-const Turn & Turn::operator=(const Turn & other)
-{
-	if (this != &other)
-	{
-		this->medicalStaff = other.medicalStaff;
-		this->patient = other.patient;
-		this->startTime = other.startTime;
-		this->sessionDurationMins = other.sessionDurationMins;
-	}
-	return *this;
-}
-
 ostream & operator<<(ostream & os, const Turn & turn)
 {
-	os << endl << "Turn beginning at: " << turn.getStartTime() << endl <<
-		"Duration: " << turn.getDurationMins() << " minutes" << endl << "for patient:" << (turn.getPatient())->getName()
-		<< endl << "with medical Staff: " << (turn.getMedicalStaff())->getName();
+	os << "Turn [Starts : " << turn.getStartTime() << ", duration: " << turn.getDurationMins() << "mins , patient: " << (turn.getPatient())->getName()
+		<< " , Staff: " << (turn.getMedicalStaff())->getName() << " ]" << endl;
 	return os;
 }

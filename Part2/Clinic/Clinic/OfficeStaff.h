@@ -1,4 +1,3 @@
-#pragma message("Adding OfficeStaff")
 #ifndef __OFFICESTAFF_H
 #define __OFFICESTAFF_H
 #pragma warning(disable: 4996)

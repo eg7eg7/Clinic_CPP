@@ -15,8 +15,8 @@
 //***************************	ID	 :	307943001  		     ******************************
 //*****************************************************************************************
 
-
 #pragma warning(disable: 4996)
+#pragma warning(disable: 4290)
 #include <iostream>
 using namespace std;
 #include "ClinicManager.h"
@@ -33,14 +33,14 @@ int main()
 	populateClinic(clinic);
 
 	clinic.getManager()->changeClinicName("Clalit");
-	
+
 	clinic.checkPatients();
 
-	
 	cout << clinic << endl;
 	try
 	{
 		clinic.getManager()->fireStaff(clinic.getNurse());
+		clinic.getManager()->fireStaff(clinic.getSecretary());
 	}
 	catch (const char* msg)
 	{

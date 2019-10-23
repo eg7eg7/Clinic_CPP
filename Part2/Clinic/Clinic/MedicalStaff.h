@@ -1,4 +1,3 @@
-#pragma message("Adding MedicalStaff")
 #ifndef __MEDICALSTAFF_H
 #define __MEDICALSTAFF_H
 #pragma warning(disable: 4996)
@@ -33,7 +32,7 @@ public:
 	// Methods
 
 	/* Returns time where the medical staff has enough time for an appointment */
-	Time getNextFreeTime(long sessionDurationMins) const;
+	Time getNextFreeTime(long sessionDurationMins) const throw(const char*);
 
 	void addTurn(Turn& turn) const;
 	void deleteTurn(const Turn& turn) const;

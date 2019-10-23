@@ -24,7 +24,7 @@ public:
 
 	void setHour(const int& h) { hours = h; };
 	void setMinute(const int& min) { minutes = min; };
-	void setTime(const int& hrs, const int& mins);
+	void setTime(const int& hrs, const int& mins) throw (string);
 
 	/* returns difference in minutes between time t1 to t2 */
 	static int getTimeDifference(const Time& t1, const Time& t2);

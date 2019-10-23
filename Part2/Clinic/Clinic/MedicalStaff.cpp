@@ -51,7 +51,7 @@ const MedicalStaff& MedicalStaff::operator=(const MedicalStaff& medicalstaff)
 	return *this;
 }
 
-Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
+Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw(const char*)
 {
 	int timeDifference1 = 0;
 	int timeDifference2 = 0;
@@ -59,7 +59,7 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 	{
 		timeDifference1 = Time::getTimeDifference(this->acceptHoursFrom, turns[0]->getStartTime());
 		if (timeDifference1 >= sessionDurationMins)
-			return this->acceptHoursTo;
+			return this->acceptHoursFrom;
 	}
 	else
 		return this->acceptHoursFrom;
@@ -84,8 +84,7 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const
 				return turns[i]->getEndTime();
 		}
 	}
-	Time t = Time();
-	return t;
+	throw "No time available for a new turn";
 }
 
 void MedicalStaff::addTurn(Turn& turn) const

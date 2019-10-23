@@ -1,14 +1,5 @@
 #include "Secretary.h"
 #include "Clinic.h"
-Secretary::Secretary(Secretary && secretary) : Staff(std::move(secretary)), OfficeStaff(std::move(secretary))
-{
-	//nothing
-}
-
-Secretary::Secretary(const Secretary & secretary) : Staff(secretary), OfficeStaff(secretary)
-{
-	*this = secretary;
-}
 
 void Secretary::callPatient(Patient & patient) const
 {
@@ -25,19 +16,26 @@ void Secretary::callPatient(Patient & patient) const
 			try {
 				medical = &(clinic->getNurse());
 			}
-			catch (const char*& msg) {
+			catch (const char* msg) {
 				cout << msg << endl;
 			}
 		}
 
-		else if (answer == Patient::eStatus::SICK || medical == nullptr)
+		if (answer == Patient::eStatus::SICK || medical == nullptr)
 		{
 			medical = patient.getPersonalDoctor();
 		}
-
-		Turn* turn = new Turn(*medical, patient, medical->getNextFreeTime(length), length);
-		clinic->addTurn(*turn);
-		cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n" << *turn << endl;
+		try {
+			Time t = medical->getNextFreeTime(length);
+			Turn* turn = new Turn(*medical, patient, t, length);
+			clinic->addTurn(*turn);
+			cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n\n" << *turn << endl;
+		}
+		catch (const char* msg)
+		{
+			cout << msg << endl;
+			cout << this->getName() << ">> I'm sorry there are isn't a time slot available for you. try again tomorrow." << endl;
+		}
 	}
 	else
 		cout << this->getName() << ">> Stay healthy!" << endl;
@@ -47,13 +45,4 @@ void Secretary::toOs(ostream & os) const
 {
 	os << "**Secretary**" << endl;
 	OfficeStaff::toOs(os);
-}
-
-const Secretary & Secretary::operator=(const Secretary & other)
-{
-	if (this != &other)
-	{
-		OfficeStaff::operator=(other);
-	}
-	return *this;
 }

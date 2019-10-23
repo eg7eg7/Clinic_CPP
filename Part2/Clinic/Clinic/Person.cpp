@@ -52,6 +52,7 @@ const Person & Person::operator=(const Person & other)
 		this->phone = strdup(other.phone);
 		this->age = other.age;
 		this->gender = other.gender;
+		this->address = other.address;
 	}
 	return *this;
 }

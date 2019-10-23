@@ -10,15 +10,14 @@ Doctor::Doctor(const MedicalStaff && medicalStaff, const char * profession) : St
 	profession = strdup(profession);
 }
 
-Doctor::Doctor(const MedicalStaff & medicalStaff, const char * profession) : Staff(medicalStaff), MedicalStaff(medicalStaff) 
+Doctor::Doctor(const MedicalStaff & medicalStaff, const char * profession) : Staff(medicalStaff), MedicalStaff(medicalStaff)
 {
 	this->profession = strdup(profession);
 }
 
-
 Doctor::Doctor(const Doctor & other) : Staff(other), MedicalStaff(other)
-{ 
-	*this = other; 
+{
+	*this = other;
 }
 
 Doctor::~Doctor()

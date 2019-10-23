@@ -20,20 +20,14 @@ protected:
 
 public:
 	Address(const string& country, const string& city, const string& street, int buildNum, int floorNum, int houseNum);
-	Address(const Address& other); // copy constructor
-	Address(Address&& other); // move constructor
-
-	~Address();
-
-	const Address& operator=(const Address& address);
 
 	// Getters
 	const string& getCountry() const { return country; }
 	const string& getCity() const { return city; }
 	const string& getStreet() const { return street; }
-	int getBuildNO() const { return floorNum; }
-	int getFloor() const { return buildNum; }
-	int getHouseNO() const { return houseNum; }
+	int getBuildNum() const { return floorNum; }
+	int getFloorNum() const { return buildNum; }
+	int getHouseNum() const { return houseNum; }
 
 	// Setters
 	void setCountry(const string& country) { this->country = country; };

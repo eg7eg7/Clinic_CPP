@@ -12,8 +12,8 @@ class ClinicManager : public OfficeStaff, public Doctor
 {
 private:
 
-	ClinicManager(const OfficeStaff& officeStaff, const Doctor&& doctor);
-	ClinicManager(const OfficeStaff&& officeStaff, const Doctor& doctor);
+	ClinicManager(const OfficeStaff& officeStaff, const Doctor&& doctor) = delete;
+	ClinicManager(const OfficeStaff&& officeStaff, const Doctor& doctor) = delete;
 public:
 	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor

@@ -1,4 +1,3 @@
-#pragma message("Adding Address")
 #ifndef __ADDRESS_H
 #define __ADDRESS_H
 #pragma warning(disable: 4996)
@@ -31,9 +30,9 @@ public:
 	const char* getCountry() const { return country; }
 	const char* getCity() const { return city; }
 	const char* getStreet() const { return street; }
-	int getBuildNO() const { return floorNum; }
-	int getFloor() const { return buildNum; }
-	int getHouseNO() const { return houseNum; }
+	int getBuildNum() const { return floorNum; }
+	int getFloorNum() const { return buildNum; }
+	int getHouseNum() const { return houseNum; }
 
 	// Setters
 	void setCountry(const char* country);

@@ -1,4 +1,3 @@
-#pragma message("Adding Room")
 #ifndef __ROOM_H
 #define __ROOM_H
 
@@ -16,15 +15,15 @@ protected:
 	int size;
 	int numOccupants;
 private:
-	Room(const Room& other); // private copy constructor
+	Room(const Room& other); // copy constructor
 
 public:
 	Room(Room&& other); // private move constructor
 	Room(int roomNumber, int floor, int size) : roomNumber(roomNumber), floor(floor), size(size), numOccupants(0) {};	// Constructor
-	~Room() {};
+
 	// Getters
 	const int& getRoomNumber() const { return roomNumber; }
-	const int& getFloor() const { return floor; }
+	const int& getFloorNum() const { return floor; }
 	const int& getSize() const { return size; }
 	const bool isOccupied() const;
 

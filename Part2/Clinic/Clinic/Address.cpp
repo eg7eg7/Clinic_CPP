@@ -39,7 +39,6 @@ const Address& Address::operator=(const Address & other)
 		delete[]country;
 		delete[]city;
 		delete[]street;
-
 		this->country = strdup(other.country);
 		this->city = strdup(other.city);
 		this->street = strdup(other.street);
@@ -71,7 +70,7 @@ void Address::setStreet(const char * street)
 ostream & operator<<(ostream & os, const Address & add)
 {
 	os << " Country: " << add.getCountry() << " \n City: " << add.getCity()
-		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNO() << " Floor num: " <<
-		add.getFloor() << " \n House num: " << add.getHouseNO() << endl;
+		<< " \n Street: " << add.getStreet() << " \n Building num: " << add.getBuildNum() << " Floor num: " <<
+		add.getFloorNum() << " \n House num: " << add.getHouseNum() << endl;
 	return os;
 }

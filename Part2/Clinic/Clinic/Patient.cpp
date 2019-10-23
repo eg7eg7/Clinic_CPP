@@ -47,10 +47,19 @@ const Patient & Patient::operator=(const Patient & other)
 
 const Patient::eStatus& Patient::answerCall() const
 {
-	if (status)
-		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up." << endl;
-	else
+	switch (status)
+	{
+	case eStatus::SICK:
+		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up by a doctor." << endl;
+		break;
+	case eStatus::REQUIRE_TREATMENT:
+		cout << this->getName() << ">> I'm bruised, I need to get treated." << endl;
+		break;
+	case eStatus::HEALTHY:
 		cout << this->getName() << ">> It's ok I'm healthy." << endl;
+		break;
+	}
+
 	return status;
 }
 
@@ -59,7 +68,7 @@ void Patient::changeDoctor(Doctor& doctor)
 	personalDoctor = &doctor;
 }
 
-void Patient::addTurn(Turn & turn)
+void Patient::addTurn(Turn & turn) const
 {
 	if (numTurns < MAX_TURNS_SIZE)
 	{
@@ -75,7 +84,7 @@ void Patient::addTurn(Turn & turn)
 	}
 }
 
-void Patient::deleteTurn(Turn & turn)
+void Patient::deleteTurn(Turn & turn) const
 {
 	for (int i = 0; i < MAX_TURNS_SIZE; i++)
 	{

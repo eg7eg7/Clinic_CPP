@@ -49,7 +49,7 @@ Clinic::~Clinic()
 	setClinicManager(nullptr);
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
-		if(turns[i] !=nullptr)
+		if (turns[i] != nullptr)
 			delete turns[i];
 	}
 	for (int i = 0; i < MAX_NUM_ROOMS; i++)
@@ -186,7 +186,7 @@ void Clinic::removePatient(const Patient & patient)
 
 void Clinic::checkPatients()
 {
-	cout << endl <<"******************************************************" << endl;
+	cout << endl << "******************************************************" << endl;
 	cout << "Checking patients status and creating new appointments" << endl;
 	cout << "******************************************************" << endl;
 	try {
@@ -194,13 +194,13 @@ void Clinic::checkPatients()
 		{
 			if (patients[i] != nullptr)
 			{
-				const Secretary& s = getSecretary();
+				Secretary& s = getSecretary();
 				s.callPatient(*(patients[i]));
 				cout << "-----------------------------------------" << endl;
 			}
 		}
 	}
-	catch (const char*& msg)
+	catch (const char* msg)
 	{
 		cout << msg << endl;
 	}
@@ -271,51 +271,43 @@ void Clinic::removeTurn(const Turn & turn)
 
 void Clinic::printStaff(ostream & os) const
 {
-	int printed = 0;
 	os << endl << "************ Printing staff at the clinic ****************" << endl;
 	for (int i = 0; i < MAX_NUM_STAFF; i++)
-		if (&(*(staff[i])) != nullptr && printed < numStaff)
+		if (&(*(staff[i])) != nullptr)
 		{
 			os << *(staff[i]) << endl;
 			os << "****************************************" << endl;
-			++printed;
 		}
 }
 
 void Clinic::printPatients(ostream & os) const
 {
-	int printed = 0;
 	os << endl << "************ Printing patients at the clinic ****************" << endl;
 	for (int i = 0; i < MAX_NUM_PATIENTS; i++)
-		if (&(*(patients[i])) != nullptr && printed < numPatients)
+		if (&(*(patients[i])) != nullptr)
 		{
 			os << *(patients[i]) << endl;
-			++printed;
 		}
 }
 
 void Clinic::printRooms(ostream & os) const
 {
 	os << endl << "************ Printing rooms at the clinic ****************" << endl;
-	int printed = 0;
 	for (int i = 0; i < MAX_NUM_ROOMS; i++)
-		if (&(*(rooms[i])) != nullptr && printed < numRooms)
+		if (&(*(rooms[i])) != nullptr)
 		{
 			os << *(rooms[i]) << endl;
-			++printed;
 		}
 }
 
 void Clinic::printTurns(ostream & os) const
 {
 	os << endl << "************ Printing turns at the clinic ****************" << endl;
-	int printed = 0;
 	for (int i = 0; i < MAX_NUM_TURNS; i++)
 	{
-		if (&(*(turns[i])) != nullptr && printed < numTurns)
+		if (&(*(turns[i])) != nullptr)
 		{
 			os << *(turns[i]) << endl;
-			++printed;
 		}
 	}
 }
@@ -352,7 +344,7 @@ void Clinic::setName(const char * newName)
 	}
 }
 
-const Secretary& Clinic::getSecretary() const throw (const char*)
+Secretary& Clinic::getSecretary() const throw (const char*)
 {
 	static int last_index = 0;
 	Secretary* p;

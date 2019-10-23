@@ -1,4 +1,3 @@
-#pragma message("Adding Person")
 #ifndef __PERSON_H
 #define __PERSON_H
 

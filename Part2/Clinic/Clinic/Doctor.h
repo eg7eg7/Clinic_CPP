@@ -1,4 +1,3 @@
-#pragma message("Adding Doctor")
 #ifndef __DOCTOR_H
 #define __DOCTOR_H
 #pragma warning(disable: 4996)

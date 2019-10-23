@@ -1,4 +1,3 @@
-#pragma message("Adding Patient")
 #ifndef __PATIENT_H
 #define __PATIENT_H
 
@@ -16,9 +15,10 @@ public:
 
 protected:
 
-	Turn** turns;
+	mutable Turn** turns;
+	mutable int numTurns;
+
 	Doctor* personalDoctor;
-	int numTurns;
 	eStatus status;
 public:
 	Patient(const Person& person, Doctor& personalDoctor, eStatus status = HEALTHY); // Constructor
@@ -36,8 +36,8 @@ public:
 	void changeDoctor(Doctor & doctor);
 	int getNumTurns() { return numTurns; };
 
-	void addTurn(Turn & turn);
-	void deleteTurn(Turn & turn);
+	void addTurn(Turn & turn) const;
+	void deleteTurn(Turn & turn) const;
 	// Show
 	void toOs(ostream & os) const override;
 

@@ -11,7 +11,7 @@ Time::Time(const int& hrs, const int& mins)
 	}
 }
 
-void Time::setTime(const int& hrs, const int& mins)
+void Time::setTime(const int& hrs, const int& mins) throw (const char*)
 {
 	if (hrs > 23 || hrs < 0)
 	{
@@ -38,7 +38,7 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 	return totalMinutes;
 }
 
-const bool& Time::operator<(const Time & t) const
+bool Time::operator<(const Time & t) const
 {
 	if (hours < t.hours)
 		return true;
@@ -47,36 +47,26 @@ const bool& Time::operator<(const Time & t) const
 	return false;
 }
 
-const bool& Time::operator>(const Time & t) const
+bool Time::operator>(const Time & t) const
 {
 	return !operator<(t);
 }
 
-const Time& Time::operator=(const Time & t)
-{
-	if (this != &t)
-	{
-		hours = t.hours;
-		minutes = t.minutes;
-	}
-	return *this;
-}
-
-const bool& Time::operator==(const Time & t) const
+bool Time::operator==(const Time & t) const
 {
 	if (t.hours == hours && t.minutes == minutes)
 		return true;
 	return false;
 }
 
-const bool& Time::operator<=(const Time & t) const
+bool Time::operator<=(const Time & t) const
 {
 	if (operator<(t) || operator==(t))
 		return true;
 	return false;
 }
 
-const bool& Time::operator>=(const Time & t) const
+bool Time::operator>=(const Time & t) const
 {
 	if (operator>(t) || operator==(t))
 		return true;
@@ -85,6 +75,6 @@ const bool& Time::operator>=(const Time & t) const
 
 ostream & operator<<(ostream & os, const Time & t)
 {
-	os << "Time: " << t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "") << endl;
+	os << "Time: " << t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "");
 	return os;
 }

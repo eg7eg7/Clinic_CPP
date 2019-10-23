@@ -1,4 +1,3 @@
-#pragma message("Adding Turn")
 #ifndef __TURN_H
 #define __TURN_H
 
@@ -28,11 +27,7 @@ private:
 public:
 
 	Turn(MedicalStaff& medicalStaff, Patient& patient, Time startTime, long sessionDurationMins);	// Constructor
-	Turn(const Turn& other); //  copy constructor
-
-	~Turn() {};
-
-	const Turn& operator=(const Turn& other);
+	Turn(const Turn& other) = delete; //  copy constructor
 
 	// Methods
 	static void sortTurns(Turn** turns, const int& size);

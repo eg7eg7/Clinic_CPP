@@ -217,54 +217,25 @@ void populateClinic(Clinic& clinic)
 
 //design patterns
 
-//switch to strings
-
-//in part2 and part3 - make getSecretary return a non-const object
-
-//in part2, remove ref from catch in clinic.cpp and secretary.cpp
-//this line catch (const char*& msg)
-
 //add const to functions in LinkedList
 
-//in part 2 - person.cpp - in operator= , other.address not included!
-
-//add throws to setTime in part2 and part3
-
-//remove in Time.h const bool& ---> change to bool
 
 //remove empty dtor, copy ctor, operator=, also in part2
 
 //remove copy c'tor for clinic
 
-//add to part 2 #pragma warning(disable: 4290)
 
-//remove printed variable in prints at clinic
-
-//make printpatients, printstaff..etc a general func that gets a vector to print
+//make printpatients, printstaff..etc a general func that gets a vector to print (only in part 3 - use STL)
 
 //add is_heap http://www.cplusplus.com/reference/algorithm/
 
 //go over TODO
 
-//part 2 - in secretary cpp - (if (answer == Patient::eStatus::SICK || medical == nullptr))
-//remove else before if
-
-//part2 - make getNextFreeTime throw an error
-//also change:
-
-//timeDifference1 = Time::getTimeDifference(this->acceptHoursFrom, turns[0]->getStartTime());
-//if (timeDifference1 >= sessionDurationMins)
-//*****************return this->acceptHoursTo; TO return this->acceptHoursFrom
 
 //indent all code
 
-//in part 2
-//change - add const functions, and turn to mutable
-//void Patient::deleteTurn(Turn & turn) const
-//void Patient::addTurn(Turn & turn) const
 
-//in part 2 - update ostream of turn
 
-//remove compiler prints "Adding" part 2+part 3
+//remove compiler prints part 3
 
-// = delete on copy c'tor of turn in part 2
+//delete functions that include //nothing or {}

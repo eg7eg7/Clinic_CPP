@@ -24,7 +24,7 @@ public:
 	~Room() {};
 	// Getters
 	const int& getRoomNumber() const { return roomNumber; }
-	const int& getFloor() const { return floor; }
+	const int& getFloorNum() const { return floor; }
 	const int& getSize() const { return size; }
 	const bool isOccupied() const;
 
