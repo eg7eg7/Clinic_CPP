@@ -28,14 +28,13 @@ private:
 public:
 
 	Turn(MedicalStaff& medicalStaff, Patient& patient, Time startTime, long sessionDurationMins);	// Constructor
-	Turn(const Turn& other); //  copy constructor
+	Turn(const Turn& other) = delete; //  copy constructor
 
-	~Turn() {};
 
 	const Turn& operator=(const Turn& other);
 
 	// Methods
-	static void sortTurns(Turn** turns, const int& size);
+	static bool compareTurnPointer(const Turn* t1, const Turn* t2) { return *t1 < *t2; }
 	const Time& getStartTime() const { return startTime; };
 	const long& getDurationMins() const { return sessionDurationMins; };
 
@@ -49,7 +48,7 @@ public:
 	void changeDuration(const long& sessionDurationMins);
 	void changeMedicalStaff(MedicalStaff* medicalStaff);
 	void changePatient(Patient* patient);
-	static bool compareTurnPointer(const Turn* t1, const Turn* t2) { return *t1 < *t2; }
+	
 	// Show
 	friend ostream & operator<<(ostream & os, const Turn & turn);
 	bool operator==(const Turn & other) const;

@@ -51,16 +51,6 @@ bool Time::operator>(const Time & t) const
 	return !operator<(t);
 }
 
-const Time& Time::operator=(const Time & t)
-{
-	if (this != &t)
-	{
-		hours = t.hours;
-		minutes = t.minutes;
-	}
-	return *this;
-}
-
 bool Time::operator==(const Time & t) const
 {
 	if (t.hours == hours && t.minutes == minutes)

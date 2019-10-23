@@ -13,10 +13,19 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) 
 
 const Patient::eStatus& Patient::answerCall() const
 {
-	if (status)
-		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up." << endl;
-	else
+	switch (status)
+	{
+	case eStatus::SICK:
+		cout << this->getName() << ">> I'm not feeling well, i'd like to get checked up by a doctor." << endl;
+		break;
+	case eStatus::REQUIRE_TREATMENT:
+		cout << this->getName() << ">> I'm bruised, I need to get treated." << endl;
+		break;
+	case eStatus::HEALTHY:
 		cout << this->getName() << ">> It's ok I'm healthy." << endl;
+		break;
+	}
+
 	return status;
 }
 
