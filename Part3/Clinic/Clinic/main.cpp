@@ -227,3 +227,8 @@ void populateClinic(Clinic& clinic)
 //*****************return this->acceptHoursTo; TO return this->acceptHoursFrom
 
 //indent all code
+
+//in part 2
+//change - add const functions, and turn to mutable
+//void Patient::deleteTurn(Turn & turn) const
+//void Patient::addTurn(Turn & turn) const

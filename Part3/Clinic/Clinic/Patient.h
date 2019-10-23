@@ -16,9 +16,9 @@ public:
 
 protected:
 
-	Turn** turns;
+	mutable Turn** turns;
 	Doctor* personalDoctor;
-	int numTurns;
+	mutable int numTurns;
 	eStatus status;
 public:
 	Patient(const Person& person, Doctor& personalDoctor, eStatus status = HEALTHY); // Constructor
@@ -36,8 +36,8 @@ public:
 	void changeDoctor(Doctor & doctor);
 	int getNumTurns() { return numTurns; };
 
-	void addTurn(Turn & turn);
-	void deleteTurn(Turn & turn);
+	void addTurn(Turn & turn) const;
+	void deleteTurn(Turn & turn) const;
 	// Show
 	void toOs(ostream & os) const override;
 

@@ -141,6 +141,7 @@ void Clinic::addTurn(Turn & turn)
 		{
 			turns.push_back(&turn);
 			turn.getMedicalStaff()->addTurn(turn);
+			turn.getPatient()->addTurn(turn);
 		}
 	}
 	std::sort(turns.begin(), turns.end(), Turn::compareTurnPointer);

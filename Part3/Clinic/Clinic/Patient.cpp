@@ -59,7 +59,7 @@ void Patient::changeDoctor(Doctor& doctor)
 	personalDoctor = &doctor;
 }
 
-void Patient::addTurn(Turn & turn)
+void Patient::addTurn(Turn & turn) const
 {
 	if (numTurns < MAX_TURNS_SIZE)
 	{
@@ -75,7 +75,7 @@ void Patient::addTurn(Turn & turn)
 	}
 }
 
-void Patient::deleteTurn(Turn & turn)
+void Patient::deleteTurn(Turn & turn) const
 {
 	for (int i = 0; i < MAX_TURNS_SIZE; i++)
 	{
@@ -94,4 +94,5 @@ void Patient::toOs(ostream & os) const
 	Person::toOs(os);
 	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
 	os << " Status : " << eStatusString[this->status] << endl;
+	os << " Has " << numTurns << " turns scheduled ahead." << endl;
 }
