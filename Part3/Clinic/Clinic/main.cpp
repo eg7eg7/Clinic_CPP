@@ -264,3 +264,5 @@ void populateClinic(Clinic& clinic)
 //void Patient::addTurn(Turn & turn) const
 
 //in part 2 - update ostream of turn
+
+//remove compiler prints "Adding" part 2+part 3

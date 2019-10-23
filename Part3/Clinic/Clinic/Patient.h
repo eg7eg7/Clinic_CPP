@@ -5,6 +5,7 @@
 #pragma warning(disable: 4996)
 
 #include <iostream>
+#include <vector>
 using namespace std;
 #include "Doctor.h"
 class Patient : public Person
@@ -16,25 +17,18 @@ public:
 
 protected:
 
-	mutable Turn** turns;
+	mutable vector<Turn*> turns;
 	Doctor* personalDoctor;
-	mutable int numTurns;
 	eStatus status;
 public:
 	Patient(const Person& person, Doctor& personalDoctor, eStatus status = HEALTHY); // Constructor
-	Patient(Patient&& other); //move ctor
-	Patient(Patient& other); // copy constructor
-	~Patient();
-
-	const Patient& operator=(const Patient& other);
-
 	// Methods
 
 	/* Returns true if sick and needs a turn*/
 	const eStatus& answerCall() const;
 
 	void changeDoctor(Doctor & doctor);
-	int getNumTurns() { return numTurns; };
+	int getNumTurns() { return (int) turns.size(); };
 
 	void addTurn(Turn & turn) const;
 	void deleteTurn(Turn & turn) const;

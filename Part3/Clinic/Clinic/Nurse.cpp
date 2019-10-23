@@ -3,6 +3,7 @@
 
 Nurse::Nurse(const MedicalStaff& medicalStaff, const string& service) : Staff(medicalStaff), MedicalStaff(medicalStaff)
 {
+	services.reserve(MAX_NURSE_SERVICES);
 	services.push_back(service);
 };
 

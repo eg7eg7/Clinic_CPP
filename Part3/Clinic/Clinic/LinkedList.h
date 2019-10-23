@@ -182,7 +182,7 @@ void LinkedList<T>::removeIndex(int index) throw (const string)
 		throw string("index out of bounds in LinkedList");
 	int count = 0;
 	Node * current = head;
-	while (count < length && count <= index)
+	while (count < length)
 	{
 		if (count == index)
 		{
@@ -197,11 +197,13 @@ void LinkedList<T>::removeIndex(int index) throw (const string)
 				tail = current->prev;
 
 			delete current;
+
+			--length;
+			break;
 		}
 		current = current->next;
 		++count;
 	}
-	--length;
 }
 
 template<class T>

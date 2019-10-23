@@ -3,47 +3,13 @@ const string Patient::eStatusString[] = { "Healthy", "Sick","Needs Treatment" };
 
 Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) : Person(person)
 {
-	numTurns = 0;
-	turns = new Turn*[MAX_TURNS_SIZE];
-	for (int i = 0; i < MAX_TURNS_SIZE; i++)
-		turns[i] = nullptr;
+	turns.reserve(MAX_TURNS_SIZE);
 	this->personalDoctor = &personalDoctor;
 	this->status = status;
 }
 
-Patient::Patient(Patient && other) : Person(std::move(other))
-{
-	numTurns = other.numTurns;
-	turns = std::move(other.turns);
-	this->personalDoctor = std::move(other.personalDoctor);
-	status = other.status;
-}
 
-Patient::Patient(Patient & other) : Person(other)
-{
-	*this = other;
-}
 
-Patient::~Patient()
-{
-	delete[]turns;
-}
-
-const Patient & Patient::operator=(const Patient & other)
-{
-	if (this != &other)
-	{
-		Person::operator=(other);
-		delete[]turns;
-		numTurns = other.numTurns;
-		turns = new Turn*[MAX_TURNS_SIZE];
-		for (int i = 0; i < MAX_TURNS_SIZE; i++)
-			turns[i] = other.turns[i];
-		this->personalDoctor = other.personalDoctor;
-		status = other.status;
-	}
-	return *this;
-}
 
 const Patient::eStatus& Patient::answerCall() const
 {
@@ -61,28 +27,20 @@ void Patient::changeDoctor(Doctor& doctor)
 
 void Patient::addTurn(Turn & turn) const
 {
-	if (numTurns < MAX_TURNS_SIZE)
+	if (turns.size() < MAX_TURNS_SIZE)
 	{
-		for (int i = 0; i < MAX_TURNS_SIZE; i++)
-		{
-			if (turns[i] == nullptr)
-			{
-				turns[i] = &turn;
-				++numTurns;
-				break;
-			}
-		}
+		turns.push_back(&turn);
 	}
 }
 
 void Patient::deleteTurn(Turn & turn) const
 {
-	for (int i = 0; i < MAX_TURNS_SIZE; i++)
+	auto iterEnd = turns.end();
+	for (auto iter = turns.begin(); iter != iterEnd; ++iter)
 	{
-		if (turns[i] == &turn)
+		if (*iter == &turn)
 		{
-			turns[i] = nullptr;
-			--numTurns;
+			turns.erase(iter);
 			break;
 		}
 	}
@@ -94,5 +52,5 @@ void Patient::toOs(ostream & os) const
 	Person::toOs(os);
 	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
 	os << " Status : " << eStatusString[this->status] << endl;
-	os << " Has " << numTurns << " turns scheduled ahead." << endl;
+	os << " Has " << turns.size() << " turns scheduled ahead." << endl;
 }
