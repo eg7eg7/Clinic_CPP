@@ -19,6 +19,7 @@ public:
 class ComparePointer
 {
 public:
+	//T is a pointer
 	template<class T>
 	int operator()(const T* t1, const T* t2) const
 	{
@@ -41,16 +42,16 @@ public:
 		Node* prev;
 		T* data;
 
-		Node(const T& newData) { data = new T(newData); }
+		Node(const T& newData) { this->data = new T(newData); }
 		Node(const Node& other) = delete;
 		~Node() { delete data; }
-		T* getData() { return data; }
+		T* getData() { return this->data; }
 		Node* getNext() { return next; }
 		Node* getPrev() { return prev; }
 
-		void setData(const T& data) { data = &data; }
-		void setNext(Node* nextNode) { next = nextNode; };
-		void setPrev(Node* prevNode) { prev = prevNode; };
+		void setData(const T& data) { this->data = &data; }
+		void setNext(Node* nextNode) { this->next = nextNode; };
+		void setPrev(Node* prevNode) { this->prev = prevNode; };
 
 		operator T&() { return *data; }
 	};
@@ -64,20 +65,24 @@ public:
 	LinkedList(LinkedList&& list);
 	~LinkedList();
 
-	const Node* getHead() const { return head; }
-	const Node* getTail() const { return tail; }
+	const Node* getHead() const { return head; };
+	const Node* getTail() const { return tail; };
+
+	void setHead(Node * newHead) { head = newHead; };
+	void setTail(Node * newTail) { tail = newTail; };
+
+
 	int size() const { return length; }
 
 	T& operator[](int index) throw (const string);
 	const LinkedList<T>& operator=(const LinkedList<T>& other);
 
-	friend ostream & operator<<(ostream & os, const LinkedList<T> & l);
 
 	template <class Comparator>
 	void sort(const Comparator& compare);
 	void clear();
 	void add(const T& data);
-	void remove(int index) throw (const string);
+	void removeIndex(int index) throw (const string);
 	bool remove(const T& data);
 };
 
@@ -119,11 +124,9 @@ T& LinkedList<T>::operator[](int index) throw (const string)
 	{
 		if (i == index)
 			return *(cur->data);
-		cur = head->next;
+		cur = cur->next;
 	}
-	if (head != nullptr)
-		return *(head->data);
-	else throw string("index out of bounds - empty LinkedList");
+	throw string("index out of bounds - empty LinkedList");
 }
 
 template<class T>
@@ -159,29 +162,27 @@ template <class T>
 void LinkedList<T>::add(const T& data) {
 	Node* node = new Node(data);
 	node->setNext(nullptr);
+	node->setPrev(tail);
 	if (head == nullptr)
 	{
-		head = node;
-		tail = node;
-		node->setPrev(nullptr);
+		head = tail = node;
 	}
 	else
 	{
-		tail->setNext(node);
-		node->setPrev(tail);
+		tail->next = node;
 		tail = node;
 	}
 	++length;
 }
 
 template<class T>
-void LinkedList<T>::remove(int index) throw (const string)
+void LinkedList<T>::removeIndex(int index) throw (const string)
 {
 	if (index >= length || index < 0)
 		throw string("index out of bounds in LinkedList");
 	int count = 0;
 	Node * current = head;
-	while (count < length && index < count)
+	while (count < length && count <= index)
 	{
 		if (count == index)
 		{
@@ -210,9 +211,11 @@ bool LinkedList<T>::remove(const T & data)
 	int count = 0;
 	while (cur != nullptr)
 	{
+		cout << "Removing " << data << "match " << *(cur->getData()) << " index "<< count<<  endl;
 		if (*(cur->getData()) == data)
 		{
-			remove(count);
+			
+			removeIndex(count);
 			return true;
 		}
 		cur = cur->next;
@@ -221,20 +224,6 @@ bool LinkedList<T>::remove(const T & data)
 	return false;
 }
 
-template <class T>
-ostream & operator<<(ostream & os, const LinkedList<T> & l) {
-	Node* head = l.head;
-	os << "LinkedList<" << typeof(T).name() << "> " << "Length: " << l.length << endl;
-	os << "Head is " << l.head << endl;
-	os << "Tail is " << l.tail << endl;
-	int i = 1;
-	while (head->next) {
-		os << i << ". " << *head << endl;
-		head = head->next;
-		++i;
-	}
-	return os;
-}
 
 template<class T>
 template<class Comparator>

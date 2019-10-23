@@ -50,14 +50,16 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const 
 		}
 	}
 	else
+	{
 		return this->acceptHoursFrom;
+	}
+		
 
 	for (int i = 0; i < turns.size() - 1; i++)
 	{
 		//check if doctor has a time gap for desired duration
 		timeDifference1 = Time::getTimeDifference(turns[i]->getEndTime(), turns[i + 1]->getStartTime());
 		timeDifference2 = Time::getTimeDifference(turns[i]->getEndTime(), this->acceptHoursTo);
-
 		if (timeDifference1 >= sessionDurationMins && timeDifference2 >= sessionDurationMins)
 		{
 			return turns[i]->getEndTime();
@@ -70,6 +72,7 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const 
 	}
 	throw string("No time available for a new turn");
 }
+
 
 void MedicalStaff::addTurn(Turn& turn) const
 {

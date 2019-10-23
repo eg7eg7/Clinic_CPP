@@ -38,6 +38,7 @@ public:
 	void addTurn(Turn& turn) const;
 	void deleteTurn(Turn& turn) const;
 
+
 	Turn * operator[](int index);
 	// Show
 	virtual void toOs(ostream& os) const override;

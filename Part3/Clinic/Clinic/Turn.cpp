@@ -129,8 +129,7 @@ bool Turn::operator<(const Turn & other) const
 }
 ostream & operator<<(ostream & os, const Turn & turn)
 {
-	os << endl << "Turn beginning at: " << turn.getStartTime() << endl <<
-		"Duration: " << turn.getDurationMins() << " minutes" << endl << "for patient:" << (turn.getPatient())->getName()
-		<< endl << "with medical Staff: " << (turn.getMedicalStaff())->getName();
+	os << "Turn [Starts : " << turn.getStartTime() << ", duration: " << turn.getDurationMins() << "mins , patient " << (turn.getPatient())->getName()
+		<< " , Staff: " << (turn.getMedicalStaff())->getName() << " ]"<<endl;
 	return os;
 }

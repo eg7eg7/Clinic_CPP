@@ -34,7 +34,6 @@ int Time::getTimeDifference(const Time& t1, const Time& t2)
 	int min = t2.getMinute() - t1.getMinute();
 
 	int totalMinutes = hrs * 60 + min;
-
 	return totalMinutes;
 }
 
@@ -85,6 +84,6 @@ bool Time::operator>=(const Time & t) const
 
 ostream & operator<<(ostream & os, const Time & t)
 {
-	os << "Time: " << t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "") << endl;
+	os << "Time: " << t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "");
 	return os;
 }
