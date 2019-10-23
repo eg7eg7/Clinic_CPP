@@ -13,11 +13,7 @@ public:
 
 public:
 	OfficeStaff(const Person & person, long extension, long salary, Room & room) : Staff(person, extension, salary, room) {};
-	OfficeStaff(const OfficeStaff& other); // copy constructor
-	OfficeStaff(OfficeStaff&& other); // move constructor
-	virtual ~OfficeStaff();
 
-	const OfficeStaff& operator=(const OfficeStaff& other);
 
 	// Show
 	void OfficeStaff::toOs(ostream & os) const override;

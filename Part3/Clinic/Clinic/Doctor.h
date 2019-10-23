@@ -14,13 +14,9 @@ protected:
 
 	string profession;
 public:
-	Doctor(const Doctor&& other);
 	Doctor(const MedicalStaff&& medicalStaff, const string& profession);
 	Doctor(const MedicalStaff& medicalStaff, const string& profession);	// Constructor
-	Doctor(const Doctor& other); // copy constructor
-	virtual ~Doctor();
 
-	const Doctor& operator=(const Doctor& doctor);
 
 	// Getters
 	const string& getProfession() const { return profession; }

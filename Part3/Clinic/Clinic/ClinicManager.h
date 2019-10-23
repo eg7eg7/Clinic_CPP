@@ -15,12 +15,7 @@ private:
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor&& doctor) = delete;
 	ClinicManager(const OfficeStaff&& officeStaff, const Doctor& doctor) = delete;
 public:
-	ClinicManager(const OfficeStaff&& officeStaff, const Doctor&& doctor);
 	ClinicManager(const OfficeStaff& officeStaff, const Doctor& doctor) : Staff(officeStaff), OfficeStaff(officeStaff), Doctor(doctor) {}; // Constructor
-	ClinicManager(const ClinicManager& other) : Staff(other), OfficeStaff(other), Doctor(other) { *this = other; }; // copy constructor
-	~ClinicManager() {};
-
-	const ClinicManager& operator=(const ClinicManager& other);
 
 	void setClinic(Clinic* new_clinic);
 

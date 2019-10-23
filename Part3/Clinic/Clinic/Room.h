@@ -21,7 +21,7 @@ private:
 public:
 	Room(Room&& other); // private move constructor
 	Room(int roomNumber, int floor, int size) : roomNumber(roomNumber), floor(floor), size(size), numOccupants(0) {};	// Constructor
-	~Room() {};
+
 	// Getters
 	const int& getRoomNumber() const { return roomNumber; }
 	const int& getFloorNum() const { return floor; }

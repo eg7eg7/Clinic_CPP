@@ -234,8 +234,6 @@ void populateClinic(Clinic& clinic)
 
 //indent all code
 
-
-
 //remove compiler prints part 3
 
 //delete functions that include //nothing or {}

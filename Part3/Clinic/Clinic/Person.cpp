@@ -9,25 +9,6 @@ Person::Person(int id, const string& name, const string& phone,
 	this->gender = gender;
 }
 
-Person::Person(const Person & other) : address(other.address), name(other.name), phone(other.phone)
-{
-	this->id = other.id;
-	this->age = other.age;
-	this->gender = other.gender;
-}
-
-Person::Person(Person && other) : address(std::move(other.address)), name(std::move(other.name)), phone(std::move(other.phone))
-{
-	this->id = other.id;
-	this->age = other.age;
-	this->gender = other.gender;
-}
-
-Person::~Person()
-{
-	//nothing
-}
-
 void Person::setPhone(const string& phone)
 {
 	this->phone = phone;
@@ -36,19 +17,7 @@ void Person::setAddress(const Address& address)
 {
 	this->address = address;
 }
-const Person & Person::operator=(const Person & other)
-{
-	if (this != &other)
-	{
-		this->id = other.id;
-		this->name = other.name;
-		this->phone = other.phone;
-		this->age = other.age;
-		this->gender = other.gender;
-		this->address = other.address;
-	}
-	return *this;
-}
+
 void Person::toOs(ostream & os) const
 {
 	os << " " << getName() << " - id " << getId() << endl

@@ -8,34 +8,6 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, Ti
 	acceptHoursTo = acceptHoursT;
 }
 
-MedicalStaff::MedicalStaff(const MedicalStaff& other) : Staff(other), turns(other.turns)
-{
-	*this = other;
-}
-
-MedicalStaff::MedicalStaff(MedicalStaff && other) : Staff(std::move(other)), turns(std::move(turns))
-{
-	acceptHoursFrom = std::move(other.acceptHoursFrom);
-	acceptHoursTo = std::move(other.acceptHoursTo);
-}
-
-MedicalStaff::~MedicalStaff()
-{
-	//nothing
-}
-
-const MedicalStaff& MedicalStaff::operator=(const MedicalStaff& medicalstaff)
-{
-	if (this != &medicalstaff)
-	{
-		Staff::operator=(medicalstaff);
-
-		acceptHoursFrom = medicalstaff.acceptHoursFrom;
-		acceptHoursTo = medicalstaff.acceptHoursTo;
-		turns = medicalstaff.turns;
-	}
-	return *this;
-}
 
 Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const string)
 {

@@ -1,19 +1,6 @@
 #include "ClinicManager.h"
 
-ClinicManager::ClinicManager(const OfficeStaff && officeStaff, const Doctor && doctor) : Staff(std::move(officeStaff)), OfficeStaff(std::move(officeStaff)), Doctor(std::move(doctor))
-{
-	//nothing
-}
 
-const ClinicManager & ClinicManager::operator=(const ClinicManager & other)
-{
-	if (this != &other)
-	{
-		Doctor::operator=(other);
-		OfficeStaff::operator=(other);
-	}
-	return *this;
-}
 
 void ClinicManager::setClinic(Clinic* new_clinic)
 {

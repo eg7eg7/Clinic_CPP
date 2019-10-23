@@ -1,14 +1,6 @@
 #include "Secretary.h"
 #include "Clinic.h"
-Secretary::Secretary(Secretary && secretary) : Staff(std::move(secretary)), OfficeStaff(std::move(secretary))
-{
-	//nothing
-}
 
-Secretary::Secretary(const Secretary & secretary) : Staff(secretary), OfficeStaff(secretary)
-{
-	*this = secretary;
-}
 
 void Secretary::callPatient(Patient & patient) const
 {
@@ -55,13 +47,4 @@ void Secretary::toOs(ostream & os) const
 {
 	os << "**Secretary**" << endl;
 	OfficeStaff::toOs(os);
-}
-
-const Secretary & Secretary::operator=(const Secretary & other)
-{
-	if (this != &other)
-	{
-		OfficeStaff::operator=(other);
-	}
-	return *this;
 }

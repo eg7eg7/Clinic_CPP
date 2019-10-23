@@ -31,8 +31,6 @@ public:
 	Turn(const Turn& other) = delete; //  copy constructor
 
 
-	const Turn& operator=(const Turn& other);
-
 	// Methods
 	static bool compareTurnPointer(const Turn* t1, const Turn* t2) { return *t1 < *t2; }
 	const Time& getStartTime() const { return startTime; };

@@ -24,13 +24,6 @@ protected:
 
 public:
 	MedicalStaff(const Person& person, long extension, long salary, Time acceptHoursFrom, Time acceptHoursTo, Room& room);
-	MedicalStaff(const MedicalStaff& other); // copy constructor
-	MedicalStaff(MedicalStaff&& other); // move constructor
-	virtual ~MedicalStaff();
-
-	const MedicalStaff& operator=(const MedicalStaff& medicalstaff);
-
-	// Methods
 
 	/* Returns time where the medical staff has enough time for an appointment */
 	Time getNextFreeTime(long sessionDurationMins) const throw(const string);
@@ -38,9 +31,7 @@ public:
 	void addTurn(Turn& turn) const;
 	void deleteTurn(Turn& turn) const;
 
-
 	Turn * operator[](int index);
-	// Show
 	virtual void toOs(ostream& os) const override;
 };
 

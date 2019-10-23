@@ -26,9 +26,8 @@ protected:
 
 public:
 	Person(int id, const string& name, const string& phone, int age, const Address& address, const eGender& gender);	// Constructor
-	Person(const Person& other); // copy constructor
-	Person(Person&& other); // move constructor
-	virtual ~Person();
+
+	virtual ~Person() {};
 
 	// Getters
 	const int& getId() const { return id; }
@@ -44,7 +43,6 @@ public:
 
 	// Show
 	friend ostream & operator<<(ostream & os, const Person & person);
-	const Person& operator=(const Person& other);
 	virtual void toOs(ostream& os) const;
 	const string displayGender() const;
 };
