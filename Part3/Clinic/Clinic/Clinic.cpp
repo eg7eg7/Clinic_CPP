@@ -259,6 +259,5 @@ ostream & operator<<(ostream & os, const Clinic & clinic)
 	os << endl << "************ Printing staff at the clinic ****************" << endl;
 	clinic.printVector(os, clinic.staff);
 
-
 	return os;
 }

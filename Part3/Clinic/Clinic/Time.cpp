@@ -74,6 +74,6 @@ bool Time::operator>=(const Time & t) const
 
 ostream & operator<<(ostream & os, const Time & t)
 {
-	os <<  t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "");
+	os << t.hours << ":" << t.minutes << (t.minutes == 0 ? "0" : "");
 	return os;
 }

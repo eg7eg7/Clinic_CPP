@@ -16,7 +16,6 @@ public:
 	Doctor(const MedicalStaff&& medicalStaff, const string& profession);
 	Doctor(const MedicalStaff& medicalStaff, const string& profession);	// Constructor
 
-
 	// Getters
 	const string& getProfession() const { return profession; }
 

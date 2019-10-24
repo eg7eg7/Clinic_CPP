@@ -70,7 +70,7 @@ public:
 
 	Secretary& getSecretary() const throw (const string);
 	Nurse& getNurse() const throw (const string);
-	
+
 	template <class T>
 	void printVector(ostream& os, const vector<T*>& vector) const;
 
@@ -98,5 +98,3 @@ void Clinic::printVector(ostream& os, const vector<T*>& vec) const
 	}
 }
 #endif // !__CLINIC_H
-
-

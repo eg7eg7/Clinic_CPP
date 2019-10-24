@@ -27,7 +27,7 @@ public:
 	const eStatus& answerCall() const;
 
 	void changeDoctor(Doctor & doctor);
-	int getNumTurns() { return (int) turns.size(); };
+	int getNumTurns() { return (int)turns.size(); };
 
 	void addTurn(Turn & turn) const;
 	void deleteTurn(Turn & turn) const;

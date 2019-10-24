@@ -8,7 +8,6 @@ MedicalStaff::MedicalStaff(const Person& person, long extension, long salary, Ti
 	acceptHoursTo = acceptHoursT;
 }
 
-
 Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const string)
 {
 	int timeDifference1 = 0;
@@ -25,7 +24,6 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const 
 	{
 		return this->acceptHoursFrom;
 	}
-		
 
 	for (int i = 0; i < turns.size() - 1; i++)
 	{
@@ -45,20 +43,19 @@ Time MedicalStaff::getNextFreeTime(long sessionDurationMins) const throw (const 
 	throw string("No time available for a new turn");
 }
 
-
 void MedicalStaff::addTurn(Turn& turn) const
 {
 	if (turns.size() < TURN_SIZE)
 	{
 		turns.add(&turn);
 	}
-	turns.sort(ComparePointer());
+	turns.sort(CompareValue());
 }
 
 void MedicalStaff::deleteTurn(Turn& turn) const
 {
 	turns.remove(&turn);
-	turns.sort(ComparePointer());
+	turns.sort(CompareValue());
 }
 
 Turn * MedicalStaff::operator[](int index)

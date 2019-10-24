@@ -57,8 +57,6 @@ void Turn::changePatient(Patient* patient)
 	}
 }
 
-
-
 bool Turn::operator==(const Turn & other) const
 {
 	if (this == &other)
@@ -82,6 +80,6 @@ bool Turn::operator<(const Turn & other) const
 ostream & operator<<(ostream & os, const Turn & turn)
 {
 	os << "Turn [Starts : " << turn.getStartTime() << ", duration: " << turn.getDurationMins() << "mins , patient: " << (turn.getPatient())->getName()
-		<< " , Staff: " << (turn.getMedicalStaff())->getName() << " ]"<<endl;
+		<< " , Staff: " << (turn.getMedicalStaff())->getName() << " ]" << endl;
 	return os;
 }

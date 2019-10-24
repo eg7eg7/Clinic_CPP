@@ -10,9 +10,6 @@ Doctor::Doctor(const MedicalStaff & medicalStaff, const  string& profession) : S
 	//nothing
 }
 
-
-
-
 void Doctor::toOs(ostream & os) const
 {
 	os << "**Doctor**" << endl;

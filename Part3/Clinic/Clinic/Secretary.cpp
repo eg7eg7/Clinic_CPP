@@ -1,7 +1,6 @@
 #include "Secretary.h"
 #include "Clinic.h"
 
-
 void Secretary::callPatient(Patient & patient) const
 {
 	int length = Clinic::DEFAULT_TURN_LENGTH_MINS;
@@ -37,7 +36,6 @@ void Secretary::callPatient(Patient & patient) const
 			cout << msg << endl;
 			cout << this->getName() << ">> I'm sorry there are isn't a time slot available for you. try again tomorrow." << endl;
 		}
-		
 	}
 	else
 		cout << this->getName() << ">> Stay healthy!" << endl;

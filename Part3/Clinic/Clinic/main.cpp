@@ -28,7 +28,7 @@ void exceptionCatcher();
 int main()
 {
 	set_terminate(exceptionCatcher);
-	
+
 	Clinic clinic("Macabbi", Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
 
 	populateClinic(clinic);
@@ -48,7 +48,6 @@ int main()
 		cout << msg << endl;
 	}
 	cout << "---------------------------------END MAIN-------------------------------------------\n";
-	
 
 	return 0;
 }
@@ -163,20 +162,20 @@ void populateClinic(Clinic& clinic)
 	Patient* patient_7 = new Patient(person_14, *doctor_1, Patient::REQUIRE_TREATMENT);
 	Patient* patient_8 = new Patient(person_15, *doctor_2);
 	Patient* patient_9 = new Patient(person_16, *doctor_1, Patient::SICK);
-	Patient* patient_10 = new Patient(Person(12211,"patient_10","09-7654321",11,Address("China","Hong Kong","Xindu",1,25,3),Person::Male), *doctor_1, Patient::SICK);
-	Patient* patient_11 = new Patient(Person(12232,"patient_11","09-7654322",11,Address("China","Hong Kong","Xindu",1,25,4),Person::Female), *manager, Patient::SICK);
-	Patient* patient_12 = new Patient(Person(12232423,"patient_12","09-7654323",11,Address("China","Hong Kong","Xindu",1,25,5),Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient* patient_13 = new Patient(Person(12321,"patient_13","09-7654324",11,Address("China","Hong Kong","Xindu",1,25,6),Person::Female), *doctor_2, Patient::REQUIRE_TREATMENT);
-	Patient* patient_14 = new Patient(Person(1221321,"patient_14","09-7654325",11,Address("China","Hong Kong","Xindu",1,25,7),Person::Male), *manager, Patient::SICK);
-	Patient* patient_15 = new Patient(Person(1223111,"patient_15","09-7654326",11,Address("China","Hong Kong","Xindu",1,25,8),Person::Female), *doctor_2, Patient::REQUIRE_TREATMENT);
-	Patient* patient_16 = new Patient(Person(1224311,"patient_16","09-7654327",11,Address("China","Hong Kong","Xindu",1,25,9),Person::Male), *doctor_1, Patient::SICK);
-	Patient* patient_17 = new Patient(Person(122611,"patient_17","09-7654328",11,Address("China","Hong Kong","Xindu",1,25,10),Person::Female), *manager, Patient::SICK);
-	Patient* patient_18 = new Patient(Person(122181,"patient_18","09-7654329",11,Address("China","Hong Kong","Xindu",1,25,11),Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient* patient_19 = new Patient(Person(122711,"patient_19","09-7654320",11,Address("China","Hong Kong","Xindu",1,25,12),Person::Female), *doctor_2, Patient::SICK);
-	Patient* patient_20 = new Patient(Person(12254311,"patient_20","09-7654321",11,Address("China","Hong Kong","Xindu",1,25,13),Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient* patient_21 = new Patient(Person(122111,"patient_21","09-7654330",11,Address("China","Hong Kong","Xindu",1,25,14),Person::Female), *manager, Patient::SICK);
-	Patient* patient_22 = new Patient(Person(1265211,"patient_22","09-7654331",11,Address("China","Hong Kong","Xindu",1,25,15),Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
-	Patient* patient_23 = new Patient(Person(12275611,"patient_23","09-7654332",11,Address("China","Hong Kong","Xindu",1,25,16),Person::Female), *manager, Patient::SICK);
+	Patient* patient_10 = new Patient(Person(12211, "patient_10", "09-7654321", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 3), Person::Male), *doctor_1, Patient::SICK);
+	Patient* patient_11 = new Patient(Person(12232, "patient_11", "09-7654322", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 4), Person::Female), *manager, Patient::SICK);
+	Patient* patient_12 = new Patient(Person(12232423, "patient_12", "09-7654323", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 5), Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_13 = new Patient(Person(12321, "patient_13", "09-7654324", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 6), Person::Female), *doctor_2, Patient::REQUIRE_TREATMENT);
+	Patient* patient_14 = new Patient(Person(1221321, "patient_14", "09-7654325", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 7), Person::Male), *manager, Patient::SICK);
+	Patient* patient_15 = new Patient(Person(1223111, "patient_15", "09-7654326", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 8), Person::Female), *doctor_2, Patient::REQUIRE_TREATMENT);
+	Patient* patient_16 = new Patient(Person(1224311, "patient_16", "09-7654327", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 9), Person::Male), *doctor_1, Patient::SICK);
+	Patient* patient_17 = new Patient(Person(122611, "patient_17", "09-7654328", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 10), Person::Female), *manager, Patient::SICK);
+	Patient* patient_18 = new Patient(Person(122181, "patient_18", "09-7654329", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 11), Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_19 = new Patient(Person(122711, "patient_19", "09-7654320", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 12), Person::Female), *doctor_2, Patient::SICK);
+	Patient* patient_20 = new Patient(Person(12254311, "patient_20", "09-7654321", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 13), Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_21 = new Patient(Person(122111, "patient_21", "09-7654330", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 14), Person::Female), *manager, Patient::SICK);
+	Patient* patient_22 = new Patient(Person(1265211, "patient_22", "09-7654331", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 15), Person::Male), *doctor_1, Patient::REQUIRE_TREATMENT);
+	Patient* patient_23 = new Patient(Person(12275611, "patient_23", "09-7654332", 11, Address("China", "Hong Kong", "Xindu", 1, 25, 16), Person::Female), *manager, Patient::SICK);
 
 	clinic.addPatient(patient_1);
 	clinic.addPatient(patient_2);
@@ -205,7 +204,6 @@ void populateClinic(Clinic& clinic)
 	cout << "Populating clinic finished." << endl << endl;
 }
 
-//split LinkedList to cpp and h
 
 //use setter getters instead of direct access in LinkedList to nodes
 
@@ -219,17 +217,13 @@ void populateClinic(Clinic& clinic)
 
 //add const to functions in LinkedList
 
-
 //remove empty dtor, copy ctor, operator=, also in part2
 
 //remove copy c'tor for clinic
 
-
 //make printpatients, printstaff..etc a general func that gets a vector to print (only in part 3 - use STL)
 
-
 //go over TODO
-
 
 //indent all code
 

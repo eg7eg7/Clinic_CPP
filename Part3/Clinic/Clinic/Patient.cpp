@@ -8,9 +8,6 @@ Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) 
 	this->status = status;
 }
 
-
-
-
 const Patient::eStatus& Patient::answerCall() const
 {
 	switch (status)
