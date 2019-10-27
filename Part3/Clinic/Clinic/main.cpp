@@ -204,29 +204,16 @@ void populateClinic(Clinic& clinic)
 	cout << "Populating clinic finished." << endl << endl;
 }
 
-
-//use setter getters instead of direct access in LinkedList to nodes
-
-//finish implementing node
-
 //catch exceptions
-
-//review iterator at the end
 
 //design patterns
 
-//add const to functions in LinkedList
-
-//remove empty dtor, copy ctor, operator=, also in part2
-
-//remove copy c'tor for clinic
-
-//make printpatients, printstaff..etc a general func that gets a vector to print (only in part 3 - use STL)
-
-//go over TODO
-
 //indent all code
 
-//remove compiler prints part 3
+//use iterators to implement LinkedList or leave be?
 
-//delete functions that include //nothing or {}
+//DESIGN PATTERNS
+
+//Clinic - Singleton, Prototype for comparator, possibly for nurse and doctor when creating a new turn
+//Adapter for comparator
+//Proxy patient to secretary

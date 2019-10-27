@@ -60,6 +60,9 @@
     <ClCompile Include="Time.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
+    <ClCompile Include="Visitor.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Room.h">
@@ -105,6 +108,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

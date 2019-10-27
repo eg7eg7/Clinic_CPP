@@ -161,6 +161,7 @@
     <ClCompile Include="Secretary.cpp" />
     <ClCompile Include="Staff.cpp" />
     <ClCompile Include="Turn.cpp" />
+    <ClCompile Include="Visitor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Address.h" />
@@ -178,6 +179,7 @@
     <ClInclude Include="Secretary.h" />
     <ClInclude Include="Staff.h" />
     <ClInclude Include="Turn.h" />
+    <ClInclude Include="Visitor.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

@@ -4,10 +4,11 @@
 #pragma warning(disable: 4996)
 #include <iostream>
 #include "Person.h"
+#include "Visitor.h"
 #include "Room.h"
 class Clinic;
 using namespace std;
-class Staff : public Person
+class Staff : public Person, public Visitable
 {
 protected:
 	long extension;
@@ -30,6 +31,7 @@ public:
 	void setClinic(Clinic* clinic);
 	// Show
 	virtual void toOs(ostream& os) const override;
+	virtual void accept(Visitor* visitor);
 	const Staff& operator=(const Staff& other);
 };
 

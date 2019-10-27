@@ -4,9 +4,7 @@
 #pragma warning(disable: 4996)
 #include <iostream>
 #include <string.h>
-
 #include "Address.h"
-
 using namespace std;
 
 class Person
@@ -43,6 +41,7 @@ public:
 	// Show
 	friend ostream & operator<<(ostream & os, const Person & person);
 	virtual void toOs(ostream& os) const;
+	
 	const string displayGender() const;
 };
 

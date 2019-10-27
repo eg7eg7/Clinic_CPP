@@ -38,3 +38,9 @@ const Staff & Staff::operator=(const Staff & other)
 	}
 	return *this;
 }
+
+void Staff::accept(Visitor * visitor)
+{
+	visitor->visit(this);
+	delete visitor;
+}

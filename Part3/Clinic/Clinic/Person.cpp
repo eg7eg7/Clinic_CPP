@@ -26,6 +26,7 @@ void Person::toOs(ostream & os) const
 		<< " Phone - " << getPhone() << endl
 		<< getAddress() << endl;
 }
+
 const string Person::displayGender() const
 {
 	switch (gender) {

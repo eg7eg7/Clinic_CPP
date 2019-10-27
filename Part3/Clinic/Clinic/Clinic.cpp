@@ -97,7 +97,7 @@ void Clinic::checkPatients()
 		for (auto it = patients.begin(); it != patients.end(); ++it)
 		{
 			Secretary& s = getSecretary();
-			s.callPatient(**it);
+			s.accept(new CallPatient(*it));
 			cout << "-----------------------------------------" << endl;
 		}
 	}
