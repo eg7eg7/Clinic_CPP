@@ -40,12 +40,13 @@ protected:
 private:
 	Clinic(const Clinic& other) = delete;
 	const Clinic& operator=(const Clinic& clinic) = delete;
-public:
+	Clinic() : Clinic("Default Clinic Name", Address("default country", "default city", "default street", 1, 1, 1)) {};
 	Clinic(const string& name, const Address& address);
-
-	Clinic(Clinic&& other); // move constructor
-
+	Clinic(Clinic&& other);
+public:
 	~Clinic();
+
+	static Clinic* getInstance();
 
 	// Methods
 
@@ -66,7 +67,7 @@ public:
 
 	void setClinicManager(ClinicManager* new_manager);
 
-	void setAddress(const Address& address);
+	
 
 	Secretary& getSecretary() const throw (const string);
 	Nurse& getNurse() const throw (const string);
@@ -79,13 +80,14 @@ public:
 private:
 	void addStaff(Staff * staff);
 	void removeStaff(Staff& staff);
+	void setAddress(const Address& address);
 	void setName(const string& newName) { name = newName; };
-
 	void reserveVectors();
 	const vector<Turn*>& getTurns() const { return turns; }
 	const vector<Staff*>& getStaff() const { return staff; }
 	const vector<Patient*>& getPatients() const { return patients; }
 	const vector<Room*>& getRooms() const { return rooms; }
+
 };
 
 template<class T>

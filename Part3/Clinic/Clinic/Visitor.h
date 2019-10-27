@@ -41,6 +41,7 @@ private:
 	Staff* staff;
 };
 
+//to be used by clinic manager
 class HireStaff : public Visitor
 {
 public:

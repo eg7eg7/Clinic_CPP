@@ -22,6 +22,7 @@ public:
 	void fireStaff(Staff& staff) const;
 	void hireStaff(Staff& staff) const;
 	void changeClinicName(const string& newName) const;
+	void changeClinicAddress(const Address& address) const;
 	//show
 	void toOs(ostream & os) const override;
 };

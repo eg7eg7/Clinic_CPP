@@ -30,6 +30,14 @@ Clinic::~Clinic()
 		delete *it;
 }
 
+
+
+Clinic * Clinic::getInstance()
+{
+	static Clinic clinic;
+	return &clinic;
+}
+
 void Clinic::addStaff(Staff * newStaff)
 {
 	if (newStaff != nullptr && newStaff->getClinic() == nullptr && staff.size() < MAX_NUM_STAFF)

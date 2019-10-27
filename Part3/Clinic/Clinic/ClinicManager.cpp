@@ -37,6 +37,15 @@ void ClinicManager::changeClinicName(const string& newName) const
 	}
 }
 
+void ClinicManager::changeClinicAddress(const Address & address) const
+{
+	if (clinic != nullptr)
+	{
+		cout << "manager " << this->getName() << " is changing clinic address from\n" << clinic->getAddress() << " to\n" << address << endl;
+		clinic->setAddress(address);
+	}
+}
+
 void ClinicManager::toOs(ostream & os) const
 {
 	os << "**ClinicManager**" << endl;
