@@ -28,8 +28,9 @@ void Secretary::callPatient(Patient & patient) const
 		try {
 			Time t = medical->getNextFreeTime(length);
 			Turn* turn = new Turn(*medical, patient, t, length);
+			cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n\n" << *turn << endl << endl;
+
 			clinic->addTurn(*turn);
-			cout << this->getName() << ">> Ok, I have created an appointment for you, please check the details :\n\n" << *turn << endl;
 		}
 		catch (const char* msg)
 		{

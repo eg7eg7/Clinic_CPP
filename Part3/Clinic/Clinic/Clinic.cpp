@@ -15,6 +15,7 @@ Clinic::Clinic(Clinic && other) : address(std::move(other.address)), name(std::m
 	staff = std::move(other.staff);
 	patients = std::move(other.patients);
 	turns = std::move(other.turns);
+	observers = std::move(other.observers);
 }
 
 Clinic::~Clinic()
@@ -38,6 +39,7 @@ Clinic & Clinic::getInstance()
 
 void Clinic::addStaff(Staff * newStaff)
 {
+	ClinicObserver * obs;
 	if (newStaff != nullptr && newStaff->getClinic() == nullptr && staff.size() < MAX_NUM_STAFF)
 	{
 		//check if staff exists
@@ -46,6 +48,9 @@ void Clinic::addStaff(Staff * newStaff)
 		if (iterFound == staff.end())
 		{
 			staff.push_back(newStaff);
+			obs = dynamic_cast<ClinicObserver*>(newStaff);
+			if (obs)
+				RegisterTurnObserver(obs);
 		}
 		newStaff->setClinic(this);
 	}
@@ -53,9 +58,13 @@ void Clinic::addStaff(Staff * newStaff)
 
 void Clinic::removeStaff(Staff & newStaff)
 {
+	ClinicObserver * obs;
 	for (auto it = staff.begin(); it != staff.end(); ++it)
 		if ((*it) == &newStaff)
 		{
+			obs = dynamic_cast<ClinicObserver*>(&newStaff);
+			if (obs)
+				UnregisterTurnObserver(obs);
 			newStaff.setClinic(nullptr);
 			delete *it;
 			staff.erase(it);
@@ -69,27 +78,62 @@ void Clinic::reserveVectors()
 	patients.reserve(MAX_NUM_PATIENTS);
 	rooms.reserve(MAX_NUM_ROOMS);
 	turns.reserve(MAX_NUM_TURNS);
+	observers.reserve(MAX_NUM_STAFF);
+}
+
+void Clinic::notifyAllObserversRegistered(Turn * turn) const
+{
+	vector<ClinicObserver*>::const_iterator iter = observers.begin();
+	vector<ClinicObserver*>::const_iterator iterEnd = observers.end();
+	while (iter != iterEnd)
+	{
+		(*iter)->notify(turn);
+		++iter;
+	}
 }
 
 void Clinic::addPatient(Patient * patient)
 {
+	ClinicObserver * obs;
 	if (patients.size() < MAX_NUM_PATIENTS && patient != nullptr)
 	{
 		vector<Patient*>::iterator iterFound = find(patients.begin(), patients.end(), patient);
 		if (iterFound == patients.end())
 		{
+			obs = dynamic_cast<ClinicObserver*>(patient);
+			if (obs)
+				RegisterTurnObserver(obs);
 			patients.push_back(patient);
 		}
 	}
 }
 
-void Clinic::removePatient(const Patient & patient)
+void Clinic::removePatient(Patient & patient)
 {
+	ClinicObserver * obs;
 	for (auto it = patients.begin(); it != patients.end(); ++it)
-		if ((*it) == &patient)
+		if (*it == &patient)
 		{
+			obs = dynamic_cast<ClinicObserver*>(&patient);
+			if (obs)
+				UnregisterTurnObserver(obs);
 			delete *it;
 			patients.erase(it);
+			break;
+		}
+}
+
+void Clinic::RegisterTurnObserver(ClinicObserver * obs)
+{
+	observers.push_back(obs);
+}
+
+void Clinic::UnregisterTurnObserver(ClinicObserver * obs)
+{
+	for (auto it = observers.begin(); it != observers.end(); ++it)
+		if (*it == obs)
+		{
+			observers.erase(it);
 			break;
 		}
 }
@@ -146,8 +190,7 @@ void Clinic::addTurn(Turn & turn)
 		if (iterFound == turns.end())
 		{
 			turns.push_back(&turn);
-			turn.getMedicalStaff()->addTurn(turn);
-			turn.getPatient()->addTurn(turn);
+			notifyAllObserversRegistered(&turn);
 		}
 	}
 	std::sort(turns.begin(), turns.end(), Turn::compareTurnPointer);

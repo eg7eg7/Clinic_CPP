@@ -6,8 +6,10 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
+#include "ClinicObserver.h"
 #include "Doctor.h"
-class Patient : public Person
+class Patient : public Person, public ClinicObserver
 {
 public:
 	static const int MAX_TURNS_SIZE = 20;
@@ -39,6 +41,9 @@ public:
 
 	const eStatus& getIsSick() const { return status; };
 	void setIsSick(const eStatus sick) { status = sick; };
+
+	void notify(Turn * turn) const override;
+
 };
 
 #endif // !__PATIENT_H

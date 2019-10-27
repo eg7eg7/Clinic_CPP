@@ -39,8 +39,9 @@ int main()
 	cout << clinic << endl;
 	try
 	{
+		clinic.getManager()->accept(new FireStaff(&(clinic.getSecretary())));
 		clinic.getManager()->accept(new FireStaff(&clinic.getNurse()));
-		clinic.getManager()->accept(new FireStaff(&clinic.getSecretary()));
+		
 	}
 	catch (const string msg)
 	{

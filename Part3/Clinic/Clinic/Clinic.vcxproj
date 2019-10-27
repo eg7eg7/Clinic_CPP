@@ -167,6 +167,7 @@
     <ClInclude Include="Address.h" />
     <ClInclude Include="Clinic.h" />
     <ClInclude Include="ClinicManager.h" />
+    <ClInclude Include="ClinicObserver.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Time.h" />
     <ClInclude Include="Doctor.h" />

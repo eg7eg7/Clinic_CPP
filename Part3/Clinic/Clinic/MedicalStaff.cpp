@@ -70,3 +70,12 @@ void MedicalStaff::toOs(ostream & os) const
 	os << " Accepting from " << acceptHoursFrom << " to " <<
 		acceptHoursTo << endl;
 }
+
+void MedicalStaff::notify(Turn * turn) const
+{
+	if (turn->getMedicalStaff() == this)
+	{
+		cout << "MEDICAL STAFF NOTIFICATION : Dear staff " << getName() << ", you have a new patient for treatment." << endl;
+		addTurn(*turn);
+	}
+}

@@ -37,6 +37,9 @@ protected:
 	vector<Patient*> patients;
 
 	mutable vector<Turn*> turns;
+
+	vector<ClinicObserver*> observers;
+
 private:
 	Clinic(const Clinic& other) = delete;
 	const Clinic& operator=(const Clinic& clinic) = delete;
@@ -52,7 +55,7 @@ public:
 	// Methods
 
 	void addPatient(Patient * patient);
-	void removePatient(const Patient& patient);
+	void removePatient(Patient& patient);
 
 	void addRoom(Room* room);
 	void removeRoom(const Room& room);
@@ -64,6 +67,8 @@ public:
 	const Address& getAddress() const { return address; };
 	ClinicManager* getManager() const { return manager; };
 
+	void RegisterTurnObserver(ClinicObserver* obs);
+	void UnregisterTurnObserver(ClinicObserver * obs);
 	void checkPatients();
 
 	void setClinicManager(ClinicManager* new_manager);
@@ -82,6 +87,7 @@ private:
 	void setAddress(const Address& address);
 	void setName(const string& newName) { name = newName; };
 	void reserveVectors();
+	void notifyAllObserversRegistered(Turn * turn) const;
 	const vector<Turn*>& getTurns() const { return turns; }
 	const vector<Staff*>& getStaff() const { return staff; }
 	const vector<Patient*>& getPatients() const { return patients; }

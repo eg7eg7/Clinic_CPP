@@ -1,4 +1,5 @@
 #include "Patient.h"
+#include "Turn.h"
 const string Patient::eStatusString[] = { "Healthy", "Sick","Needs Treatment" };
 
 Patient::Patient(const Person & person, Doctor& personalDoctor, eStatus status) : Person(person)
@@ -59,4 +60,13 @@ void Patient::toOs(ostream & os) const
 	os << " Personal doctor is " << this->personalDoctor->getName() << endl;
 	os << " Status : " << eStatusString[this->status] << endl;
 	os << " Has " << turns.size() << " turns scheduled ahead." << endl;
+}
+
+void Patient::notify(Turn * turn) const
+{
+	if (turn->getPatient() == this)
+	{
+		cout << "PATIENT NOTIFICATION : Dear patient " << getName() << ", you have a new appointment!" << endl;
+		addTurn(*turn);
+	}
 }

@@ -5,11 +5,11 @@
 #include <iostream>
 #include "Staff.h"
 #include "LinkedList.h"
-
+#include "ClinicObserver.h"
 using namespace std;
 class Turn;
 
-class MedicalStaff : virtual public Staff
+class MedicalStaff : virtual public Staff, public ClinicObserver
 {
 public:
 	static const int TURN_SIZE = 20;
@@ -32,6 +32,7 @@ public:
 
 	Turn * operator[](int index);
 	virtual void toOs(ostream& os) const override;
+	virtual void notify(Turn * turn) const override;
 };
 
 #endif // !__MEDICALSTAFF_H
