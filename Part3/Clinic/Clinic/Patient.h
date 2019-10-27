@@ -43,7 +43,6 @@ public:
 	void setIsSick(const eStatus sick) { status = sick; };
 
 	void notify(Turn * turn) const override;
-
 };
 
 #endif // !__PATIENT_H

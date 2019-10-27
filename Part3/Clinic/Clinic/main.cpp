@@ -15,6 +15,11 @@
 //***************************	ID	 :	307943001  		     ******************************
 //*****************************************************************************************
 
+/*
+Design patterns :	Singleton - Clinic
+					Observer - Patient and MedicalStaff observe Clinic
+					Visitor - HireStaff, FireStaff, CallPatient
+*/
 #pragma warning(disable: 4996)
 #pragma warning(disable: 4290)
 
@@ -41,7 +46,6 @@ int main()
 	{
 		clinic.getManager()->accept(new FireStaff(&(clinic.getSecretary())));
 		clinic.getManager()->accept(new FireStaff(&clinic.getNurse()));
-		
 	}
 	catch (const string msg)
 	{
@@ -203,17 +207,3 @@ void populateClinic(Clinic& clinic)
 
 	cout << "Populating clinic finished." << endl << endl;
 }
-
-//catch exceptions
-
-//design patterns
-
-//indent all code
-
-//use iterators to implement LinkedList or leave be?
-
-//DESIGN PATTERNS
-
-//Clinic - Singleton, Prototype for comparator, possibly for nurse and doctor when creating a new turn
-//Adapter for comparator
-//Proxy patient to secretary
