@@ -26,6 +26,7 @@ Design patterns :	Singleton - Clinic
 #include <iostream>
 using namespace std;
 #include "ClinicManager.h"
+#include "Clinic.h"
 
 void populateClinic(Clinic& clinic);
 void exceptionCatcher();

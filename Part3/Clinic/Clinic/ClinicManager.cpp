@@ -41,7 +41,7 @@ void ClinicManager::changeClinicAddress(const Address & address) const
 {
 	if (clinic != nullptr)
 	{
-		cout << "manager " << this->getName() << " is changing clinic address from\n" << clinic->getAddress() << " to\n" << address << endl;
+		cout << "manager " << this->getName() << " is changing clinic address from\n\n" << clinic->getAddress() << "\n\nTo address:\n\n" << address << endl;
 		clinic->setAddress(address);
 	}
 }
