@@ -28,19 +28,19 @@ void exceptionCatcher();
 int main()
 {
 	set_terminate(exceptionCatcher);
-	Clinic* clinic = Clinic::getInstance();
+	Clinic& clinic = Clinic::getInstance();
 
-	populateClinic(*clinic);
+	populateClinic(clinic);
 
-	clinic->getManager()->changeClinicName("Clalit");
-	clinic->getManager()->changeClinicAddress(Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
-	clinic->checkPatients();
+	clinic.getManager()->changeClinicName("Clalit");
+	clinic.getManager()->changeClinicAddress(Address("Israel", "Tel-Aviv", "Ben Gurion", 13, 4, 14));
+	clinic.checkPatients();
 
-	cout << *clinic << endl;
+	cout << clinic << endl;
 	try
 	{
-		clinic->getManager()->accept(new FireStaff(&clinic->getNurse()));
-		clinic->getManager()->accept(new FireStaff(&clinic->getSecretary()));
+		clinic.getManager()->accept(new FireStaff(&clinic.getNurse()));
+		clinic.getManager()->accept(new FireStaff(&clinic.getSecretary()));
 	}
 	catch (const string msg)
 	{

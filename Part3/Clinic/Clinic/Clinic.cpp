@@ -30,12 +30,10 @@ Clinic::~Clinic()
 		delete *it;
 }
 
-
-
-Clinic * Clinic::getInstance()
+Clinic & Clinic::getInstance()
 {
 	static Clinic clinic;
-	return &clinic;
+	return clinic;
 }
 
 void Clinic::addStaff(Staff * newStaff)

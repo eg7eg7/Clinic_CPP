@@ -41,7 +41,7 @@ public:
 	// Show
 	friend ostream & operator<<(ostream & os, const Person & person);
 	virtual void toOs(ostream& os) const;
-	
+
 	const string displayGender() const;
 };
 

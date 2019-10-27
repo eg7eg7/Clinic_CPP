@@ -20,7 +20,6 @@ public:
 	}
 };
 
-
 template <class T>
 class LinkedList
 {
@@ -81,7 +80,7 @@ public:
 	void setNext(Node* nextNode) { this->next = nextNode; };
 	void setPrev(Node* prevNode) { this->prev = prevNode; };
 
-	operator T&() { return *data; } 
+	operator T&() { return *data; }
 };
 
 template <class T>
@@ -132,7 +131,6 @@ public:
 		return os;
 	};
 };
-
 
 template <class T>
 LinkedList<T>::LinkedList() {
@@ -285,7 +283,7 @@ void LinkedList<T>::sort(const Comparator & compare)
 		iter = begin();
 		iter2 = begin();
 		++iter2;
-		while (iter !=iterEnd && iter2 !=iterEnd)
+		while (iter != iterEnd && iter2 != iterEnd)
 		{
 			if (compare(*iter, *iter2) < 0)
 			{

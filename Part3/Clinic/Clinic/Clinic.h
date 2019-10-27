@@ -46,7 +46,8 @@ private:
 public:
 	~Clinic();
 
-	static Clinic* getInstance();
+	// Singleton Design Pattern
+	static Clinic& getInstance();
 
 	// Methods
 
@@ -67,8 +68,6 @@ public:
 
 	void setClinicManager(ClinicManager* new_manager);
 
-	
-
 	Secretary& getSecretary() const throw (const string);
 	Nurse& getNurse() const throw (const string);
 
@@ -87,7 +86,6 @@ private:
 	const vector<Staff*>& getStaff() const { return staff; }
 	const vector<Patient*>& getPatients() const { return patients; }
 	const vector<Room*>& getRooms() const { return rooms; }
-
 };
 
 template<class T>
