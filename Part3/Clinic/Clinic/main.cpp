@@ -40,8 +40,8 @@ int main()
 	cout << clinic << endl;
 	try
 	{
-		clinic.getManager()->fireStaff(clinic.getNurse());
-		clinic.getManager()->fireStaff(clinic.getSecretary());
+		clinic.getManager()->accept(new FireStaff(&clinic.getNurse()));
+		clinic.getManager()->accept(new FireStaff(&clinic.getSecretary()));
 	}
 	catch (const string msg)
 	{
@@ -145,12 +145,12 @@ void populateClinic(Clinic& clinic)
 
 	clinic.setClinicManager(manager);
 
-	manager->hireStaff(*doctor_1);
-	manager->hireStaff(*doctor_2);
-	manager->hireStaff(*nurse_1);
-	manager->hireStaff(*nurse_2);
-	manager->hireStaff(*secretary_1);
-	manager->hireStaff(*secretary_2);
+	manager->accept(new HireStaff(doctor_1));
+	manager->accept(new HireStaff(doctor_2));
+	manager->accept(new HireStaff(nurse_1));
+	manager->accept(new HireStaff(nurse_2));
+	manager->accept(new HireStaff(secretary_1));
+	manager->accept(new HireStaff(secretary_2));
 
 	// Patients
 	Patient* patient_1 = new Patient(person_8, *doctor_1);

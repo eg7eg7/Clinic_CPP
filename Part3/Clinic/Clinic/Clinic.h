@@ -60,7 +60,7 @@ public:
 
 	const string& getName() const { return name; };
 	const Address& getAddress() const { return address; };
-	const ClinicManager* getManager() const { return manager; };
+	ClinicManager* getManager() const { return manager; };
 
 	void checkPatients();
 
